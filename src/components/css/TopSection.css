@@ -1,0 +1,36 @@
+.main_top_container{
+    width: 100%;
+    color: #fff;
+    height: 40rem;
+    background: linear-gradient(180deg, rgba(50,0,3,1) 46%, rgba(12,1,37,1) 81%);}
+.navbar{
+    width: 100%;
+    height: 8rem;
+    border: 2px solid teal;
+    display: flex;
+}
+.logo{
+    width: 20%;
+    height: 100%;
+    /* border:2px solid yellowgreen; */
+}
+.nav_options{
+    width: 60%;
+    height: 100%;
+    border:2px solid yellowgreen;
+}
+/* nav options section starts */
+
+/* nav options section ends */
+/* contact section starts */
+.contact{
+    margin: auto;
+}
+.contact .contact_button{
+width: 6rem;
+padding: 10%;
+border: 1px solid rgb(136, 124, 124);
+border-radius: 5px;
+color: white;
+background: transparent;
+}
