@@ -2,11 +2,13 @@
     width: 100%;
     color: #fff;
     height: 40rem;
-    background: linear-gradient(180deg, rgba(50,0,3,1) 46%, rgba(12,1,37,1) 81%);}
+    background: linear-gradient(180deg, #0C0125 26.56%, #1F0015 58.85%, #320003 100%);
+}
 .navbar{
+    font-family: Poppins;
     width: 100%;
     height: 8rem;
-    border: 2px solid teal;
+    font-weight: 400;
     display: flex;
 }
 .logo{
@@ -14,12 +16,20 @@
     height: 100%;
     /* border:2px solid yellowgreen; */
 }
+/* nav options section starts */
 .nav_options{
     width: 60%;
     height: 100%;
-    border:2px solid yellowgreen;
+    /* border:2px solid yellowgreen; */
 }
-/* nav options section starts */
+
+.nav_options .nav_menus ul{
+    color:rgba(255, 255, 255, 0.80);
+list-style: none;
+display: flex;
+justify-content: space-around;
+margin-top: 7%;
+}
 
 /* nav options section ends */
 /* contact section starts */
@@ -27,10 +37,60 @@
     margin: auto;
 }
 .contact .contact_button{
+
 width: 6rem;
 padding: 10%;
 border: 1px solid rgb(136, 124, 124);
 border-radius: 5px;
-color: white;
+ color:rgba(255, 255, 255, 0.80);
 background: transparent;
 }
+/* contact section ends */
+
+/* social links section starts */
+.social_links{
+    margin-top: 2%;
+    width: 100%;
+    height: 2rem;
+    /* border: 2px solid teal; */
+}
+.social_links .social_icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social_links .social_icons span{
+    margin: 10px;
+}
+.social_links .social_icons span:hover{
+   cursor: pointer;
+}
+
+/* social links section ends */
+
+/* heading section starts */
+.heading_text{
+    width: 60%;
+    margin: auto;
+}
+.heading_text p{
+    font-family: 'Cormorant',serif;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 70px;
+}
+/* heading section ends */
+
+/* detail section starts */
+.detailed_desc{
+    width: 47%;
+    margin: auto;
+}
+.detailed_desc p{
+    margin-top: 22px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 32.5px;
+}
+/* detail section ends */
+

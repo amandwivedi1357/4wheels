@@ -1,0 +1,11 @@
+.car_images{
+    width: 50%;
+}
+.car_images img{
+    width: 100%;
+    margin-top: 20%;
+}
+.cars{
+    width: 25%;
+    margin: auto;
+}

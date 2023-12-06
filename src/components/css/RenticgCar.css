@@ -1,0 +1,139 @@
+.renting_main_container{
+    width: 100%;
+    height: auto;
+    
+}
+.head_text{
+color: #031B4E;
+text-align: center;
+font-family: 'Cormorant';
+font-size: 48px;
+margin-top: 139px;
+font-style: normal;
+font-weight: 700;
+line-height: 55px; /* 114.583% */
+letter-spacing: 0.25px;
+text-transform: capitalize;
+}
+.desc_text{
+    color: rgba(3, 27, 78, 0.80);
+text-align: center;
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 29px; /* 181.25% */
+letter-spacing: 0.5px;
+margin-top: 21px;
+}
+.sports_car{
+    display: flex;
+    margin-top: 117px;
+}
+.sports_car .sports_info{
+    width: 40%;
+    margin-top: 80px;
+    height: 20rem;
+
+    background: linear-gradient(180deg, #0C0125 31.33%, #1F0015 64.81%, #320003 100%);
+}
+.sports_info .head_text{
+    color: #FFF;
+text-align: center;
+font-family: 'Cormorant';
+font-size: 48px;
+font-style: normal;
+font-weight: 400;
+line-height: 55px; /* 114.583% */
+letter-spacing: 0.25px;
+text-transform: capitalize;
+}
+.sports_info .desc_text{
+color: rgba(255, 255, 255, 0.80);
+text-align: center;
+font-family: 'Poppins';
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 29px; /* 181.25% */
+letter-spacing: 0.5px;
+}
+.sports_img{
+    width: 60%;
+  
+}
+.sports_img img{
+height: 95%;
+width: 100%;
+}
+
+
+/* React Flow implementation  starts*/
+.renting_main_container .red_car_container{
+    width: 100%;
+    height: auto;
+    padding: 2% 0;
+}
+
+.red_car_container .head_text{
+    color: rgba(40, 1, 14, 0.90);
+font-family: 'Cormorant';
+font-size: 46px;
+font-style: normal;
+font-weight: 600;
+line-height: 55px;
+letter-spacing: 1px;
+}
+/* React Flow implementation  ends*/
+.customer_offer{
+    width: 100%;
+    height: auto;
+    color: #FFF;
+    padding: 5% 0;
+    background: linear-gradient(180deg, #0C0125 31.33%, #1F0015 64.81%, #320003 100%);
+}
+.offer_text_container{
+    width: 70%;
+}
+.offer_text_container .offer_text{
+    color: #FFF;
+    font-family: 'Cormorant';
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 600;
+    margin-left: 10%;
+    line-height: 78.5px; /* 122.656% */
+    letter-spacing: 0.25px;
+}
+
+.customer_offer .animate_numbers{
+    width: 80%;
+    height: 8rem;
+    
+    margin-top: 7rem;
+    margin-left: 8rem;
+    display: flex;
+    justify-content: space-around;
+}
+.animate_numbers .data_map{
+    margin-top: 1rem;
+}
+.animate_numbers .data_map .num{
+    margin-bottom: 1rem;
+    color: #9A0404;
+font-family: Poppins;
+font-size: 32px;
+font-style: normal;
+font-weight: 500;
+line-height: 47px; /* 146.875% */
+letter-spacing: 0.25px;
+}
+.animate_numbers .data_map .text{
+    color: rgba(255, 255, 255, 0.90);
+font-family: Poppins;
+font-size: 19px;
+font-style: normal;
+font-weight: 400;
+line-height: 40px; /* 210.526% */
+letter-spacing: 0.25px;
+}
