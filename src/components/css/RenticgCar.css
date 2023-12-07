@@ -89,11 +89,11 @@ letter-spacing: 1px;
     width: 100%;
     height: auto;
     color: #FFF;
-    padding: 5% 0;
+    padding: 6% 0;
     background: linear-gradient(180deg, #0C0125 31.33%, #1F0015 64.81%, #320003 100%);
 }
 .offer_text_container{
-    width: 70%;
+    width: 73%;
 }
 .offer_text_container .offer_text{
     color: #FFF;
@@ -111,7 +111,7 @@ letter-spacing: 1px;
     height: 8rem;
     
     margin-top: 7rem;
-    margin-left: 8rem;
+    margin-left: 3rem;
     display: flex;
     justify-content: space-around;
 }
@@ -121,7 +121,7 @@ letter-spacing: 1px;
 .animate_numbers .data_map .num{
     margin-bottom: 1rem;
     color: #9A0404;
-font-family: Poppins;
+font-family: 'Poppins';
 font-size: 32px;
 font-style: normal;
 font-weight: 500;
@@ -130,10 +130,84 @@ letter-spacing: 0.25px;
 }
 .animate_numbers .data_map .text{
     color: rgba(255, 255, 255, 0.90);
-font-family: Poppins;
+font-family: 'Poppins';
 font-size: 19px;
 font-style: normal;
 font-weight: 400;
 line-height: 40px; /* 210.526% */
 letter-spacing: 0.25px;
 }
+
+/* steps container  starts*/
+.steps_container{
+width: 100%;
+height: 50rem;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.steps_container .inner_cont{
+width: 70%;
+height: 80%;
+border: 2px solid springgreen;
+}
+/* steps container  ends*/
+
+/* special services starts */
+.Special_Services{
+     width: 100%;
+    height: 40rem;
+    color: #FFF;
+    background: linear-gradient(180deg, #0C0125 31.33%, #1F0015 64.81%, #320003 100%);
+}
+.Special_Services .head_text{
+    padding: 2rem;
+    color: #FFF;
+    text-align: center;
+    font-family: 'Cormorant';
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 55px; /* 119.565% */
+    letter-spacing: 0.25px;
+    text-transform: capitalize;
+}
+
+
+.Special_Services .head_text{
+    color: #FFF;
+text-align: center;
+font-family: 'Cormorant';
+font-size: 46px;
+font-style: normal;
+font-weight: 400;
+line-height: 55px; /* 119.565% */
+letter-spacing: 0.25px;
+text-transform: capitalize;
+}
+
+.Special_Services .cars_det{
+    width: 90%;
+    height: 60%;
+    margin: auto;
+    display: grid;
+    padding: 5% 0;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));;
+}
+.Special_Services .cars_det .single_car_detail img{
+    width: 100%;
+}
+.Special_Services .cars_det .single_car_detail p{
+    color: #FFF;
+text-align: center;
+font-family: Cormorant;
+font-size: 32px;
+font-style: normal;
+font-weight: 400;
+padding-top: 5%;
+line-height: 55px; /* 171.875% */
+letter-spacing: 0.25px;
+text-transform: capitalize;
+}
+/* special services ends */
