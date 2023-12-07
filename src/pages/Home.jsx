@@ -1,7 +1,6 @@
 import TopSection from "../components/Home/TopSection";
 import Services from "../components/Home/Services";
 import RentingCar from "../components/Home/RentingCar";
-import BottomContainer from "../components/Home/BottomContainer";
 
 
 export default function Home() {
@@ -10,7 +9,7 @@ export default function Home() {
      <TopSection/>
      <Services/>
      <RentingCar/>
-     <BottomContainer/>
+     
     </div>
   )
 }

@@ -1,5 +1,6 @@
 import "../css/Services.css"
 import black_car from "../../assets/cheauffeur-drive.png"
+
 const Services = () => {
   return (
     <div className="services">
@@ -42,6 +43,7 @@ const Services = () => {
           </div>
         </div>
       </div>
+     
     </div>
   )
 }
