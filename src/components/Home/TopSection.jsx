@@ -1,19 +1,27 @@
+import { Link, useNavigate } from "react-router-dom";
 import MySlider from "../MySlider";
+import logo from "../../assets/cheuffeur-menu-cars/logo.png"
 import "../css/home/TopSection.css"
 import { FaFacebookF,FaTwitter, FaInstagram, FaYoutube} from "react-icons/fa";
 export default function TopSection() {
+  const navigate = useNavigate();
+  const handleClick = (route)=>{
+    navigate(`/${route}`)
+  }
   return (
     <div className="main_top_container">
         <div className="navbar">
 
-      <div className="logo">logo</div>
+      <div className="logo">
+       <Link to={'/'}> <img src={logo} alt="" /></Link>
+      </div>
       <div className="nav_options">
         <div className="nav_menus">
                 <ul>
-                    <li>Home</li>
-                    <li>Services</li>
-                    <li>About Us</li>
-                    <li>Gallery</li>
+                    <li onClick={()=>handleClick('')}>Home</li>
+                    <li onClick={()=>handleClick('services')}>Services</li>
+                    <li onClick={()=>handleClick('about-us')}>About Us</li>
+                    <li onClick={()=>handleClick('gallery')}>Gallery</li>
                 </ul>
         </div>
       </div>

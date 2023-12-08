@@ -374,10 +374,10 @@ font-size: 64px;
 font-style: normal;
 font-weight: 500;
 line-height: 55px; /* 85.938% */
-
+/* 
 letter-spacing: 0.25px;
 padding-top: 4rem;
-}
+} */
 .footer_flex{
     display: flex;
     justify-content: space-between;
@@ -442,5 +442,5 @@ border-left:none;
 border-right:none;
 padding: 1rem;
 }
-   */
+  
 /* banner ends */
