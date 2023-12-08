@@ -1,9 +1,13 @@
-import React from 'react'
+
+import Footer from '../components/Footer'
+import TopSectionAbout from '../components/About-us/TopSectionAbout'
+
 
 const AboutUs = () => {
   return (
     <div>
-      About Us
+      <TopSectionAbout/>
+      <Footer/>
     </div>
   )
 }

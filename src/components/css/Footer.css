@@ -42,6 +42,7 @@
     }
     .unordered_list li{
         margin-bottom: 1rem;
+        cursor: pointer;
     }
     .flex_cont .head{
         color: rgba(255, 255, 255, 0.95);

@@ -142,12 +142,12 @@ letter-spacing: 0.25px;
 .steps_container{
 width: 100%;
 height: 50rem;
-display: flex;
 justify-content: center;
 align-items: center;
 }
 .steps_container .inner_cont{
 width: 70%;
+margin: auto;
 height: 80%;
 border: 2px solid springgreen;
 }
@@ -195,21 +195,10 @@ text-transform: capitalize;
     gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));;
 }
-.Special_Services .cars_det .single_car_detail img{
-    width: 100%;
-}
-.Special_Services .cars_det .single_car_detail p{
-    color: #FFF;
-text-align: center;
-font-family: 'Cormorant';
-font-size: 32px;
-font-style: normal;
-font-weight: 400;
-padding-top: 5%;
-line-height: 55px; /* 171.875% */
-letter-spacing: 0.25px;
-text-transform: capitalize;
-}
+
+
+
+
 /* special services ends */
 
 /* btm_container_1 starts  */

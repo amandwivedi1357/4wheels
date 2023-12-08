@@ -1,9 +1,14 @@
-import React from 'react'
+
+import Footer from '../components/Footer'
+import BottomSectionGallery from '../components/Gallery/BottomSectionGallery'
+import TopSectionGallery from '../components/Gallery/TopSectionGallery'
 
 const Gallery = () => {
   return (
     <div>
-      Gallery
+      <TopSectionGallery/>
+      <BottomSectionGallery/>
+      <Footer/>
     </div>
   )
 }

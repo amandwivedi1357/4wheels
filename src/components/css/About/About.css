@@ -1,0 +1,10 @@
+.btm_Sec {
+width: 80%;
+margin: auto;
+}
+.btm_Sec .desc_text{
+    color: rgba(255, 255, 255, 0.80);
+    width: 60%;
+    margin: auto;
+    padding: 2rem;
+}

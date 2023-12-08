@@ -3,7 +3,12 @@ import { GrLocation } from "react-icons/gr";
 import "./css/Footer.css"
 import { CiMail } from "react-icons/ci";
 import { FiPhone } from "react-icons/fi";
+import { useNavigate } from "react-router-dom";
 const Footer = () => {
+  const navigate = useNavigate();
+  const handleClick = (route)=>{
+    navigate(`/${route}`)
+  }
   return (
     <div className="footer-cont">
       <p className="head_text">Let’s Get Started</p>
@@ -19,19 +24,19 @@ const Footer = () => {
         </div>
         <div className="flex_cont">
         <ul className="unordered_list" style={{listStyle:'none'}}>
-                <li className="list_head">Contact Now</li>
-                <li>Services</li>
-                <li>About Us</li>
-                <li>Gallery</li>
+                <li className="list_head">Quick Links</li>
+                <li onClick={()=>handleClick('services')}>Services</li>
+                    <li onClick={()=>handleClick('about-us')}>About Us</li>
+                    <li onClick={()=>handleClick('gallery')}>Gallery</li>
                 
             </ul>
         </div>
         <div className="flex_cont">
-          <p className="head">Don’t miss a thing</p>
+          {/* <p className="head">Don’t miss a thing</p>
           <div className="desc_cont">
 
           <p className="desc">Subscribe to our news letter for exclusive deals </p>
-          </div>
+          </div> */}
         </div>
         
       </div>

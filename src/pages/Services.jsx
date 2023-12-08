@@ -1,9 +1,12 @@
-import React from 'react'
+import Footer from "../components/Footer"
+import TopSectionServe from "../components/Services/TopSectionServe"
+
 
 const Services = () => {
   return (
     <div>
-      Services
+      <TopSectionServe/>
+      <Footer/>
     </div>
   )
 }

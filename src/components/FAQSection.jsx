@@ -25,7 +25,7 @@ const FaqItem = ({ question, answer }) => {
       </Flex>
       <Collapse in={isOpen} animateOpacity>
         <VStack align="start" spacing={4}>
-          <Text>{answer}</Text>
+          <Text fontWeight={'bold'}>{answer}</Text>
         </VStack>
       </Collapse>
     </div>

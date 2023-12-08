@@ -2,7 +2,7 @@ import "../css/CheuffeurDrive/CheuffeurTopSection.css"
 import "..//css/CheuffeurDrive/CheuffeurTopSection.css"
 import logo from "../../assets/cheuffeur-menu-cars/logo.png"
 import { Link, useNavigate } from "react-router-dom"
-export default function CheuffeurTopSection() {
+export default function TopSectionGallery() {
   const navigate = useNavigate();
   const handleClick = (route)=>{
     navigate(`/${route}`)
@@ -31,7 +31,7 @@ export default function CheuffeurTopSection() {
       </div>
         </div>
         <div className="btm_Sec">
-              <p className="head_text">Chauffeur Drive</p>
+              <p className="head_text">Gallery</p>
         </div>
     </div>
   )
