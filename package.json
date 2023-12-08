@@ -19,6 +19,7 @@
     "react-animated-numbers": "^0.17.1",
     "react-dom": "^18.2.0",
     "react-icons": "^4.12.0",
+    "react-router-dom": "^6.20.1",
     "react-slick": "^0.29.0",
     "react-spring": "^9.7.3",
     "reactflow": "^11.10.1",

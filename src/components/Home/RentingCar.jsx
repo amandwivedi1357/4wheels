@@ -1,4 +1,4 @@
-import "../css/RenticgCar.css";
+import "../css/home/RenticgCar.css";
 import rentingCar1 from "../../assets/rentingCar1.png";
 import FlowReact from "../FlowReact";
 import AnimatedNumberCounter from "./AnimatedNumberCounter";
@@ -12,7 +12,7 @@ import car3 from "../../assets/gal_3.png";
 import test1 from "../../assets/test1.png";
 import quote from "../../assets/quote.svg";
 import FAQSection from "../FAQSection";
-import Footer from "./Footer";
+import Footer from "../Footer";
 
 const second_car_data = [
   {

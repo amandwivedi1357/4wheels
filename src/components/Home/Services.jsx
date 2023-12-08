@@ -1,7 +1,12 @@
 import "../css/Services.css"
 import black_car from "../../assets/cheauffeur-drive.png"
+import { useNavigate } from "react-router-dom"
 
 const Services = () => {
+  const navigate = useNavigate()
+  const handleClick = ()=>{
+    navigate('/cheuffeurdrive')
+  }
   return (
     <div className="services">
       <p className="head_text">
@@ -38,7 +43,7 @@ const Services = () => {
                   </ul>
               </div>
               <div>
-                <button className="book_btn">Book Now</button>
+                <button onClick={handleClick} className="book_btn">Book Now</button>
               </div>
           </div>
         </div>

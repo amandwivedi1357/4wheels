@@ -1,5 +1,6 @@
 
 import { GrLocation } from "react-icons/gr";
+import "./css/Footer.css"
 import { CiMail } from "react-icons/ci";
 import { FiPhone } from "react-icons/fi";
 const Footer = () => {
@@ -35,7 +36,7 @@ const Footer = () => {
         
       </div>
       <div className="btm_text">
-        <p>@20234wheels. All Rights Reserved . <span>| Privacy Policy</span></p>
+        <p>@2023 4wheels. All Rights Reserved . <span>| Privacy Policy</span></p>
       </div>
     </div>
 

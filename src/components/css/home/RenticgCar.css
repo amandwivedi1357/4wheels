@@ -32,8 +32,8 @@ margin-top: 21px;
 }
 .sports_car .sports_info{
     width: 40%;
-    margin-top: 80px;
-    height: 20rem;
+    
+    height: 29rem;
 
     background: linear-gradient(180deg, #0C0125 31.33%, #1F0015 64.81%, #320003 100%);
 }
@@ -362,7 +362,7 @@ flex-shrink: 0;
     margin-left: 31px;
    
 }
-.footer-cont{
+/* .footer-cont{
 width: 100%;
 height: auto;
 background: #0C0125;
@@ -442,5 +442,5 @@ border-left:none;
 border-right:none;
 padding: 1rem;
 }
-  
+   */
 /* banner ends */

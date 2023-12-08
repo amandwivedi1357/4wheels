@@ -1,5 +1,5 @@
 import MySlider from "../MySlider";
-import "../css/TopSection.css"
+import "../css/home/TopSection.css"
 import { FaFacebookF,FaTwitter, FaInstagram, FaYoutube} from "react-icons/fa";
 export default function TopSection() {
   return (
