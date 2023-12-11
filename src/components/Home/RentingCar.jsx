@@ -4,8 +4,8 @@ import FlowReact from "../FlowReact";
 import AnimatedNumberCounter from "./AnimatedNumberCounter";
 import bann_Car from "../../assets/home/banner_Car-removebg.png"
 import car_data_1 from "../../assets/home/car_Data_1.png";
-import car_data_2 from "../../assets/home/car_Data_2.png";
-import car_data_3 from "../../assets/home/car_Data_3.png";
+import car_data_2 from "../../assets/home/car_data_2.png";
+import car_data_3 from "../../assets/home/car_data_3.png";
 import car1 from "../../assets/home/gal_1.png";
 import car2 from "../../assets/home/gal_2.png";
 import car3 from "../../assets/home/gal_3.png";
