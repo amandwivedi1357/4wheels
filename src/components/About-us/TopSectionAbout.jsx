@@ -34,6 +34,8 @@ export default function TopSectionAbout() {
               <p className="head_text">Elevating Corporate Travel Experiences</p>
               <p className="desc_text">Established in 1981, 4 Wheel Travels, is one of the largest Car & bus rental companies operating out of Hyderabad.</p>
         </div>
+
+        
     </div>
   )
 }

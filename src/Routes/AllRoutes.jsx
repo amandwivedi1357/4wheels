@@ -4,12 +4,14 @@ import CheuffeurDrive from "../pages/CheuffeurDrive"
 import Services from "../pages/Services"
 import AboutUs from "../pages/AboutUs"
 import Gallery from "../pages/Gallery"
+import SelfDrive from "../components/SelfDrive/SelfDrive"
 
 const AllRoutes = () => {
     return (
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/cheuffeurdrive' element={<CheuffeurDrive />} />
+        <Route path='/selfdrive' element={<SelfDrive />} />
         <Route path='/services' element={<Services />} />
         <Route path='/about-us' element={<AboutUs />} />
         <Route path='/gallery' element={<Gallery />} />

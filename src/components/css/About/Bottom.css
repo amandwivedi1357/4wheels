@@ -1,0 +1,146 @@
+.About_cont{
+width: 100%;
+height: auto;
+padding: 2rem;
+
+}
+.about_first_cont{
+    width: 100%;
+    
+    display: flex;
+}
+.image_cont{
+   
+    width: 50%;
+    margin-top: 15%;
+   
+}
+.lower{
+position: relative;
+left: 40%;
+width: 60%;
+
+}
+.upper{
+    position: absolute;
+    left: 10%;
+    top: 120%;
+    width: 30%;
+}
+.info_cont{
+    width: 41%;
+    
+    text-align: left;
+    margin-left: 5%;
+}
+.info_cont .head_text{
+    text-align: left;
+}
+.info_cont .desc_text{
+    margin: auto;
+    color: rgba(3, 27, 78, 0.80);
+font-family: 'Poppins';
+text-align: left;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 32.5px; /* 203.125% */
+letter-spacing: 0.5px;
+}
+.about_first_cont2{
+    padding: 1rem;
+    width: 100%;
+    
+    display: flex;
+    justify-content: space-between;
+}
+.info_cont2{
+    width: 61%;
+    text-align: left;
+}
+.info_cont2 .head_text{
+    text-align: left;
+}
+.info_cont2 .desc_text{
+    margin: auto;
+    color: rgba(3, 27, 78, 0.80);
+font-family: 'Poppins';
+text-align: left;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 32.5px; /* 203.125% */
+letter-spacing: 0.5px;
+}
+.img_cont2{
+width: 85%;
+height: 85%;
+margin-top: 20%;
+}
+
+/* 3rd contaier */
+.about_first_cont3{
+    padding: 1rem;
+    width: 100%;
+    
+    display: flex;
+    justify-content: space-between;
+}
+.info_cont3{
+    width: 61%;
+    
+    text-align: left;
+}
+.info_cont3 .head_text{
+    text-align: right;
+}
+.info_cont3 .desc_text{
+    margin: auto;
+    color: rgba(3, 27, 78, 0.80);
+font-family: 'Poppins';
+text-align: right;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 32.5px; /* 203.125% */
+letter-spacing: 0.5px;
+}
+.img_cont3{
+width: 85%;
+height: 65%;
+margin-top: 60%;
+}
+.bullet{
+    float: right;
+    width: 60%;
+    height: auto;
+    padding: 1rem;
+}
+.list_cont{
+    list-style: none;
+
+}
+.list_cont li {
+    display: flex;
+    justify-content: space-between;
+    
+}
+.list_cont li p{
+    
+    margin-bottom: 1rem;
+    color: #031B4E;
+text-align: right;
+font-family: 'Cormorant';
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 55px; /* 275% */
+letter-spacing: 0.25px;
+text-transform: capitalize;
+}
+.conc{
+    width: 20%;
+    height: 20%;
+    margin-top: 0.8rem;
+    
+}
