@@ -4,7 +4,8 @@ import CheuffeurDrive from "../pages/CheuffeurDrive"
 import Services from "../pages/Services"
 import AboutUs from "../pages/AboutUs"
 import Gallery from "../pages/Gallery"
-import SelfDrive from "../components/SelfDrive/SelfDrive"
+import SelfDrive from "../pages/SelfDrive"
+
 
 const AllRoutes = () => {
     return (
