@@ -1,16 +1,16 @@
 import "../css/home/RenticgCar.css";
-import rentingCar1 from "../../assets/rentingCar1.png";
+import rentingCar1 from "../../assets/home/rentingCar1.png";
 import FlowReact from "../FlowReact";
 import AnimatedNumberCounter from "./AnimatedNumberCounter";
-import bann_Car from "../../assets/banner_Car-removebg.png"
-import car_data_1 from "../../assets/car_Data_1.png";
-import car_data_2 from "../../assets/car_Data_2.png";
-import car_data_3 from "../../assets/car_Data_3.png";
-import car1 from "../../assets/gal_1.png";
-import car2 from "../../assets/gal_2.png";
-import car3 from "../../assets/gal_3.png";
+import bann_Car from "../../assets/home/banner_Car-removebg.png"
+import car_data_1 from "../../assets/home/car_Data_1.png";
+import car_data_2 from "../../assets/home/car_Data_2.png";
+import car_data_3 from "../../assets/home/car_Data_3.png";
+import car1 from "../../assets/home/gal_1.png";
+import car2 from "../../assets/home/gal_2.png";
+import car3 from "../../assets/home/gal_3.png";
 
-import quote from "../../assets/quote.svg";
+import quote from "../../assets/home/quote.svg";
 import FAQSection from "../FAQSection";
 import Footer from "../Footer";
 

@@ -1,5 +1,5 @@
 import "../css/Services.css"
-import black_car from "../../assets/cheauffeur-drive.png"
+import black_car from "../../assets/home/cheauffeur-drive.png"
 // import { useNavigate } from "react-router-dom"
 
 const  ElectricCars = () => {
