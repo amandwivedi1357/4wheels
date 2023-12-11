@@ -18,8 +18,9 @@
     grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
 }
 .cheuffer_menu .menu_cont{
+    padding: 0.5rem;
     margin: auto;
-width: 70%;
+width: 80%;
 height: 95%;
 border-radius: 5px;
 border: 0.5px solid rgba(0, 0, 0, 0.58);

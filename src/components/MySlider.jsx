@@ -3,12 +3,12 @@ import "./css/MySlider.css"
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import car1 from '../assets/car1-removebg.png'
-import car2 from '../assets/car2-removebg-preview.png'
-import car3 from '../assets/car3-removebg-preview.png'
-import car4 from '../assets/car4-removebg-preview.png'
-import car5 from '../assets/car5-removebg-preview.png'
-import car6 from '../assets/car6-removebg-preview.png'
+import car1 from '../assets/home/car1-removebg.png'
+import car2 from '../assets/home/car2-removebg-preview.png'
+import car3 from '../assets/home/car3-removebg-preview.png'
+import car4 from '../assets/home/car4-removebg-preview.png'
+import car5 from '../assets/home/car5-removebg-preview.png'
+import car6 from '../assets/home/car6-removebg-preview.png'
 const MySlider = () => {
   const CustomPrevArrow = (props) => (
     <button {...props} className="slick-prev">
