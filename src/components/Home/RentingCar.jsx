@@ -13,6 +13,7 @@ import car3 from "../../assets/home/gal_3.png";
 import quote from "../../assets/home/quote.svg";
 import FAQSection from "../FAQSection";
 import Footer from "../Footer";
+import Steps from "./Steps";
 
 const second_car_data = [
   {
@@ -81,6 +82,7 @@ const quoteStyle = {
 }
 const cust_text = {
   width:'90%',
+  textAlign:'left',
   color:'#c0b4b4',
   margin:'auto'
 }
@@ -155,7 +157,7 @@ const RentingCar = () => {
         <p className="desc_text">
         How it works
         </p>
-        <div className="inner_cont"></div>
+        <Steps/>
       </div>
 
       <div className="Special_Services">

@@ -1,57 +1,21 @@
-import { useState, useCallback } from 'react';
-import ReactFlow, {
-  Controls,
-  Background,
-  applyNodeChanges,
-  applyEdgeChanges,
-} from 'reactflow';
-import 'reactflow/dist/style.css';
-
-const initialNodes = [
-  {
-    id: '1',
-    data: { label: 'Hello' },
-    position: { x: 0, y: 0 },
-    type: 'input',
-  },
-  {
-    id: '2',
-    data: { label: 'World' },
-    position: { x: 100, y: 100 },
-  },
-];
-
-const initialEdges = [
-  { id: '1-2', source: '1', target: '2', label: 'to the', type: 'step' },
-];
-
-const FlowReact=()=> {
-  const [nodes, setNodes] = useState(initialNodes);
-  const [edges, setEdges] = useState(initialEdges);
-
-  const onNodesChange = useCallback(
-    (changes) => setNodes((nds) => applyNodeChanges(changes, nds)),
-    [],
-  );
-  const onEdgesChange = useCallback(
-    (changes) => setEdges((eds) => applyEdgeChanges(changes, eds)),
-    [],
-  );
-
+import red_Car from "../assets/home/red_car.png"
+import "./css/home/FlowReact.css"
+const FlowReact = () => {
   return (
-    <div style={{ height: '100%' }}>
-      <ReactFlow
-        nodes={nodes}
-        onNodesChange={onNodesChange}
-        edges={edges}
-        onEdgesChange={onEdgesChange}
-        fitView
-      >
-        <Background />
-        <Controls />
-      </ReactFlow>
+    <div className="cont">
+    <div className="inner">
+        <img src={red_Car} alt=""/>
+        <div className="pos_1"></div> 
+        <div className="pos_2"></div> 
+        <div className="pos_3"></div> 
+        <div className="pos_4"></div> 
     </div>
-  );
+    <div className="box_1"><p className="box_text">Affordable Price </p></div>
+    <div className="box_2"><p className="box_text">First class Service </p></div>
+    <div className="box_3"><p className="box_text">Flexible Plans </p></div>
+    <div className="box_4"><p className="box_text">No Repair Hassel</p></div>
+</div>
+  )
 }
 
-export default FlowReact;
+export default FlowReact

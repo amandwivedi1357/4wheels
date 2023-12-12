@@ -18,7 +18,7 @@ text-transform: capitalize;
 .desc_text{
     color: rgba(3, 27, 78, 0.80);
 text-align: center;
-font-family: Poppins;
+font-family: 'Poppins';
 font-size: 16px;
 font-style: normal;
 font-weight: 400;
@@ -60,7 +60,6 @@ letter-spacing: 0.5px;
 }
 .sports_img{
     width: 60%;
-  
 }
 .sports_img img{
 height: 95%;
@@ -109,7 +108,6 @@ letter-spacing: 1px;
 .customer_offer .animate_numbers{
     width: 80%;
     height: 8rem;
-    
     margin-top: 7rem;
     margin-left: 3rem;
     display: flex;
@@ -226,9 +224,8 @@ letter-spacing: 0.25px;
     gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));;
 }
-.btm_container_1 .second_car_data .cars_det .single_car_detail img{
-aspect-ratio: 3/2;
-object-fit: contain;
+ .cars_det .single_car_detail p{
+text-align: center;
 }
 
 /* btm_container_1 ends */
@@ -295,7 +292,7 @@ display: flex;
     
 }
 .left_cont{
-    width: 70%;
+    width: 95%;
     height: 80%;
 
     
@@ -310,7 +307,7 @@ font-style: normal;
 text-align: left;
 font-weight: 600;
 line-height: 55px; /* 84.615% */
-font-variant: all-small-caps;
+
 letter-spacing: 0.25px;
 margin: 31px;
 }
