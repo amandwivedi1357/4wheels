@@ -4,6 +4,7 @@ import "./css/Footer.css"
 import { CiMail } from "react-icons/ci";
 import { FiPhone } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
+import { Input } from "@chakra-ui/react";
 const Footer = () => {
   const navigate = useNavigate();
   const handleClick = (route)=>{
@@ -32,11 +33,12 @@ const Footer = () => {
             </ul>
         </div>
         <div className="flex_cont">
-          {/* <p className="head">Don’t miss a thing</p>
+          <p className="head">Don’t miss a thing</p>
+          <Input className="input_text" placeholder="Sign up for our news letter" w={'20rem'} h={40} bg={"transparent"} ml={18}/>
           <div className="desc_cont">
 
           <p className="desc">Subscribe to our news letter for exclusive deals </p>
-          </div> */}
+          </div>
         </div>
         
       </div>

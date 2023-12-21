@@ -1,0 +1,70 @@
+.btm_Sec{
+    width: 100%;
+    height: 50rem;
+    display: flex;
+    gap: 5%;
+    padding: 2%;
+}
+.inner_left{
+width: 20%;
+border: 2px solid red;
+}
+.inner_Select{
+    width: 100%;
+}
+.inner_right{
+width: 80%;
+border: 2px solid red;
+}
+.right_cont{
+    margin: auto;
+    width: 95%;
+    height: 100%;
+    border: 2px solid springgreen;
+}
+.right_cont .single_cont{
+    width: 95%;
+    height: 23%;
+    border: 2px solid blue;
+    margin: 0.5rem;
+    display: flex;
+
+}
+.right_cont .single_cont .img_sec{
+    border: 1px solid black;
+    width: 20%;
+    margin: auto;
+    height: 100%;
+}
+.right_cont .single_cont .specification_sec{
+    border: 1px solid black;
+    width: 50%;
+    margin: auto;
+    height: 100%;
+}
+.right_cont .single_cont .price_sec{
+    border: 1px solid black;
+    width: 15%;
+    margin: auto;
+    height: 100%;
+}
+.price_sec .hourly{
+    color: #031B4E;
+font-family: 'Poppins';
+text-align: center;
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: 26px; /* 162.5% */
+letter-spacing: 0.5px;
+}
+/* In your CSS file or component styles */
+@media only screen and (max-width: 768px) {
+    .specification_sec {
+      display: none;
+    }
+    .img_sec{
+        width: 50%;
+    }
+  }
+  

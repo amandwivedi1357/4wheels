@@ -5,7 +5,7 @@
 .inner{
     width: 90%;
     height: 80%;
-    
+    /* border: 2px solid red; */
     margin: auto;
 }
 .inner{
@@ -15,45 +15,49 @@
     align-items: center; 
 }
 .inner img{
+    width: 30%;
     position: absolute;
 }
-.pos_1{
+/* box-4 starts */
+.pos_4{
     position: relative;
-    left: 56%;
-    top: 15%;
+    left: 46%;
+    top: 5%;
     width: 10rem;
     height: 0.5px;
     border: 0.5px solid rgb(0, 0, 0);
 }
+.box_3{
+    position: relative;
+    bottom: 54.5%;
+    left: 75.3%;
+width: 13rem;
+height: 60px;
+border-radius: 10px;
+border: 0.5px solid #28010E;
+display: flex;
+justify-content: center; 
+align-items: center;
+}
+/* box-4 e */
+
+
+
+/* box 1 starts */
 .pos_2{
     position: relative;
-    bottom: 19%;
-    right: 19%;
+    bottom: 15%;
+    right: 9%;
     width: 17rem;
     height: 0.5px;
     border: 0.5px solid rgb(0, 0, 0);
 }
-.pos_3{
-    position: relative;
-    bottom: 20%;
-    left: 17%;
-    width: 10rem;
-    height: 0.5px;
-    border: 0.5px solid rgb(0, 0, 0);
-}
-.pos_4{
-    position: relative;
-    right: 55%;
-    top: 15%;
-    width: 10rem;
-    height: 0.5px;
-    border: 0.5px solid rgb(0, 0, 0);
-}
+
 
 .box_1{
     position: relative;
-    bottom: 60%;
-    left: 0.8%;
+    bottom: 56%;
+    left: 10.5%;
 width: 13rem;
 height: 60px;
 border-radius: 10px;
@@ -62,11 +66,14 @@ display: flex;
 justify-content: center; 
 align-items: center;
 }
+/* box-1 ends */
 
+
+/* box-2 starts */
 .box_2{
     position: relative;
-    bottom: 71%;
-    left: 82%;
+    bottom: 62.5%;
+    left: 70.8%;
 width: 13rem;
 height: 60px;
 border-radius: 10px;
@@ -75,22 +82,20 @@ display: flex;
 justify-content: center; 
 align-items: center;
 }
-.box_3{
+.pos_3{
     position: relative;
-    bottom: 52.5%;
-    left: 84%;
-width: 13rem;
-height: 60px;
-border-radius: 10px;
-border: 0.5px solid #28010E;
-display: flex;
-justify-content: center; 
-align-items: center;
+    bottom: 14%;
+    right: 8%;
+    width: 10rem;
+    height: 0.5px;
+    border: 0.5px solid rgb(0, 0, 0);
 }
+/* box-2 ends */
+/* box-3 starts */
 .box_4{
     position: relative;
     bottom: 62.5%;
-    left: 0.8%;
+    left: 10%;
 width: 13rem;
 height: 60px;
 border-radius: 10px;
@@ -99,6 +104,15 @@ display: flex;
 justify-content: center; 
 align-items: center;
 }
+.pos_1{
+    position: relative;
+    right: 32%;
+    top: 5%;
+    width: 10rem;
+    height: 0.5px;
+    border: 0.5px solid rgb(0, 0, 0);
+}
+/* box 3 ends */
 .box_text{
     text-align: center;
     color: rgba(3, 3, 3, 0.90);
@@ -108,4 +122,285 @@ font-style: normal;
 font-weight: 400;
 line-height: 40px; /* 250% */
 letter-spacing: 0.25px;
+}
+@media only screen and (min-width: 768px) and (max-width: 1025px) {
+    /* .cont{
+        visibility: hidden;
+    } */
+    .inner{
+        width: 80%;
+        height: 80%;
+        
+        margin: auto;
+    }
+    .inner{
+    
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+    }
+    .inner img{
+        position: absolute;
+        width: 30%;
+    }
+    .pos_1{
+        position: relative;
+        left: 66%;
+        top: 5%;
+        width: 5rem;
+        height: 0.5px;
+        border: 0.5px solid rgb(0, 0, 0);
+    }
+    .pos_2{
+        position: relative;
+        bottom: 19%;
+        right: 19%;
+        width: 5rem;
+        height: 0.5px;
+        border: 0.5px solid rgb(0, 0, 0);
+    }
+    .pos_3{
+        position: relative;
+        bottom: 20%;
+        left: 17%;
+        width: 10rem;
+        height: 0.5px;
+        border: 0.5px solid rgb(0, 0, 0);
+    }
+    .pos_4{
+        position: relative;
+        right: 55%;
+        top: 15%;
+        width: 10rem;
+        height: 0.5px;
+        border: 0.5px solid rgb(0, 0, 0);
+    }
+    
+    .box_1{
+        position: relative;
+        bottom: 60%;
+        left: 0.8%;
+    width: 13rem;
+    height: 60px;
+    border-radius: 10px;
+    border: 0.5px solid #28010E;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    }
+    
+    .box_2{
+        position: relative;
+        bottom: 71%;
+        left: 82%;
+    width: 13rem;
+    height: 60px;
+    border-radius: 10px;
+    border: 0.5px solid #28010E;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    }
+    .box_3{
+        position: relative;
+        bottom: 52.5%;
+        left: 84%;
+    width: 13rem;
+    height: 60px;
+    border-radius: 10px;
+    border: 0.5px solid #28010E;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    }
+    .box_4{
+        position: relative;
+        bottom: 62.5%;
+        left: 0.8%;
+    width: 13rem;
+    height: 60px;
+    border-radius: 10px;
+    border: 0.5px solid #28010E;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    }
+    .box_text{
+        text-align: center;
+        color: rgba(3, 3, 3, 0.90);
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 250% */
+    letter-spacing: 0.25px;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .cont{
+        display: none;
+    }
+    
+    .inner{
+        
+        width: 80%;
+        height: 80%;
+        
+        margin: auto;
+    }
+    .inner{
+    
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+    }
+    .inner img{
+        position: absolute;
+    }
+    .pos_1{
+        position: relative;
+        left: 56%;
+        top: 15%;
+        width: 10rem;
+        height: 0.5px;
+        border: 0.5px solid rgb(0, 0, 0);
+    }
+    .pos_2{
+        position: relative;
+        bottom: 19%;
+        right: 19%;
+        width: 17rem;
+        height: 0.5px;
+        border: 0.5px solid rgb(0, 0, 0);
+    }
+    .pos_3{
+        position: relative;
+        bottom: 20%;
+        left: 17%;
+        width: 10rem;
+        height: 0.5px;
+        border: 0.5px solid rgb(0, 0, 0);
+    }
+    .pos_4{
+        position: relative;
+        right: 55%;
+        top: 15%;
+        width: 10rem;
+        height: 0.5px;
+        border: 0.5px solid rgb(0, 0, 0);
+    }
+    
+    .box_1{
+        position: relative;
+        bottom: 60%;
+        left: 0.8%;
+    width: 13rem;
+    height: 60px;
+    border-radius: 10px;
+    border: 0.5px solid #28010E;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    }
+    
+    .box_2{
+        position: relative;
+        bottom: 71%;
+        left: 82%;
+    width: 13rem;
+    height: 60px;
+    border-radius: 10px;
+    border: 0.5px solid #28010E;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    }
+    .box_3{
+        position: relative;
+        bottom: 52.5%;
+        left: 84%;
+    width: 13rem;
+    height: 60px;
+    border-radius: 10px;
+    border: 0.5px solid #28010E;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    }
+    .box_4{
+        position: relative;
+        bottom: 62.5%;
+        left: 0.8%;
+    width: 13rem;
+    height: 60px;
+    border-radius: 10px;
+    border: 0.5px solid #28010E;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    }
+    .box_text{
+        text-align: center;
+        color: rgba(3, 3, 3, 0.90);
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 250% */
+    letter-spacing: 0.25px;
+    }
+}
+/* tab */
+@media screen and (min-width: 768px) and (max-width: 1025px) {
+    .inner img{
+        position: absolute;
+        width: 30%;
+    }
+
+   
+    /* box1 s */
+    .pos_2{
+        position: relative;
+        left: 8%;
+        bottom: 11%;
+    }
+    .box_1{
+        width: 10rem;
+        height: 40px;
+        position: relative;
+        bottom: 52%;
+        left: 12%;
+        }
+        /* box1 e */
+
+        .box_2{
+            width: 10rem;
+            height: 40px;
+            position: relative;
+            bottom: 52%;
+            left: 12%;
+        }
+
+        .pos_1{
+            position: relative;
+            left: 10%;
+            top: 5%;
+        }
+
+    .pos_3{
+        position: relative;
+        left: 10%;
+        bottom: 20%;
+    }
+    .pos_4{
+        position: relative;
+        left: 10%;
+        bottom: 20%;
+    }
+    
+}
+/* mobile */
+@media screen and (max-width: 767px) {
+
 }

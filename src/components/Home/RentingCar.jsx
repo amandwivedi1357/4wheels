@@ -69,22 +69,29 @@ const car_data = [
   },
 ];
 const singleCarStyle = {
-  width:'22rem',
-  height:'33rem',
+  width:'20rem',
+  height:'auto',
+  paddingBottom:'1rem',
   margin:'auto',
   borderRadius: '5px',
-  background: 'linear-gradient(180deg, #0C0125 31.33%, #1F0015 64.81%, #320003 100%)'
+  background: 'linear-gradient(180deg, #0C0125 31.33%, #1F0015 64.81%, #320003 100%)',
+  '@media screen and (min-width: 768px) and (max-width: 1025px)':{
+    width:'18rem'
+  }
 }
 
 const quoteStyle = {
-  margin:'4rem 10rem',
+  margin:'4rem 9rem',
 
 }
 const cust_text = {
   width:'90%',
   textAlign:'left',
   color:'#c0b4b4',
-  margin:'auto'
+  margin:'auto',
+  '@media screen and (min-width: 768px) and (max-width: 1023px)':{
+    fontSize:'15px'
+  }
 }
 const cust_name = {
   color: '#FFF',
@@ -93,7 +100,7 @@ fontSize: '24px',
 fontStyle: 'normal',
 fontWeight: '400',
 lineHeight: '34.5px' ,/* 143.75% */
-
+textAlign:'left',margin:'1rem 1rem',
 letterSpacing: '0.25px',
 marginLeft:'1rem'
 }
@@ -165,7 +172,7 @@ const RentingCar = () => {
         <div className="cars_det">
           {car_data.map((data) => (
             <div key={data.id} className="single_car_detail">
-              <img src={data.img} alt="" />
+              <img className="grid_img" src={data.img} alt="" />
               <p>{data.desc}</p>
             </div>
           ))}
@@ -179,7 +186,7 @@ const RentingCar = () => {
           <div className="cars_det">
             {second_car_data.map((data) => (
               <div key={data.id} className="single_car_detail">
-                <img src={data.img} alt="" />
+                <img className="grid_img" src={data.img} alt="" />
               </div>
             ))}
           </div>
@@ -194,10 +201,10 @@ const RentingCar = () => {
             {second_car_data.map((data) => (
               <div key={data.id} className="single_car_detail" style={singleCarStyle}>
                 <img style={quoteStyle} src={quote} alt="" />
-                <p style={cust_text}>Excellent Service! Car Rent Service!
+                <p className="customer_text" style={cust_text}>Excellent Service! Car Rent Service!
 We have been using 4wheel for our trips needs for several years now and have always been happy with their service. Their customer support is Excellent Service! and they are always available to help with any issues we have. Their prices are also very competitive.</p>
 
-              <p style={{margin:'3rem 0 0 1rem'}}>⭐⭐⭐⭐</p>
+              <p style={{textAlign:'left',margin:'1rem 1rem'}}>⭐⭐⭐⭐</p>
               <p style={cust_name}>Varun Gupta</p>
               </div>
             ))}
@@ -216,8 +223,7 @@ We have been using 4wheel for our trips needs for several years now and have alw
           <div className="left">
             <div className="left_cont">
 
-            <p className="bann_text">Still Have </p>
-            <p className="bann_text">Questions ?</p>
+            <p className="bann_text">Still Have <br /> Questions ? </p>
             <p className="bann_text_2">
             Contact us for assistance
             </p>

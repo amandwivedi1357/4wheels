@@ -2,7 +2,7 @@ import "../css/home/steps.css"
 import steps from "../../assets/home/steps.png"
 export default function Steps() {
   return (
-    <div className="cont">
+    <div className="container">
     <div className="main_cont">
         <div className="cont_1">
             <div className="inner_1">

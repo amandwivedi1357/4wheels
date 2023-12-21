@@ -11,6 +11,7 @@ import car9 from "../../assets/cheuffeur-menu-cars/Electric.png"
 import car10 from "../../assets/cheuffeur-menu-cars/BusesNAC.png"
 import car11 from "../../assets/cheuffeur-menu-cars/BusesAC.png"
 import car12 from "../../assets/cheuffeur-menu-cars/Ancillary.png"
+import { useNavigate } from "react-router-dom"
 
 const cheuffeur_menu = [
     {
@@ -36,7 +37,8 @@ const cheuffeur_menu = [
     {
         id:5,
         type:'HatchBacks',
-        img:car5
+        img:car5,
+        link:'/hatchbacks'
     },
     {
         id:6,
@@ -75,6 +77,10 @@ const cheuffeur_menu = [
     },
 ]
 const BottomSection = () => {
+    const navigate = useNavigate()
+    const handleClick = (link)=>{
+        navigate(`/${link}`)
+    }
   return (
     <div className="btm_container">
       <p className="head_text">our Chauffeur collections</p>
@@ -85,7 +91,7 @@ const BottomSection = () => {
                 <div className="menu_cont" key={data.id}>
                     <img src={data.img} alt={data.type} />
                     <p className="type_text">{data.type}</p>
-                    <p className="explore" style={{textDecoration:'underline'}}>Explore</p>
+                    <p onClick={()=>handleClick(data.link)} className="explore" style={{textDecoration:'underline'}}>Explore</p>
                 </div>
             ))
         }

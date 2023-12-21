@@ -1,5 +1,5 @@
 import "../css/CheuffeurDrive/CheuffeurTopSection.css"
-import "..//css/CheuffeurDrive/CheuffeurTopSection.css"
+import "../css/CheuffeurDrive/CheuffeurTopSection.css"
 import logo from "../../assets/cheuffeur-menu-cars/logo.png"
 import { Link, useNavigate } from "react-router-dom"
 export default function SelfTop() {
@@ -31,7 +31,7 @@ export default function SelfTop() {
       </div>
         </div>
         <div className="btm_Sec">
-              <p className="head_text">Self Drive</p>
+              <p style={{textAlign:'center'}}className="head_text">Self Drive</p>
         </div>
     </div>
   )

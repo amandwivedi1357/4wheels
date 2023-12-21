@@ -20,7 +20,7 @@
 .nav_options{
     width: 60%;
     height: 100%;
-   margin: auto;
+    margin-left: 8rem;
     /* border:2px solid yellowgreen; */
 }
 
@@ -97,7 +97,7 @@ background: transparent;
 }
 /* detail section ends */
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 1025px) {
     /* Styles specific to tablet view */
     .contact{
         margin-top: 1.8rem;
@@ -108,14 +108,14 @@ background: transparent;
         text-align: center;
         font-size: 50px;
     }
+    .nav_options{
+        margin: auto;
+    }
     .logo {
-        width: 40%;
+        width: 80%;
         height: 60%;
         margin: 1rem;
         
-    }
-    .nav_options{
-        margin-left: 2rem;
     }
   }
 

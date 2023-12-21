@@ -1,10 +1,22 @@
 .Btm_cont{
     width: 100%;
     height: auto;
-    padding: 2rem;
+    padding: 1rem;
     display: grid;
+    
     grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 20px;
 }
 .single_cont{
+    border: 2[x solid springgreen];
     margin: auto;
+}
+.single_cont img{
+    width: 95%;
+}
+@media screen and (min-width: 768px) and (max-width: 1025px) 
+{
+.single_cont .img{
+    width: 20%;
+}
 }

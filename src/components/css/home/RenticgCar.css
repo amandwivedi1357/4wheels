@@ -113,9 +113,7 @@ letter-spacing: 1px;
     display: flex;
     justify-content: space-around;
 }
-.animate_numbers .data_map{
-    margin-top: 1rem;
-}
+
 .animate_numbers .data_map .num{
     margin-bottom: 1rem;
     color: #9A0404;
@@ -154,7 +152,7 @@ border: 2px solid springgreen;
 /* special services starts */
 .Special_Services{
      width: 100%;
-    height: 40rem;
+    height: auto;
     color: #FFF;
     background: linear-gradient(180deg, #0C0125 31.33%, #1F0015 64.81%, #320003 100%);
 }
@@ -252,7 +250,8 @@ letter-spacing: 0.25px;
     margin: auto;
     display: grid;
     padding: 5% 0;
-    gap: 20px;
+    
+    gap: 10px;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));;
 }
 
@@ -272,7 +271,7 @@ letter-spacing: 0.25px;
     margin-top: 5rem;
 }
 .banner{
-    width: 80%;
+    width: 100%;
     height: auto;
     margin: auto;
     border-radius: 18px;
@@ -430,3 +429,139 @@ padding: 1rem;
 }
   
 /* banner ends */
+
+/* tab */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .sports_img{
+        height: 30.5rem;
+    }
+    .right img{
+        padding-top: 5rem;
+    }
+    .bann_text{
+        font-size: 40px;
+        line-height: 40px;
+    }
+    .grid_img{
+        width: 80%;
+        display: block;
+  margin: 1rem auto;
+    }
+   .second_car_data .cars_det{
+       display: none;
+    }
+    .single_car_detail{
+        width:15rem;
+        height:auto;
+        padding-bottom:1rem;
+        margin:auto;
+        border-radius: 5px ;
+    }
+    .customer_text{
+        font-size: 15px;
+    }
+}
+/* mobile */
+@media screen and (max-width: 767px) {
+    .sports_car{
+        display: block;
+        
+    }
+    .sports_car .sports_info{
+        width: 100%;
+    }
+    .sports_img{
+        width: 100%;
+    }
+    .sports_info .head_text{
+        padding-top: 10rem;
+        
+        font-size: 40px;
+    }
+    .sports_info .desc_text{
+        width: 80%;
+        margin: auto;
+    }
+    .renting_main_container .desc_text{
+        width: 90%;
+        margin: auto;
+    }
+
+
+    .offer_text_container .offer_text{
+        font-size: 34px;
+        line-height: 48px;
+    }
+    .customer_offer .animate_numbers{
+        margin-top: 2rem;
+    }
+    .animate_numbers .data_map{
+        width: 100%;
+        margin-top: 0rem;
+    }
+    .animate_numbers .data_map .num{
+       font-size: 20px; 
+       margin-bottom: 0rem;
+    }
+    .animate_numbers .data_map .text{
+        font-size: 12px;
+        margin-right: 1.5rem;
+        line-height: 25px;
+    }
+
+
+    /* Special Services starts */
+    .grid_img{
+        width: 80%;
+        display: block;
+  margin: 1rem auto;
+    }
+
+    /* Special Services ends */
+
+    /* banner container starts */
+    .banner_cont{
+        padding: 1rem;
+        margin-top: 2rem;
+    }
+    .banner{
+        padding: 1rem 0;
+        width: 100%;
+        display: block;
+    }
+    .bann_text{
+        text-align: center;
+        font-size: 45px;
+        line-height: 45px;
+    }
+    .bann_text_2{
+        text-align: center;
+        line-height: 21px;
+    }
+    .bann_btn{
+        margin: 0 25%;
+    }
+    .right img{
+        display: block;
+        margin: 0 auto;
+    }
+    .right{
+        width: 100%;
+        border-radius: 18px;
+        height: 100%;
+        
+    }
+    .left{
+        width: 100%;
+        border-radius: 18px;
+        height: 100%;
+        
+    }
+    
+    /* banner container ends */
+
+    /* .footer */
+    .footer_flex{
+        display: block;
+    }
+}

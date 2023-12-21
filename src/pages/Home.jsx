@@ -1,5 +1,5 @@
 import TopSection from "../components/Home/TopSection";
-import Services from "../components/Home/Services";
+// import Services from "../components/Home/Services";
 import RentingCar from "../components/Home/RentingCar";
 import MySlider2 from "../components/MySlider2";
 

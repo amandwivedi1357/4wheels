@@ -11,8 +11,8 @@ export default function TopSectionAbout() {
     <div className="main_top_container">
         <div className="navbar">
 
-        <div className="logo">
-       <Link to={'/'}> <img src={logo} alt="" /></Link>
+        <div >
+       <Link to={'/'}> <img className="logo" src={logo} alt="" /></Link>
       </div>
       <div className="nav_options">
         <div className="nav_menus">
@@ -30,7 +30,7 @@ export default function TopSectionAbout() {
         </button>
       </div>
         </div>
-        <div className="btm_Sec">
+        <div className="btm_Sec2">
               <p className="head_text">Elevating Corporate Travel Experiences</p>
               <p className="desc_text">Established in 1981, 4 Wheel Travels, is one of the largest Car & bus rental companies operating out of Hyderabad.</p>
         </div>

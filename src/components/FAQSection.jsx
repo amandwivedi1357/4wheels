@@ -12,7 +12,7 @@ const FaqItem = ({ question, answer }) => {
   };
 
   return (
-    <div style={{width:'60%',border:"1px solid gray",borderRadius:'4px', padding:'10px',margin:'auto'}}>
+    <div style={{width:'90%',border:"1px solid gray",borderRadius:'4px', padding:'10px',margin:'auto'}}>
       <Flex >
 
       <Text  fontSize="xl" mb={2} cursor="pointer" onClick={handleToggle}>
