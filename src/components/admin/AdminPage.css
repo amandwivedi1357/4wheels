@@ -1,0 +1,9 @@
+.admin_cont{
+    background: var(--body-bg);
+    height: 55rem;
+}
+.btm_cont{
+    width: 100%;
+    display: flex;
+    column-gap: 10px;
+}

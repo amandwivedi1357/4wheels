@@ -1,0 +1,32 @@
+.sidebar{
+    width: 260px;
+    background: var(--primary-color);
+    height: 50rem;
+}
+.innerSide{
+    width: 90%;
+    height: 95%;
+    margin: auto;
+    padding: 1rem;
+    
+}
+.tabs{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    color: var(--small-text-color);
+    height: auto;
+    margin: 1rem 0 ;
+   
+}
+.tabs h4{
+    margin: 0.2rem 0;
+    cursor: pointer;
+    
+}
+.active{
+    color: white;
+    background: #b7ffe913;
+    border-radius: 5px;
+    padding: 10px;
+}
