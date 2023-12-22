@@ -5,7 +5,7 @@ export default function Topnav() {
   return (
     <div className="topnav">
       <div className="inner_top">
-        <div className="logo">
+        <div className="logoNav">
            <span> <FaTaxi className="icon" fontWeight={400} fontSize={'4rem'} color="white"/></span>
         </div>
         <div className="inp_cont">
