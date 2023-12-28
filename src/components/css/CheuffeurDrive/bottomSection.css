@@ -28,6 +28,9 @@ background: #FFF;
 }
 .cheuffer_menu .menu_cont img{
     width: 100%;
+    height: 50%;
+    object-fit: contain;
+    
 }
 .cheuffer_menu .menu_cont .type_text{
     color: #030303;

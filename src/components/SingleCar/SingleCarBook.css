@@ -1,0 +1,244 @@
+.Single_container{
+    width: 100%;
+    height: auto;
+    padding-bottom: 4rem;
+    /* border: 2px solid red; */
+}
+.head_cont{
+    margin: auto;
+    width: 45%;
+    /* border: 1px solid green; */
+}
+.car_cont{
+    padding-top: 1rem;
+    background: #f3ffff;
+    /* background: #0051ff; */
+    width: 90%;
+    padding-bottom: 0.5rem;
+    height: auto;
+    margin: auto;
+    /* border: 2px solid red; */
+}
+.car_cont .car_infos{
+    width: 97%;
+    height: 20%;
+    margin: auto;
+    /* border: 2px solid rgb(0, 0, 0); */
+}
+.car_infos .car_img{
+width: 50%;
+height: auto;
+background: #fff;
+
+}
+.left_img{
+    
+    display: flex;
+justify-content: center;
+align-items: center;
+background: #fff;
+}
+
+.all_details{
+    width: 100%;
+    /* border: 1px solid black; */
+    margin-left: 3rem;
+    flex: '0 0 70%';
+    background-color: '#f3ffff';
+}
+.all_details .top_cont{
+    width: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+}
+.price_btn{
+    outline: none;
+    border: none;
+   width: 30%;
+   border-radius: 4px;
+background: rgba(189, 208, 251, 0.37);
+   margin: 0.5rem;
+   height: 5rem;
+
+}
+.btn_text{
+    color: #031B4E;
+font-family: 'Poppins';
+font-size: 16px;
+font-style: normal;
+font-weight: bold;
+line-height: 26px; /* 162.5% */
+letter-spacing: 0.5px;
+}
+.price_text{
+    font-size: 20px;
+    font-weight: bolder;
+}
+.all_details .top_cont .carName_text{
+    color: #031B4E;
+text-align: center;
+font-family: 'Poppins';
+font-size: 30px;
+font-style: normal;
+margin: auto 0;
+font-weight: 600;
+line-height: 39px; /* 130% */
+letter-spacing: 0.25px;
+text-transform: capitalize;
+}
+.all_details .specs{
+    color: #031B4E;
+    font-family: 'Poppins';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 39px; /* 216.667% */
+    letter-spacing: 0.25px;
+    text-transform: capitalize;
+}
+.all_details .main_Details{
+display: flex;
+}
+.main_Details .list_cont{
+    width: 50%;
+    /* border: 1px solid blue; */
+}
+.list_cont .listItem{
+    /* border: 1px solid red; */
+    border-bottom: 2px solid #C0D2FA;
+    padding: 2px;
+    display: flex;
+    justify-content: space-between;
+}
+.input_container{
+width: 95%;
+border-radius: 5px;
+margin:3rem auto;
+padding-bottom: 2rem;
+height: auto;
+background: #ffffff;
+}
+.inp_top_text{
+    color: #031B4E;
+text-align: center;
+font-family: 'Poppins';
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: 39px; /* 162.5% */
+letter-spacing: 0.25px;
+}
+.outer_inp{
+    width: 90%;
+    /* border: 1px solid red; */
+    height: auto;
+    
+    margin: auto;
+}
+.input1{
+    padding: 2rem 0;
+    width: 80%;
+    margin: auto;
+    height: auto;
+    display: flex;
+}
+.input1 .input11{
+    width: 50%;
+    /* border: 1px solid blue; */
+}
+
+.input11 .input_wrapper{
+    width: 90%;
+}
+input,select{
+    width: 100%;
+    height: 2rem;
+    border-radius: 3px;
+border: 0.5px solid #31B404;
+}
+.input12{
+    width: 45%;
+}
+.contact_numWrap{
+    display: flex;
+}
+label{
+    color: #031B4E;
+font-family: 'Poppins';
+font-size: 15px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: 0.015px;
+}
+.box{
+    width: 3.5rem;
+    margin: auto;
+    text-align: center;
+    height:2rem;
+    color: #fff;
+    background: #8B959F;
+}
+input[type="date"]::-webkit-input-placeholder {
+    color: transparent;
+  }
+  
+  /* Style calendar icon */
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    margin-right: 10px;
+    transform: scale(2);
+    filter: invert(50%) sepia(90%) saturate(700%) hue-rotate(170deg) brightness(80%) contrast(90%);
+    /* Modify the filter properties for color changes */
+    /* For example, 'filter: invert(100%)' inverts the color to blue */
+  }
+  .input_wrapper2{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .input_wrapper2 select{
+    width: 48%;
+  }
+  .captcha_numWrap{
+    display: flex;
+}
+.box2{
+    width: 13rem;
+    margin: auto;
+    text-align: center;
+    height:2rem;
+    color: #fff;
+    background: #000000;
+}
+.box2 span{
+    padding-top: 5px;
+letter-spacing: 15px;
+}
+.submit_btn{
+    margin-left: 6.5rem;
+    margin-bottom: 1rem;
+    width: 6rem;
+    height: 2rem;
+    color: #fff;
+    border-radius: 4px;
+border: 1px solid #09005D;
+background: #031B4E;
+box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.06);
+}
+.terms{
+    width: 82%;
+    height: auto;
+    padding: 0.5rem;
+    /* border: 1px solid blue; */
+    margin: auto;
+}
+.terms_text{
+    color: rgba(3, 27, 78, 0.90);
+font-family: 'Poppins';
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: 0.018px;
+}

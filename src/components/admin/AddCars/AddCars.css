@@ -1,0 +1,55 @@
+.table_container{
+    width: 60rem;
+    height: auto;
+    margin: 2rem 3.5rem;
+    /* border: 2px solid red; */
+    background: #fff;
+    
+}
+.display_flex{
+    width: 50rem;
+    display: flex;
+    justify-content: space-between;
+}
+.display_flex p{
+    padding: 0.5rem;
+    text-align: center;
+    width: 18rem;
+    border: 1px solid black;
+}
+.table_head{
+    text-align: left;
+    font-weight: bold;
+    width: 45rem;
+    display:flex;
+    justify-content: space-between;
+}
+.table_head :nth-child(1){
+   
+   padding: 0.5rem;
+   margin-left: 5rem;
+}
+.table_head :nth-child(2){
+  
+    padding: 0.5rem;
+    margin-right: 1rem;
+}
+.table_head :nth-child(3){
+  
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+}
+.table_head :nth-child(4){
+  
+    padding: 0.5rem;
+    
+}
+.img_cont{
+    width: 40%;
+    border: 1px solid black;
+}
+.car_img{
+    border-radius: 5px;
+    margin-left: 7rem;
+    width: 60px;
+}

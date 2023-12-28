@@ -1,21 +1,12 @@
 import "../css/CheuffeurDrive/CheuffeurTopSection.css"
 import logo from "../../assets/cheuffeur-menu-cars/logo.png"
 import { Link, useNavigate } from "react-router-dom"
-import "../css/CheuffeurDrive/TopSec.css"
-import { useEffect, useState } from "react";
-export default function TopSectionServe() {
-  const [data, setData] = useState([]);
+ import "../css/CheuffeurDrive/TopSec.css"
+import {  useState } from "react";
+export default function TopSectionServe({topic,subTopic}) {
+
   const navigate = useNavigate();
 
-  const getData = async()=>{
-    let res = await fetch(`http://localhost:8080/car`)
-    let response = await res.json();
-
-    console.log(response[0].cars[0].name)
-  }
-  useEffect(() => {
-    getData()
-  }, [data]);
   const handleClick = (route)=>{
     navigate(`/${route}`)
   }
@@ -43,8 +34,9 @@ export default function TopSectionServe() {
       </div>
         </div>
         <div className="btm_Sec">
-              <p className="head_text">Services</p>
+              <p className="head_text">{topic}</p>
         </div>
+        <p className="sub_text">{subTopic}</p>
     </div>
   )
 }

@@ -5,15 +5,11 @@ const Links = [
     },
     {
         tabNum:2,
-        display:'Booking'
-    },
-    {
-        tabNum:3,
-        display:'Add Car'
+        display:'Modify Data'
     },
     {
         tabNum:4,
-        display:'Edit Car'
+        display:'User Data'
     },
 ];
 

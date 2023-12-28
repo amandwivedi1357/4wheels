@@ -1,0 +1,122 @@
+.btm_Sec{
+    width: 100%;
+    height: auto;
+    display: flex;
+    gap: 2%;
+    padding: 2%;
+}
+.inner_left{
+width: 20%;
+border: 2px solid red;
+}
+.inner_Select{
+    width: 100%;
+}
+.inner_right{
+width: 80%;
+/* border: 2px solid red; */
+}
+.right_cont{
+    margin: auto;
+    width: auto;
+    height: auto;
+   
+    /* border: 2px solid springgreen; */
+}
+.right_cont .single_cont{
+    width: 95%;
+    height: auto;
+    /* border: 2px solid blue; */
+    display: flex;
+    margin: 1.5rem;
+    
+}
+.right_cont .single_cont .img_sec{
+    /* border: 1px solid black; */
+    width: 20%;
+    margin: auto;
+    height: 100%;
+}
+.right_cont .single_cont .specification_sec{
+    /* border: 1px solid black; */
+    width: 60%;
+    margin: auto;
+    height: 13rem;
+}
+.specification_sec .carName{
+    color: #031B4E;
+font-family: 'Poppins';
+font-size: 24px;
+margin: 0.5rem;
+font-style: normal;
+font-weight: 600; /* 162.5% */
+letter-spacing: 0.25px;
+text-transform: capitalize;
+}
+.specification_sec .Single_car_details{
+    display: flex;
+    justify-content: space-between;
+}
+.list_cont li{
+    color: #031B4E;
+font-family: 'Poppins';
+margin: 0.5rem;
+font-size: 15px;
+font-style: normal;
+font-weight: 600;
+line-height: 26px; /* 173.333% */
+letter-spacing: 0.5px;
+}
+.right_cont .single_cont .price_sec{
+    /* border: 1px solid black; */
+    width: 25%;
+    margin: auto;
+    padding: 0.5rem;
+    height: auto;
+}
+.price_sec .hourly{
+    color: #031B4E;
+font-family: 'Poppins';
+text-align: center;
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: 16px; /* 162.5% */
+letter-spacing: 0.5px;
+}
+.price_sec .hour{
+    color: #031B4E;
+    font-family: 'Poppins';
+    font-size: 32px;
+    font-style: normal;
+    text-align: center;
+    padding-bottom: 0.5rem;
+    font-weight: 600;
+    line-height: 26px; /* 81.25% */
+    letter-spacing: 0.5px;
+}
+.price_sec .book_btn{
+    display: flex;
+width: 90%;
+height: 40px;
+margin: auto;
+padding: 10px 26px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+flex-shrink: 0;
+    border-radius: 4px;
+border: 0.5px solid #031B4E;
+background: #031B4E;
+box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.06);
+}
+/* In your CSS file or component styles */
+@media only screen and (max-width: 768px) {
+    .specification_sec {
+      display: none;
+    }
+    .img_sec{
+        width: 50%;
+    }
+  }
+  

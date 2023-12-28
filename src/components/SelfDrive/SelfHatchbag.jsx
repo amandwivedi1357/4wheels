@@ -1,5 +1,5 @@
 import SelfTop from "./SelfTop"
-import "../css/CheuffeurDrive/hatchback.css"
+import "../css/CheuffeurDrive/fleetDetail.css"
 import { Icon, IconButton, Image, Select, useBreakpointValue, useMediaQuery } from "@chakra-ui/react"
 import { useState } from "react";
 import { demoData } from "../../demo";

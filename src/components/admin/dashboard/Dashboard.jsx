@@ -6,16 +6,27 @@ import SingleCard from "../../reusables/SingleCard";
 import MileChart from "../../../charts/MileChart";
 import CarStats from "../../../charts/CarStats";
 import Recommend from "../../reusables/Recommend";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { getTotalCars, getTotalFleets } from "../../../redux/actions/CheuffeurDrive.action";
 
 export default function Dashboard() {
+  const dispatch = useDispatch();
+  const {totalFleets,totalCars} = useSelector(state=>state.data)
+
+  useEffect(() => {
+    dispatch(getTotalFleets())
+    dispatch(getTotalCars())
+  }, [dispatch]);
+  
   const carObject = {
-    title: "Total Cars",
-    totalNumber: 750,
+    title: "Total Fleets",
+    totalNumber: totalFleets,
     icon: <PiPoliceCarDuotone />,
   };
   const dailytrips = {
-    title: "Daily Trips",
-    totalNumber: 1697,
+    title: "Total Cars",
+    totalNumber: totalCars,
     icon: <PiSteeringWheelFill />,
   };
   const ClientObj = {

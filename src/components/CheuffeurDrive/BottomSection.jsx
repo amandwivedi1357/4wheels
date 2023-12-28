@@ -1,85 +1,26 @@
 import "../css/CheuffeurDrive/bottomSection.css"
-import car1 from "../../assets/cheuffeur-menu-cars/Royale.png"
-import car2 from "../../assets/cheuffeur-menu-cars/Sports.jpg"
-import car3 from "../../assets/cheuffeur-menu-cars/President.png"
-import car4 from "../../assets/cheuffeur-menu-cars/Corporate.png"
-import car5 from "../../assets/cheuffeur-menu-cars/HatchBacks.png"
-import car6 from "../../assets/cheuffeur-menu-cars/Luxury.png"
-import car7 from "../../assets/cheuffeur-menu-cars/LuxSUV.png"
-import car8 from "../../assets/cheuffeur-menu-cars/MPV.png"
-import car9 from "../../assets/cheuffeur-menu-cars/Electric.png"
-import car10 from "../../assets/cheuffeur-menu-cars/BusesNAC.png"
-import car11 from "../../assets/cheuffeur-menu-cars/BusesAC.png"
-import car12 from "../../assets/cheuffeur-menu-cars/Ancillary.png"
 import { useNavigate } from "react-router-dom"
+import { useDispatch, useSelector } from "react-redux"
+import { useEffect } from "react"
+import { getAllCars, getFleetById } from "../../redux/actions/CheuffeurDrive.action"
 
-const cheuffeur_menu = [
-    {
-        id:1,
-        type:'Royale',
-        img:car1
-    },
-    {
-        id:2,
-        type:'Sports',
-        img:car2
-    },
-    {
-        id:3,
-        type:'President',
-        img:car3
-    },
-    {
-        id:4,
-        type:'Corporate',
-        img:car4
-    },
-    {
-        id:5,
-        type:'HatchBacks',
-        img:car5,
-        link:'/hatchbacks'
-    },
-    {
-        id:6,
-        type:'Luxury',
-        img:car6
-    },
-    {
-        id:7,
-        type:'Luxury SUV',
-        img:car7
-    },
-    {
-        id:8,
-        type:'MPV',
-        img:car8
-    },
-    {
-        id:9,
-        type:'Electric',
-        img:car9
-    },
-    {
-        id:10,
-        type:'BusesNAC',
-        img:car10
-    },
-    {
-        id:11,
-        type:'BusesAC',
-        img:car11
-    },
-    {
-        id:12,
-        type:'Ancillary Vehicles',
-        img:car12
-    },
-]
+
 const BottomSection = () => {
+
+    const dispatch = useDispatch()
+    const {fleets} = useSelector((state)=>state.data)
+    
     const navigate = useNavigate()
-    const handleClick = (link)=>{
-        navigate(`/${link}`)
+
+    useEffect(() => {
+        dispatch(getAllCars())
+    }, [dispatch]);
+
+    console.log(fleets)
+    const handleClick = (link,id)=>{
+      dispatch(getFleetById(id))
+        navigate(`/cheuffeurdrive/${link}`)
+
     }
   return (
     <div className="btm_container">
@@ -87,12 +28,18 @@ const BottomSection = () => {
       <p className="desc_text">Driving your dreams to reality with an exquisite fleet of versatile vehicles for unforgettable journeys.</p>
       <div className="cheuffer_menu">
         {
-            cheuffeur_menu.map((data)=>(
-                <div className="menu_cont" key={data.id}>
-                    <img src={data.img} alt={data.type} />
-                    <p className="type_text">{data.type}</p>
-                    <p onClick={()=>handleClick(data.link)} className="explore" style={{textDecoration:'underline'}}>Explore</p>
+            fleets.map((data)=>(
+               
+               
+                    <div key={data._id} className="menu_cont">
+                        <img src={data.fleetImg} alt="" />
+                        <div className="fleet_img">
+                        </div>
+                     <p className="type_text" key={data._id}>{data.fleetType}</p>
+                     <p onClick={()=>handleClick(`${data.fleetType}/${data._id}`,data._id)} className="explore" style={{textDecoration:'underline'}}>Explore</p>
                 </div>
+           
+                
             ))
         }
       </div>
@@ -101,3 +48,8 @@ const BottomSection = () => {
 }
 
 export default BottomSection
+{/* <div className="menu_cont" key={data.id}>
+                    <img src={data.img} alt={data.type} />
+                    <p className="type_text">{data.type}</p>
+                    <p onClick={()=>handleClick(data.type)} className="explore" style={{textDecoration:'underline'}}>Explore</p>
+                </div> */}

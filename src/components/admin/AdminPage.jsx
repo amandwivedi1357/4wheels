@@ -2,8 +2,9 @@ import Topnav from "./TopNav/Topnav";
 import "./AdminPage.css"
 import Sidebar from "./Sidebar/Sidebar";
 import Dashboard from "./dashboard/Dashboard";
-import Booking from "./booking/Booking";
+
 import { useState } from "react";
+import AddCars from "./AddCars/AddCars";
 
 export default function AdminPage() {
   const [selectedTab, setSelectedTab] = useState(1);
@@ -12,13 +13,13 @@ export default function AdminPage() {
         setSelectedTab(tabNum);
     };
 
-    // Function to render component based on the selected tab
+    
     const renderComponent = () => {
         switch (selectedTab) {
             case 1:
                 return <Dashboard />;
             case 2:
-                return <Booking />;
+                return <AddCars />;
             default:
                 return null;
         }

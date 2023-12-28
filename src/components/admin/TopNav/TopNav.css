@@ -7,7 +7,7 @@
     display: flex;
     justify-content: space-between;
 }
-.logoNav{
+.logo_admin{
     width: 50px;
     margin-left: 1rem;
     height: 50px;
@@ -26,6 +26,7 @@
     
 }
 .input{
+    color: #fff;
     height: 2rem;
     background: transparent;
     border: none;
