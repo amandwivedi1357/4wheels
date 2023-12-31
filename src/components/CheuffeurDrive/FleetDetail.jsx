@@ -44,7 +44,9 @@ const FleetDetail = () => {
    
   return (
     <div>
-      <CheuffeurTopSection/>
+      {cars.cars && (
+        <>
+         <CheuffeurTopSection/>
       
       <div className="btm_Sec">
         <div className="inner_left">
@@ -106,6 +108,9 @@ const FleetDetail = () => {
             </div>
         </div>
       </div>
+        </>
+      )
+              }
     </div>
   )
 }
