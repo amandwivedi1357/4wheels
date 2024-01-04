@@ -9,10 +9,10 @@
 
 .desc{
     width: 40%;
-    margin: auto;
+   margin:0 25rem ;
 }
 .desc_text{
-    text-align: center;
+ 
     color: #031B4ECC;
     font-size: 16px;
     font-family: 'Poppins';
