@@ -1,7 +1,7 @@
 .main_top_container{
     width: 100%;
     color: #fff;
-    height: 40rem;
+    /* border: 2px solid springgreen; */
     background: linear-gradient(180deg, #0C0125 26.56%, #1F0015 58.85%, #320003 100%);
 }
 .navbar{
@@ -72,28 +72,41 @@ background: transparent;
 /* social links section ends */
 
 /* heading section starts */
-.heading_text{
+.headin_text{
     width: 60%;
     margin: auto;
+    /* border: 1px solid yellowgreen; */
 }
-.heading_text p{
-    font-family: 'Cormorant',serif;
-    margin-top: 10px;
-    text-align: center;
-    font-size: 70px;
+.headin_text p{
+    color: #FFF;
+
+text-align: center;
+font-family: 'Cormorant';
+font-size: 70px;
+font-style: normal;
+font-weight: 600;
+line-height: 85px; /* 121.429% */
+letter-spacing: 0.25px;
 }
 /* heading section ends */
 
 /* detail section starts */
 .detailed_desc{
-    width: 47%;
+    
     margin: auto;
+   
 }
 .detailed_desc p{
-    margin-top: 22px;
+  
+
+    color: rgba(255, 255, 255, 0.80);
     text-align: center;
+    font-family: 'Poppins';
     font-size: 16px;
-    line-height: 32.5px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32.5px; /* 203.125% */
+    letter-spacing: 0.5px;
 }
 /* detail section ends */
 
@@ -139,14 +152,15 @@ background: transparent;
         margin: 0.5rem;
         /* border:2px solid yellowgreen; */
     }
-    .heading_text{
+    .headin_text{
         width: 70%;
     }
-    .heading_text p{
+    .headin_text p{
         font-family: 'Cormorant',serif;
         margin-top: 10px;
         text-align: center;
         font-size: 35px;
+        line-height: 35px;
     }
     .detailed_desc{
         width: 67%;

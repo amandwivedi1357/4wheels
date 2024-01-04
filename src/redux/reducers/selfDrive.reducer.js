@@ -1,4 +1,4 @@
-import * as actionTypes from "../actionTypes/cheuffeurDrive.actionTypes";
+import * as actionTypes from "../actionTypes/selfDrive.actionTypes";
 
 const initialState = {
   totalCars:null,
@@ -9,7 +9,7 @@ const initialState = {
   error: false,
 };
 
-const cheuffeurReducer = (state = initialState, { type, payload }) => {
+const SelfReducer = (state = initialState, { type, payload }) => {
   switch (type) {
 
     case actionTypes.GET_TOTAL_FLEETS_REQUEST:
@@ -157,4 +157,4 @@ const cheuffeurReducer = (state = initialState, { type, payload }) => {
   }
 };
 
-export default cheuffeurReducer;
+export default SelfReducer;

@@ -7,7 +7,7 @@
 }
 .inner_left{
 width: 20%;
-border: 2px solid red;
+/* border: 2px solid red; */
 }
 .inner_Select{
     width: 100%;
@@ -66,6 +66,42 @@ font-style: normal;
 font-weight: 600;
 line-height: 26px; /* 173.333% */
 letter-spacing: 0.5px;
+}
+.fleet_filter{
+  margin-top: 1rem;
+width: 90%;
+margin: auto;
+/* border: 2px solid greenyellow; */
+}
+.fleet_text{
+    color: #031B4E;
+font-family: 'Poppins';
+text-align: center;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 26.5px; /* 165.625% */
+letter-spacing: 0.25px;
+}
+.filter_text{
+    color: rgba(3, 27, 78, 0.83);
+font-family: 'Poppins';
+font-size: 15px;
+font-style: normal;
+font-weight: bold;
+line-height: 26.5px; /* 176.667% */
+letter-spacing: 0.25px;
+}
+.inner_fleetFilter{
+    
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    text-align: right;
+}
+.checkbox{
+    
+    width: 20px;
 }
 .right_cont .single_cont .price_sec{
     /* border: 1px solid black; */

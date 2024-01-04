@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
 import "../css/CheuffeurDrive/bottomSection.css"
 import { useNavigate, useParams } from 'react-router-dom'
-import CheuffeurTopSection from './TopSection'
+import CheuffeurTopSection from '../CheuffeurDrive/TopSection'
 import "../css/CheuffeurDrive/fleetDetail.css"
 import { useDispatch, useSelector } from 'react-redux'
-import {  getAllCars, getCarById, getFleetById } from '../../redux/actions/CheuffeurDrive.action'; 
+import {  getAllSelfCars, getSelfCarById, getSelfFleetById } from '../../redux/actions/SelfDrive.action'; 
 import { Image, Select, useMediaQuery } from '@chakra-ui/react'
 const locations = [
     'Delhi',
@@ -18,48 +18,57 @@ const locations = [
     'Jaipur',
     'Surat',
   ];
-const FleetDetail = () => {
+const FleetSelfDetail = () => {
   const [localCars,setLocalCars] = useState({ cars: [] })
+  const [localFleets,setLocalFleets] = useState({fleets:[]})
     const {fleetType,id} = useParams()
     console.log(fleetType)
   const navigate = useNavigate()
     const dispatch = useDispatch();
-    const {cars} = useSelector((state)=>state.data)
-    const {fleets} = useSelector((state)=>state.data)
-   
-    const [selectedFleet, setSelectedFleet] = useState(null);
+    const {cars} = useSelector((state)=>state.selfData)
+    const {fleets} = useSelector((state)=>state.selfData)
     const [selectedLocation, setSelectedLocation] = useState('');
     const isMobile = useMediaQuery('(max-width: 768px)'); 
-    
+    const [selectedFleet, setSelectedFleet] = useState(null);
     const handleLocationChange = (e) => setSelectedLocation(e.target.value);
+    const [currentPage, setCurrentPage] = useState(1);
+    const [limit, setLimit] = useState(5);
+    
 
     useEffect(() => {
       setLocalCars(cars)
-    }, [cars]);
-  
+      setLocalFleets(fleets)
+    }, [cars,fleets]);
+
 
     useEffect(() => {
-      dispatch(getAllCars())
-        dispatch(getFleetById(id))
-    }, [dispatch,id]);
- 
+      dispatch(getAllSelfCars())
+        dispatch(getSelfFleetById(id,currentPage,limit))
+    }, [dispatch,id,currentPage,limit]);
+
+    const handlePageChange = (pageNumber) => {
+      setCurrentPage(pageNumber);
+      // Fetch data for the new page number
+      dispatch(getSelfFleetById('your_fleet_id', pageNumber, limit));
+    };
+
+
     const handleCheckboxChange = (fleetName, fleetId) => {
       setSelectedFleet({ fleetName, fleetId });
-      navigate(`/cheuffeurdrive/${fleetName}/${fleetId}`);
+      navigate(`/selfdrive/${fleetName}/${fleetId}`);
     };
-
 
     const handleBookNow = (fleetId, carId) => {
-      dispatch(getCarById(id, carId));
-      navigate(`/cheuffeurdrive/${fleetType}/${id}/car/${carId}`); 
+      dispatch(getSelfCarById(id, carId));
+      navigate(`/selfdrive/${fleetType}/${id}/car/${carId}`); 
     };
-    
+    console.log(localFleets)
    
   return (
     <div>
       {localCars.cars && (
         <>
-         <CheuffeurTopSection topic={'cheuffeur drive'} subTopic={fleetType}/>
+         <CheuffeurTopSection topic={'Self Drive'} subTopic={fleetType}/>
       
       <div className="btm_Sec">
         <div className="inner_left">
@@ -101,6 +110,7 @@ const FleetDetail = () => {
               ))}
             </div>
         </div>
+       
         <div className="inner_right ">
             <div className="right_cont">
                 {
@@ -108,7 +118,7 @@ const FleetDetail = () => {
                         
                         <div key={data._id} className="single_cont">
                             <div className="img_sec">
-                            {console.log(data.properties.hours4_40kms)}
+                            {console.log(data.properties.hourlyPack)}
                                 <Image src={data.properties.img} maxW={'10rem'}/>
                             </div>
                          
@@ -117,16 +127,16 @@ const FleetDetail = () => {
                 <p className="carName">{data.carName}</p>
                 <div className="Single_car_details">
                   <ul className='list_cont'>
-                    <li>4 Hours/40kms: {data.properties.hours4_40kms}</li>
-                    <li>8 Hours/80kms:{data.properties.hours8_80kms}</li>
-                    <li>Ext hour beyond 8Hr:{data.properties.extraHourBeyond8hr}</li>
-                    <li>Ext hour beyond 8okms:{data.properties.extraHourBeyond80kms}</li>
+                    <li>Hourly Pack : {data.properties.hourlyPack}</li>
+                    <li>Alloted KMS :{data.properties.allotedKMs}</li>
+                    <li>Zero Mileage :{data.properties.zeroMileage}</li>
+                    <li>Per KM :{data.properties.perKM}</li>
                   </ul>
                   <ul className='list_cont'>
-                  <li>Driver Bhatta: {data.properties.driverBhatta}</li>
-                    <li>InterCity Minimum kms/Day:{data.properties.InterCityMinimumkmsPerDay}</li>
-                    <li>InterCity Minimum kms/km:{data.properties.InterCityMinimumKmsPerkm}</li>
-                    <li>Driver Bhatta/Km:{data.properties.driverBhattaPerKm}</li>
+                  <li>True Unlimited:{data.properties.fupPack}</li>
+                    <li>FUP pack:{data.properties.fupPack}</li>
+                    <li>Security Deposite:{data.properties.securityDeposit}</li>
+                    <li>Fuel Type:{data.properties.fuelType}</li>
                   </ul>
                 </div>
               </div>
@@ -134,7 +144,7 @@ const FleetDetail = () => {
                             
                             <div className="price_sec">
                                 <p className="hourly">Hourly pack</p> <br />
-                                <p className="hour">{data.properties.hours4_40kms} Rs</p>
+                                <p className="hour">{data.properties.hourlyPack} Rs</p>
                                 <button onClick={()=>handleBookNow(id,data._id)} className='book_btn'>Book Now</button>
                             </div>
                         </div>
@@ -146,18 +156,29 @@ const FleetDetail = () => {
         </>
       )
               }
+              {/* <div>
+        <button onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1}>
+          Previous Page
+        </button>
+        <span>Page {currentPage}</span>
+        <button onClick={() => handlePageChange(currentPage + 1)} disabled={fleets.length < limit}>
+          Next Page
+        </button>
+      </div> */}
     </div>
   )
 }
 
-export default FleetDetail
+export default FleetSelfDetail
 
 
-{/* <div className="menu_cont" key={data.id}>
-<img src={data.properties.img} alt={data.type} />
-<p className="type_text">{data.carName}</p>
-<p  className="explore" style={{textDecoration:'underline'}}>Explore</p>
-</div> */}
+// {/* <div className="menu_cont" key={data.id}>
+// <img src={data.properties.img} alt={data.type} />
+// <p className="type_text">{data.carName}</p>
+// <p  className="explore" style={{textDecoration:'underline'}}>Explore</p>
+// </div> */}
+
+
 
 
 

@@ -4,31 +4,18 @@ import TopSectionServe from "../Services/TopSectionServe";
 import "./SingleCarBook.css";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
-import { getCarById } from "../../redux/actions/CheuffeurDrive.action";
 import BookingForm from "./BookingForm";
-export default function SingleCarBook({ topic }) {
+import { getSelfCarById } from "../../redux/actions/SelfDrive.action";
+export default function SingleSelfCarBook({ topic }) {
   const { fleetType, id, carId } = useParams();
 
   const dispatch = useDispatch();
   console.log(id);
 
-  const { cars,loading,error } = useSelector((state) => state.data);
-
-
-  
-    // localStorage.setItem('carsData', JSON.stringify(cars));
- 
-  // useEffect(() => {
-  //   const carsDataFromLocalStorage = localStorage.getItem(JSON.parse('carsData'));
-  //   if (carsDataFromLocalStorage) {
-  //     setcars(carsDataFromLocalStorage);
-  //   } else {
-  //   dispatch(getCarById(id, carId));
-  //   }
-  // }, [ dispatch,id, carId]);
+  const { cars,loading,error } = useSelector((state) => state.selfData);
 
   useEffect(() => {
-    dispatch(getCarById(id,carId))
+    dispatch(getSelfCarById(id,carId))
   }, [dispatch,id,carId]);
   console.log(cars);
 
@@ -42,13 +29,14 @@ export default function SingleCarBook({ topic }) {
   if (error) {
     return <div>Error occurred. Please try again later.</div>;
   }
-  
+  // console.log(cars)
   
   return (
     <div>
     {cars && cars.properties && (
+        
       <>
-        <TopSectionServe topic={"Cheuffeur Drive"} subTopic={fleetType} />
+        <TopSectionServe topic={"Self Drive"} subTopic={fleetType} />
       <div className="Single_container">
         <div className="head_cont">
           <p className="head_text">{topic}</p>
@@ -71,7 +59,7 @@ export default function SingleCarBook({ topic }) {
                   <span className="btn_text">
                     Hourly Pack:{" "}
                     <span className="price_text">
-                      {cars.properties.hours4_40kms} ₹
+                      {cars.properties.hourlyPack} ₹
                     </span>
                   </span>
                 </button>
@@ -80,46 +68,46 @@ export default function SingleCarBook({ topic }) {
               <div className="main_Details">
                 <ul className="list_cont">
                   <li className="listItem">
-                    <span className="bold_props">4 Hours/40kms :</span>
-                    <span className="normal_props">{cars.properties.hours4_40kms}</span>
+                    <span className="bold_props">Hourly Pack :</span>
+                    <span className="normal_props">{cars.properties.hourlyPack}</span>
                   </li>
                   <li className="listItem">
-                    <span className="bold_props">8 Hours/80kms :</span>
-                    <span className="normal_props">{cars.properties.hours8_80kms}</span>
+                    <span className="bold_props">Alloted KMs :</span>
+                    <span className="normal_props">{cars.properties.allotedKMs}</span>
                   </li>
                   <li className="listItem">
-                    <span className="bold_props">Ext hour beyond 8Hr :</span>
-                    <span className="normal_props">{cars.properties.extraHourBeyond80kms}</span>
+                    <span className="bold_props">Zero Mileage :</span>
+                    <span className="normal_props">{cars.properties.zeroMileage}</span>
                   </li>
                   <li className="listItem">
-                    <span className="bold_props">Ext hour beyond 8okms :</span>
-                    <span className="normal_props">{cars.properties.extraHourBeyond8hr}</span>
+                    <span className="bold_props">per KM:</span>
+                    <span className="normal_props">{cars.properties.perKM}</span>
                   </li>
                 </ul>
                 <ul className="list_cont">
                   <li className="listItem">
-                    <span className="bold_props">InterCity Minimum kms/km :</span>
-                    <span className="normal_props">{cars.properties.InterCityMinimumKmsPerkm}</span>
+                    <span className="bold_props">FUP Pack(350KM) :</span>
+                    <span className="normal_props">{cars.properties.fupPack}</span>
                   </li>
                   <li className="listItem">
-                    <span className="bold_props">InterCity Minimum kms/Day :</span>
-                    <span className="normal_props">{cars.properties.InterCityMinimumkmsPerDay}</span>
+                    <span className="bold_props">True Unlimited :</span>
+                    <span className="normal_props">{cars.properties.trueUnlimited}</span>
                   </li>
                   <li className="listItem">
-                    <span className="bold_props">Driver Bhatta :</span>
-                    <span className="normal_props">{cars.properties.driverBhatta}</span>
+                    <span className="bold_props">Security Deposit :</span>
+                    <span className="normal_props">{cars.properties.securityDeposit}</span>
                   </li>
                   <li className="listItem">
-                    <span className="bold_props">Driver Bhatta/Km :</span>
-                    <span className="normal_props">{cars.properties.driverBhattaPerKm}</span>
+                    <span className="bold_props">Fuel Type :</span>
+                    <span className="normal_props">{cars.properties.fuelType}</span>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
         {/* input container */}
-
-        <BookingForm car={cars}/>
+        {console.log(cars)}
+        <BookingForm car = {cars}/>
         </div>
       </div>
       

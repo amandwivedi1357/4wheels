@@ -242,3 +242,27 @@ font-weight: 600;
 line-height: normal;
 letter-spacing: 0.018px;
 }
+.textArea{
+    width: 100%; /* Occupy full width */
+    box-sizing: border-box;
+}
+textarea{
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+/* tab vies */
+@media screen and (min-width: 768px) and (max-width: 1025px) {
+    .head_cont{
+        border: 1px solid red;
+    }
+    .textArea textarea{
+        width: 190%;
+    }
+    .submit_btn{
+        margin-left: 5rem;
+    }
+}
+
+/* mobile view */
+@media screen and (max-width: 767px) {}

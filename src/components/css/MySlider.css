@@ -1,13 +1,18 @@
 .car_images{
     width: 50%;
+    /* border: 1px solid springgreen; */
+    /* position: absolute; */
+    padding: 1rem 0;
 }
 .car_images img{
     width: 100%;
-    margin-top: 20%;
+    margin-top: 5%;
 }
 .cars{
-    width: 25%;
-    margin: auto;
+    /* position: relative;
+    top: 10%; */
+    width: 45%;
+    margin:-7% auto;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1030px) {

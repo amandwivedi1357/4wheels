@@ -33,9 +33,9 @@ export default function TopSectionServe({topic,subTopic}) {
         </button>
       </div>
         </div>
-        <div className="btm_Sec">
-              <p className="head_text">{topic}</p>
-        </div>
+        
+              <p className="ser_text">{topic}</p>
+        
         <p className="sub_text">{subTopic}</p>
     </div>
   )

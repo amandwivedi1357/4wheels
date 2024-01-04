@@ -6,10 +6,14 @@ import {
   } from "redux";
   import cheuffeurReducer from './reducers/cheuffeurDrive.reducer.js'
 import {thunk} from "redux-thunk"
+import bookingReducer from "./reducers/booking.reducer.js";
+import SelfReducer from "./reducers/selfDrive.reducer.js";
  
   
   const rootReducer = combineReducers({
     data: cheuffeurReducer,
+    booking:bookingReducer,
+    selfData:SelfReducer
   });
   
   const composer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

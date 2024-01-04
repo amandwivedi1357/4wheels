@@ -1,5 +1,6 @@
+/* eslint-disable react/prop-types */
 // AnimatedNumberCounter.jsx
-import React, { useState, useEffect, useRef } from 'react';
+import  { useState, useEffect, useRef } from 'react';
 import { useSpring, animated, config } from 'react-spring';
 
 const AnimatedNumberCounter = ({ value, duration = 2000, easing = 'linear' }) => {

@@ -30,9 +30,7 @@ export default function TopSectionGallery() {
         </button>
       </div>
         </div>
-        <div className="btm_Sec">
-              <p className="head_text">Gallery</p>
-        </div>
+        <p className="ser_text">Gallery</p>
     </div>
   )
 }

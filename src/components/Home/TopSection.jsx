@@ -39,7 +39,7 @@ export default function TopSection() {
                 <span><FaInstagram/></span>
             </div>
         </div>
-        <div className="heading_text">
+        <div className="headin_text">
             <p>
             Experience the joy of riding on premium wheels
             </p>

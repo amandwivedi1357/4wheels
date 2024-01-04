@@ -36,7 +36,7 @@ const FAQSection = () => {
   
 
   return (
-    <VStack spacing={20} align="start">
+    <VStack spacing={5} align="start">
       {data.map((faq, index) => (
         <FaqItem key={index} question={faq.question} answer={faq.answer} />
       ))}

@@ -6,7 +6,7 @@ import Footer from '../components/Footer'
 const CheuffeurDrive = () => {
   return (
     <div>
-      <CheuffeurTopSection/>
+      <CheuffeurTopSection topic={'Chauffeur Drive'}/>
       <BottomSection/>
       <Footer/>
     </div>

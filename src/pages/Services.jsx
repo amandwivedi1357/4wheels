@@ -5,7 +5,7 @@ import TopSectionServe from "../components/Services/TopSectionServe"
 const Services = () => {
   return (
     <div>
-      <TopSectionServe/>
+      <TopSectionServe topic={'Services'}/>
       <Footer/>
     </div>
   )
