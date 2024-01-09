@@ -1,0 +1,39 @@
+option{
+    color: #000;
+}
+.AddForm label{
+    color: var( --small-text-color);
+}
+.add-cars-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.AddForm {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin-top: 20px;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+Input[type='text'] {
+    background: #e7ecf0;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+Input[type='text']:focus {
+    outline: none;
+    border-color: #51c4d3;
+    box-shadow: 0 0 5px #51c4d3;
+}
+
+/* Add styles as needed */

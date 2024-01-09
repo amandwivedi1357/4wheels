@@ -1,0 +1,45 @@
+/* UserDetailsModal.css */
+
+.user-details-modal {
+    max-width: 500px;
+  }
+  
+  .user-details-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .details-label {
+    font-weight: bold;
+    width: 120px; /* Adjust as needed */
+  }
+  
+  .details-value {
+    flex: 1;
+    word-break: break-word;
+  }
+  .user-details-modal {
+    max-width: 500px;
+  }
+  
+  .user-details-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .details-label {
+    font-weight: bold;
+    padding: 8px;
+  }
+  
+  .details-value {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+  }

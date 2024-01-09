@@ -8,8 +8,12 @@ const Links = [
         display:'Modify Data'
     },
     {
-        tabNum:4,
+        tabNum:3,
         display:'User Data'
+    },
+    {
+        tabNum:4,
+        display:'Add Data'
     },
 ];
 

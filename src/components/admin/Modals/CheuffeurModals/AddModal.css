@@ -1,0 +1,28 @@
+/* AddCarModal.css */
+
+.car-details-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .car-details-table th,
+  .car-details-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .car-details-table th {
+    background-color: #f2f2f2;
+    color: #000;
+  }
+  
+  .attribute {
+    font-weight: bold;
+  }
+  
+  .value {
+    /* Style for value */
+  }
+  

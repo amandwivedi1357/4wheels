@@ -1,14 +1,19 @@
 .sidebar{
-    width: 260px;
+    width: 15rem;
     background: var(--primary-color);
-    height: 50rem;
+    height: auto;
 }
 .innerSide{
     width: 90%;
-    height: 95%;
+    height: auto;
     margin: auto;
     padding: 1rem;
     
+}
+.hamb{
+   
+    margin: 1rem auto;
+ 
 }
 .tabs{
     width: 90%;
@@ -29,4 +34,65 @@
     background: #b7ffe913;
     border-radius: 5px;
     padding: 10px;
+}
+.drawer {
+    width: 15rem;
+    background: var(--primary-color);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -15rem;
+    transition: left 0.3s ease-in-out;
+  }
+  
+  .drawer.show {
+    left: 0;
+  }
+  .hamburger{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 25px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    padding: 0;
+  }
+  
+  .bar{
+    width: 100%;
+    height: 3px;
+    background-color: #fff; /* Adjust color as needed */
+    border-radius: 3px;
+    transition: all 0.3s ease;
+  }
+  
+  /* Hamburger animation when clicked */
+  .show .bar:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+  
+  .show .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .show .bar:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+  }  
+  @media (max-width: 768px) {
+    .hamb{
+        
+        /* border: 1px solid blue; */
+    }
+  }
+  
+@media screen and (min-width: 768px) and (max-width: 1025px) {
+    .sidebar{
+        width: 10rem;
+        font-size: 15px;
+    }
+    .innerSide{
+        padding: 0;
+    }
 }

@@ -1,0 +1,171 @@
+/* Self.css */
+.select option{
+    color: #000;
+}
+.table_cont{
+    margin-top: 1rem;
+}
+.car-table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: auto;
+  }
+ /* .img_cont,.edit_button,.delete_button{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+ }  */
+  .car-table th,
+  .car-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .car-table th {
+    background-color: #f2f2f2;
+    color: #000;
+  }
+  
+  .car-image {
+    width: 50px;
+    margin: auto;
+    height: 50px;
+    object-fit: cover;
+  }
+  .img_cont {
+    position: relative;
+   
+  }
+  
+  .img_cont .car-image {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .img_cont:hover .car-image {
+    transform: scale(4.2); /* Adjust the scale factor as needed */
+    z-index: 9999;
+    position: relative;
+  }
+  .edit-button,
+  .detail-button {
+    margin: auto;
+    
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+  }
+  .delete-button{
+    margin: auto;
+    
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: #e21f1f;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+  }
+  .delete-button:hover{
+    background-color: #e94343;
+  }
+  .edit-button:hover,
+  .detail-button:hover {
+    background-color: #042a53;
+  }
+  .top_bar{
+    width: 30%;
+
+    display:flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+  }
+ 
+/* Tablet Styles */
+@media (min-width: 769px) and (max-width: 1025px) {
+    .top_bar {
+        width: 70%;
+       
+    }
+
+    .edit-button,
+    .delete-button,.detail-button {
+        padding: 8px 8px;
+        
+    }
+    .table_cont{
+      margin-top: 1rem;
+  }
+  .car-table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: auto;
+    }
+  
+    .car-table th,
+    .car-table td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+    }
+    
+    .car-table th {
+      background-color: #f2f2f2;
+      color: #000;
+    }
+    
+    .car-image {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+    }
+}
+
+@media (max-width: 768px) {
+  .top_bar {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .edit-button,
+  .delete-button,
+  .detail-button {
+    margin-top: 0.5rem;
+    
+    padding: 5px 8px;
+    font-size: 12px; /* Adjust font size as needed */
+  }
+
+  .table_cont {
+    margin-top: 1rem;
+  }
+
+  .car-table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: auto;
+  }
+
+  .car-table th,
+  .car-table td {
+    border: 1px solid #ddd;
+    padding: 3px; /* Adjust padding as needed */
+    text-align: center;
+    font-size: 12px; /* Adjust font size as needed */
+  }
+
+  .car-table th {
+    background-color: #f2f2f2;
+    color: #000;
+  }
+
+  .car-image {
+    width: 40px; /* Adjust image size as needed */
+    height: 40px; /* Adjust image size as needed */
+    object-fit: cover;
+    margin: auto;
+  }
+}

@@ -1,0 +1,71 @@
+/* UserData.css */
+.heading{
+    color: var(--card-04-bg);
+text-align: center;
+font-family: 'Cormorant';
+font-size: 70px;
+font-style: normal;
+font-weight: 600;
+line-height: 85px; /* 121.429% */
+letter-spacing: 0.25px;
+}
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .user-table th, .user-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  .data{
+    color: white;
+  }
+  .user-table th {
+    background-color: #f2f2f2;
+    color: #000;
+  }
+  
+  .delete-btn {
+    cursor: pointer;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+  }
+  .detail-btn{
+    cursor: pointer;
+    background-color: var(--card-04-bg);
+    color: #fff;
+    border: none;
+    margin: auto;
+    padding: 5px 10px;
+    border-radius: 4px;
+  }
+  
+  .delete-btn:hover {
+    background-color: #bd2130;
+  }
+  .detail-btn:hover{
+    background-color: rgb(3, 49, 134);
+  }
+  @media (max-width: 768px) {
+    .heading {
+      font-size: 32px;
+      line-height: 40px;
+    }
+  
+    .user-table th,
+    .user-table td {
+      padding: 2px;
+      font-size: 14px;
+    }
+  
+    .delete-btn,
+    .detail-btn {
+      padding: 4px 8px;
+    }
+  }

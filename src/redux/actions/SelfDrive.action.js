@@ -6,7 +6,7 @@ export const getAllSelfCars = () => async (dispatch) => {
 
   try {
     const response = await api.getAllSelfCars();
-    console.log(response)
+
     dispatch({ type: actionTypes.GET_ALL_CARS_SUCCESS, payload: response.data });  
  } catch (error) {
     dispatch({ type: actionTypes.GET_ALL_CARS_FAILURE, payload: error.message }); 
@@ -70,11 +70,11 @@ export const getSelfFleetById = (id,page,limit) => async (dispatch) => {
     }
   };
   
-  export const updateSelfCarInFleet = (fleetId, carId, properties) => async (dispatch) => {
+  export const updateSelfCarInFleet = (fleetId, carId, updatedData) => async (dispatch) => {
     dispatch({ type: actionTypes.UPDATE_CAR_IN_FLEET_REQUEST });
   
     try {
-      const response = await api.updateSelfCarInFleet(fleetId, carId, properties);
+      const response = await api.updateSelfCarInFleet(fleetId, carId, updatedData);
       dispatch({ type: actionTypes.UPDATE_CAR_IN_FLEET_SUCCESS, payload: response.data });
     } catch (error) {
       dispatch({ type: actionTypes.UPDATE_CAR_IN_FLEET_FAILURE, payload: error.message });
@@ -109,7 +109,7 @@ export const getSelfFleetById = (id,page,limit) => async (dispatch) => {
     try {
       const response = await api.getTotalSelfCars();
       dispatch({ type: actionTypes.GET_TOTAL_CARS_SUCCESS, payload: response.data });
-      
+      console.log(response.data)
     } catch (error) {
       dispatch({ type: actionTypes.GET_TOTAL_CARS_FAILURE, payload: error.message });
     }
@@ -120,9 +120,9 @@ export const getSelfFleetById = (id,page,limit) => async (dispatch) => {
     dispatch({ type: actionTypes.GET_TOTAL_FLEETS_REQUEST });
     
     try {
-      const response = await api.getTotalFleets();
+      const response = await api.getTotalSelfFleets();
       dispatch({ type: actionTypes.GET_TOTAL_FLEETS_SUCCESS, payload: response.data });
-      
+     
     } catch (error) {
       dispatch({ type: actionTypes.GET_TOTAL_FLEETS_FAILURE, payload: error.message });
     }

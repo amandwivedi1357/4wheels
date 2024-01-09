@@ -1,0 +1,32 @@
+.table_container {
+    width: 100%;
+    color: #fff;
+}
+.select_cont{
+    /* border: 1px solid red; */
+    width: 60%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+.self, .cheuffeur {
+    width: 10rem;
+    height: 5rem;
+    cursor: pointer;
+}
+
+.self {
+    background: var(--card-01-bg);
+}
+
+.cheuffeur {
+    background: var(--card-02-bg);
+}
+
+.self.active {
+    background: #d83503; 
+}
+
+.cheuffeur.active {
+    background: #03915a; 
+}

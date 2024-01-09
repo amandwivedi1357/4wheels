@@ -1,9 +1,12 @@
 .admin_cont{
     background: var(--body-bg);
     height: auto;
+    display: flex;
 }
 .btm_cont{
+    width: 80%;
+    margin:1rem;
+}
+.right-content{
     width: 100%;
-    display: flex;
-    column-gap: 10px;
 }

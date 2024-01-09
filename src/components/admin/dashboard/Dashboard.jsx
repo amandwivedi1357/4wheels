@@ -9,34 +9,42 @@ import Recommend from "../../reusables/Recommend";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { getTotalCars, getTotalFleets } from "../../../redux/actions/CheuffeurDrive.action";
+import { getTotalSelfCars, getTotalSelfFleets } from "../../../redux/actions/SelfDrive.action";
+
 
 export default function Dashboard() {
   const dispatch = useDispatch();
   const {totalFleets,totalCars} = useSelector(state=>state.data)
+  const {totalSelfFleets,totalSelfCars} = useSelector(state=>state.selfData)
 
   useEffect(() => {
     dispatch(getTotalFleets())
     dispatch(getTotalCars())
   }, [dispatch]);
   
+  useEffect(() => {
+    dispatch(getTotalSelfFleets())
+    dispatch(getTotalSelfCars())
+  }, [dispatch]);
+  console.log(totalSelfFleets,totalSelfCars)
   const carObject = {
-    title: "Total Fleets",
+    title: "Total Fleets in Cheuffeur Drive",
     totalNumber: totalFleets,
     icon: <PiPoliceCarDuotone />,
   };
   const dailytrips = {
-    title: "Total Cars",
+    title: "Total Cars in Cheuffeur Drive",
     totalNumber: totalCars,
     icon: <PiSteeringWheelFill />,
   };
   const ClientObj = {
-    title: "Client Annually",
-    totalNumber: "85k+",
+    title: "Total Fleets in Self Drive",
+    totalNumber: totalSelfFleets,
     icon: <AiOutlineUser />,
   };
   const distanceObj = {
-    title: "Kilometers Daily",
-    totalNumber: 2167,
+    title: "Total Cars in Self Drive",
+    totalNumber: totalSelfCars,
     icon: <PiPoliceCarDuotone />,
   };
   return (

@@ -6,7 +6,6 @@ export const getAllCars = () => async (dispatch) => {
 
   try {
     const response = await api.getAllCars();
-    console.log(response)
     dispatch({ type: actionTypes.GET_ALL_CARS_SUCCESS, payload: response.data });  
  } catch (error) {
     dispatch({ type: actionTypes.GET_ALL_CARS_FAILURE, payload: error.message }); 
@@ -47,11 +46,11 @@ export const getFleetById = (id) => async (dispatch) => {
     }
   };
   
-  export const addCarsToFleetType = (fleetId, cars) => async (dispatch) => {
+  export const addCarsToFleetType = (fleetId, car) => async (dispatch) => {
     dispatch({ type: actionTypes.ADD_CARS_TO_FLEET_REQUEST });
   
     try {
-      const response = await api.addCarsToFleetType(fleetId, cars);
+      const response = await api.addCarsToFleetType(fleetId, car);
       dispatch({ type: actionTypes.ADD_CARS_TO_FLEET_SUCCESS, payload: response.data });  
     } catch (error) {
       dispatch({ type: actionTypes.ADD_CARS_TO_FLEET_FAILURE, payload: error.message }); 
@@ -70,11 +69,11 @@ export const getFleetById = (id) => async (dispatch) => {
     }
   };
   
-  export const updateCarInFleet = (fleetId, carId, properties) => async (dispatch) => {
+  export const updateCarInFleet = (fleetId, carId, updatedData) => async (dispatch) => {
     dispatch({ type: actionTypes.UPDATE_CAR_IN_FLEET_REQUEST });
   
     try {
-      const response = await api.updateCarInFleet(fleetId, carId, properties);
+      const response = await api.updateCarInFleet(fleetId, carId, updatedData);
       dispatch({ type: actionTypes.UPDATE_CAR_IN_FLEET_SUCCESS, payload: response.data });
     } catch (error) {
       dispatch({ type: actionTypes.UPDATE_CAR_IN_FLEET_FAILURE, payload: error.message });
@@ -98,8 +97,10 @@ export const getFleetById = (id) => async (dispatch) => {
     try {
       const response = await api.deleteCarInFleet(fleetId, carId);
       dispatch({ type: actionTypes.DELETE_CAR_IN_FLEET_SUCCESS, payload: response.data });
+      
     } catch (error) {
       dispatch({ type: actionTypes.DELETE_CAR_IN_FLEET_FAILURE, payload: error.message });
+      
     }
   };
   
