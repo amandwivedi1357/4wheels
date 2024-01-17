@@ -3,18 +3,19 @@
     height: auto;
     display: flex;
     gap: 2%;
+    border: 2px solid red;
     padding: 2%;
 }
 .inner_left{
 width: 20%;
-/* border: 2px solid red; */
+border: 2px solid red;
 }
 .inner_Select{
     width: 100%;
 }
 .inner_right{
-width: 80%;
-/* border: 2px solid red; */
+width: 75%;
+border: 2px solid red;
 }
 .right_cont{
     margin: auto;
@@ -55,7 +56,7 @@ text-transform: capitalize;
 }
 .specification_sec .Single_car_details{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .list_cont li{
     color: #031B4E;
@@ -91,6 +92,7 @@ font-style: normal;
 font-weight: bold;
 line-height: 26.5px; /* 176.667% */
 letter-spacing: 0.25px;
+margin-top: 10px;
 }
 .inner_fleetFilter{
     
@@ -147,12 +149,30 @@ background: #031B4E;
 box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.06);
 }
 /* In your CSS file or component styles */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+.filter_text{
+    margin-top: 10px;
+}
+.img_sec img{
+  height: 10rem;
+    border: 1px solid red;
+}
+}
 @media only screen and (max-width: 768px) {
     .specification_sec {
       display: none;
     }
-    .img_sec{
-        width: 50%;
-    }
+    .inner_right {
+        flex-direction: column;
+      }
+    
+      .single_cont {
+        flex-direction: column;
+      }
+    
+      .img_sec,
+      .specification_sec {
+        width: 100%;
+      }
   }
   

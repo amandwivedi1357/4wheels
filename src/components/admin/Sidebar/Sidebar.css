@@ -1,7 +1,7 @@
 .sidebar{
     width: 15rem;
     background: var(--primary-color);
-    height: auto;
+    height: 50rem;
 }
 .innerSide{
     width: 90%;

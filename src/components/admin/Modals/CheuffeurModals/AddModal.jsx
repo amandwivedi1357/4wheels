@@ -1,17 +1,16 @@
 /* eslint-disable react/prop-types */
 // /* eslint-disable react/prop-types */
-
-
+import "./detail.css"
 import { Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay } from "@chakra-ui/react";
 
 const AddCarModal = ({ isOpen, onClose, selectedCarDetails }) => {
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
-      <ModalOverlay />
-      <ModalContent>
-        <ModalHeader>Car Details</ModalHeader>
+      <ModalOverlay className="modal-overlay"/>
+      <ModalContent className="modal-content">
+        <ModalHeader className="modal-header">Car Details</ModalHeader>
         <ModalCloseButton />
-        <ModalBody>
+        <ModalBody className="modal-body">
           {selectedCarDetails && (
             <table className="car-details-table">
               <thead>

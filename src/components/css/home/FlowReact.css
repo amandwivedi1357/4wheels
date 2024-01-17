@@ -1,11 +1,12 @@
 .cont{
     width: 100%;
     height: 50rem;
+    border: 2px solid red;
 }
 .inner{
     width: 90%;
     height: 80%;
-    /* border: 2px solid red; */
+    border: 2px solid red;
     margin: auto;
 }
 .inner{
@@ -122,6 +123,25 @@ font-style: normal;
 font-weight: 400;
 line-height: 40px; /* 250% */
 letter-spacing: 0.25px;
+}
+.pos_5{
+   position: relative;
+    height: 10rem;
+    top: 23%;
+    right: 31%;
+    border: 0.5px solid rgb(0, 0, 0);
+}
+.box_5{
+    position: relative;
+    bottom: 41.5%;
+    left: 40%;
+width: 17rem;
+height: 60px;
+border-radius: 10px;
+border: 0.5px solid #28010E;
+display: flex;
+justify-content: center; 
+align-items: center;
 }
 @media only screen and (min-width: 768px) and (max-width: 1025px) {
     /* .cont{
@@ -362,15 +382,15 @@ letter-spacing: 0.25px;
     /* box1 s */
     .pos_2{
         position: relative;
-        left: 8%;
-        bottom: 11%;
+        right: 5%;
+        bottom: 8%;
     }
     .box_1{
         width: 10rem;
         height: 40px;
         position: relative;
-        bottom: 52%;
-        left: 12%;
+        bottom: 49.3%;
+        left: 16%;
         }
         /* box1 e */
 
@@ -378,25 +398,47 @@ letter-spacing: 0.25px;
             width: 10rem;
             height: 40px;
             position: relative;
-            bottom: 52%;
-            left: 12%;
+            bottom: 54%;
+            left: 75%;
         }
 
         .pos_1{
             position: relative;
-            left: 10%;
+            left: 16%;
             top: 5%;
         }
 
     .pos_3{
+
         position: relative;
-        left: 10%;
-        bottom: 20%;
+        left: -1%;
+        bottom: 8%;
+    }
+    .box_3{
+        position: relative;
+        left: 73%;
+        bottom: 50%;
+        width: 10rem;
     }
     .pos_4{
         position: relative;
-        left: 10%;
-        bottom: 20%;
+        left: -1%;
+        top: 5%;
+    }
+    .box_4{
+        width: 10rem;
+        position: relative;
+        bottom: 58%;
+    }
+    .pos_5{
+        position: relative;
+        right: 35%;
+        top: 17%;
+    }
+    .box_5{
+        position: relative;
+        left: 35%;
+        
     }
     
 }

@@ -1,5 +1,5 @@
 
- .ser_text{
+.ser_text{
     /* border: 1px solid red; */
     color: #FFF;
     margin: 10rem auto 2rem auto;
@@ -16,7 +16,7 @@ letter-spacing: 0.25px;
     color: rgba(255, 255, 255, 0.80);
     text-align: center;
     font-family: 'Poppins';
-    font-size: 16px;
+    font-size: 25px;
     font-style: normal;
     font-weight: 400;
     line-height: 32.5px; /* 203.125% */

@@ -8,7 +8,7 @@ color: #031B4E;
 text-align: center;
 font-family: 'Cormorant';
 font-size: 48px;
-margin-top: 139px;
+margin-top: 10%;
 font-style: normal;
 font-weight: 700;
 line-height: 55px; /* 114.583% */
@@ -24,7 +24,7 @@ font-style: normal;
 font-weight: 400;
 line-height: 29px; /* 181.25% */
 letter-spacing: 0.5px;
-margin-top: 21px;
+margin-top: 5%;
 }
 .sports_car{
     display: flex;
@@ -71,7 +71,7 @@ width: 100%;
 .renting_main_container .red_car_container{
     width: 100%;
     height: auto;
-    padding: 2% 0;
+    
 }
 
 .red_car_container .head_text{
@@ -252,7 +252,7 @@ letter-spacing: 0.25px;
     padding: 5% 0;
     
     gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));;
+    grid-template-columns: repeat(3,1fr)
 }
 
 .inner_data{
@@ -400,6 +400,10 @@ padding: 1rem;
         display: block;
   margin: 1rem auto;
     }
+    
+    .btm_container_2 .second_car_data .cars_det{
+        grid-template-columns: repeat(2,1fr);
+    }
    .second_car_data .cars_det{
        display: none;
     }
@@ -416,6 +420,24 @@ padding: 1rem;
 }
 /* mobile */
 @media screen and (max-width: 767px) {
+    .renting_main_container .head_text{
+        font-size: 28px;
+    }
+    .renting_main_container .rent_desc{
+       
+       
+        font-size: 14px;
+    }
+    .red_car_container{
+        padding: 2rem 1rem;
+    }
+    .red_car_container .head_text{
+        margin: auto;
+        line-height: 25px;
+    }
+   .red_car_container .flow{
+        font-size: 14px;
+    }
     .sports_car{
         display: block;
         
@@ -442,8 +464,8 @@ padding: 1rem;
 
 
     .offer_text_container .offer_text{
-        font-size: 34px;
-        line-height: 48px;
+        font-size: 25px;
+        line-height: 40px;
     }
     .customer_offer .animate_numbers{
         margin-top: 2rem;
@@ -462,7 +484,9 @@ padding: 1rem;
         line-height: 25px;
     }
 
-
+    .steps_container .head_text{
+        font-size: 25px;
+    }
     /* Special Services starts */
     .grid_img{
         width: 80%;
@@ -471,7 +495,10 @@ padding: 1rem;
     }
 
     /* Special Services ends */
-
+       
+        .btm_container_2 .second_car_data .cars_det{
+            grid-template-columns: repeat(1,1fr);
+        }
     /* banner container starts */
     .banner_cont{
         padding: 1rem;

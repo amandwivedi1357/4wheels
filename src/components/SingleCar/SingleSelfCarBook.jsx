@@ -107,7 +107,7 @@ export default function SingleSelfCarBook({ topic }) {
           </div>
         {/* input container */}
         {console.log(cars)}
-        <BookingForm car = {cars}/>
+        <BookingForm car = {cars} fleetType={fleetType} service={'self drive'}/>
         </div>
       </div>
       

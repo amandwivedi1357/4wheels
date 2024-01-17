@@ -8,12 +8,12 @@ export default function Steps() {
             <div className="inner_1">
 
                 <p className="head">Select</p>
-                <p className="desc">Choose your desired  car <br/> from fleet</p>
+                <p className="desc_inner1">Choose your desired  car <br/> from fleet</p>
             </div>
             <div className="inner_1">
 
                 <p className="head">Make Payment</p>
-                <p className="desc">Make hassle free <br/> payment</p>
+                <p className="desc_inner1">Make hassle free <br/> payment</p>
             </div>
         </div>
         <img src={steps} alt=""/>

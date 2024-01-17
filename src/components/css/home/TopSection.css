@@ -2,26 +2,34 @@
     width: 100%;
     color: #fff;
     /* border: 2px solid springgreen; */
-    background: linear-gradient(180deg, #0C0125 26.56%, #1F0015 58.85%, #320003 100%);
+    background: linear-gradient(180deg, #320003 0%, #1F0015 41.15%, #0C0125 73.44%)
 }
-.navbar{
-    font-family: 'Poppins';
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 8rem;
+    font-family: 'Poppins';
     font-weight: 400;
     display: flex;
+    background: rgba(7, 7, 16, 0.28);
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12);
+    z-index: 999; /* Set a high z-index to ensure it appears above other elements */
 }
+
 .logo{
-    width: 60%;
+    width: 30%;
+
     height: 100%;
-    /* border:2px solid yellowgreen; */
+    border:2px solid yellowgreen;
 }
 /* nav options section starts */
 .nav_options{
-    width: 60%;
+    width: 40%;
     height: 100%;
    margin: auto;
-    /* border:2px solid yellowgreen; */
+    border:2px solid yellowgreen;
 }
 
 .nav_options .nav_menus ul{
@@ -38,6 +46,7 @@ margin-top: 7%;
 /* contact section starts */
 .contact{
     margin: auto;
+    border: 1px solid red;
 }
 .contact .contact_button{
 
@@ -72,12 +81,12 @@ background: transparent;
 /* social links section ends */
 
 /* heading section starts */
-.headin_text{
+.heading_text{
     width: 60%;
     margin: auto;
     /* border: 1px solid yellowgreen; */
 }
-.headin_text p{
+.heading_text p{
     color: #FFF;
 
 text-align: center;
@@ -109,13 +118,76 @@ letter-spacing: 0.25px;
     letter-spacing: 0.5px;
 }
 /* detail section ends */
+/* Add these styles to your existing CSS file or create a new one for the dropdown styles */
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+.navbar {
+    /* Your existing styles for navbar */
+    position: relative;
+  }
+  
+  .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 160px; /* Set a fixed width for the dropdown */
+    background-color: #fafafa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    z-index: 1;
+    padding: 10px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s, transform 0.3s;
+  }
+  
+  .service_nav:hover .dropdown {
+    display: block;
+    margin-top: -3rem;
+   margin-left: 30rem;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .dropdown ul {
+    display: flex;
+    flex-direction: column;
+    
+    padding: 0;
+    margin: 0;
+  }
+  
+  .dropdown ul li {
+    padding: 8px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+    color: #0C0125;
+  }
+  
+  .dropdown li:hover {
+    background-color: #dfd5d5;
+  }
+  
+  /* Additional styles to make it visually appealing */
+  .dropdown {
+    border: 1px solid #ccc;
+  }
+  
+  .dropdown li {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  
+  /* Adjust as needed for your design */
+  
+@media screen and (min-width: 768px) and (max-width: 1025px) {
     /* Styles specific to tablet view */
     .contact{
         margin-top: 1.8rem;
     }
-    .heading_text p{
+    .headin_text p{
         font-family: 'Cormorant',serif;
         margin-top: 10px;
         text-align: center;
@@ -144,23 +216,27 @@ letter-spacing: 0.25px;
         display: none;
     }
     .social_links{
-        margin-top: -15%;
+        margin-top: 15%;
     }
     .logo {
         width: 40%;
-        height: 70%;
-        margin: 0.5rem;
+        height: 50%;
+       
         /* border:2px solid yellowgreen; */
     }
-    .headin_text{
+    .home_btm{
+        margin-top: 15%;
+    }
+    .heading_text{
+        margin-top: 10%;
         width: 70%;
     }
-    .headin_text p{
+    .heading_text p{
         font-family: 'Cormorant',serif;
-        margin-top: 10px;
+        
         text-align: center;
         font-size: 35px;
-        line-height: 35px;
+        line-height: 45px;
     }
     .detailed_desc{
         width: 67%;

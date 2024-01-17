@@ -12,6 +12,7 @@ export default function UserData() {
   const [selectedUserDetails, setSelectedUserDetails] = useState(null);
   const userData = useSelector((state) => state.booking);
   
+  
   useEffect(() => {
     dispatch(getBookingsData());
   }, [dispatch]);
@@ -25,7 +26,13 @@ export default function UserData() {
     dispatch(deleteBooking(userId))
     console.log(`Deleting user with ID: ${userId}`);
   };
-
+// const handleStatusToggle = (user) => {
+//     // Assuming 'status' is a property in each 'user' object
+//     const updatedUser = { ...user };
+//     updatedUser.status = user.status === "Pending" ? "Confirmed" : "Pending";
+//     // Perform action to update user status in your Redux store or API
+//     // dispatch(updateUserStatus(updatedUser)); // Dispatch action to update status in Redux store
+//   };
   return (
     <div>
       <h1 className="heading">User Data</h1>
@@ -33,9 +40,7 @@ export default function UserData() {
         <thead>
           <tr>
             <th>Name</th>
-          
             <th>Contact Number</th>
-          
             <th>Action</th>
             <th>More Details</th>
           </tr>

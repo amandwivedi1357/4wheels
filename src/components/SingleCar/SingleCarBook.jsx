@@ -119,7 +119,7 @@ export default function SingleCarBook({ topic }) {
           </div>
         {/* input container */}
 
-        <BookingForm car={cars}/>
+        <BookingForm car={cars} service = {'chauffeur drive'} fleetType={fleetType}/>
         </div>
       </div>
       

@@ -108,7 +108,7 @@ const RentingCar = () => {
   return (
     <div className="renting_main_container">
       <p className="head_text">A fleet that meets your needs</p>
-      <p className="desc_text">Have a look at our different category of cars</p>
+      <p className="desc_text rent_desc">Have a look at our different category of cars</p>
       <div className="sports_car">
         <div className="sports_info">
           <p className="head_text">Sports Car</p>
@@ -124,7 +124,7 @@ const RentingCar = () => {
       {/* React Flow implementation */}
       <div className="red_car_container">
         <p className="head_text">is Renting a Car worth it?</p>
-        <p className="desc_text">
+        <p className="desc_text flow">
           Have a look at our different category of cars
         </p>
 

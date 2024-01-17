@@ -9,10 +9,10 @@
     padding: 1rem;
 }
 .cheuffer_menu{
+    /* border: 1px solid red; */
     width: 95%;
     height: auto;
     margin: auto;
-    padding: 1rem;
     margin-bottom: 0.5rem;
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
@@ -56,4 +56,36 @@ text-decoration-line: underline;
 text-transform: capitalize;
 cursor: pointer;
 padding: 1rem;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1025px) {
+    .btm_container .desc_text{
+        width: 80%;
+        font-size: 13px;
+        margin: auto;
+        padding: 1rem;
+    }
+    .cheuffer_menu .menu_cont{
+        width: 80%;
+    }
+    .cheuffer_menu .menu_cont .type_text{
+        font-size: 25px;
+    }
+    .cheuffer_menu .menu_cont .explore{
+    font-size: 16px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .btm_container .desc_text{
+        width: 80%;
+        font-size: 13px;
+        margin: auto;
+        padding: 1rem;
+    }
+    .cheuffer_menu .menu_cont{
+        width: 60%;
+    }
+    .cheuffer_menu .menu_cont .type_text{
+        font-size: 25px;
+    }
 }

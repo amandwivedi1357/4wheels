@@ -9,17 +9,17 @@ import ElectricCars from "./Home/ElectricCars";
 import "./css/home/MySlider2.css"
 
 const MySlider2 = () => {
-  const CustomPrevArrow = (props) => (
-    <button {...props} className="slick-prev">
-      Previous
-    </button>
-  );
+  // const CustomPrevArrow = (props) => (
+  //   <button {...props} className="slick-prev">
+  //     Previous
+  //   </button>
+  // );
 
-  const CustomNextArrow = (props) => (
-    <button {...props} className="slick-next">
-      Next
-    </button>
-  );
+  // const CustomNextArrow = (props) => (
+  //   <button {...props} className="slick-next">
+  //     Next
+  //   </button>
+  //);
   const settings = {
     dots: true,
     infinite: true,
@@ -27,8 +27,6 @@ const MySlider2 = () => {
     speed: 300,
     slidesToShow: 1,
     slidesToScroll: 1,
-    prevArrow: <CustomPrevArrow />,
-    nextArrow: <CustomNextArrow />,
   };
 
   const slides = [

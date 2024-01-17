@@ -36,14 +36,14 @@
     left: 14%;
     width: 30%;
     
-    /* border: 1px solid green; */
+   
     margin: 0 2rem;
 }
 .inner_1{
     padding: 2rem 0;
     width: 80%;
     height: 40%;
-    
+      /* border: 1px solid green; */
     float: right;
 }
 .head{
@@ -57,7 +57,7 @@ line-height: 55px; /* 152.778% */
 letter-spacing: 0.25px;
 text-transform: capitalize;
 }
-.desc{
+.desc_inner1{
 width: 90%; 
 float: left; 
 /* border: 1px solid red; */
@@ -111,9 +111,9 @@ letter-spacing: 0.5px;
 
 @media screen and (max-width: 767px) {
     .container{
-        visibility: hidden;
+       
     }
     .main_cont{
-        display: none;
+        
     }
 }

@@ -76,7 +76,7 @@ background: transparent;
 .heading_text{
     width: 60%;
     margin: auto;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 .heading_text p{
     font-family: 'Cormorant',serif;

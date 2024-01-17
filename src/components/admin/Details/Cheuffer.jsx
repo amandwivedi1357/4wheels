@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useDispatch, useSelector } from "react-redux";
 import "./self.css"
 import { useEffect, useState } from "react";
@@ -9,8 +10,8 @@ import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, Modal
 "@chakra-ui/react";
 import AddModal from "../Modals/CheuffeurModals/AddModal";
 import { FaRegEdit } from "react-icons/fa";
-import { AiFillDelete } from "react-icons/ai";
 import { FcViewDetails } from "react-icons/fc";
+import ConfirmationModal from "../Modals/CheuffeurModals/ConfirmationModal";
 
 
 
@@ -29,11 +30,15 @@ export default function Cheuffer() {
       InterCityMinimumkmsPerDay: '',
       InterCityMinimumKmsPerkm: 0,
       driverBhattaPerKm: 0,
+      status:""
     },
   });
   const [selectedCarDetails, setSelectedCarDetails] = useState(null);
   const [isDetailsModalOpen, setIsDetailsModalOpen] = useState(false);
     const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+    const [isDeleteConfirmationOpen, setIsDeleteConfirmationOpen] = useState(false);
+const [selectedCarToDelete, setSelectedCarToDelete] = useState(null);
+
     const [carId, setCarId] = useState(null);
   const [fleetId, setFleetId] = useState(null);
     const [selectedFleet, setSelectedFleet] = useState('ROYALE');
@@ -53,6 +58,7 @@ export default function Cheuffer() {
       InterCityMinimumkmsPerDay: '',
       InterCityMinimumKmsPerkm: 0,
       driverBhattaPerKm: 0,
+      status:''
     },
   });
 
@@ -93,6 +99,7 @@ export default function Cheuffer() {
             InterCityMinimumkmsPerDay: '',
             InterCityMinimumKmsPerkm: 0,
             driverBhattaPerKm: 0,
+            status:''
           },
         });
       };
@@ -126,6 +133,7 @@ export default function Cheuffer() {
       const handleSaveChanges = () => {
         console.log(editedCar)
         dispatch(updateCarInFleet(fleetId, carId, editedCar));
+        dispatch(getAllCars())
         setIsEditModalOpen(false);
         toast({
           title: 'Car edited.',
@@ -136,24 +144,63 @@ export default function Cheuffer() {
         });
         
       };
+      const handleToggleStatus = (carId, fleetId, newStatus) => {
+        // Update the local status immediately
+        setEditedCar((prevEditedCar) => ({
+          ...prevEditedCar,
+          properties: {
+            ...prevEditedCar.properties,
+            status: newStatus,
+          },
+        }));
+      
+        // Dispatch the update to the backend
+        dispatch(updateCarInFleet(fleetId, carId, {
+          properties: {
+            status: newStatus,
+          },
+        }));
+      
+        toast({
+          title: 'Car Status Updated',
+          description: 'The car status has been successfully updated.',
+          status: 'success',
+          duration: 3000,
+          isClosable: true,
+        });
+      };
       
     
     
-      const handleDeleteCar = (carId,fleetId) => {
+      // const handleDeleteCar = (carId,fleetId) => {
 
-        if(fleetId && carId){
+      //   if(fleetId && carId){
+      //     setSelectedCarToDelete({ carId, fleetId });
+      //     setIsDeleteConfirmationOpen(true);
+      //   }
+       
+      // };
+      const handleConfirmDelete = () => {
+        if (selectedCarToDelete) {
+          const { carId, fleetId } = selectedCarToDelete;
           console.log(`Delete car with ID: ${carId}`);
-          dispatch(deleteCarInFleet(fleetId,carId))
+          dispatch(deleteCarInFleet(fleetId, carId));
           toast({
             title: 'Car Deleted.',
-            description: "The car has been successfully deleted in database",
+            description: "The car has been successfully deleted in the database",
             status: 'success',
             duration: 9000,
             isClosable: true,
-          })
+          });
+          setIsDeleteConfirmationOpen(false);
         }
-       
       };
+      
+      const handleCloseDeleteConfirmation = () => {
+        setSelectedCarToDelete(null);
+        setIsDeleteConfirmationOpen(false);
+      };
+      
      
   const handleDeleteFleet = () => {
     const fleetIndexToDelete = fleets.findIndex((fleet) => fleet.fleetType === selectedFleet);
@@ -236,35 +283,40 @@ export default function Cheuffer() {
           <th className="header-cell">Car Name</th>
           <th className="header-cell c_image">Car Image</th>
           <th className="header-cell ">Edit Car Detail</th>
-          <th className="header-cell">Delete Car</th>
+          <th className="header-cell">Status</th>
           <th className="header-cell">Details</th>
 
         </tr>
       </thead>
       <tbody>
-      {fleets.map((fleet) =>
-            fleet.fleetType === selectedFleet &&
-            fleet.cars.map((car, index) => (
-              <tr key={index}>
-       
-        
-        <td >{car.carName}</td>
+  {fleets.map((fleet) =>
+    fleet.fleetType === selectedFleet &&
+    fleet.cars.map((car, index) => (
+      <tr key={index} className={car.properties.status === 'Out of Stock' ? 'out-of-stock' : ''}>
+        <td>{car.carName}</td>
         <td className="img_cont">
           <img src={car.properties.img} alt={`Car ${index}`} className="car-image" />
         </td>
         <td>
-          <button className="edit-button" onClick={() => handleEditCar(car._id,fleet._id)}><FaRegEdit /></button>
+          <button className="edit-button" onClick={() => handleEditCar(car._id, fleet._id)}>
+            <FaRegEdit />
+          </button>
         </td>
         <td>
-          <button className="delete-button" onClick={() => handleDeleteCar(car._id,fleet._id)}><AiFillDelete /></button>
+          <StatusButton
+            status={car.properties.status}
+            onToggleStatus={(newStatus) => handleToggleStatus(car._id, fleet._id, newStatus)}
+          />
         </td>
         <td>
-          <button className="detail-button" onClick={() => handleCarDetails(car)}><FcViewDetails /></button>
+          <button className="detail-button" onClick={() => handleCarDetails(car)}>
+            <FcViewDetails />
+          </button>
         </td>
       </tr>
     ))
-    )}
-      </tbody>
+  )}
+</tbody>
     <Button onClick={handleDeleteFleet} bg={'red'} color={'white'} mt={5}>Delete Fleet</Button>
     </table>
    
@@ -380,6 +432,33 @@ export default function Cheuffer() {
     onClose={() => setIsDetailsModalOpen(false)}
     selectedCarDetails={selectedCarDetails}
   />
+  <ConfirmationModal
+  isOpen={isDeleteConfirmationOpen}
+  onClose={handleCloseDeleteConfirmation}
+  onConfirmDelete={handleConfirmDelete}
+/>
+
     </div>
   )
 }
+
+
+const StatusButton = ({ status, onToggleStatus }) => {
+  const [stockStatus, setStockStatus] = useState(status);
+
+  const handleStock = () => {
+    const newStatus = stockStatus === 'In Stock' ? 'Out of Stock' : 'In Stock';
+    setStockStatus(newStatus);
+    onToggleStatus(newStatus); // Notify the parent component about the status change
+  };
+
+  return (
+    <Button onClick={handleStock} _hover={{
+      bg: stockStatus === 'In Stock' ? 'darkgreen' : 'darkred',
+      color: 'white',
+    }}  color={'white'} bg={stockStatus === 'In Stock' ? '#2F855A' : '#F56565'}>
+      {stockStatus}
+    </Button>
+  );
+};
+

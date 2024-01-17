@@ -6,7 +6,7 @@ import Footer from '../components/Footer'
 const SelfDrive = () => {
   return (
     <div>
-      <SelfTop/>
+      <SelfTop topic={'Self Drive'} subTopic = {''}/>
       <SelfDriveBottom/>
       <Footer/>
     </div>

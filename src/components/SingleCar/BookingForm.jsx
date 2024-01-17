@@ -3,7 +3,6 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useToast } from "@chakra-ui/react";
 import { addBooking } from "../../redux/actions/Booking.action";
-import { useNavigate } from "react-router-dom";
 
 
 
@@ -11,13 +10,16 @@ function generateFiveDigitNumber() {
   return Math.floor(10000 + Math.random() * 90000);
 }
 const randomFiveDigitNumber = generateFiveDigitNumber();
-export default function BookingForm({car}) {
+export default function BookingForm({car,service,fleetType}) {
+  console.log(service)
   const resetForm = {
     name: "",
     captcha: "",
     carName:car.carName,
-    car:car,
+    fleetType:fleetType,
+    // car:cars,
     contactNo: "",
+    status:"Pending",
     emailId: "",
     serviceCity: "",
     startDate: "",
@@ -32,13 +34,14 @@ export default function BookingForm({car}) {
   };
   const dispatch = useDispatch();
   const toast = useToast();
-  const navigate = useNavigate()
   const [formData, setFormData] = useState({
     name: "",
     carName:car.carName,
-    car:car,
+    // car:car,
     captcha: "",
+    status:"Pending",
     contactNo: "",
+    fleetType:fleetType,
     emailId: "",
     serviceCity: "",
     startDate: "",
@@ -46,7 +49,7 @@ export default function BookingForm({car}) {
     reportingTimeHrs: "",
     reportingTime24Hrs: "",
     placeOfReporting: "",
-    choiceOfTravel: "",
+    choiceOfTravel: "Local",
     typeOfVehicle: "",
     tentativePointOfDrop: "",
     specialInstruction: "",
@@ -60,7 +63,7 @@ export default function BookingForm({car}) {
       [id]: value,
     });
   };
-  console.log(car)
+ 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (formData.captcha === randomFiveDigitNumber.toString()) {
@@ -75,7 +78,7 @@ export default function BookingForm({car}) {
       setFormData({...formData})
       dispatch(addBooking(formData));
       console.log("Form Data:", formData);
-      setFormData(resetForm);
+      // setFormData(resetForm);
       // navigate("/")
     } else {
       toast({
@@ -151,10 +154,9 @@ export default function BookingForm({car}) {
                 value={formData.serviceCity}
                 onChange={handleInputChange}
               >
-                <option value="All">All</option>
-                <option value="Type 1">Type 1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
+               <option value="Hyderabad" disabled>
+    Hyderabad
+  </option>
               </select>
             </div>
           </div>
@@ -207,11 +209,14 @@ export default function BookingForm({car}) {
                 value={formData.reportingTimeHrs}
                 onChange={handleInputChange}
               >
-                <option value="" disabled selected>
-                  hrs
-                </option>
-                <option value="1">1</option>
-                <option value="2">2</option>
+                <option value="" disabled hidden>
+    hrs
+  </option>
+                {[...Array(24).keys()].map((hour) => (
+    <option key={hour} value={hour}>
+      {hour.toString().padStart(2, '0')}
+    </option>
+  ))}
               </select>
 
               <select
@@ -221,11 +226,13 @@ export default function BookingForm({car}) {
                 value={formData.reportingTime24Hrs}
                 onChange={handleInputChange}
               >
-                <option value="" disabled selected>
-                  24 hours basis
-                </option>
-                <option value="PM">PM</option>
-                <option value="AM">AM</option>
+                <option value="" disabled hidden>
+    24 hours basis
+  </option>
+                <option value="00">00</option>
+                <option value="15">15</option>
+                <option value="30">30</option>
+                <option value="45">45</option>
               </select>
             </div>
           </div>
@@ -234,19 +241,15 @@ export default function BookingForm({car}) {
               Place of Reporting <span style={{ color: "red" }}>*</span>
             </label>
             <div className="contact_numWrap">
-              <select
+              <input
                 name=""
                 id="placeOfReporting"
                 required
                 value={formData.placeOfReporting}
                 onChange={handleInputChange}
-              >
-                <option value="" disabled selected>
-                  Address
-                </option>
-                <option value="z">z</option>
-                <option value="x">x</option>
-              </select>
+              />
+                
+              
             </div>
           </div>
         </div>
@@ -263,9 +266,10 @@ export default function BookingForm({car}) {
                 value={formData.choiceOfTravel}
                 onChange={handleInputChange}
               >
-                <option value="a">a</option>
-                <option value="b">b</option>
-                <option value="c">c</option>
+                <option value="Local">Local</option>
+                <option value="Intercity">Intercity</option>
+                <option value="Station">Station</option>
+                <option value="Airport">Airport</option>
               </select>
             </div>
           </div>
@@ -280,12 +284,13 @@ export default function BookingForm({car}) {
                 value={formData.typeOfVehicle}
                 onChange={handleInputChange}
               >
-                <option value="cheuffeur-drive">Cheuffeur Drive</option>
-                <option value="self-drive">Self Drive</option>
+                <option value={service} >
+                {service}
+              </option>
                 
               </select>
             </div>
-          </div>
+          </div> 
         </div>
 
         <div className="input1">
@@ -333,7 +338,7 @@ export default function BookingForm({car}) {
                 onChange={handleInputChange}
                 name=""
                 id="specialInstruction"
-                cols="105"
+                cols="120"
                 rows="10"
                 required
               ></textarea>

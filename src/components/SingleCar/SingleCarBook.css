@@ -112,6 +112,7 @@ display: flex;
     justify-content: space-between;
 }
 .input_container{
+    
 width: 95%;
 border-radius: 5px;
 margin:3rem auto;
@@ -153,9 +154,9 @@ letter-spacing: 0.25px;
 }
 input,select{
     width: 100%;
-    height: 2rem;
+    height: 3rem;
     border-radius: 3px;
-border: 0.5px solid #31B404;
+border: 0.5px solid rgba(90, 84, 84, 0.58);
 }
 .input12{
     width: 45%;
@@ -174,9 +175,10 @@ letter-spacing: 0.015px;
 }
 .box{
     width: 3.5rem;
-    margin: auto;
-    text-align: center;
-    height:2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:3rem;
     color: #fff;
     background: #8B959F;
 }
@@ -204,15 +206,17 @@ input[type="date"]::-webkit-input-placeholder {
     display: flex;
 }
 .box2{
-    width: 13rem;
-    margin: auto;
-    text-align: center;
-    height:2rem;
+    width: 10rem;
+   
+    display: flex;
+  justify-content: center;
+  align-items: center;
+    height:3rem;
     color: #fff;
     background: #000000;
 }
 .box2 span{
-    padding-top: 5px;
+    padding: 5px;
 letter-spacing: 15px;
 }
 .submit_btn{

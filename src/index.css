@@ -8,29 +8,8 @@ body{
 }
 
 
-body {
-  --sb-track-color: #68222c;
-  --sb-thumb-color: #3300b7;
-  --sb-size: 12px;
 
-  scrollbar-color: var(--sb-thumb-color) 
-                   var(--sb-track-color);
-}
 
-body::-webkit-scrollbar {
-  width: var(--sb-size) 
-}
-
-body::-webkit-scrollbar-track {
-  background: var(--sb-track-color);
-  border-radius: 1px;
-}
-
-body::-webkit-scrollbar-thumb {
-  background: var(--sb-thumb-color);
-  border-radius: 4px;
-  
-  }
 :root{
   --primary-color:#181b3a;
   --secondary-color:#01d293;

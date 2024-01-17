@@ -1,7 +1,8 @@
+/* eslint-disable react/prop-types */
 import { useDispatch, useSelector } from "react-redux";
 import "./self.css"
 import { useEffect, useState } from "react";
-import { getAllSelfCars,deleteSelfCarInFleet,updateSelfCarInFleet, deleteSelfFleet } from "../../../redux/actions/SelfDrive.action";
+import { getAllSelfCars,updateSelfCarInFleet, deleteSelfFleet } from "../../../redux/actions/SelfDrive.action";
 import {Button, Input, Select, useToast} from "@chakra-ui/react"
 import AddModal from "../Modals/SelfModals/AddModal";
 
@@ -9,13 +10,17 @@ import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, Modal
  
 "@chakra-ui/react";
 import { FaRegEdit } from "react-icons/fa";
-import { AiFillDelete } from "react-icons/ai";
+// import { AiFillDelete } from "react-icons/ai";
 import { FcViewDetails } from "react-icons/fc";
+// import ConfirmationModal from "../Modals/SelfModals/ConfirmationModal";
 
 export default function Self() {
   const [selectedCarDetails, setSelectedCarDetails] = useState(null);
   const [isDetailsModalOpen, setIsDetailsModalOpen] = useState(false);
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+//   const [isDeleteConfirmationOpen, setIsDeleteConfirmationOpen] = useState(false);
+// const [selectedCarToDelete, setSelectedCarToDelete] = useState(null);
+
   const [carId, setCarId] = useState(null);
 const [fleetId, setFleetId] = useState(null);
     const [selectedFleet, setSelectedFleet] = useState('ELECTRIC');
@@ -25,7 +30,7 @@ const [fleetId, setFleetId] = useState(null);
    const [editedCar, setEditedCar] = useState({
     carName: '',
     properties: {
-      img: '',
+      img:'',
       hourlyPack: 0,
       allotedKMs: 0,
       zeroMileage: 0,
@@ -33,7 +38,8 @@ const [fleetId, setFleetId] = useState(null);
       fupPack: 0,
       trueUnlimited: 0,
       securityDeposit: 0,
-      fuelType: '',
+      fuelType:'',
+      status:''
     },
   });
 
@@ -72,6 +78,7 @@ const [fleetId, setFleetId] = useState(null);
       trueUnlimited: 0,
       securityDeposit: 0,
       fuelType: '',
+      status:''
     }    
     });
       };
@@ -96,22 +103,66 @@ const [fleetId, setFleetId] = useState(null);
         });
         
       };
-    
-      const handleDeleteCar = (carId,fleetId) => {
 
-        if(fleetId && carId){
-          console.log(`Delete car with ID: ${carId}`);
-          dispatch(deleteSelfCarInFleet(fleetId,carId))
-          toast({
-            title: 'Car Deleted.',
-            description: "The car has been successfully deleted in database",
-            status: 'success',
-            duration: 9000,
-            isClosable: true,
-          })
-        }
-       
+
+      const handleToggleStatus = (carId, fleetId, newStatus) => {
+        // Update the local status immediately
+        setEditedCar((prevEditedCar) => ({
+          ...prevEditedCar,
+          properties: {
+            ...prevEditedCar.properties,
+            status: newStatus,
+          },
+        }));
+      
+        // Dispatch the update to the backend
+        dispatch(updateSelfCarInFleet(fleetId, carId, {
+          properties: {
+            status: newStatus,
+          },
+        }));
+      
+        toast({
+          title: 'Car Status Updated',
+          description: 'The car status has been successfully updated.',
+          status: 'success',
+          duration: 3000,
+          isClosable: true,
+        });
       };
+      
+    
+    
+      
+      
+      // const handleDeleteCar = (carId,fleetId) => {
+        
+      //   if(fleetId && carId){
+      //     setSelectedCarToDelete({ carId, fleetId });
+      //     setIsDeleteConfirmationOpen(true);
+      //   }
+       
+      // };
+      // const handleConfirmDelete = () => {
+      //   if (selectedCarToDelete) {
+      //     const { carId, fleetId } = selectedCarToDelete;
+      //     console.log(`Delete car with ID: ${carId}`);
+      //     dispatch(deleteSelfCarInFleet(fleetId, carId));
+      //     toast({
+      //       title: 'Car Deleted.',
+      //       description: "The car has been successfully deleted in the database",
+      //       status: 'success',
+      //       duration: 9000,
+      //       isClosable: true,
+      //     });
+      //     setIsDeleteConfirmationOpen(false);
+      //   }
+      // };
+      // const handleCloseDeleteConfirmation = () => {
+      //   setSelectedCarToDelete(null);
+      //   setIsDeleteConfirmationOpen(false);
+      // };
+      
       const handleDeleteFleet = () => {
         const fleetIndexToDelete = fleets.findIndex((fleet) => fleet.fleetType === selectedFleet);
     
@@ -149,32 +200,39 @@ const [fleetId, setFleetId] = useState(null);
           <th className="header-cell">Car Name</th>
           <th className="header-cell">Car Image</th>
           <th className="header-cell">Edit Car Detail</th>
-          <th className="header-cell">Delete Car</th>
+          <th className="header-cell">Status</th>
           <th className="header-cell">Details</th>
         </tr>
       </thead>
       <tbody>
-      {fleets?.map((fleet) =>
-            fleet.fleetType === selectedFleet &&
-            fleet.cars?.map((car, index) => (
-      <tr key={index}>
+      {fleets.map((fleet) =>
+    fleet.fleetType === selectedFleet &&
+    fleet.cars.map((car, index) => (
+      <tr key={index} className={car.properties.status === 'Out of Stock' ? 'out-of-stock' : ''}>
         <td>{car.carName}</td>
         <td className="img_cont">
           <img src={car.properties.img} alt={`Car ${index}`} className="car-image" />
         </td>
         <td>
-          <button className="edit-button" onClick={() => handleEditCar(car._id,fleet._id)}><FaRegEdit /></button>
+          <button className="edit-button" onClick={() => handleEditCar(car._id, fleet._id)}>
+            <FaRegEdit />
+          </button>
         </td>
         <td>
-          <button className="delete-button" onClick={() => handleDeleteCar(car._id,fleet._id)}><AiFillDelete /></button>
+          <StatusButton
+            status={car.properties.status}
+            onToggleStatus={(newStatus) => handleToggleStatus(car._id, fleet._id, newStatus)}
+          />
         </td>
         <td>
-          <button className="detail-button" onClick={() => handleCarDetails(car)}><FcViewDetails /></button>
+          <button className="detail-button" onClick={() => handleCarDetails(car)}>
+            <FcViewDetails />
+          </button>
         </td>
       </tr>
     ))
-    )}
-      </tbody>
+  )}
+</tbody>
     </table>
     <Button onClick={handleDeleteFleet} bg={'red'} color={'white'} mt={5}>Delete Fleet</Button>
     <Modal isOpen={isEditModalOpen} onClose={handleCloseEditModal}>
@@ -289,6 +347,30 @@ const [fleetId, setFleetId] = useState(null);
     onClose={() => setIsDetailsModalOpen(false)}
     selectedCarDetails={selectedCarDetails}
   />
+  {/* <ConfirmationModal
+  isOpen={isDeleteConfirmationOpen}
+  onClose={handleCloseDeleteConfirmation}
+  onConfirmDelete={handleConfirmDelete}
+/> */}
     </div>
   )
 }
+const StatusButton = ({ status, onToggleStatus }) => {
+  const [stockStatus, setStockStatus] = useState(status);
+
+  const handleStock = () => {
+    const newStatus = stockStatus === 'In Stock' ? 'Out of Stock' : 'In Stock';
+    setStockStatus(newStatus);
+    onToggleStatus(newStatus); // Notify the parent component about the status change
+  };
+
+  return (
+    <Button onClick={handleStock} _hover={{
+      bg: stockStatus === 'In Stock' ? 'darkgreen' : 'darkred',
+      color: 'white',
+    }}  color={'white'} bg={stockStatus === 'In Stock' ? '#2F855A' : '#F56565'}>
+      {stockStatus}
+    </Button>
+  );
+};
+

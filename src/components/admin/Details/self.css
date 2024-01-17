@@ -18,7 +18,7 @@
   .car-table th,
   .car-table td {
     border: 1px solid #ddd;
-    padding: 8px;
+    padding: 2px;
     text-align: center;
   }
   
@@ -81,6 +81,10 @@
     display:flex;
     justify-content: space-between;
     margin: 1rem 0;
+  }
+
+  .out-of-stock {
+    background-color: rgba(192, 192, 192, 0.2);  /* or any other greyish color */
   }
  
 /* Tablet Styles */

@@ -11,13 +11,13 @@ import car5 from '../assets/home/car5-removebg-preview.png'
 import car6 from '../assets/home/car6-removebg-preview.png'
 const MySlider = () => {
   const CustomPrevArrow = (props) => (
-    <button {...props} className="slick-prev">
+    <button {...props} className="slick-prev prev">
       Previous
     </button>
   );
 
   const CustomNextArrow = (props) => (
-    <button {...props} className="slick-next">
+    <button {...props} className="slick-next next">
       Next
     </button>
   );
