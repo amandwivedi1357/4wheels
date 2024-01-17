@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 // /* eslint-disable react/prop-types */
-import "./detail.css"
+import "./Detail.css"
 import { Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay } from "@chakra-ui/react";
 
 const AddCarModal = ({ isOpen, onClose, selectedCarDetails }) => {
