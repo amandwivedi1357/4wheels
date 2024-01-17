@@ -20,7 +20,7 @@ const AllRoutes = () => {
         <Route path='/cheuffeurdrive' element={<CheuffeurDrive />} />
         
         <Route path='/selfdrive' element={<SelfDrive />} />
-        <Route path='/admin' element={<Admin />} /> 
+        <Route path='/4wheels-admn' element={<Admin />} /> 
         <Route path='/cheuffeurdrive/:fleetType/:id/car/:carId' element={<SingleCarBook topic = {'cheuffeur'}/>} />
         <Route path='/cheuffeurdrive/:fleetType/:id' element={<FleetDetail />} />
         <Route path='/selfdrive/:fleetType/:id/car/:carId' element={<SingleSelfCarBook topic = {'self'}/>} />

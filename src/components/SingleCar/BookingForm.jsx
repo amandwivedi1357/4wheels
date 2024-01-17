@@ -66,7 +66,8 @@ export default function BookingForm({car,service,fleetType}) {
  
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (formData.captcha === randomFiveDigitNumber.toString()) {
+    
+    if (formData.captcha === randomFiveDigitNumber.toString() ) {
       toast({
         title: "form submitted",
         description: "Thank you the form has been submitted",
@@ -78,6 +79,7 @@ export default function BookingForm({car,service,fleetType}) {
       setFormData({...formData})
       dispatch(addBooking(formData));
       console.log("Form Data:", formData);
+      
       // setFormData(resetForm);
       // navigate("/")
     } else {

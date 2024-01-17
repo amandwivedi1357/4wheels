@@ -25,7 +25,7 @@
 .chauffeur_drive{
     margin-top: 68px;
     width: 100%;
-    height: auto;
+    height: 30rem;
     display: flex;
     justify-content: space-between;
 }
