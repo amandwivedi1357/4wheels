@@ -154,7 +154,7 @@ export default function BookingForm({car,service,fleetType}) {
                 value={formData.serviceCity}
                 onChange={handleInputChange}
               >
-               <option value="Hyderabad" disabled>
+               <option value="Hyderabad" >
     Hyderabad
   </option>
               </select>
