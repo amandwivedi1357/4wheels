@@ -3,7 +3,7 @@
 
 import { Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay } from "@chakra-ui/react";
 import { useEffect } from "react";
-import "./UserDetailModal.css"; 
+import "./userDetailModal.css"; 
 
 const UserDetailsModal = ({ isOpen, onClose, userDetails }) => {
   

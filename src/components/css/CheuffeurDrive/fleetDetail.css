@@ -162,15 +162,30 @@ box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.06);
     .specification_sec {
       display: none;
     }
+    .inner_left{
+        width: 50%;
+    }
     .inner_right {
         flex-direction: column;
       }
-    
-      .single_cont {
-        flex-direction: column;
+      .right_cont{
+        margin: 0.5rem;
+        border: 1px solid blue;
       }
     
-      .img_sec,
+      .single_cont {
+     
+        flex-direction: column;
+        border: 1px solid red;
+
+      }
+      Image{
+        width: 60%;
+      }
+      .img_sec{
+        width: 6;
+      }
+    
       .specification_sec {
         width: 100%;
       }

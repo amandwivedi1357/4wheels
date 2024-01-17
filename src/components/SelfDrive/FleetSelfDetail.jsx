@@ -72,21 +72,7 @@ const FleetSelfDetail = () => {
       
       <div className="btm_Sec">
         <div className="inner_left">
-            <div className="inner_Select">
-
-        <Select
-        placeholder="Select location"
-        variant="outline"
-        borderRadius="lg"
-        m={'auto'}
-         size={isMobile ? 'sm' : "xl"}
-        onChange={handleLocationChange}
-        >
-        {locations.map((location) => (
-            <option key={location}>{location}</option>
-            ))}
-      </Select>
-            </div>
+           
             <div className="fleet_filter">
             <p className="fleet_text">Type of Cars</p>
               {
@@ -119,7 +105,7 @@ const FleetSelfDetail = () => {
                         <div key={data._id} className="single_cont">
                             <div className="img_sec">
                             {console.log(data.properties.hourlyPack)}
-                                <Image src={data.properties.img} maxW={'10rem'}/>
+                                <Image className='car_img' src={data.properties.img} maxW={'10rem'}/>
                             </div>
                          
               <div className="specification_sec">
