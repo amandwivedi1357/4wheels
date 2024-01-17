@@ -3,19 +3,19 @@
     height: auto;
     display: flex;
     gap: 2%;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     padding: 2%;
 }
 .inner_left{
 width: 20%;
-border: 2px solid red;
+/* border: 2px solid red; */
 }
 .inner_Select{
     width: 100%;
 }
 .inner_right{
 width: 75%;
-border: 2px solid red;
+/* border: 2px solid red; */
 }
 .right_cont{
     margin: auto;
