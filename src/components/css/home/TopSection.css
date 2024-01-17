@@ -22,14 +22,14 @@
     width: 30%;
 
     height: 100%;
-    border:2px solid yellowgreen;
+    
 }
 /* nav options section starts */
 .nav_options{
     width: 40%;
     height: 100%;
    margin: auto;
-    border:2px solid yellowgreen;
+   
 }
 
 .nav_options .nav_menus ul{
@@ -46,7 +46,7 @@ margin-top: 7%;
 /* contact section starts */
 .contact{
     margin: auto;
-    border: 1px solid red;
+    
 }
 .contact .contact_button{
 
