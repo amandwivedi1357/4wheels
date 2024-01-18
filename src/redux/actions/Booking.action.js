@@ -10,6 +10,7 @@ export const addBooking = (bookingData) => async (dispatch) => {
     dispatch({ type: types.CREATE_BOOKING_SUCCESS, payload: response.data });
   } catch (error) {
     dispatch({ type: types.CREATE_BOOKING_FAILURE, payload: error.response.data.message });
+    console.log(error.response)
   }
 };
 

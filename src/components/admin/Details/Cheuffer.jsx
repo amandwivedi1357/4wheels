@@ -30,7 +30,7 @@ export default function Cheuffer() {
       InterCityMinimumkmsPerDay: '',
       InterCityMinimumKmsPerkm: 0,
       driverBhattaPerKm: 0,
-      status:""
+      
     },
   });
   const [selectedCarDetails, setSelectedCarDetails] = useState(null);
@@ -154,7 +154,6 @@ const [selectedCarToDelete, setSelectedCarToDelete] = useState(null);
           },
         }));
       
-        // Dispatch the update to the backend
         dispatch(updateCarInFleet(fleetId, carId, {
           properties: {
             status: newStatus,

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = 'http://localhost:8080'; 
+const BASE_URL = 'https://stormy-fish-houndstooth.cyclic.app'; 
 
 
 const api = axios.create({
@@ -37,8 +37,8 @@ export const addCarsToFleetType = async(fleetId, cars) => {
     return await api.patch(`/api/v1/cars/fleet/${fleetId}`, { fleetType });
   };
   
-  export const updateCarInFleet = async(fleetId, carId, properties) => {
-    return await api.patch(`/api/v1/cars/fleet/${fleetId}/car/${carId}`, { properties });
+  export const updateCarInFleet = async(fleetId, carId, updatedData) => {
+    return await api.patch(`/api/v1/cars/fleet/${fleetId}/car/${carId}`,  updatedData );
   };
   
   export const deleteFleet = async(fleetId) => {
@@ -104,7 +104,7 @@ export const addSelfCarsToFleetType = async(fleetId, cars) => {
   };
   
   export const updateSelfCarInFleet = async(fleetId, carId, properties) => {
-    return await api.patch(`/api/v3/self/fleet/${fleetId}/car/${carId}`, { properties });
+    return await api.patch(`/api/v3/self/fleet/${fleetId}/car/${carId}`,  properties );
   };
   
   export const deleteSelfFleet = async(fleetId) => {

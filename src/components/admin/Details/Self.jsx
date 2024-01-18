@@ -30,7 +30,7 @@ const [fleetId, setFleetId] = useState(null);
    const [editedCar, setEditedCar] = useState({
     carName: '',
     properties: {
-      img:'',
+      img: '',
       hourlyPack: 0,
       allotedKMs: 0,
       zeroMileage: 0,
@@ -38,7 +38,7 @@ const [fleetId, setFleetId] = useState(null);
       fupPack: 0,
       trueUnlimited: 0,
       securityDeposit: 0,
-      fuelType:'',
+      fuelType: '',
       status:''
     },
   });
@@ -91,7 +91,7 @@ const [fleetId, setFleetId] = useState(null);
         
       };
       const handleSaveChanges = () => {
-        console.log(editedCar)
+        
         dispatch(updateSelfCarInFleet(fleetId, carId, editedCar));
         setIsEditModalOpen(false);
         toast({

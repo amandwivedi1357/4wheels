@@ -21,7 +21,7 @@ export default function BookingForm({car,service,fleetType}) {
     contactNo: "",
     status:"Pending",
     emailId: "",
-    serviceCity: "",
+    serviceCity: "Hyderabad",
     startDate: "",
     endDate: "",
     reportingTimeHrs: "",
@@ -43,14 +43,14 @@ export default function BookingForm({car,service,fleetType}) {
     contactNo: "",
     fleetType:fleetType,
     emailId: "",
-    serviceCity: "",
+    serviceCity: "Hyderabad",
     startDate: "",
     endDate: "",
     reportingTimeHrs: "",
     reportingTime24Hrs: "",
     placeOfReporting: "",
     choiceOfTravel: "Local",
-    typeOfVehicle: "",
+    typeOfVehicle: service,
     tentativePointOfDrop: "",
     specialInstruction: "",
   });
@@ -58,6 +58,7 @@ export default function BookingForm({car,service,fleetType}) {
   const today = new Date().toISOString().split("T")[0];
   const handleInputChange = (e) => {
     const { id, value } = e.target;
+    console.log(`Updating ${id} with value: ${value}`);
     setFormData({
       ...formData,
       [id]: value,
