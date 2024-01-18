@@ -6,7 +6,8 @@ import AdminPage from "../components/admin/AdminPage"
 const Admin = () => {
   return (
     <div>
-     <AdminPage/>
+     {/* <AdminPage/> */}
+     hello
     </div>
   )
 }
