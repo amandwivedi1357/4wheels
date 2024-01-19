@@ -2,7 +2,7 @@
     width: 100%;
     color: #fff;
     /* border: 2px solid springgreen; */
-    background: linear-gradient(180deg, #320003 0%, #1F0015 41.15%, #0C0125 73.44%)
+    background: linear-gradient(0deg, #0C0125 26.56%, #1F0015 58.85%, #320003 100%);
 }
 .navbar {
     position: fixed;

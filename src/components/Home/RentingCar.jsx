@@ -9,7 +9,6 @@ import car_data_3 from "../../assets/home/car_data_3.png";
 import car1 from "../../assets/home/gal_1.png";
 import car2 from "../../assets/home/gal_2.png";
 import car3 from "../../assets/home/gal_3.png";
-
 import quote from "../../assets/home/quote.svg";
 import FAQSection from "../FAQSection";
 import Footer from "../Footer";
@@ -69,32 +68,34 @@ const car_data = [
   },
 ];
 const singleCarStyle = {
-  width:'20rem',
+  boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
+  width:'23rem',
   height:'auto',
-  paddingBottom:'1rem',
+  paddingBottom:'2rem',
   margin:'auto',
+  color:"rgba(3, 3, 3, 0.90)",
   borderRadius: '5px',
-  background: 'linear-gradient(180deg, #0C0125 31.33%, #1F0015 64.81%, #320003 100%)',
+
   '@media screen and (min-width: 768px) and (max-width: 1025px)':{
     width:'18rem'
   }
 }
 
 const quoteStyle = {
-  margin:'4rem 9rem',
+  margin:'4rem auto',
 
 }
 const cust_text = {
   width:'90%',
   textAlign:'left',
-  color:'#c0b4b4',
+  color:'rgba(3, 3, 3, 0.90)',
   margin:'auto',
   '@media screen and (min-width: 768px) and (max-width: 1023px)':{
     fontSize:'15px'
   }
 }
 const cust_name = {
-  color: '#FFF',
+  color: 'rgba(3, 3, 3, 0.90)',
 fontFamily: 'Cormorant',
 fontSize: '24px',
 fontStyle: 'normal',
@@ -170,28 +171,34 @@ const RentingCar = () => {
       <div className="Special_Services">
         <p className="head_text">Our Special Services</p>
         <div className="cars_det">
-          {car_data.map((data) => (
-            <div key={data.id} className="single_car_detail">
-              <img className="grid_img" src={data.img} alt="" />
-              <p>{data.desc}</p>
-            </div>
-          ))}
-        </div>
+        {car_data.map((data) => (
+  <div key={data.id} className="single_car_detail">
+    <img className="grid_img" src={data.img} alt="" />
+    <div className="overlay">
+      <p className="image-name">{data.desc}</p>
+    </div>
+  </div>
+    ))}
+</div>
       </div>
-      <div className="btm_container_1">
+       <div className="btm_container_1">
         <p className="head_text">Gallery</p>
         <p className="desc_text">The perfect car in 4 simple steps</p>
 
         <div className="second_car_data">
-          <div className="cars_det">
-            {second_car_data.map((data) => (
-              <div key={data.id} className="single_car_detail">
-                <img className="grid_img" src={data.img} alt="" />
-              </div>
-            ))}
+          <div className="cars_det1">
+          {second_car_data.map((data) => (
+  <div key={data.id} className="single_car_detail">
+    <div className="image-container">
+      <img className="grid_img1" src={data.img} alt="" />
+      <div className="overlay1"></div>
+    </div>
+  </div>
+))}
+
           </div>
         </div>
-      </div>
+      </div> 
       <div className="btm_container_2">
         <p className="head_text">Our Clients Say About Us</p>
         <p className="desc_text">We Believe in Quality Service</p>
@@ -199,7 +206,7 @@ const RentingCar = () => {
         <div className="second_car_data">
           <div className="cars_det">
             {second_car_data.map((data) => (
-              <div key={data.id} className="single_car_detail" style={singleCarStyle}>
+              <div key={data.id} className="single_car_detail2" style={singleCarStyle}>
                 <img style={quoteStyle} src={quote} alt="" />
                 <p className="customer_text" style={cust_text}>Excellent Service! Car Rent Service!
 We have been using 4wheel for our trips needs for several years now and have always been happy with their service. Their customer support is Excellent Service! and they are always available to help with any issues we have. Their prices are also very competitive.</p>

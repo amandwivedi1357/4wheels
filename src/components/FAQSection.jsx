@@ -12,10 +12,10 @@ const FaqItem = ({ question, answer }) => {
   };
 
   return (
-    <div style={{width:'90%',border:"1px solid gray",borderRadius:'4px', padding:'10px',margin:'auto'}}>
-      <Flex >
+    <div style={{width:'60%',border:"1px solid gray",borderRadius:'4px',margin:'auto'}}>
+      <Flex p={'18px 23px 13px 23px'}>
 
-      <Text  fontSize="xl" mb={2} cursor="pointer" onClick={handleToggle}>
+      <Text fontWeight={400} fontSize="16px" mb={2} cursor="pointer" fontFamily={'Poppins'} onClick={handleToggle}>
         {question}
        
 
@@ -25,7 +25,7 @@ const FaqItem = ({ question, answer }) => {
       </Flex>
       <Collapse in={isOpen} animateOpacity>
         <VStack align="start" spacing={4}>
-          <Text fontWeight={'bold'}>{answer}</Text>
+          <Text p={'5px 23px'}>{answer}</Text>
         </VStack>
       </Collapse>
     </div>

@@ -18,9 +18,14 @@ const Footer = () => {
  <div className="flex_cont">
      <ul className="unordered_list" style={{listStyle:'none'}}>
          <li className="list_head">Contact Now</li>
-         <li><span><GrLocation /></span> 203 Fake St. Mountain View,11378 New York</li>
-         <li><span><CiMail /></span> rental@example.com</li>
-         <li><span><FiPhone /></span> +012-345-6789</li>
+         <li><span><GrLocation /></span>Corporate office / regs office — 
+4 wheel travels 
+91/A-2 , sagar cooperative society , road no.2 , banjara hills , hyderabad — 500034
+</li>
+         <li><span><CiMail /></span> Sales@4wheeltravels.com <br />
+Bookings@4wheeltravels.com</li>
+         <li><span><FiPhone /></span> +914044774477 <br />
++919885354321 </li>
      
      </ul>
  </div>
@@ -33,7 +38,7 @@ const Footer = () => {
      
      </ul>
  </div>
- <div className="flex_cont">
+ {/* <div className="flex_cont">
    <p className="head">Don’t miss a thing</p>
    
    <div className="desc_cont">
@@ -42,7 +47,7 @@ const Footer = () => {
    <div className="footer_inp">
     <Input w={'15rem'} placeholder="Sign up for our news letter"/> <span><Button color={'rgba(255, 255, 255, 0.71);'} bg={'transparent'}>Join now</Button></span>
    </div>
- </div>
+ </div> */}
  </div>
      <div className="btm_text">
         <p>@2023 4wheels. All Rights Reserved . <span>| Privacy Policy</span></p>

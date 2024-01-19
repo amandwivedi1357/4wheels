@@ -1,8 +1,8 @@
 import { Link, useNavigate } from "react-router-dom";
 import MySlider from "../MySlider";
-import logo from "../../assets/cheuffeur-menu-cars/logo.png";
+import logo from "../../assets/home/logo_img.png";
 
-import "../css/home/TopSection.css";
+ import "../css/home/TopSection.css";
 import {
   FaFacebookF,
   FaTwitter,
@@ -47,28 +47,12 @@ export default function TopSection() {
           <div className="nav_options">
             <div className="nav_menus">
               <ul>
-                <li onClick={() => handleNavigate("")}>Home</li>
-                <li
-                  onMouseEnter={() => setShowDropdown(true)}
-                  onClick={() => setShowDropdown(true)}
-                  className="service_nav"
-                >
-                  Services
-                  {showDropdown && (
-                    <div className="dropdown">
-                      <ul>
-                        <li onClick={() => handleNavigate("selfdrive")}>
-                          Self Drive
-                        </li>
-                        <li onClick={() => handleNavigate("cheuffeurdrive")}>
-                          Chauffeur Drive
-                        </li>
-                      </ul>
-                    </div>
-                  )}
-                </li>
+              <li onClick={() => handleNavigate("selfdrive")}>Self Drive</li>
+                <li onClick={() => handleNavigate("cheuffeurdrive")}>Chauffeur Drive</li>
+               
                 <li onClick={() => handleNavigate("about-us")}>About Us</li>
                 <li onClick={() => handleNavigate("gallery")}>Gallery</li>
+                <li onClick={() => handleNavigate("gallery")}>Faq</li>
               </ul>
             </div>
           </div>
@@ -84,12 +68,12 @@ export default function TopSection() {
           <span>
             <FaFacebookF />
           </span>
-          <span>
+          {/* <span>
             <FaTwitter />
           </span>
           <span>
             <FaYoutube />
-          </span>
+          </span> */}
           <span>
             <FaInstagram />
           </span>
@@ -105,7 +89,6 @@ export default function TopSection() {
           comfortable cars.
         </p>
       </div>
-
       <MySlider />
       </div>
     </div>

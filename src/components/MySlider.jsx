@@ -1,8 +1,8 @@
 
 import "./css/MySlider.css"
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
 import car1 from '../assets/home/car1-removebg.png'
 import car2 from '../assets/home/car2-removebg-preview.png'
 import car3 from '../assets/home/car3-removebg-preview.png'
@@ -12,13 +12,13 @@ import car6 from '../assets/home/car6-removebg-preview.png'
 const MySlider = () => {
   const CustomPrevArrow = (props) => (
     <button {...props} className="slick-prev prev">
-      Previous
+      {"<"}
     </button>
   );
 
   const CustomNextArrow = (props) => (
     <button {...props} className="slick-next next">
-      Next
+      {">"}
     </button>
   );
   const settings = {
