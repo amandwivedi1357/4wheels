@@ -23,16 +23,16 @@
 /* box-4 starts */
 .pos_4{
     position: relative;
-    left: 46%;
+    left: 41%;
     top: 5%;
-    width: 10rem;
+    width: 7rem;
     height: 0.5px;
     border: 0.5px solid rgb(0, 0, 0);
 }
 .box_3{
     position: relative;
     bottom: 54.5%;
-    left: 75.3%;
+    left: 70.3%;
 width: 13rem;
 height: 60px;
 border-radius: 10px;
@@ -48,9 +48,9 @@ align-items: center;
 /* box 1 starts */
 .pos_2{
     position: relative;
-    bottom: 15%;
-    right: 9%;
-    width: 17rem;
+    bottom: 14%;
+    right: 3%;
+    width: 13rem;
     height: 0.5px;
     border: 0.5px solid rgb(0, 0, 0);
 }
@@ -58,8 +58,8 @@ align-items: center;
 
 .box_1{
     position: relative;
-    bottom: 56%;
-    left: 10.5%;
+    bottom: 55%;
+    left: 14%;
 width: 13rem;
 height: 60px;
 border-radius: 10px;
@@ -75,7 +75,7 @@ align-items: center;
 .box_2{
     position: relative;
     bottom: 62.5%;
-    left: 70.8%;
+    left: 67.8%;
 width: 13rem;
 height: 60px;
 border-radius: 10px;
@@ -108,7 +108,7 @@ align-items: center;
 }
 .pos_1{
     position: relative;
-    right: 32%;
+    right: 26%;
     top: 5%;
     width: 10rem;
     height: 0.5px;
@@ -135,7 +135,7 @@ letter-spacing: 0.25px;
 .box_5{
     position: relative;
     bottom: 41.5%;
-    left: 40%;
+    left: 37%;
 width: 17rem;
 height: 60px;
 border-radius: 10px;
