@@ -4,21 +4,21 @@ import Slider from "react-slick";
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
 import car1 from '../assets/home/car1-removebg.png'
-import car2 from '../assets/home/car2-removebg-preview.png'
-import car3 from '../assets/home/car3-removebg-preview.png'
+import car2 from '../assets/home/slider1.png'
+import car3 from '../assets/home/slider2.png'
 import car4 from '../assets/home/car4-removebg-preview.png'
 import car5 from '../assets/home/car5-removebg-preview.png'
 import car6 from '../assets/home/car6-removebg-preview.png'
 const MySlider = () => {
   const CustomPrevArrow = (props) => (
-    <button {...props} className="slick-prev prev">
-      {"<"}
+    <button {...props} className=" ">
+      {""}
     </button>
   );
 
   const CustomNextArrow = (props) => (
-    <button {...props} className="slick-next next">
-      {">"}
+    <button {...props} className=" ">
+      {""}
     </button>
   );
   const settings = {
@@ -53,9 +53,9 @@ const MySlider = () => {
       <div className="car_images">
       <img src={car5} alt="" />
       </div>
-      <div className="car_images">
+      {/* <div className="car_images">
       <img src={car6} alt="" />
-      </div>
+      </div> */}
       
     </Slider>
       </div>
