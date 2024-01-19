@@ -219,11 +219,11 @@ We have been using 4wheel for our trips needs for several years now and have alw
         </div>
       </div>
 
-      <div className="btm_container_3">
+      {/* <div className="btm_container_3">
         <p className="head_text">Do you have any question?</p>
         <p style={{paddingBottom:'2rem'}} className="desc_text">We Believe in Quality Service</p>
       </div>
-      <FAQSection/>
+      <FAQSection/> */}
 
       <div className="banner_cont">
         <div className="banner">
