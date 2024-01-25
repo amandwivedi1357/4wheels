@@ -2,24 +2,47 @@ import operations from  "../../assets/about/operations.png"
 import bann_Car from "../../assets/home/banner_Car-removebg.png"
 import "../css/home/RenticgCar.css"
 import "../css/About/Bottom.css"
+import who from "../../assets/about/who.png"
+import fleet from "../../assets/about/fleet.png"
 const BottomAboutUs = () => {
   return (
     <div className="About_cont">
       <div className="top">
+        <div className="left">
+          <img src={who} alt="" />
+        </div>
+        <div className="right">
+
         <p className="head_text">Who Are We?</p>
         <p className="desc_text">4 Wheel Travels, otherwise referred to by one & all as 4 wheels, is a Proprietorship Firm owned by Mr. S. M. Jain.  The operations are managed by Mr. Ashwin Jain, the CEO of the company, assisted by a team of people who have been with the company for 15 years or more.</p>
+        </div>
       </div>
+      {/* <div className="who_car">
+        <div className="who_info">
+          <p className="head_text">Why Choose Us?</p>
+          
+        </div>
+        <div className="who_img">
+          <img src={why} alt="sports car" />
+        </div>
+      </div> */}
       <div className="mid">
         <div className="inner_mid">
+          <div className="left">
 
+            
         <p className="head_text">Fleet</p>
         <p className="desc_text">4 Wheels has one of the largest fleets in car rentals in Hyderabad.  With a own fleet of over 270 vehicles in almost 86 varieties (as on 1.11.23), the range of vehicles on offer to the clients is unmatched by probably any other company in Hyderabad or elsewhere.  4 wheels also probably has the most valuable fleet in car & bus rentals in Hyderabad.  Also, goes without saying that 4 wheels is also the undisputed leader in Hyderabad by fleet and value for luxury cars & luxury buses. <br /><br />
 
 4 wheels also has the reputation for owning practically every car sold in the country and available in car rentals and for also being the first to buy a vehicle in car rentals the moment it is launched.
 </p>
+          </div>
+          <div className="right">
+            <img src={fleet} alt="" />
+          </div>
         </div>
       </div>
-      <div className="btm_mid"></div>
+      
       <div className="bottom">
         <div className="inner_btm">
         <p className="head_text">Operations</p>

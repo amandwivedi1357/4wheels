@@ -50,6 +50,7 @@
 }
 
 .unordered_list li {
+  cursor: pointer;
     color: rgba(255, 255, 255, 0.90);
 font-family: 'Poppins';
 font-size: 18px;

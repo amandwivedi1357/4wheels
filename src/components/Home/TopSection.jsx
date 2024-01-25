@@ -7,6 +7,7 @@ import {
   FaFacebookF,
   
   FaInstagram,
+  FaWhatsapp,
  
 } from "react-icons/fa";
 import { useState } from "react";
@@ -26,6 +27,9 @@ export default function TopSection() {
   const handleResize = () => {
     setIsMobile(window.innerWidth < 768);
   };
+  const handleNav = (url)=>{
+    window.open(url, '_blank');
+  }
 
   // Add event listener for window resize
   window.addEventListener("resize", handleResize);
@@ -56,9 +60,12 @@ export default function TopSection() {
             </div>
           </div>
         )}
-        <div className="contact">
-          <button className="contact_button" onClick={()=>handleNavigate("admin")}>Contact us</button>
-        </div>
+         <div className="contact">
+        {/* <div className="contact_button">
+           
+        </div> */}
+        <FaWhatsapp size={'2rem'} cursor={'pointer'} onClick={()=>handleNav('https://api.whatsapp.com/send?phone=917440501499')}/>
+      </div>
       </div>
       <div className="home_btm">
 

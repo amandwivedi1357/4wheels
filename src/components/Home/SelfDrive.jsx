@@ -28,7 +28,7 @@ const SelfDrive = () => {
               Self Drive
               </p>
               <p className="desc_text">
-              Enhance every single trip to the fullest with the most spectacular luxury car rental dubai for the most affordable prices.              </p>
+              Enhance every single trip to the fullest with the most luxury car rental dubai for the most affordable prices.              </p>
               <div className="list">
                   <ul className="left_list">
                     <li>Comfort on every ride</li>

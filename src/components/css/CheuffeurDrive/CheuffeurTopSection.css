@@ -46,3 +46,10 @@ font-weight: 400;
 line-height: 32.5px; /* 203.125% */
 letter-spacing: 0.5px;
 }
+.bred{
+    padding-top: 1rem;
+    font-family: 'Poppins';
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+}

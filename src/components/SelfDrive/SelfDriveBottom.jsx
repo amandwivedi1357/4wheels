@@ -6,6 +6,7 @@ import {
   getAllSelfCars,
   getSelfFleetById,
 } from "../../redux/actions/SelfDrive.action";
+import Footer from "../Footer";
 
 const BottomSection = () => {
   const dispatch = useDispatch();

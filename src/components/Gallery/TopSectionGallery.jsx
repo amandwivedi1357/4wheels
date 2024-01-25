@@ -4,6 +4,8 @@ import logo from "../../assets/home/final_logo.png";
 import { Link, useNavigate } from "react-router-dom"
 import RespNav from "../Responsive/RespNav";
 import { useState } from "react";
+import { FaWhatsapp } from "react-icons/fa";
+import Breadcrumbs from "../BredCrumbs";
 export default function TopSectionGallery() {
   const navigate = useNavigate();
   const [showDropdown, setShowDropdown] = useState(false);
@@ -13,6 +15,9 @@ export default function TopSectionGallery() {
     navigate(`/${route}`);
     setShowDropdown(false);
   };
+  const handleNav = (url)=>{
+    window.open(url, '_blank');
+  }
   const handleResize = () => {
     setIsMobile(window.innerWidth < 768);
   };
@@ -42,12 +47,12 @@ export default function TopSectionGallery() {
           </div>
         )}
       <div className="contact">
-        <button className="contact_button">
-            Contact us
-        </button>
+      <FaWhatsapp size={'2rem'} cursor={'pointer'} onClick={()=>handleNav('https://api.whatsapp.com/send?phone=917440501499')}/>
+
       </div>
         </div>
         <p className="ser_text">Gallery</p>
+        <p className="bred"><Breadcrumbs/></p>
     </div>
   )
 }

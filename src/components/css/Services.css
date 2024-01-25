@@ -33,15 +33,18 @@
     display: flex;
     justify-content: space-between;
   }
-  
+  .chauffeur_drive .left_car{
+    flex: 1;
+  }
   .chauffeur_drive .left_car img {
     height: 100%;
-    
+    width: 100%;
   }
   
   .chauffeur_drive .right_info {
     height: 100%;
     width: 50%;
+    flex: 1;
     background: linear-gradient(0deg, #0C0125 26.56%, #1F0015 58.85%, #320003 100%);
   }
   

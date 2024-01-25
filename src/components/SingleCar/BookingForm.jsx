@@ -79,10 +79,10 @@ export default function BookingForm({car,service,fleetType}) {
   const today = new Date().toISOString().split("T")[0];
   const handleInputChange = (e) => {
     const { id, value } = e.target;
-    console.log(`Updating ${id} with value: ${value}`);
+    const formattedValue = e.target.type === 'date' ? value.split('T')[0] : value;    console.log(`Updating ${id} with value: ${value}`);
     setFormData({
       ...formData,
-      [id]: value,
+      [id]: formattedValue,
     });
   };
  
@@ -265,7 +265,7 @@ export default function BookingForm({car,service,fleetType}) {
           </div>
           <div className="input12">
             <label htmlFor="address">
-              Place of Reporting <span style={{ color: "red" }}>*</span>
+              Pick Up Point <span style={{ color: "red" }}>*</span>
             </label>
             <div className="contact_numWrap">
               <input
@@ -323,7 +323,7 @@ export default function BookingForm({car,service,fleetType}) {
         <div className="input1">
           <div className="input11">
             <label htmlFor="tentativePointOfDrop">
-              Tentative Point of drop<span style={{ color: "red" }}>*</span>
+               Point of drop<span style={{ color: "red" }}>*</span>
             </label>
             <div className="input_wrapper">
               <input

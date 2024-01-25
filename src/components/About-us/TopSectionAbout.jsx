@@ -4,6 +4,8 @@ import logo from "../../assets/home/final_logo.png";
 import { Link, useNavigate } from "react-router-dom"
 import { useState } from "react";
 import RespNav from "../Responsive/RespNav";
+import { FaWhatsapp } from "react-icons/fa";
+import Breadcrumbs from "../BredCrumbs";
 export default function TopSectionAbout() {
   const navigate = useNavigate();
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768); // Initial check for mobile
@@ -14,6 +16,9 @@ export default function TopSectionAbout() {
   const handleResize = () => {
     setIsMobile(window.innerWidth < 768);
   };
+  const handleNav = (url)=>{
+    window.open(url, '_blank');
+  }
   window.addEventListener("resize", handleResize);
 
   return (
@@ -40,15 +45,17 @@ export default function TopSectionAbout() {
           </div>
         )}
       <div className="contact">
-        <button className="contact_button">
-            Contact us
-        </button>
+        {/* <div className="contact_button">
+           
+        </div> */}
+               <FaWhatsapp size={'2rem'} cursor={'pointer'} onClick={()=>handleNav('https://api.whatsapp.com/send?phone=917440501499')}/>
+
       </div>
         </div>
        
               <p className="ser_text">Elevating Corporate Travel Experiences</p>
               <p className="about_text">Established in 1981, 4 Wheel Travels, is one of the largest Car & bus rental companies operating out of Hyderabad.</p>
-        
+              <p className="bred"><Breadcrumbs/></p>
 
         
     </div>

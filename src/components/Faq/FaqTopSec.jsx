@@ -4,10 +4,14 @@ import logo from "../../assets/home/final_logo.png";
 import { Link, useNavigate } from "react-router-dom"
 import { useState } from "react";
 import RespNav from "../Responsive/RespNav";
+import { FaWhatsapp } from "react-icons/fa";
+import Breadcrumbs from "../BredCrumbs";
 export default function FaqTopSec() {
   const navigate = useNavigate();
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768); // Initial check for mobile
-
+  const handleNav = (url)=>{
+    window.open(url, '_blank');
+  }
   const handleNavigate = (route) => {
     navigate(`/${route}`);
   };
@@ -40,14 +44,13 @@ export default function FaqTopSec() {
           </div>
         )}
       <div className="contact">
-        <button className="contact_button">
-            Contact us
-        </button>
+      <FaWhatsapp size={'2rem'} cursor={'pointer'} onClick={()=>handleNav('https://api.whatsapp.com/send?phone=917440501499')}/>
+
       </div>
         </div>
        
               <p className="ser_text">Find everything here</p>
-           
+              <p className="bred"><Breadcrumbs/></p>
         
 
         

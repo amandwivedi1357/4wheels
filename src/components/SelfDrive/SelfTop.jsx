@@ -1,9 +1,12 @@
+/* eslint-disable react/prop-types */
 import "../css/CheuffeurDrive/CheuffeurTopSection.css"
 
 import logo from "../../assets/home/final_logo.png";
 import { Link, useNavigate } from "react-router-dom"
 import { useState } from "react";
 import RespNav from "../Responsive/RespNav";
+import { FaWhatsapp } from "react-icons/fa";
+import Breadcrumbs from "../BredCrumbs";
 export default function SelfTop({topic,subTopic}) {
   const navigate = useNavigate();
   const [showDropdown, setShowDropdown] = useState(false);
@@ -16,6 +19,9 @@ export default function SelfTop({topic,subTopic}) {
   const handleResize = () => {
     setIsMobile(window.innerWidth < 768);
   };
+  const handleNav = (url)=>{
+    window.open(url, '_blank');
+  }
   window.addEventListener("resize", handleResize);
 
   return (
@@ -42,13 +48,13 @@ export default function SelfTop({topic,subTopic}) {
           </div>
         )}
       <div className="contact">
-        <button className="contact_button">
-            Contact us
-        </button>
+      <FaWhatsapp size={'2rem'} cursor={'pointer'} onClick={()=>handleNav('https://api.whatsapp.com/send?phone=917440501499')}/>
+
       </div>
         </div>
         <p className="ser_text">{topic}</p>
               <p className="sub_text">{subTopic}</p>
+              <p className="bred"><Breadcrumbs/></p>
     </div>
   )
 }

@@ -6,6 +6,7 @@ import "../css/CheuffeurDrive/fleetDetail.css"
 import { useDispatch, useSelector } from 'react-redux'
 import {  getAllSelfCars, getSelfCarById, getSelfFleetById } from '../../redux/actions/SelfDrive.action'; 
 import { Image, Select, useMediaQuery } from '@chakra-ui/react'
+import Footer from '../Footer'
 const locations = [
     'Delhi',
     'Mumbai',
@@ -100,7 +101,9 @@ const FleetSelfDetail = () => {
         <div className="inner_right ">
             <div className="right_cont">
                 {
-                    localCars.cars.map((data)=>(
+                    localCars.cars
+                    .filter((car) => car.properties.status === 'In Stock')
+                    .map((data)=>(
                         
                         <div key={data._id} className="single_cont">
                             <div className="img_sec">
@@ -112,13 +115,13 @@ const FleetSelfDetail = () => {
                 {/* Render your specification content here */}
                 <p className="carName">{data.carName}</p>
                 <div className="Single_car_details">
-                  <ul className='list_cont'>
+                  <ul className='list_cont' style={{listStyle:'none'}}>
                     <li>Hourly Pack : {data.properties.hourlyPack}</li>
                     <li>Alloted KMS :{data.properties.allotedKMs}</li>
                     <li>Zero Mileage :{data.properties.zeroMileage}</li>
                     <li>Per KM :{data.properties.perKM}</li>
                   </ul>
-                  <ul className='list_cont'>
+                  <ul className='list_cont' style={{listStyle:'none'}}>
                   <li>True Unlimited:{data.properties.fupPack}</li>
                     <li>FUP pack:{data.properties.fupPack}</li>
                     <li>Security Deposite:{data.properties.securityDeposit}</li>
@@ -151,6 +154,7 @@ const FleetSelfDetail = () => {
           Next Page
         </button>
       </div> */}
+      <Footer/>
     </div>
   )
 }

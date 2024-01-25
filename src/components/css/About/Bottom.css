@@ -3,40 +3,81 @@
  
 }
 .top{
-  max-width: 55%;
-  margin: auto 0 auto 10rem;
-  
+  max-width: 100%;
+  display: flex;
 }
-.top .head_text{
+.top .left{
+  margin: 3rem auto auto 3rem;
+}
+.top .right{
+  width: 50%;
+
+  margin: auto 5rem auto 1rem;
+}
+.top .right .head_text{
   text-align: left;
 }
-.top .desc_text{
+.top .right .desc_text{
   text-align: left;
+}
+.who_car {
+  width: 100%;
+  margin-top: 5rem;
+  display: flex;
+}
+
+.who_info {
+  background: linear-gradient(0deg, #0C0125 31.33%, #1F0015 64.81%, #320003 100%);
+  width: 100%; /* Adjusted width to 100% */
+  flex: 1;
+}
+
+.who_info .head_text {
+  color: #FFF;
+  margin-left: 5rem;
+  text-align: left;
+  font-family: 'Cormorant';
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 85px;
+  letter-spacing: 0.25px;
+}
+
+.who_img {
+  width: 100%; /* Adjusted width to 100% */
+  flex: 1;
 }
 .mid{
   max-width: 100%;
-  float: right;
-
 }
 .inner_mid{
-  max-width: 77%;
-  float: right;
+  max-width: 100%;
 }
-.mid .head_text{
-  text-align: right;
-  margin-right: 5rem;
+.inner_mid{
+  display: flex;
+  margin-top: 3rem;
 }
-.mid .desc_text{
-  text-align: right;
-  margin-right: 5rem;
+.inner_mid .left{
+  flex: 1;
+  margin-top: 2rem;
+  width: 50%;
 }
-.btm_mid{
-  height: 15rem;
+.inner_mid .left .head_text{
+  text-align: left;
 }
-.bottom{
+.inner_mid .left .desc_text{
+  text-align: left;
+}
+.inner_mid .right{
+  margin: auto;
+}
+.inner_mid .right img{
   padding-top: 5rem;
-  margin-top: 5rem;
+  width: 65%;
+  margin: auto;
 }
+
 .inner_btm .desc_text{
   margin-bottom: 5rem;
 }

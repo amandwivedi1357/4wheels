@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom"
+import { Route, Routes, useNavigate } from "react-router-dom"
 import Home from "../pages/Home"
 import CheuffeurDrive from "../pages/CheuffeurDrive"
 import Services from "../pages/Services"
@@ -14,7 +14,19 @@ import SingleSelfCarBook from "../components/SingleCar/SingleSelfCarBook"
 import AdminPage from "../components/admin/AdminPage"
 import Faq from "../pages/Faq"
 
+const NotFound = () => {
+  const navigate = useNavigate();
 
+  return (
+    <div style={styles.container}>
+      <h1 style={styles.heading}>Oops! Page not found.</h1>
+      <p style={styles.message}>Sorry, the page you are looking for might be unavailable or does not exist.</p>
+      <button style={styles.button} onClick={() => navigate(-1)}>
+        Go Back
+      </button>
+    </div>
+  );
+};
 const AllRoutes = () => {
     return (
       <Routes>
@@ -31,10 +43,35 @@ const AllRoutes = () => {
         <Route path='/about-us' element={<AboutUs />} />
         <Route path='/gallery' element={<Gallery />} />
         <Route path='/faq' element={<Faq />} />
-       
+        <Route path="*" element={<NotFound />} />
         
       </Routes>
     )
   }
   
   export default AllRoutes
+  const styles = {
+    container: {
+      textAlign: "center",
+      marginTop: "100px",
+    },
+    heading: {
+      fontSize: "2em",
+      color: "#333",
+      marginBottom: "20px",
+    },
+    message: {
+      fontSize: "1.2em",
+      color: "#555",
+      marginBottom: "40px",
+    },
+    button: {
+      padding: "10px 20px",
+      fontSize: "1em",
+      backgroundColor: "#4CAF50",
+      color: "white",
+      border: "none",
+      borderRadius: "5px",
+      cursor: "pointer",
+    },
+  };

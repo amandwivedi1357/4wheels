@@ -75,8 +75,13 @@ const FleetDetail = () => {
             </div>
             <div className="inner_right ">
               <div className="right_cont">
-                {localCars.cars.map((data) => (
+                {localCars.cars
+                
+                .filter((car) => car.properties.status === 'In Stock')
+                .map((data) => (
+                 
                   <div key={data._id} className="single_cont">
+                     {console.log(cars)}
                     <div className="img_sec">
                       <img src={data.properties.img}  />
                     </div>
@@ -85,27 +90,23 @@ const FleetDetail = () => {
                       {/* Render your specification content here */}
                       <p className="carName">{data.carName}</p>
                       <div className="Single_car_details">
-                        <ul className="list_cont">
-                          <li>4 Hours/40kms:{data.properties.hours4_40kms}</li>
-                          <li>8 Hours/80kms:{data.properties.hours8_80kms}</li>
+                        <ul className="list_cont" style={{listStyle:'none'}}>
+                          <li>4 Hours/40kms: {data.properties.hours4_40kms}</li>
+                          <li>8 Hours/80kms: {data.properties.hours8_80kms}</li>
                           <li>
-                            Ext hour beyond 8Hr:
-                            {data.properties.extraHourBeyond8hr}
+                            Ext hour beyond 8Hr: {data.properties.extraHourBeyond8hr}
                           </li>
                           <li>
-                            Ext hour beyond 8okms:
-                            {data.properties.extraHourBeyond80kms}
+                            Ext hour beyond 8okms: {data.properties.extraHourBeyond80kms}
                           </li>
                         </ul>
-                        <ul className="list_cont">
+                        <ul className="list_cont" style={{listStyle:'none'}}>
                           <li>Driver Bhatta: {data.properties.driverBhatta}</li>
                           <li>
-                            InterCity Minimum kms/Day:
-                            {data.properties.InterCityMinimumkmsPerDay}
+                            InterCity Minimum kms/Day: {data.properties.InterCityMinimumkmsPerDay}
                           </li>
                           <li>
-                            InterCity Minimum kms/km:
-                            {data.properties.InterCityMinimumKmsPerkm}
+                            InterCity Minimum kms/km: {data.properties.InterCityMinimumKmsPerkm}
                           </li>
                           <li>
                             Driver Bhatta/Km:{data.properties.driverBhattaPerKm}
