@@ -1,201 +1,70 @@
 .About_cont{
-width: 100%;
-height: auto;
-padding: 2rem;
+  max-width: 100%;
+ 
+}
+.top{
+  max-width: 55%;
+  margin: auto 0 auto 10rem;
+  
+}
+.top .head_text{
+  text-align: left;
+}
+.top .desc_text{
+  text-align: left;
+}
+.mid{
+  max-width: 100%;
+  float: right;
 
 }
-.about_first_cont{
-    width: 100%;
-    
-    display: flex;
+.inner_mid{
+  max-width: 77%;
+  float: right;
 }
-.image_cont{
-   
-    width: 50%;
-    margin-top: 15%;
-   
+.mid .head_text{
+  text-align: right;
+  margin-right: 5rem;
 }
-.lower{
-position: relative;
-left: 40%;
-width: 60%;
-
+.mid .desc_text{
+  text-align: right;
+  margin-right: 5rem;
 }
-.upper{
-    position: absolute;
-    left: 10%;
-    top: 20%;
-    width: 30%;
+.btm_mid{
+  height: 15rem;
 }
-.info_cont{
-    width: 41%;
-    
-    text-align: left;
-    margin-left: 5%;
+.bottom{
+  padding-top: 5rem;
+  margin-top: 5rem;
 }
-.info_cont .head_text{
-    text-align: left;
+.inner_btm .desc_text{
+  margin-bottom: 5rem;
 }
-.info_cont .desc_text{
-    margin: auto;
-    color: rgba(3, 27, 78, 0.80);
+.conc_info{
+  width: 50%;
+  margin: auto;
+}
+.btm_cont_text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 15rem;
+  border-radius: 21px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -2rem;
+background: rgba(192, 170, 238, 0.55);
+}
+.btm_info{
+  color: rgba(3, 27, 78, 0.80);
+text-align: center;
 font-family: 'Poppins';
-text-align: left;
 font-size: 16px;
 font-style: normal;
 font-weight: 400;
 line-height: 32.5px; /* 203.125% */
 letter-spacing: 0.5px;
+  width: 80%;
+  text-align: center;
 }
-.about_first_cont2{
-    padding: 1rem;
-    width: 100%;
-    
-    display: flex;
-    justify-content: space-between;
-}
-.info_cont2{
-    width: 61%;
-    text-align: left;
-}
-.info_cont2 .head_text{
-    text-align: left;
-}
-.info_cont2 .desc_text{
-    margin: auto;
-    color: rgba(3, 27, 78, 0.80);
-font-family: 'Poppins';
-text-align: left;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 32.5px; /* 203.125% */
-letter-spacing: 0.5px;
-}
-.img_cont2{
-width: 85%;
-height: 85%;
-margin-top: 20%;
-}
-
-/* 3rd contaier */
-.about_first_cont3{
-    padding: 1rem;
-    width: 100%;
-    
-    display: flex;
-    justify-content: space-between;
-}
-.info_cont3{
-    width: 61%;
-    
-    text-align: left;
-}
-.info_cont3 .head_text{
-    text-align: right;
-}
-.info_cont3 .desc_text{
-    margin: auto;
-    color: rgba(3, 27, 78, 0.80);
-font-family: 'Poppins';
-text-align: right;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 32.5px; /* 203.125% */
-letter-spacing: 0.5px;
-}
-.img_cont3{
-width: 85%;
-height: 65%;
-margin-top: 60%;
-}
-.bullet{
-    float: right;
-    width: 60%;
-    height: auto;
-    padding: 1rem;
-}
-.list_cont{
-    list-style: none;
-
-}
-.list_cont li {
-    display: flex;
-    justify-content: space-between;
-    
-}
-.list_cont li p{
-    
-    margin-bottom: 1rem;
-    color: #031B4E;
-text-align: right;
-font-family: 'Cormorant';
-font-size: 20px;
-font-style: normal;
-font-weight: 700;
-line-height: 55px; /* 275% */
-letter-spacing: 0.25px;
-text-transform: capitalize;
-}
-.conc{
-    width: 20%;
-    height: 20%;
-    margin-top: 0.8rem;
-    
-}
-
-  
-  /* Second media query for smaller screens (e.g., mobile) */
-  @media screen and (max-width: 767px) {
-    .info_cont,
-    .info_cont2,
-    .info_cont3 {
-      width: 100%;
-      text-align: left;
-      margin-left: 0;
-    }
-  
-    .img_cont2,
-    .img_cont3 {
-      width: 100%;
-      height: auto;
-      margin-top: 10%;
-    }
-  
-    .bullet {
-      width: 100%;
-      float: none;
-      padding: 1rem;
-    }
-  
-    .conc {
-      width: 10%;
-      height: 10%;
-      margin-top: 0.4rem;
-    }
-  }
-  @media screen and (min-width: 768px) and (max-width: 1023px) {
-    .about_first_cont {
-        flex-direction: column;
-      }
-    
-      .image_cont {
-        width: 100%;
-        margin-top: 0;
-      }
-    
-      .lower {
-        left: 20%;
-      }
-    
-      .upper {
-        left: 0;
-        top: 0;
-      }
-    
-      .info_cont {
-        width: 100%;
-        margin-left: 0;
-      }
-  }

@@ -1,26 +1,43 @@
 .btm_Sec{
     width: 100%;
-    height: auto;
+    height: 100vh;
     display: flex;
+    overflow: hidden;
     gap: 2%;
-    /* border: 2px solid red; */
     padding: 2%;
 }
 .inner_left{
-width: 20%;
+    margin-top: 10px;
+    width: 20%; /* Adjust the width as needed */
+    padding: 10px;
+    max-height: 100vh; /* Set the maximum height to 100% of the viewport height */
+    overflow-y: auto; /* Enable vertical scrolling if the content exceeds the height */
+    border-radius: 5px;
+border: 0.5px solid rgba(122, 131, 140, 0.21);
+background: #FFF;
+box-shadow: 0px 2px 2px 0px rgba(151, 166, 183, 0.16);
+    
 /* border: 2px solid red; */
 }
 .inner_Select{
     width: 100%;
 }
 .inner_right{
+    flex-grow: 1;
+    overflow-y: auto;
 width: 75%;
 /* border: 2px solid red; */
 }
+.inner_right::before {
+    content: '';
+    flex-shrink: 0;
+    width: 30px; /* Adjust the width as needed */
+  }
 .right_cont{
     margin: auto;
     width: auto;
     height: auto;
+    padding: 10px;
    
     /* border: 2px solid springgreen; */
 }
@@ -29,7 +46,12 @@ width: 75%;
     height: auto;
     /* border: 2px solid blue; */
     display: flex;
-    margin: 1.5rem;
+    margin: 0 1.5rem 1.5rem 1.5rem;
+    padding-bottom:1rem ;
+    border-radius: 5px;
+border: 0.5px solid rgba(122, 131, 140, 0.21);
+background: #FFF;
+box-shadow: 0px 2px 2px 0px rgba(151, 166, 183, 0.16);
     
 }
 .right_cont .single_cont .img_sec{
@@ -56,7 +78,7 @@ text-transform: capitalize;
 }
 .specification_sec .Single_car_details{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .list_cont li{
     color: #031B4E;
@@ -68,6 +90,17 @@ font-weight: 600;
 line-height: 26px; /* 173.333% */
 letter-spacing: 0.5px;
 }
+.inner_fleetFilter {
+    
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    margin-bottom: 10px; /* Adjust as needed to control the space between checkboxes */
+  }
+  .checkbox {
+    width: 16px; 
+    height: 16px;
+    margin-right: 8px; 
+  }
 .fleet_filter{
   margin-top: 1rem;
 width: 90%;
@@ -77,34 +110,32 @@ margin: auto;
 .fleet_text{
     color: #031B4E;
 font-family: 'Poppins';
-text-align: center;
 font-size: 16px;
+margin-bottom: 0.5rem;
 font-style: normal;
 font-weight: 600;
 line-height: 26.5px; /* 165.625% */
 letter-spacing: 0.25px;
 }
 .filter_text{
-    color: rgba(3, 27, 78, 0.83);
+ color: rgba(3, 3, 3, 0.82);
 font-family: 'Poppins';
 font-size: 15px;
 font-style: normal;
 font-weight: bold;
 line-height: 26.5px; /* 176.667% */
 letter-spacing: 0.25px;
-margin-top: 10px;
+margin-left: 2rem;
+margin-bottom: 0.2rem;
 }
-.inner_fleetFilter{
+/* .inner_fleetFilter{
     
     display: flex;
     justify-content: space-between;
     padding: 0.5rem;
     text-align: right;
-}
-.checkbox{
-    
-    width: 20px;
-}
+} */
+
 .right_cont .single_cont .price_sec{
     /* border: 1px solid black; */
     width: 25%;
@@ -149,45 +180,12 @@ background: #031B4E;
 box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.06);
 }
 /* In your CSS file or component styles */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-.filter_text{
-    margin-top: 10px;
-}
-.img_sec img{
-  height: 10rem;
-    border: 1px solid red;
-}
-}
 @media only screen and (max-width: 768px) {
     .specification_sec {
       display: none;
     }
-    .inner_left{
+    .img_sec{
         width: 50%;
     }
-    .inner_right {
-        flex-direction: column;
-      }
-      .right_cont{
-        margin: 0.5rem;
-        border: 1px solid blue;
-      }
-    
-      .single_cont {
-     
-        flex-direction: column;
-        border: 1px solid red;
-
-      }
-      Image{
-        width: 60%;
-      }
-      .img_sec{
-        width: 6;
-      }
-    
-      .specification_sec {
-        width: 100%;
-      }
   }
   

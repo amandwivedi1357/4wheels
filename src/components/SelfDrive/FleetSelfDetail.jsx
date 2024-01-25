@@ -62,7 +62,7 @@ const FleetSelfDetail = () => {
       dispatch(getSelfCarById(id, carId));
       navigate(`/selfdrive/${fleetType}/${id}/car/${carId}`); 
     };
-    console.log(localFleets)
+    // console.log(localFleets)
    
   return (
     <div>

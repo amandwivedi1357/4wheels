@@ -10,10 +10,10 @@ import car1 from "../../assets/home/gal_1.png";
 import car2 from "../../assets/home/gal_2.png";
 import car3 from "../../assets/home/gal_3.png";
 import quote from "../../assets/home/quote.svg";
-import FAQSection from "../FAQSection";
+import FAQSection from "../Faq/FAQSection";
 import Footer from "../Footer";
 import Steps from "./Steps";
-
+import red_car_info from "../../assets/home/red_car_info.png"
 const second_car_data = [
   {
     id: 1,
@@ -124,14 +124,15 @@ const RentingCar = () => {
 
       {/* React Flow implementation */}
       <div className="red_car_container">
-        <p className="head_text">is Renting a Car worth it?</p>
+        {/* <p className="head_text">is Renting a Car worth it?</p>
         <p className="desc_text flow">
           Have a look at our different category of cars
         </p>
 
         <div className="react_flow">
-          <FlowReact />
-        </div>
+          <Flow2 />
+        </div> */}
+        <img src={red_car_info} alt="" className="info_red" />
       </div>
 
       <div className="customer_offer">

@@ -1,6 +1,6 @@
 import "../css/CheuffeurDrive/CheuffeurTopSection.css"
 import "..//css/CheuffeurDrive/CheuffeurTopSection.css"
-import logo from "../../assets/cheuffeur-menu-cars/logo.png"
+import logo from "../../assets/home/final_logo.png";
 import { Link, useNavigate } from "react-router-dom"
 import RespNav from "../Responsive/RespNav";
 import { useState } from "react";
@@ -30,29 +30,13 @@ export default function TopSectionGallery() {
         ) : (
           <div className="nav_options">
             <div className="nav_menus">
-              <ul>
-                <li onClick={() => handleNavigate("")}>Home</li>
-                <li
-                  onMouseEnter={() => setShowDropdown(true)}
-                  onClick={() => setShowDropdown(true)}
-                  className="service_nav"
-                >
-                  Services
-                  {showDropdown && (
-                    <div className="dropdown">
-                      <ul>
-                        <li onClick={() => handleNavigate("selfdrive")}>
-                          Self Drive
-                        </li>
-                        <li onClick={() => handleNavigate("cheuffeurdrive")}>
-                          Chauffeur Drive
-                        </li>
-                      </ul>
-                    </div>
-                  )}
-                </li>
+            <ul>
+              <li onClick={() => handleNavigate("selfdrive")}>Self Drive</li>
+                <li onClick={() => handleNavigate("cheuffeurdrive")}>Chauffeur Drive</li>
+               
                 <li onClick={() => handleNavigate("about-us")}>About Us</li>
                 <li onClick={() => handleNavigate("gallery")}>Gallery</li>
+                <li onClick={() => handleNavigate("faq")}>Faq</li>
               </ul>
             </div>
           </div>

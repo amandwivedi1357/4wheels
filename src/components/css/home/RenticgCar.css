@@ -160,7 +160,9 @@ height: 80%;
 border: 2px solid springgreen;
 }
 /* steps container  ends*/
-
+.red_car_info{
+    max-width: 100%;
+}
 /* special services starts */
 .Special_Services {
     width: 100%;

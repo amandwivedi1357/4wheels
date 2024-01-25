@@ -9,7 +9,7 @@ const SelfDrive = () => {
   }
   return (
     <div className="services">
-      <p className="head_text">
+      <p className="head_text mt">
         Services We Offer
       </p>
       <div className="desc">
@@ -28,8 +28,7 @@ const SelfDrive = () => {
               Self Drive
               </p>
               <p className="desc_text">
-              Where luxury meets exceptional care, creating unforgettable moments and exceeding your every expectation.
-              </p>
+              Enhance every single trip to the fullest with the most spectacular luxury car rental dubai for the most affordable prices.              </p>
               <div className="list">
                   <ul className="left_list">
                     <li>Comfort on every ride</li>
@@ -38,6 +37,7 @@ const SelfDrive = () => {
                   </ul>
                   <ul className="right_list">
                       <li>Extra Safety</li>
+                      <li>Luxury Appearance</li>
                       <li>Limitless fun</li>
                   </ul>
               </div>

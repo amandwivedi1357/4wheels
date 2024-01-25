@@ -40,11 +40,12 @@
     margin: 0 2rem;
 }
 .inner_1{
-    padding: 2rem 0;
+    padding: 2rem 0 2rem 4rem;
     width: 80%;
     height: 40%;
       /* border: 1px solid green; */
     float: right;
+    
 }
 .head{
     color: #031B4E;

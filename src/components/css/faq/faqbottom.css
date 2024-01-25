@@ -1,0 +1,29 @@
+.faq_cont{
+    width: 100%;
+    height: auto;
+}
+.content
+{
+    padding-top: 4rem;
+    width: 80%;
+    margin: auto;
+    /* border :1px solid red; */
+}
+.text_style{
+    color: rgba(3, 27, 78, 0.80);
+font-family: 'Poppins';
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: 28px; /* 186.667% */
+letter-spacing: 0.5px;
+}
+.que_style{
+    color: rgba(3, 27, 78, 0.80);
+font-family: 'Poppins';
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 26px; /* 162.5% */
+letter-spacing: 0.5px;
+}

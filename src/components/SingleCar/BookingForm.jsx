@@ -55,6 +55,27 @@ export default function BookingForm({car,service,fleetType}) {
     specialInstruction: "",
   });
 
+  const sendEmail = async()=>{
+    let dataSend = {
+      email:formData.emailId,
+      subject:'Fleet Booking SuccessFull',
+      message:`your ${formData.carName} has been booked SuccessFull. Thanks For using our Service.`
+    }
+    const res = await fetch(`http://localhost:8080/api/email/sendEmail`,{
+      method:'POST',
+      body:JSON.stringify(dataSend),
+      headers:{
+        Accept:'application/json',
+        'Content-Type':"application/json",
+      }
+    }).then((res)=>{
+      console.log(res);
+      if(res.status>199 && res.status<300){
+        alert('Send Successfully')
+      }
+    })
+  }
+
   const today = new Date().toISOString().split("T")[0];
   const handleInputChange = (e) => {
     const { id, value } = e.target;
@@ -65,10 +86,11 @@ export default function BookingForm({car,service,fleetType}) {
     });
   };
  
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     
     if (formData.captcha === randomFiveDigitNumber.toString() ) {
+      
       toast({
         title: "form submitted",
         description: "Thank you the form has been submitted",
@@ -78,7 +100,9 @@ export default function BookingForm({car,service,fleetType}) {
       });
       // const selectedCar = formData.typeOfVehicle === "self-drive" ? formData.car : formData.cheuffeurCar;
       setFormData({...formData})
+
       dispatch(addBooking(formData));
+      await sendEmail();
       console.log("Form Data:", formData);
       
       // setFormData(resetForm);

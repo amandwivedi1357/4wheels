@@ -1,14 +1,15 @@
 /* eslint-disable react/prop-types */
 
-
+import logo from "../../../assets/home/final_logo.png";
 import { useEffect, useState } from "react";
 import Links from "../dummy";
 import "./Sidebar.css"
 import RespSideBar from "./RespSideBar";
+import { useNavigate } from "react-router-dom";
 export default function Sidebar({handleTabChange}) {
     const [activeTab,setActiveTab] = useState(1);
-    const [screenSize, setScreenSize] = useState(window.innerWidth); // Initial screen width
-
+    const [screenSize, setScreenSize] = useState(window.innerWidth);
+    const navigate = useNavigate()
     const handleTabClick = (tabNum) => {
         handleTabChange(tabNum);
         setActiveTab(tabNum)
@@ -33,6 +34,7 @@ export default function Sidebar({handleTabChange}) {
       </div>
     ) : (
       <div className="sidebar">
+        <img src={logo} onClick={()=>navigate('/')} style={{width:"6rem",margin:'1rem auto',cursor:'pointer'}}/>
         <div className="innerSide">
           {Links.map((item, idx) => (
             <div

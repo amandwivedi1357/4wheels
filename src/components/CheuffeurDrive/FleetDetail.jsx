@@ -86,7 +86,7 @@ const FleetDetail = () => {
                       <p className="carName">{data.carName}</p>
                       <div className="Single_car_details">
                         <ul className="list_cont">
-                          <li>4 Hours/40kms: {data.properties.hours4_40kms}</li>
+                          <li>4 Hours/40kms:{data.properties.hours4_40kms}</li>
                           <li>8 Hours/80kms:{data.properties.hours8_80kms}</li>
                           <li>
                             Ext hour beyond 8Hr:

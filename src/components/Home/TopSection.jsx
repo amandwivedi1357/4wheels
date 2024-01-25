@@ -1,26 +1,26 @@
 import { Link, useNavigate } from "react-router-dom";
 import MySlider from "../MySlider";
-import logo from "../../assets/home/logo_img.png";
+import wheels from "../../assets/home/final_logo.png"
 
  import "../css/home/TopSection.css";
 import {
   FaFacebookF,
-  FaTwitter,
+  
   FaInstagram,
-  FaYoutube,
+ 
 } from "react-icons/fa";
 import { useState } from "react";
 import RespNav from "../Responsive/RespNav";
 
 export default function TopSection() {
-  const [showDropdown, setShowDropdown] = useState(false);
+
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768); // Initial check for mobile
 
   const navigate = useNavigate();
 
   const handleNavigate = (route) => {
     navigate(`/${route}`);
-    setShowDropdown(false);
+    
   };
 
   const handleResize = () => {
@@ -35,13 +35,13 @@ export default function TopSection() {
       <div className="navbar">
         <div>
           <Link to={"/"}>
-            <img className="logo" src={logo} alt="" />
+            <img className="logo" src={wheels} alt="" />
           </Link>
         </div>
         {isMobile ? (
           <div className="fixed">
             
-          <RespNav setShowDropdown={setShowDropdown} />
+          <RespNav />
           </div>
         ) : (
           <div className="nav_options">
@@ -49,16 +49,15 @@ export default function TopSection() {
               <ul>
               <li onClick={() => handleNavigate("selfdrive")}>Self Drive</li>
                 <li onClick={() => handleNavigate("cheuffeurdrive")}>Chauffeur Drive</li>
-               
                 <li onClick={() => handleNavigate("about-us")}>About Us</li>
                 <li onClick={() => handleNavigate("gallery")}>Gallery</li>
-                <li onClick={() => handleNavigate("gallery")}>Faq</li>
+                <li onClick={() => handleNavigate("faq")}>Faq</li>
               </ul>
             </div>
           </div>
         )}
         <div className="contact">
-          <button className="contact_button">Contact us</button>
+          <button className="contact_button" onClick={()=>handleNavigate("admin")}>Contact us</button>
         </div>
       </div>
       <div className="home_btm">

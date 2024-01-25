@@ -186,7 +186,7 @@ const [fleetId, setFleetId] = useState(null);
     
   return (
     <div className="table_cont">
-        <Select className="select" size={'md'} w={'12rem'} onChange={(e) => setSelectedFleet(e.target.value)}
+        <Select className="select" size={'md'} mb={5} w={'12rem'} onChange={(e) => setSelectedFleet(e.target.value)}
         value={selectedFleet}>
             {
                 fleets?.map((fleet)=>(
