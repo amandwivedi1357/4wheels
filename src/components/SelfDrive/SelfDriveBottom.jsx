@@ -34,7 +34,7 @@ const BottomSection = () => {
         {
         fleets && 
         fleets.map((data) => (
-          <>
+          
           <div key={data._id} className="menu_cont">
             <img src={data.fleetImg} alt="" />
             <div className="fleet_img"></div>
@@ -51,7 +51,7 @@ const BottomSection = () => {
               Explore
             </p>
           </div>
-          </>
+      
         ))}
       </div>
     </div>

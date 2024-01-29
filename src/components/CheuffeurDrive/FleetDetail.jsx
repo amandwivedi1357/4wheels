@@ -10,6 +10,7 @@ import {
   getFleetById,
 } from "../../redux/actions/CheuffeurDrive.action";
 import { Image } from "@chakra-ui/react";
+import Loader from "../designs/Loader";
 
 const FleetDetail = () => {
   const [localCars, setLocalCars] = useState({ cars: [] });
@@ -17,7 +18,7 @@ const FleetDetail = () => {
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const { cars } = useSelector((state) => state.data);
+  const { cars,loading } = useSelector((state) => state.data);
   const { fleets } = useSelector((state) => state.data);
 
   const [selectedFleet, setSelectedFleet] = useState(null);
@@ -40,7 +41,9 @@ const FleetDetail = () => {
     dispatch(getCarById(id, carId));
     navigate(`/cheuffeurdrive/${fleetType}/${id}/car/${carId}`);
   };
-
+  if(loading){
+    return <Loader/>
+  }
   return (
     <div>
       {localCars.cars && (

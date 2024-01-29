@@ -7,6 +7,7 @@ import { useEffect } from "react";
 
 import BookingForm from "./BookingForm";
 import { getSelfCarById } from "../../redux/actions/SelfDrive.action";
+import Loader from "../designs/Loader";
 export default function SingleSelfCarBook({ topic }) {
   const { fleetType, id, carId } = useParams();
 
@@ -24,7 +25,7 @@ export default function SingleSelfCarBook({ topic }) {
   
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div><Loader/></div>;
   }
   
   if (error) {

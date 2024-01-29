@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import {  getAllSelfCars, getSelfCarById, getSelfFleetById } from '../../redux/actions/SelfDrive.action'; 
 import { Image, Select, useMediaQuery } from '@chakra-ui/react'
 import Footer from '../Footer'
+import Loader from '../designs/Loader'
 const locations = [
     'Delhi',
     'Mumbai',
@@ -26,7 +27,7 @@ const FleetSelfDetail = () => {
     console.log(fleetType)
   const navigate = useNavigate()
     const dispatch = useDispatch();
-    const {cars} = useSelector((state)=>state.selfData)
+    const {cars,loading} = useSelector((state)=>state.selfData)
     const {fleets} = useSelector((state)=>state.selfData)
     
 
@@ -52,6 +53,9 @@ const FleetSelfDetail = () => {
     //   dispatch(getSelfFleetById('your_fleet_id', pageNumber, limit));
     // };
 
+    if(loading){
+      return <Loader/>
+    }
 
     const handleCheckboxChange = (fleetName, fleetId) => {
       setSelectedFleet({ fleetName, fleetId });
@@ -147,15 +151,6 @@ const FleetSelfDetail = () => {
         </>
       )
               }
-              {/* <div>
-        <button onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1}>
-          Previous Page
-        </button>
-        <span>Page {currentPage}</span>
-        <button onClick={() => handlePageChange(currentPage + 1)} disabled={fleets.length < limit}>
-          Next Page
-        </button>
-      </div> */}
       <Footer/>
     </div>
   )

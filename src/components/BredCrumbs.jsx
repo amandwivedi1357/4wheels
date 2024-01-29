@@ -24,14 +24,14 @@ const Breadcrumbs = () => {
 
         return isLast ? (
           <span key={index} className="breadcrumb-item">
-            {'>'} {name}
-          </span>
-        ) : (
-          <span key={index} className="breadcrumb-item">
-            {'>'}<Link className="breadcrumb-link" to={breadcrumbPath}>
-              {name}
-            </Link>
-          </span>
+    {'>'} {name}
+  </span>
+) : (
+  <span key={index} className="breadcrumb-item">
+    {'>'}<Link className="breadcrumb-link" to={breadcrumbPath}>
+      {name}
+    </Link>
+  </span>
         );
       })}
     </div>
