@@ -6,13 +6,16 @@ import {
   getAllCars,
   getFleetById,
 } from "../../redux/actions/CheuffeurDrive.action";
+import Loader from "../designs/Loader";
 
 const BottomSection = () => {
   const dispatch = useDispatch();
-  const { fleets } = useSelector((state) => state.data);
+  const { fleets,loading } = useSelector((state) => state.data);
 
   const navigate = useNavigate();
 
+  
+  
   useEffect(() => {
     dispatch(getAllCars());
   }, [dispatch]);
@@ -22,6 +25,9 @@ const BottomSection = () => {
     dispatch(getFleetById(id));
     navigate(`/cheuffeurdrive/${link}`);
   };
+  if(loading){
+    return <Loader/>
+  }
   return (
     <div className="btm_container">
       <p className="head_text">our Chauffeur collections</p>

@@ -7,10 +7,11 @@ import {
   getSelfFleetById,
 } from "../../redux/actions/SelfDrive.action";
 import Footer from "../Footer";
+import Loader from "../designs/Loader";
 
 const BottomSection = () => {
   const dispatch = useDispatch();
-  const { fleets } = useSelector((state) => state.selfData);
+  const { fleets,loading } = useSelector((state) => state.selfData);
 
   const navigate = useNavigate();
 
@@ -23,6 +24,9 @@ const BottomSection = () => {
     dispatch(getSelfFleetById(id));
     navigate(`/selfdrive/${link}`);
   };
+  if(loading){
+    return <Loader/>
+  }
   return (
     <div className="btm_container">
       <p className="head_text">our Self Drive collections</p>
