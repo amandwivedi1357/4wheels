@@ -24,7 +24,7 @@ font-style: normal;
 font-weight: 400;
 line-height: 29px; /* 181.25% */
 letter-spacing: 0.5px;
-margin-top: 2%;
+margin-top: 1%;
 }
 .sports_car {
     display: flex;
@@ -164,15 +164,17 @@ border: 2px solid springgreen;
     max-width: 100%;
 }
 /* special services starts */
+.spec{
+   
+}
 .Special_Services {
     width: 100%;
-    height: auto;
     color: #FFF;
     background: linear-gradient(180deg, #0C0125 31.33%, #1F0015 64.81%, #320003 100%);
   }
   
   .Special_Services .head_text {
-    padding: 2rem;
+    padding-top: 5rem;
     color: #FFF;
     text-align: center;
     font-family: 'Cormorant';
@@ -292,6 +294,9 @@ font-style: normal;
 font-weight: 600;
 line-height: 78.5px; /* 163.542% */
 letter-spacing: 0.25px;
+}
+.btm_container_1 .desc_text{
+margin-top: -0.2rem;
 }
 .btm_container_1 .second_car_data .cars_det1{
     width: 90%;

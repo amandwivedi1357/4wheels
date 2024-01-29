@@ -27,10 +27,10 @@ border: 0.5px solid rgba(0, 0, 0, 0.58);
 background: #FFF;
 }
 .cheuffer_menu .menu_cont img{
-    width: 100%;
+    width: 358px;
     height: 50%;
     object-fit: cover;
-    
+    margin: auto;
 }
 .cheuffer_menu .menu_cont .type_text{
     color: #030303;
