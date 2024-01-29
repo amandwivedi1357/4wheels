@@ -28,30 +28,29 @@ const FleetSelfDetail = () => {
     const dispatch = useDispatch();
     const {cars} = useSelector((state)=>state.selfData)
     const {fleets} = useSelector((state)=>state.selfData)
-    const [selectedLocation, setSelectedLocation] = useState('');
-    const isMobile = useMediaQuery('(max-width: 768px)'); 
+    
+
     const [selectedFleet, setSelectedFleet] = useState(null);
-    const handleLocationChange = (e) => setSelectedLocation(e.target.value);
-    const [currentPage, setCurrentPage] = useState(1);
-    const [limit, setLimit] = useState(5);
+  
+   
     
 
     useEffect(() => {
       setLocalCars(cars)
       setLocalFleets(fleets)
     }, [cars,fleets]);
+    const defaultFleetType = fleetType || "";
 
+    // useEffect(() => {
+    //   dispatch(getAllSelfCars())
+    //     dispatch(getSelfFleetById(id,currentPage,limit))
+    // }, [dispatch,id,currentPage,limit]);
 
-    useEffect(() => {
-      dispatch(getAllSelfCars())
-        dispatch(getSelfFleetById(id,currentPage,limit))
-    }, [dispatch,id,currentPage,limit]);
-
-    const handlePageChange = (pageNumber) => {
-      setCurrentPage(pageNumber);
-      // Fetch data for the new page number
-      dispatch(getSelfFleetById('your_fleet_id', pageNumber, limit));
-    };
+    // const handlePageChange = (pageNumber) => {
+    //   setCurrentPage(pageNumber);
+    //   // Fetch data for the new page number
+    //   dispatch(getSelfFleetById('your_fleet_id', pageNumber, limit));
+    // };
 
 
     const handleCheckboxChange = (fleetName, fleetId) => {
@@ -87,7 +86,10 @@ const FleetSelfDetail = () => {
               className='checkbox'
               value={data.fleetType}
               onChange={() => handleCheckboxChange(data.fleetType, data._id)}
-              checked={selectedFleet && selectedFleet.fleetId === data._id}
+              checked={
+                (selectedFleet && selectedFleet.fleetId === data._id) ||
+                (!selectedFleet && defaultFleetType === data.fleetType)
+              }
               />
               </div> 
               <div className='check_text'>

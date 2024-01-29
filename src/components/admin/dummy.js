@@ -5,15 +5,19 @@ const Links = [
     },
     {
         tabNum:2,
-        display:'Modify Data'
+        display:'Data Analytics'
     },
     {
         tabNum:3,
-        display:'User Data'
+        display:'Booking Details'
     },
     {
         tabNum:4,
-        display:'Add Data'
+        display:'Chauffeur Drive'
+    },
+    {
+        tabNum:5,
+        display:'Self Drive'
     },
 ];
 

@@ -25,7 +25,7 @@ const FleetDetail = () => {
   useEffect(() => {
     setLocalCars(cars);
   }, [cars]);
-
+  const defaultFleetType = fleetType || "";
   useEffect(() => {
     dispatch(getAllCars());
     dispatch(getFleetById(id));
@@ -62,7 +62,8 @@ const FleetDetail = () => {
                           handleCheckboxChange(data.fleetType, data._id)
                         }
                         checked={
-                          selectedFleet && selectedFleet.fleetId === data._id
+                          (selectedFleet && selectedFleet.fleetId === data._id) ||
+                          (!selectedFleet && defaultFleetType === data.fleetType)
                         }
                       />
                     </div>

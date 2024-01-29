@@ -6,6 +6,7 @@ import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { getCarById } from "../../redux/actions/CheuffeurDrive.action";
 import BookingForm from "./BookingForm";
+import Loader from "../designs/Loader";
 export default function SingleCarBook({ topic }) {
   const { fleetType, id, carId } = useParams();
 
@@ -36,7 +37,7 @@ export default function SingleCarBook({ topic }) {
   
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div><Loader/></div>;
   }
   
   if (error) {

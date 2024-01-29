@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useToast } from "@chakra-ui/react";
 import { addBooking } from "../../redux/actions/Booking.action";
-
+import email from "../../assets/email/template.png"
 
 
 function generateFiveDigitNumber() {
@@ -59,9 +59,69 @@ export default function BookingForm({car,service,fleetType}) {
     let dataSend = {
       email:formData.emailId,
       subject:'Fleet Booking SuccessFull',
-      message:`your ${formData.carName} has been booked SuccessFull. Thanks For using our Service.`
+      message:`
+      <html>
+          <head>
+            <style>
+              body {
+                font-family: 'Arial', sans-serif;
+                color: #333;
+              }
+              .container {
+                max-width: 600px;
+                margin: 0 auto;
+                padding: 20px;
+                border: 1px solid #ddd;
+              }
+              .header {
+                background-color: #007bff;
+                color: #fff;
+                padding: 10px;
+                text-align: center;
+              }
+              .content {
+                padding: 20px;
+                color:#000307;
+                text-align: center;
+              }
+              .content img {
+                max-width: 100%;
+                height: auto;
+                margin-bottom: 20px;
+              }
+              .footer {
+                background-color: #f4f4f4;
+                padding: 10px;
+                text-align: center;
+              }
+            </style>
+          </head>
+          <body>
+            <div class="container">
+              <div class="header">
+                <h2>Fleet Booking Successful</h2>
+              </div>
+              <div class="content">
+                <img src="https://dl.dropboxusercontent.com/scl/fi/pjwy1k9wexq5jg3pe0bdt/template.png?rlkey=mi51z7k2bzxuczhxotvfj0v17&dl=0" alt="thanks for booking car" />
+                <p>Your ${formData.carName} has been booked successfully.</p>
+                <!-- Add more content as needed -->
+              </div>
+              <div class="footer">
+                <p>For any inquiries, please contact us at Bookings@4wheeltravels.com <br/> or Call us At +91 </p>
+              </div>
+            </div>
+          </body>
+        </html>
+    `,
+    attachments: [
+      {
+        filename: "template.png",
+        path: email,
+        cid: "emailImage", // same cid value as used in the email HTML
+      },
+    ],
     }
-    const res = await fetch(`http://localhost:8080/api/email/sendEmail`,{
+    const res = await fetch(`https://stormy-fish-houndstooth.cyclic.app/api/email/sendEmail`,{
       method:'POST',
       body:JSON.stringify(dataSend),
       headers:{

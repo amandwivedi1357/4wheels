@@ -4,6 +4,7 @@ import TopSectionServe from "../Services/TopSectionServe";
 import "./SingleCarBook.css";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
+
 import BookingForm from "./BookingForm";
 import { getSelfCarById } from "../../redux/actions/SelfDrive.action";
 export default function SingleSelfCarBook({ topic }) {
@@ -113,8 +114,7 @@ export default function SingleSelfCarBook({ topic }) {
       
       </>
     )}
-   
-      
+    
     </div>
   );
 }

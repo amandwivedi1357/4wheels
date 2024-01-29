@@ -32,7 +32,8 @@ Bookings@4wheeltravels.com</li>
  <div className="flex_cont">
  <ul className="unordered_list center" style={{listStyle:'none'}}>
          <li className="list_head">Quick Links</li>
-         <li onClick={()=>handleClick('services')}>Services</li>
+         <li onClick={()=>handleClick('selfdrive')}>Self Drive</li>
+         <li onClick={()=>handleClick('cheuffeurdrive')}>Chauffeur Drive</li>
              <li onClick={()=>handleClick('about-us')}>About Us</li>
              <li onClick={()=>handleClick('gallery')}>Gallery</li>
      

@@ -187,6 +187,15 @@ export default function AddCarsToFleet() {
                    placeholder="Car Name"
                    mb={4}
                  />
+                 <label >Status</label>
+                 <Input
+                   type="text"
+                   name="status"
+                   value={carData.properties.status}
+                   onChange={handleInputChange}
+                   placeholder="Car Name"
+                   mb={4}
+                 />
                    <Button type="submit" bg={'blue.500'} mt={4}>Submit</Button>
                </form>
             )}

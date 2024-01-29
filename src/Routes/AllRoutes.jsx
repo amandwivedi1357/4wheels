@@ -13,6 +13,7 @@ import FleetSelfDetail from "../components/SelfDrive/FleetSelfDetail"
 import SingleSelfCarBook from "../components/SingleCar/SingleSelfCarBook"
 import AdminPage from "../components/admin/AdminPage"
 import Faq from "../pages/Faq"
+ import Login from "../components/Login/Login"
 
 const NotFound = () => {
   const navigate = useNavigate();
@@ -43,6 +44,8 @@ const AllRoutes = () => {
         <Route path='/about-us' element={<AboutUs />} />
         <Route path='/gallery' element={<Gallery />} />
         <Route path='/faq' element={<Faq />} />
+         <Route path='/login' element={<Login />} /> 
+
         <Route path="*" element={<NotFound />} />
         
       </Routes>

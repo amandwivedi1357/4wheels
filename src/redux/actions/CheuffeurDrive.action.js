@@ -54,6 +54,7 @@ export const getFleetById = (id) => async (dispatch) => {
       dispatch({ type: actionTypes.ADD_CARS_TO_FLEET_SUCCESS, payload: response.data });  
     } catch (error) {
       dispatch({ type: actionTypes.ADD_CARS_TO_FLEET_FAILURE, payload: error.message }); 
+      console.log(error.message)
     }
   };
 

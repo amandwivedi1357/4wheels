@@ -47,7 +47,7 @@ export default function TopSectionGallery() {
           </div>
         )}
       <div className="contact">
-      <FaWhatsapp size={'2rem'} cursor={'pointer'} onClick={()=>handleNav('https://api.whatsapp.com/send?phone=917440501499')}/>
+      <FaWhatsapp size={'2rem'} cursor={'pointer'} onClick={()=>handleNav('https://api.whatsapp.com/send?phone=919885354321')}/>
 
       </div>
         </div>

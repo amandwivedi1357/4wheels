@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const BASE_URL = 'https://stormy-fish-houndstooth.cyclic.app'; 
-
+// const BASE_URL = 'http://localhost:8080'
 
 const api = axios.create({
   baseURL: BASE_URL,
@@ -30,7 +30,7 @@ export const addFleet = async(fleetData) => {
 };
 
 export const addCarsToFleetType = async(fleetId, cars) => {
-    return await api.post(`/api/v1/cars/fleet/${fleetId}/addCars`, { cars });
+    return await api.post(`/api/v1/cars/fleet/${fleetId}/AddCars`,  cars );
   };
   
   export const updateFleet = async(fleetId, fleetType) => {
