@@ -6,9 +6,12 @@ import bann_Car from "../../assets/home/banner_Car-removebg.png"
 import weds from "../../assets/home/weds1.png"
 import vip from "../../assets/home/VIP.png"
 import cust from "../../assets/home/custom_sols.png"
-import car1 from "../../assets/home/gal_1.png";
-import car2 from "../../assets/home/gal_2.png";
-import car3 from "../../assets/home/gal_3.png";
+import car2 from "../../assets/home/custom_sols.png"
+import car1 from "../../assets/home/newgal_1.png";
+import car3 from "../../assets/home/newgal_3.png";
+import car4 from "../../assets/home/newgal_4.png";
+import car5 from "../../assets/home/newgal_5.png";
+import car6 from "../../assets/home/newgal_6.png";
 import quote from "../../assets/home/quote.svg";
 import FAQSection from "../Faq/FAQSection";
 import Footer from "../Footer";
@@ -155,20 +158,23 @@ const RentingCar = () => {
 
       <div className="Special_Services">
         <p className="head_text spec">Our Special Services</p>
+        <p className="desc_text">We work for your comfort</p>
         <div className="cars_det">
             <div className="flex_container1">
               <img src={weds} alt="" className="fl_1" />
+              <div className="text_overlay1">Weddings & Special Events</div>
             </div>
             <div className="flex_container2">
               <div className="img1">
 
               <img className="fl2_img1" src={vip} alt="" />
+              <div className="text_overlay2">Custom Solutions</div>
               </div>
 
               <div className="img2">
 
               <img className="fl2_img2" src={cust} alt="" />
-              <input type="text" placeholder="hello"/>
+              <div className="text_overlay3">VIP</div>
               </div>
             </div>
         </div>
@@ -178,10 +184,19 @@ const RentingCar = () => {
         <p className="desc_text">4 Wheels Gallery </p>
 
         <div className="second_car_data">
-          <div className="cars_det1">
-          
-
+          <div className="cont1">
+            <img src={car1} alt="" />
           </div>
+          <div className="cont2">
+            <img src={cust} alt="" />
+            <img src={car3} alt="" />
+          </div>
+          <div className="cont3">
+            <img src={car4} alt="" />
+          </div>
+          <div className="cont4">
+            <img src={car5} alt="" /><img src={car6} alt="" />
+            </div>  
         </div>
       </div> 
       <div className="btm_container_2">

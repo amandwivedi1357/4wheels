@@ -46,10 +46,14 @@ const FleetDetail = () => {
   }
   return (
     <div>
-      {localCars.cars && (
+       <CheuffeurTopSection topic={"cheuffeur drive"} subTopic={fleetType} />
+      {localCars?.cars && (
         <>
-          <CheuffeurTopSection topic={"cheuffeur drive"} subTopic={fleetType} />
-
+         
+          <p className="head_text">{fleetType}</p>
+          <div className="desc_self">
+          <p className="desc_text">Driving your dreams to reality with an exquisite fleet of versatile vehicles for unforgettable journeys.</p>
+          </div>
           <div className="btm_Sec">
             <div className="inner_left">
               <div className="fleet_filter">

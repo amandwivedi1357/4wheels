@@ -22,7 +22,7 @@ const MySlider = () => {
     </button>
   );
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     autoplay: true,
     speed: 300,

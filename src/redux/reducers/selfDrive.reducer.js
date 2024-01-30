@@ -13,6 +13,27 @@ let updatedCar;
 const SelfReducer = (state = initialState, { type, payload }) => {
   switch (type) {
 
+
+    case actionTypes.GET_CAR_BY_FUELTYPE_REQUEST:
+      return {
+        ...state,
+        loading:true,
+        error:false
+      }
+    case actionTypes.GET_CAR_BY_FUELTYPE_SUCCESS:
+      return {
+        ...state,
+        loading:false,
+        cars:payload,
+        error:false,
+      }
+    case actionTypes.GET_CAR_BY_FUELTYPE_FAILURE:
+      return {
+        ...state,
+        loading:true,
+        error:false
+      }
+
     case actionTypes.GET_TOTAL_FLEETS_REQUEST:
 
       return {
@@ -20,7 +41,7 @@ const SelfReducer = (state = initialState, { type, payload }) => {
         loading:true,
         error:false
       }
-    case actionTypes.GET_TOTAL_FLEETS_SUCCESS : 
+    case actionTypes.GET_TOTAL_FLEETS_SUCCESS: 
     
       return {
         ...state,

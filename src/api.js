@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const BASE_URL = 'https://stormy-fish-houndstooth.cyclic.app'; 
-// const BASE_URL = 'http://localhost:8080'
+// const BASE_URL = 'https://stormy-fish-houndstooth.cyclic.app'; 
+const BASE_URL = 'http://localhost:8080'
 
 const api = axios.create({
   baseURL: BASE_URL,
@@ -90,6 +90,11 @@ export const getSelfFleetById = async(id, page, limit) => {
 export const getSelfCarById = async(fleetId, carId) => {
   return await api.get(`/api/v3/self/fleet/${fleetId}/car/${carId}`);
 };
+export const getSelfCarByFuelType = async(fleetId,fuelType) => {
+  return await api.get(`/api/v3/self/fleet/${fleetId}/cars/filter?fuelType=${fuelType}`);
+};
+
+
 
 export const addSelfFleet = async(fleetData) => {
   return await api.post('/api/v3/self/', fleetData);

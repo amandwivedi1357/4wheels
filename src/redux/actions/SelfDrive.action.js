@@ -23,7 +23,17 @@ export const getSelfFleetById = (id,page,limit) => async (dispatch) => {
       dispatch({ type: actionTypes.GET_FLEET_BY_ID_FAILURE, payload: error.message }); 
     }
   };
+  export const getSelfCarByFuelType = (id,fuelType) => async (dispatch) => {
+    dispatch({ type: actionTypes.GET_FLEET_BY_ID_REQUEST });
   
+    try {
+      const response = await api.getSelfCarByFuelType(id,fuelType);
+      dispatch({ type: actionTypes.GET_FLEET_BY_ID_SUCCESS, payload: response.data });  
+      console.log(response.data)
+    } catch (error) {
+      dispatch({ type: actionTypes.GET_FLEET_BY_ID_FAILURE, payload: error.message }); 
+    }
+  };
   export const getSelfCarById = (fleetId, carId) => async (dispatch) => {
     console.log(1)
     dispatch({ type: actionTypes.GET_CAR_BY_ID_REQUEST });

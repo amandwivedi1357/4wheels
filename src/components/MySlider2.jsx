@@ -11,7 +11,7 @@ import "./css/home/MySlider2.css"
 const MySlider2 = () => {
   
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     autoplay: true,
     speed: 300,
