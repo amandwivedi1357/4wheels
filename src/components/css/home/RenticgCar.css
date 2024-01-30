@@ -164,18 +164,15 @@ border: 2px solid springgreen;
     max-width: 100%;
 }
 /* special services starts */
-.spec{
-   
-}
 .Special_Services {
     width: 100%;
     color: #FFF;
-    background: linear-gradient(180deg, #0C0125 31.33%, #1F0015 64.81%, #320003 100%);
+    background: #fff
   }
   
   .Special_Services .head_text {
     padding-top: 5rem;
-    color: #FFF;
+    color: rgba(40, 1, 14, 0.90);
     text-align: center;
     font-family: 'Cormorant';
     font-size: 46px;
@@ -186,91 +183,21 @@ border: 2px solid springgreen;
     text-transform: capitalize;
   }
   
-  .Special_Services .cars_det {
+  .Special_Services .cars_det{
     width: 90%;
-    height: auto;
     margin: auto;
-    display: grid;
-    padding: 5% 0;
-    gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
-  
-  .single_car_detail {
-    position: relative;
-    overflow: hidden;
-    display: inline-block;
-  }
-  
-  .grid_img {
-    display: block;
-    max-width: 100%;
-    height: 30rem;
-    transition: filter 0.5s ease;
-  }
-  
-  .overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    transition: top 0.5s ease, opacity 0.5s ease;
+
+    border: 1px solid red;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    opacity: 0;
+    justify-content: space-between;
   }
-  
-  .single_car_detail:hover .overlay {
-    top: 0;
-    opacity: 1;
+  .flex_container1{
+    width: 30%;
+    border: 1px solid rgb(38, 0, 255);
   }
-  
-  .image-name {
-    margin: 0;
-    font-family: 'Cormorant';
-    font-size: 26px;
-  }
-  .btm_container_1 .cars_det1 {
-    width: 85%;
-    height: auto;
-    margin: auto;
-    display: grid;
-    padding: 5% 0;
-    gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
-  
-  .grid_img1 {
-    display: block;
-    width: 100%;
-    height: 28rem;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-  }
-  
-  .overlay1 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 0;
-    background: rgba(131, 125, 125, 0.5);
-    transition: opacity 0.3s ease;
-    opacity: 0;
-  }
-  
-  .single_car_detail:hover .grid_img1 {
-    transform: scale(1.05); /* Slight scale-up effect on hover */
-    opacity: 0.9; /* Reduce opacity on hover */
-  }
-  
-  .single_car_detail:hover .overlay {
-    opacity: 1;
+  .flex_container2{
+    width: 68%;
+    border: 1px solid rgb(7, 7, 7);
   }
   /* Add additional styling as needed */
   

@@ -3,9 +3,9 @@ import rentingCar1 from "../../assets/home/rentingCar1.png";
 import FlowReact from "../FlowReact";
 import AnimatedNumberCounter from "./AnimatedNumberCounter";
 import bann_Car from "../../assets/home/banner_Car-removebg.png"
-import car_data_1 from "../../assets/home/car_Data_1.png";
-import car_data_2 from "../../assets/home/car_data_2.png";
-import car_data_3 from "../../assets/home/car_data_3.png";
+import weds from "../../assets/home/weds1.png"
+import vip from "../../assets/home/VIP.png"
+import cust from "../../assets/home/custom_sols.png"
 import car1 from "../../assets/home/gal_1.png";
 import car2 from "../../assets/home/gal_2.png";
 import car3 from "../../assets/home/gal_3.png";
@@ -50,23 +50,7 @@ const animate_data = [
     numbers: 42,
   },
 ];
-const car_data = [
-  {
-    id: 1,
-    img: car_data_1,
-    desc: "Weddings & Special Events",
-  },
-  {
-    id: 2,
-    img: car_data_2,
-    desc: "VIP",
-  },
-  {
-    id: 3,
-    img: car_data_3,
-    desc: "Custom Solutions",
-  },
-];
+
 const singleCarStyle = {
   boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
   width:'23rem',
@@ -172,15 +156,22 @@ const RentingCar = () => {
       <div className="Special_Services">
         <p className="head_text spec">Our Special Services</p>
         <div className="cars_det">
-        {car_data.map((data) => (
-  <div key={data.id} className="single_car_detail">
-    <img className="grid_img" src={data.img} alt="" />
-    <div className="overlay">
-      <p className="image-name">{data.desc}</p>
-    </div>
-  </div>
-    ))}
-</div>
+            <div className="flex_container1">
+              <img src={weds} alt="" className="fl_1" />
+            </div>
+            <div className="flex_container2">
+              <div className="img1">
+
+              <img className="fl2_img1" src={vip} alt="" />
+              </div>
+
+              <div className="img2">
+
+              <img className="fl2_img2" src={cust} alt="" />
+              <input type="text" placeholder="hello"/>
+              </div>
+            </div>
+        </div>
       </div>
        <div className="btm_container_1">
         <p className="head_text">Gallery</p>
@@ -188,14 +179,7 @@ const RentingCar = () => {
 
         <div className="second_car_data">
           <div className="cars_det1">
-          {second_car_data.map((data) => (
-  <div key={data.id} className="single_car_detail">
-    <div className="image-container">
-      <img className="grid_img1" src={data.img} alt="" />
-      <div className="overlay1"></div>
-    </div>
-  </div>
-))}
+          
 
           </div>
         </div>
