@@ -44,52 +44,35 @@ background: #FFF;
     font-weight: 400;
     line-height: 55px; /* 152.778% */
     letter-spacing: 0.25px;
-    text-transform: capitalize;
+    
 }
-.cheuffer_menu .menu_cont .btn {
-    border: none;
-    width: 8em;
-    height: 2em;
-    border-radius: 1em;
+.cheuffer_menu .menu_cont .explore{
     display: flex;
-    margin: auto;
-    margin-top: 2rem;
+    width: 131px;
+    cursor: pointer;
+    height: 40px;
+    padding: 10px 26px;
     justify-content: center;
     align-items: center;
-    gap: 12px;
-    background: #1C1A1C;
-    cursor: pointer;
-    transition: all 450ms ease-in-out;
+    margin: auto;
+    margin-top: 2rem;
+    text-align: center;
+    gap: 10px;
+    color: #FFF;
+    font-family: 'Poppins';
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 12.5px; /* 83.333% */
+    letter-spacing: 1px;
+    border-radius: 4px;
+border: 0.5px solid #09005D;
+background: #09005D;
+box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.06);
+    flex-shrink: 0;
   }
   
-  .sparkle {
-    fill: #AAAAAA;
-    transition: all 800ms ease;
-  }
   
-  .text {
-    font-weight: 600;
-    color: #AAAAAA;
-    font-size: medium;
-  }
-  
-  .btn:hover {
-    background: linear-gradient(0deg,#A47CF3,#683FEA);
-    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4),
-    inset 0px -4px 0px 0px rgba(0, 0, 0, 0.2),
-    0px 0px 0px 4px rgba(255, 255, 255, 0.2),
-    0px 0px 180px 0px #9917FF;
-    transform: translateY(-2px);
-  }
-  
-  .btn:hover .text {
-    color: white;
-  }
-  
-  .btn:hover .sparkle {
-    fill: white;
-    transform: scale(1.2);
-  } 
 .desc_self{
     width: 40%;
     margin: auto;

@@ -83,8 +83,8 @@ export const getAllSelfCars = async() => {
   return  await api.get('/api/v3/self');
 };
 
-export const getSelfFleetById = async(id, page, limit) => {
-  return await api.get(`/api/v3/self/fleet/${id}?page=${page}&limit=${limit}`);
+export const getSelfFleetById = async(id) => {
+  return await api.get(`/api/v3/self/fleet/${id}`);
 };
 
 export const getSelfCarById = async(fleetId, carId) => {

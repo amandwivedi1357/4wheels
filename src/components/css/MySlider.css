@@ -6,7 +6,7 @@
 }
 .car_images img{
     width: 100%;
-    margin-top: 7%;
+    margin-top: -5%;
 }
 .cars{
     /* position: relative;
@@ -41,7 +41,7 @@
 .next{
     margin-top: 18.5%;
 }
-
+@media screen and (min-width: 1031px) and (max-width: 3000px) {}
 @media screen and (min-width: 768px) and (max-width: 1030px) {
     .cars{
         width: 35%;

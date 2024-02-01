@@ -47,7 +47,8 @@ width: 75%;
     /* border: 2px solid blue; */
     display: flex;
     margin: 0 1.5rem 1.5rem 1.5rem;
-    padding-bottom:1rem ;
+    padding-bottom:2rem ;
+    padding-top: 2rem;
     border-radius: 5px;
 border: 0.5px solid rgba(122, 131, 140, 0.21);
 background: #FFF;
@@ -71,6 +72,18 @@ box-shadow: 0px 2px 2px 0px rgba(151, 166, 183, 0.16);
 font-family: 'Poppins';
 font-size: 24px;
 margin: 0.5rem;
+margin-left: 1rem;
+font-style: normal;
+font-weight: 600; /* 162.5% */
+letter-spacing: 0.25px;
+text-transform: capitalize;
+}
+.specification_sec .carName_self{
+    color: #031B4E;
+font-family: 'Poppins';
+font-size: 24px;
+margin: 0.5rem;
+margin-left: 3rem;
 font-style: normal;
 font-weight: 600; /* 162.5% */
 letter-spacing: 0.25px;
@@ -78,7 +91,7 @@ text-transform: capitalize;
 }
 .specification_sec .Single_car_details{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .list_cont li{
     color: #031B4E;
@@ -111,7 +124,7 @@ margin: auto;
     color: #031B4E;
 font-family: 'Poppins';
 font-size: 16px;
-margin-bottom: 0.5rem;
+margin: 1rem 0;
 font-style: normal;
 font-weight: 600;
 line-height: 26.5px; /* 165.625% */
@@ -125,7 +138,7 @@ font-style: normal;
 font-weight: bold;
 line-height: 26.5px; /* 176.667% */
 letter-spacing: 0.25px;
-margin-left: 2rem;
+margin-left: 1rem;
 margin-bottom: 0.2rem;
 }
 /* .inner_fleetFilter{
@@ -166,7 +179,51 @@ letter-spacing: 0.5px;
 }
 .price_sec .book_btn{
     display: flex;
-width: 90%;
+width: 70%;
+height: 40px;
+margin: auto;
+margin-top: 25px;
+padding: 10px 26px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+flex-shrink: 0;
+    border-radius: 4px;
+border: 0.5px solid #031B4E;
+background: #031B4E;
+box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.06);
+}
+.right_cont .single_cont .price_sec_ch{
+    /* border: 1px solid black; */
+    width: 25%;
+   
+    padding: 0.5rem;
+    height: auto;
+}
+.price_sec_ch .hourly{
+    color: #031B4E;
+font-family: 'Poppins';
+text-align: center;
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: 16px; /* 162.5% */
+letter-spacing: 0.5px;
+}
+.price_sec_ch .hour{
+    color: #031B4E;
+    font-family: 'Poppins';
+    font-size: 32px;
+    font-style: normal;
+    text-align: center;
+    padding-bottom: 0.5rem;
+    font-weight: 600;
+    line-height: 26px; /* 81.25% */
+    letter-spacing: 0.5px;
+}
+.price_sec_ch .book_btn{
+    display: flex;
+width: 70%;
 height: 40px;
 margin: auto;
 padding: 10px 26px;
@@ -178,6 +235,22 @@ flex-shrink: 0;
 border: 0.5px solid #031B4E;
 background: #031B4E;
 box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.06);
+}
+.nocar{
+margin: auto;
+}
+.nocar img{
+    margin: auto;
+}
+ .desc_nocar{
+    color: rgba(3, 27, 78, 0.60);
+text-align: center;
+font-family: 'Poppins';
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 29px; /* 145% */
+letter-spacing: 0.5px;
 }
 /* In your CSS file or component styles */
 @media only screen and (max-width: 768px) {

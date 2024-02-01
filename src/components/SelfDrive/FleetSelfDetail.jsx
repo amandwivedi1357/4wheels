@@ -4,15 +4,10 @@ import { useNavigate, useParams } from "react-router-dom";
 import CheuffeurTopSection from "../CheuffeurDrive/TopSection";
 import "../css/CheuffeurDrive/fleetDetail.css";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  getAllCars,
-  getCarById,
-  getFleetById,
-} from "../../redux/actions/CheuffeurDrive.action";
-import { Image } from "@chakra-ui/react";
 import Loader from "../designs/Loader";
-import { getAllSelfCars, getSelfCarByFuelType, getSelfCarById, getSelfFleetById } from "../../redux/actions/SelfDrive.action";
+import { getAllSelfCars, getSelfCarById, getSelfFleetById } from "../../redux/actions/SelfDrive.action";
 import Footer from "../Footer";
+import NocarModal from "./NocarModal";
 
 const FleetSelfDetail = () => {
   const [localCars, setLocalCars] = useState({ cars: [] });
@@ -22,48 +17,60 @@ const FleetSelfDetail = () => {
   const dispatch = useDispatch();
   const { cars,loading } = useSelector((state) => state.selfData);
   const { fleets } = useSelector((state) => state.selfData);
-  const [selectedFuelType, setSelectedFuelType] = useState("Petrol"); // Default to "Petrol"
-  const [filteredCars, setFilteredCars] = useState([]);
-  const [selectedFleet, setSelectedFleet] = useState(null);
+  const [selectedFuelType, setSelectedFuelType] = useState(""); // Default to "Petrol"
 
+  const [selectedFleet, setSelectedFleet] = useState(null);
+  const [isNoCarModalOpen, setIsNoCarModalOpen] = useState(false);
   useEffect(() => {
     setLocalCars(cars);
   }, [cars]);
+  console.log(cars)
   const defaultFleetType = fleetType || "";
   useEffect(() => {
     dispatch(getAllSelfCars());
     dispatch(getSelfFleetById(id));
   }, [dispatch, id]);
-
+  
   const handleCheckboxChange = (fleetName, fleetId) => {
     setSelectedFleet({ fleetName, fleetId });
     navigate(`/selfdrive/${fleetName}/${fleetId}`);
+    setSelectedFuelType("");
   };
-  const handleFuelTypeChange = (fuelType) => {
-    setSelectedFuelType(fuelType);
-    dispatch(getSelfCarByFuelType(id,fuelType))
-  };
+  
   const handleBookNow = (fleetId, carId) => {
     dispatch(getSelfCarById(id, carId));
     navigate(`/selfdrive/${fleetType}/${id}/car/${carId}`);
   };
-//   useEffect(() => {
-//   // Filter the cars whenever selectedFuelType or localCars changes
-//   const filtered = localCars.cars.filter((car) => {
-//     const matchesFuelType = car.properties.fuelType === selectedFuelType;
-//     const isInStock = car.properties.status === 'In Stock';
-//     return matchesFuelType && isInStock;
-//   });
 
-//   setFilteredCars(filtered);
-// }, [selectedFuelType, localCars.cars]);
+  const handleFuelTypeChange = async(fuelType)=>{
+    const fleetId = id;
+    setSelectedFuelType(fuelType);
+    navigate({
+      pathname: `/selfdrive/${fleetType}/${id}`,
+      search: `?fuelType=${fuelType}`,
+    });
+    try {
+      const res = await fetch(`http://localhost:8080/api/v3/self/fleet/${fleetId}?fuelType=${fuelType}`);
+      const data = await res.json();
+      console.log(data);
+      setLocalCars({ cars: data });
+      if (data.filter((car) => car.properties.status === 'In Stock').length === 0) {
+        setIsNoCarModalOpen(true);
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  }
+  const closeNoCarModal = () => {
+    setIsNoCarModalOpen(false);
+  };
   if(loading){
     return <Loader/>
   }
   return (
     <div>
       <CheuffeurTopSection topic={"Self Drive"} subTopic={fleetType} />
-      {localCars.cars && (
+      {localCars?.cars && (
         <>
           <p className="head_text">{fleetType}</p>
           <div className="desc_self">
@@ -95,13 +102,13 @@ const FleetSelfDetail = () => {
                   </div>
                 ))}
               <p className="fleet_text">Fuel Type</p>
-                {["EV", "Petrol", "Diesel"].map((fuelType) => (
+                {["EV", "PETROL", "DIESEL"].map((fuelType) => (
                   <div className="inner_fleetFilter" key={fuelType}>
                     <div className="inp_check">
                       <input
                         type="checkbox"
                         className="checkbox"
-                        value={fuelType}
+                        value={fuelType.toUpperCase()}
                         onChange={() => handleFuelTypeChange(fuelType)}
                         checked={selectedFuelType === fuelType}
                       />
@@ -116,40 +123,38 @@ const FleetSelfDetail = () => {
             <div className="inner_right ">
               <div className="right_cont">
                 {localCars.cars
-                
                 .filter((car) => car.properties.status === 'In Stock')
                 .map((data) => (
                  
                   <div key={data._id} className="single_cont">
-               
                     <div className="img_sec">
                       <img src={data.properties.img}  />
                     </div>
 
                     <div className="specification_sec">
                       {/* Render your specification content here */}
-                      <p className="carName">{data.carName}</p>
+                      <p className="carName_self">{data.carName}</p>
                       <div className="Single_car_details">
                         <ul className="list_cont" style={{listStyle:'none'}}>
-                          <li>4 Hours/40kms: {data.properties.hourlyPack}</li>
-                          <li>8 Hours/80kms: {data.properties.allotedKMs}</li>
+                          <li>Hourly Pack:  <span style={{fontWeight:'400'}}>{data.properties.hourlyPack}</span></li>
+                          <li>Alloted KMs: <span style={{fontWeight:'400'}}> {data.properties.allotedKMs}</span></li>
                           <li>
-                            Ext hour beyond 8Hr: {data.properties.zeroMileage}
+                          Zero Mileage:  <span style={{fontWeight:'400'}}>{data.properties.zeroMileage}</span>
                           </li>
                           <li>
-                            Ext hour beyond 8okms: {data.properties.perKM}
+                          Per Kilometer:  <span style={{fontWeight:'400'}}>{data.properties.perKM}</span>
                           </li>
                         </ul>
                         <ul className="list_cont" style={{listStyle:'none'}}>
-                          <li>Driver Bhatta: {data.properties.fupPack}</li>
+                          <li>Fup Pack:  <span style={{fontWeight:'400'}}>{data.properties.fupPack}</span></li>
                           <li>
-                            InterCity Minimum kms/Day: {data.properties.trueUnlimited}
+                          True Unlimited:  <span style={{fontWeight:'400'}}>{data.properties.trueUnlimited}</span>
                           </li>
                           <li>
-                            InterCity Minimum kms/km: {data.properties.securityDeposit}
+                          Security Deposit:  <span style={{fontWeight:'400'}}>{data.properties.securityDeposit}</span>
                           </li>
                           <li>
-                            Driver Bhatta/Km:{data.properties.fuelType}
+                          Fuel Type: <span style={{fontWeight:'400'}}>{data.properties.fuelType}</span>
                           </li>
                         </ul>
                       </div>
@@ -162,11 +167,15 @@ const FleetSelfDetail = () => {
                         onClick={() => handleBookNow(id, data._id)}
                         className="book_btn"
                       >
-                        Book Now
+                       Rent now
                       </button>
                     </div>
                   </div>
                 ))}
+                {/* Conditionally render a message if no cars are available */}
+                {isNoCarModalOpen && (
+            <NocarModal onClose={closeNoCarModal} fuelType={selectedFuelType} fleet={fleetType}/>
+          )}
               </div>
             </div>
           </div>

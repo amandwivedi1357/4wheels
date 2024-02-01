@@ -9,8 +9,8 @@ import {
   getCarById,
   getFleetById,
 } from "../../redux/actions/CheuffeurDrive.action";
-import { Image } from "@chakra-ui/react";
 import Loader from "../designs/Loader";
+import Footer from "../Footer";
 
 const FleetDetail = () => {
   const [localCars, setLocalCars] = useState({ cars: [] });
@@ -99,38 +99,36 @@ const FleetDetail = () => {
                       <p className="carName">{data.carName}</p>
                       <div className="Single_car_details">
                         <ul className="list_cont" style={{listStyle:'none'}}>
-                          <li>4 Hours/40kms: {data.properties.hours4_40kms}</li>
-                          <li>8 Hours/80kms: {data.properties.hours8_80kms}</li>
+                          <li>4 hrs/40kms: <span style={{fontWeight:'400'}}>{data.properties.hours4_40kms}</span></li>
+                          <li>8 hrs/80kms: <span style={{fontWeight:'400'}}>{data.properties.hours8_80kms}</span></li>
                           <li>
-                            Ext hour beyond 8Hr: {data.properties.extraHourBeyond8hr}
+                            Ext.hr/beyond 8Hr: <span style={{fontWeight:'400'}}>{data.properties.extraHourBeyond8hr}</span>
                           </li>
                           <li>
-                            Ext hour beyond 8okms: {data.properties.extraHourBeyond80kms}
+                            Ext.hr/beyond 8okms: <span style={{fontWeight:'400'}}>{data.properties.extraHourBeyond80kms}</span>
                           </li>
                         </ul>
                         <ul className="list_cont" style={{listStyle:'none'}}>
-                          <li>Driver Bhatta: {data.properties.driverBhatta}</li>
+                          <li>Driver Allowance: <span style={{fontWeight:'400'}}> {data.properties.driverBhatta}</span></li>
                           <li>
-                            InterCity Minimum kms/Day: {data.properties.InterCityMinimumkmsPerDay}
-                          </li>
+                            InterCity Mini kms/Day: <span style={{fontWeight:'400'}}>{data.properties.InterCityMinimumkmsPerDay}
+                          </span></li>
                           <li>
-                            InterCity Minimum kms/km: {data.properties.InterCityMinimumKmsPerkm}
-                          </li>
+                            Per kilometer: <span style={{fontWeight:'400'}}>{data.properties.InterCityMinimumKmsPerkm}
+                          </span></li>
                           <li>
-                            Driver Bhatta/Km:{data.properties.driverBhattaPerKm}
+                            Driver Allowance:<span style={{fontWeight:'400'}}>{data.properties.driverBhattaPerKm}</span>
                           </li>
                         </ul>
                       </div>
                     </div>
 
-                    <div className="price_sec">
-                      <p className="hourly">Hourly pack</p> <br />
-                      <p className="hour">{data.properties.hours4_40kms} Rs</p>
+                    <div className="price_sec_ch">
                       <button
                         onClick={() => handleBookNow(id, data._id)}
                         className="book_btn"
                       >
-                        Book Now
+                        Rent now
                       </button>
                     </div>
                   </div>
@@ -140,6 +138,7 @@ const FleetDetail = () => {
           </div>
         </>
       )}
+      <Footer/>
     </div>
   );
 };
