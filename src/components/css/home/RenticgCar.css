@@ -33,7 +33,7 @@ margin-top: 1%;
   
   .sports_info {
     flex: 1; /* Take up 50% of the width */
-    height: 29rem;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -167,7 +167,10 @@ border: 2px solid springgreen;
 .Special_Services {
     width: 100%;
     color: #FFF;
-    background: #fff
+    background: #fff;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
   }
   
   .Special_Services .head_text {
@@ -186,7 +189,7 @@ border: 2px solid springgreen;
   .Special_Services .cars_det{
     width: 80%;
     margin: auto;
-    padding-top: 4rem;
+    margin-top: 4rem;
     /* border: 1px solid red; */
     display: flex;
     justify-content: space-between;
