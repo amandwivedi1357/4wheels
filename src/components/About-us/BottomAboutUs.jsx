@@ -1,9 +1,9 @@
-import operations from  "../../assets/about/operations.png"
-import bann_Car from "../../assets/home/banner_Car-removebg.png"
+import operations from  "../../assets/about/operations.webp"
+import bann_Car from "../../assets/home/banner_Car-removebg.webp"
 import "../css/home/RenticgCar.css"
 import "../css/About/Bottom.css"
-import who from "../../assets/about/who.png"
-import fleet from "../../assets/about/fleet.png"
+import who from "../../assets/about/who.webp"
+import fleet from "../../assets/about/fleet.webp"
 const BottomAboutUs = () => {
   return (
     <div className="About_cont">

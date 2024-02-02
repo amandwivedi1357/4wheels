@@ -1,5 +1,5 @@
 import { LuRefreshCw, LuSettings, LuTimer } from "react-icons/lu";
-import red_car from "../../assets/home/red_car.png"
+import red_car from "../../assets/home/red_car.webp"
 import { FaRetweet } from "react-icons/fa";
 
 export default function Recommend() {

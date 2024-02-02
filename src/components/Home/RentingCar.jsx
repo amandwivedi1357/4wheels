@@ -1,22 +1,22 @@
 import "../css/home/RenticgCar.css";
-import rentingCar1 from "../../assets/home/rentingCar1.png";
+import rentingCar1 from "../../assets/home/rentingCar1.webp";
 import FlowReact from "../FlowReact";
 import AnimatedNumberCounter from "./AnimatedNumberCounter";
-import bann_Car from "../../assets/home/banner_Car-removebg.png"
-import weds from "../../assets/home/weds1.png"
-import vip from "../../assets/home/VIP.png"
-import cust from "../../assets/home/custom_sols.png"
-import car2 from "../../assets/home/custom_sols.png"
-import car1 from "../../assets/home/newgal_1.png";
-import car3 from "../../assets/home/newgal_3.png";
-import car4 from "../../assets/home/newgal_4.png";
-import car5 from "../../assets/home/newgal_5.png";
-import car6 from "../../assets/home/newgal_6.png";
+import bann_Car from "../../assets/home/banner_Car-removebg.webp"
+import weds from "../../assets/home/weds1.webp"
+import vip from "../../assets/home/VIP.webp"
+import cust from "../../assets/home/custom_sols.webp"
+import car2 from "../../assets/home/custom_sols.webp"
+import car1 from "../../assets/home/newgal_1.webp";
+import car3 from "../../assets/home/newgal_3.webp";
+import car4 from "../../assets/home/newgal_4.webp";
+import car5 from "../../assets/home/newgal_5.webp";
+import car6 from "../../assets/home/newgal_6.webp";
 import quote from "../../assets/home/quote.svg";
 import FAQSection from "../Faq/FAQSection";
 import Footer from "../Footer";
 import Steps from "./Steps";
-import red_car_info from "../../assets/home/red_car_info.png"
+import red_car_info from "../../assets/home/red_car_info.webp"
 const second_car_data = [
   {
     id: 1,

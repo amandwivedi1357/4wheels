@@ -1,4 +1,4 @@
-import red_Car from "../assets/home/red_car.png"
+import red_Car from "../assets/home/red_car.webp"
 import "./css/home/FlowReact.css"
 const FlowReact = () => {
   return (

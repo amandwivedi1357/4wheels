@@ -1,5 +1,5 @@
 import "../css/Services.css"
-import black_car from "../../assets/home/cheauffeur-drive.png"
+import black_car from "../../assets/home/cheauffeur-drive.webp"
 import { useNavigate } from "react-router-dom"
 
 const Services = () => {

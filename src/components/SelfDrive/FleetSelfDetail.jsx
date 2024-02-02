@@ -50,7 +50,7 @@ const FleetSelfDetail = () => {
       search: `?fuelType=${fuelType}`,
     });
     try {
-      const res = await fetch(`http://localhost:8080/api/v3/self/fleet/${fleetId}?fuelType=${fuelType}`);
+      const res = await fetch(`https://stormy-fish-houndstooth.cyclic.app/api/v3/self/fleet/${fleetId}?fuelType=${fuelType}`);
       const data = await res.json();
       console.log(data);
       setLocalCars({ cars: data });
