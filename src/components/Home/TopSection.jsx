@@ -72,7 +72,7 @@ export default function TopSection() {
       <div className="social_links">
         <div className="social_icons">
           <span>
-            <FaFacebookF />
+            <FaFacebookF onClick={()=>handleNav('https://www.facebook.com/profile.php?id=100069861290873')}/>
           </span>
           {/* <span>
             <FaTwitter />

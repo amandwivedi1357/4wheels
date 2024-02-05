@@ -254,7 +254,7 @@ margin-top: -0.2rem;
 .second_car_data .cont1 img{
     border-radius: 5px;
 height: 24rem;
-width: 100%; /* Ensure image takes up 100% width of its container */
+max-width: 100%; /* Ensure image takes up 100% width of its container */
 object-fit: cover;
 }
 
