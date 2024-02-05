@@ -50,7 +50,7 @@ export default function CheuffeurTopSection({topic,subTopic}) {
       </div>
         </div>
         
-              <p className="ser_text">{topic}</p>
+              <p className="head_text ser_text">{topic}</p>
               <p className="sub_text">{subTopic}</p>
               <p className="bred"><Breadcrumbs/></p>
     </div>
