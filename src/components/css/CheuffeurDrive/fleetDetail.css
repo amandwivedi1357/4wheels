@@ -67,6 +67,10 @@ box-shadow: 0px 2px 2px 0px rgba(151, 166, 183, 0.16);
     margin: auto;
     height: 13rem;
 }
+.car_name_Sec{
+    width: 84%;
+    margin: auto;
+}
 .specification_sec .carName{
     color: #031B4E;
 font-family: 'Poppins';

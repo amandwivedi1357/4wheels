@@ -96,7 +96,10 @@ const FleetDetail = () => {
 
                     <div className="specification_sec">
                       {/* Render your specification content here */}
+                      <div className="car_name_Sec">
+
                       <p className="carName">{data.carName}</p>
+                      </div>
                       <div className="Single_car_details">
                         <ul className="list_cont" style={{listStyle:'none'}}>
                           <li>4 hrs/40kms: <span style={{fontWeight:'400'}}>{data.properties.hours4_40kms}</span></li>
