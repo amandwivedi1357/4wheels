@@ -230,8 +230,13 @@ input[type="date"]::-webkit-input-placeholder {
     padding: 5px;
 letter-spacing: 15px;
 }
+.submit_button{
+    width: 80%;
+   
+    margin: auto;
+}
 .submit_btn{
-    margin-left: 6.5rem;
+  
     margin-bottom: 1rem;
     width: 6rem;
     height: 2rem;

@@ -177,7 +177,8 @@ const RentingCar = () => {
       </div>
 
       <div className="Special_Services">
-        <p className="head_text">Our Special Services</p>
+       <p className="head_text">Our Special Services</p>
+       <p className="desc_text">We work for your comfort</p>
         <div className="cars_det">
           {car_data.map((data) => (
             <div key={data.id} className="single_car_detail">

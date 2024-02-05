@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import { getCarById } from "../../redux/actions/CheuffeurDrive.action";
 import BookingForm from "./BookingForm";
 import Loader from "../designs/Loader";
+import Footer from "../Footer";
 export default function SingleCarBook({ topic }) {
   const { fleetType, id, carId } = useParams();
 
@@ -127,7 +128,7 @@ export default function SingleCarBook({ topic }) {
       </>
     )}
    
-      
+      <Footer/>
     </div>
   );
 }

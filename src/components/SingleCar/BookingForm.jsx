@@ -451,9 +451,12 @@ export default function BookingForm({car,service,fleetType}) {
             </div>
           </div>
         </div>
+        <div className="submit_button">
+
         <button className="submit_btn" type="submit">
           Submit
         </button>
+        </div>
 
         <div className="terms">
           <p className="terms_text">Terms And Conditions:</p>

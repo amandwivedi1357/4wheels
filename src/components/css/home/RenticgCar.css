@@ -171,12 +171,12 @@ border: 2px solid springgreen;
 }
 .Special_Services .head_text{
    padding: 2rem;
-   color: #FFF;
+   color: #031B4E;
    text-align: center;
    font-family: 'Cormorant';
    font-size: 46px;
    font-style: normal;
-   font-weight: 400;
+   font-weight: 600;
    line-height: 55px; /* 119.565% */
    letter-spacing: 0.25px;
    text-transform: capitalize;
@@ -184,15 +184,16 @@ border: 2px solid springgreen;
 
 
 .Special_Services .head_text{
-   color: #FFF;
+    color: #031B4E;
 text-align: center;
 font-family: 'Cormorant';
 font-size: 46px;
 font-style: normal;
-font-weight: 400;
+font-weight: 600;
 line-height: 55px; /* 119.565% */
 letter-spacing: 0.25px;
 text-transform: capitalize;
+margin-bottom: -1rem;
 }
 
 .Special_Services .cars_det{
