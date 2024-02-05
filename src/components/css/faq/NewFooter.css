@@ -51,7 +51,7 @@
     text-transform: none;
   }
   .unordered_list li {
-    cursor: pointer;
+  
       color: rgba(255, 255, 255, 0.90);
   font-family: 'Poppins';
   font-size: 18px;
@@ -83,6 +83,9 @@
     line-height: 29px; /* 207.143% */
     letter-spacing: 0.5px;
   }
+  .curs{
+    cursor: auto;
+  }
   .flex_cont .unordered_list .list_head{
     font-weight: bolder;
   }
@@ -93,6 +96,7 @@
   
   .center{
       text-align: center;
+      cursor: pointer;
   }
   .btm_text {
     color: rgba(255, 255, 255, 0.9);

@@ -15,7 +15,7 @@ const Footer = () => {
       <p className="head_text">Let’s Get Started</p>
     
  <div className="footer_flex">
- <div className="flex_cont">
+ <div className="flex_cont curs">
      <ul className="unordered_list" style={{listStyle:'none'}}>
          <li className="list_head">Contact Now</li>
          <li><p >Address</p>Corporate office / regs office — 
