@@ -261,7 +261,7 @@ We have been using 4wheel for our trips needs for several years now and have alw
             Contact us for assistance
             </p>
             </div>
-            <button className="bann_btn">
+            <button className="bann_btn" onClick={()=>window.open('https://api.whatsapp.com/send?phone=919885354321','_blank')}>
               Contact Us
             </button>
           </div>
