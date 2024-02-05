@@ -62,7 +62,7 @@ const FleetDetail = () => {
                   <div className="inner_fleetFilter" key={data._id}>
                     <div className="inp_check">
                       <input
-                        type="checkbox"
+                        type="radio"
                         className="checkbox"
                         value={data.fleetType}
                         onChange={() =>

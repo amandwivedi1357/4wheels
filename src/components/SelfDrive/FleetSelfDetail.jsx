@@ -84,7 +84,7 @@ const FleetSelfDetail = () => {
                   <div className="inner_fleetFilter" key={data._id}>
                     <div className="inp_check">
                       <input
-                        type="checkbox"
+                        type="radio"
                         className="checkbox"
                         value={data.fleetType}
                         onChange={() =>
@@ -106,7 +106,7 @@ const FleetSelfDetail = () => {
                   <div className="inner_fleetFilter" key={fuelType}>
                     <div className="inp_check">
                       <input
-                        type="checkbox"
+                        type="radio"
                         className="checkbox"
                         value={fuelType.toUpperCase()}
                         onChange={() => handleFuelTypeChange(fuelType)}

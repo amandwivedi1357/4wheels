@@ -135,6 +135,9 @@ width: 60%;
   }
   .left_sec .bottom_info ul li{
     margin-bottom: 2rem;
+    margin-right: 10rem;
+    font-family: 'Poppins';
+    font-size: 18.5px;
   }
 .last_Sec .right_sec{
 width: 40%;

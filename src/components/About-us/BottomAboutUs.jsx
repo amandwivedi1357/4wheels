@@ -50,10 +50,10 @@ const BottomAboutUs = () => {
           </div>
           <div className="bottom_info">
             <ul>
-              <li>Something</li>
-              <li>Something</li>
-              <li>Something</li>
-              <li>Something</li>
+              <li>24x7 operations for seamless service to clients in Hyderabad & elsewhere.</li>
+              <li>100% of the own fleet is GPS enabled for enhanced security and tracking.</li>
+              <li>Comprehensive website with payment gateway enabled.</li>
+              <li>All drivers (deployed on 4 wheel owned vehicles) on the rolls of the company for peace of mind</li>
             </ul>
           </div>
         </div>

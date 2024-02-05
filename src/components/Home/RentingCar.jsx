@@ -18,19 +18,22 @@ import quote from "../../assets/home/quote.svg";
 import FAQSection from "../Faq/FAQSection";
 import Footer from "../Footer";
 import Steps from "./Steps";
-import red_car_info from "../../assets/home/red_car_info.webp"
+import red_car_info from "../../assets/home/car_image.webp"
 const car_data = [
   {
     id: 1,
     img: weds,
+    title:'Wedding'
   },
   {
     id: 2,
     img: vip,
+    title:'Sports'
   },
   {
     id: 3,
     img: vip1,
+    title:'Luxury'
   },
 ]
 const second_car_data = [
@@ -184,6 +187,7 @@ const RentingCar = () => {
           {car_data.map((data) => (
             <div key={data.id} className="single_car_detail">
               <img className="grid_img" src={data.img} alt="" />
+              <p className="desc_title">{data.title}</p>
             </div>
           ))}
         </div>

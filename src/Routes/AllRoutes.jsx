@@ -6,7 +6,6 @@ import AboutUs from "../pages/AboutUs"
 import Gallery from "../pages/Gallery"
 import SelfDrive from "../pages/SelfDrive"
 
-import Admin from "../pages/Admin"
 import FleetDetail from "../components/CheuffeurDrive/FleetDetail"
 import SingleCarBook from "../components/SingleCar/SingleCarBook"
 import FleetSelfDetail from "../components/SelfDrive/FleetSelfDetail"
@@ -14,6 +13,7 @@ import SingleSelfCarBook from "../components/SingleCar/SingleSelfCarBook"
 import AdminPage from "../components/admin/AdminPage"
 import Faq from "../pages/Faq"
  import Login from "../components/Login/Login"
+
 
 const NotFound = () => {
   const navigate = useNavigate();
@@ -31,6 +31,7 @@ const NotFound = () => {
 const AllRoutes = () => {
     return (
       <Routes>
+       
         <Route path='/' element={<Home />} />
         <Route path='/cheuffeurdrive' element={<CheuffeurDrive />} />
         
