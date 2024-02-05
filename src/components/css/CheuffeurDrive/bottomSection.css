@@ -76,7 +76,8 @@ box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.06);
   .cheuffer_menu .menu_cont .explore:hover{
     background: #fff;
     color: #09005D;
-    border: none;
+    border: 1px solid #09005D;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   }
 .desc_self{
     width: 40%;
