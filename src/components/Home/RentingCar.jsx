@@ -115,6 +115,7 @@ marginLeft:'1rem'
 const RentingCar = () => {
   return (
     <div className="renting_main_container">
+      
       <p className="head_text">A fleet that meets your needs</p>
       <p className="desc_text rent_desc">Have a look at our different category of cars</p>
       <div className="sports_car">

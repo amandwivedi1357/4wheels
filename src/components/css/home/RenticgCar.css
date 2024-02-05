@@ -3,6 +3,7 @@
     height: auto;
     
 }
+
 .head_text{
 color: #031B4E;
 text-align: center;
@@ -33,7 +34,7 @@ margin-top: 1%;
   
   .sports_info {
     flex: 1; /* Take up 50% of the width */
-    
+   
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -64,6 +65,7 @@ margin-top: 1%;
     font-weight: 400;
     line-height: 29px;
     letter-spacing: 0.5px;
+    margin-bottom: 3rem;
   }
   
   .sports_img {
