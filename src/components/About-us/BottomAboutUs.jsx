@@ -3,6 +3,7 @@ import bann_Car from "../../assets/home/banner_Car-removebg.webp"
 import "../css/home/RenticgCar.css"
 import "../css/About/Bottom.css"
 import who from "../../assets/about/who.webp"
+import why from "../../assets/about/why.png"
 import fleet from "../../assets/about/fleet.webp"
 const BottomAboutUs = () => {
   return (
@@ -42,7 +43,24 @@ const BottomAboutUs = () => {
           </div>
         </div>
       </div>
-      
+      <div className="last_Sec">
+        <div className="left_sec">
+          <div className="top_head">
+            <p className="head_text">Why Choose Us</p>
+          </div>
+          <div className="bottom_info">
+            <ul>
+              <li>Something</li>
+              <li>Something</li>
+              <li>Something</li>
+              <li>Something</li>
+            </ul>
+          </div>
+        </div>
+        <div className="right_sec">
+          <img src={why} alt="" />
+        </div>
+      </div>
       <div className="bottom">
         <div className="inner_btm">
         <p className="head_text">Operations</p>

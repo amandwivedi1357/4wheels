@@ -128,7 +128,7 @@ letter-spacing: 1px;
 
 .animate_numbers .data_map .num{
     margin-bottom: 1rem;
-    color: #9A0404;
+    color: rgba(255, 255, 255, 1);
 font-family: 'Poppins';
 font-size: 32px;
 font-style: normal;
@@ -137,7 +137,7 @@ line-height: 47px; /* 146.875% */
 letter-spacing: 0.25px;
 }
 .animate_numbers .data_map .text{
-    color: rgba(255, 255, 255, 0.90);
+    color: rgba(255, 255, 255, 0.80);
 font-family: 'Poppins';
 font-size: 19px;
 font-style: normal;
@@ -164,105 +164,49 @@ border: 2px solid springgreen;
     max-width: 100%;
 }
 /* special services starts */
-.Special_Services {
+.Special_Services{
     width: 100%;
-    color: #FFF;
-    background: #fff;
-    display: flex;
-  flex-direction: column;
-  align-items: center;
-  }
-  
-  .Special_Services .head_text {
-    padding-top: 5rem;
-    color: rgba(40, 1, 14, 0.90);
-    text-align: center;
-    font-family: 'Cormorant';
-    font-size: 46px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 55px;
-    letter-spacing: 0.25px;
-    text-transform: capitalize;
-  }
-  
-  .Special_Services .cars_det{
-    width: 80%;
-    margin: auto;
-    margin-top: 4rem;
-    /* border: 1px solid red; */
-    display: flex;
-    justify-content: space-between;
-  }
-  .flex_container1{
-    width: 30%;
-    position: relative;
-    margin-left: 3rem;
-    /* border: 1px solid rgb(38, 0, 255); */
-  }
-  .flex_container1 img{
-    height: 22.5rem;
-  }
-  .flex_container2{
-    width: 68%;
-    margin-left: 1rem;
-    /* border: 1px solid rgb(7, 7, 7); */
-  }
-  .img1,.img2{height: 50%;
-/* border: 1px solid red; */
-position: relative;
-overflow: hidden;
+   height: auto;
+   color: #FFF;
 }
-.img1 img{
-    height: 94%;
-    max-width: 100%;
+.Special_Services .head_text{
+   padding: 2rem;
+   color: #FFF;
+   text-align: center;
+   font-family: 'Cormorant';
+   font-size: 46px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 55px; /* 119.565% */
+   letter-spacing: 0.25px;
+   text-transform: capitalize;
 }
-.img2 img{
-    height: 94%;
-    max-width: 100%;
-}
-.text_overlay1 {
-  position: absolute;
-  top: 80%;
-  left: 40%;
-  transform: translate(-50%, -50%);
-  color: #FFF;
+
+
+.Special_Services .head_text{
+   color: #FFF;
+text-align: center;
 font-family: 'Cormorant';
-font-size: 32px;
+font-size: 46px;
 font-style: normal;
 font-weight: 400;
-line-height: 45px; /* 140.625% */
+line-height: 55px; /* 119.565% */
 letter-spacing: 0.25px;
 text-transform: capitalize;
 }
-.text_overlay2{
-    position: absolute;
-    top: 15%;
-    left: 20%;
-    transform: translate(-50%, -50%);
-    color: #FFF;
-  font-family: 'Cormorant';
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 45px; /* 140.625% */
-  letter-spacing: 0.25px;
-  text-transform: capitalize;
+
+.Special_Services .cars_det{
+   width: 90%;
+   height: 60%;
+   margin: auto;
+   display: grid;
+   padding: 5% 0;
+   gap: 20px;
+   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));;
 }
-.text_overlay3{
-    position: absolute;
-    top: 15%;
-    left: 9%;
-    transform: translate(-50%, -50%);
-    color: #FFF;
-  font-family: 'Cormorant';
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 45px; /* 140.625% */
-  letter-spacing: 0.25px;
-  text-transform: capitalize;
-}
+
+
+
 
   /* Add additional styling as needed */
   
@@ -305,8 +249,10 @@ margin-top: -0.2rem;
     /* border: 1px solid black; */
 }
 .second_car_data .cont1 img{
-    
+    border-radius: 5px;
 height: 24rem;
+width: 100%; /* Ensure image takes up 100% width of its container */
+object-fit: cover;
 }
 
 .second_car_data .cont2{
@@ -473,21 +419,27 @@ letter-spacing: 0.25px;
     font-family: 'Poppins';
     font-size: 15px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 12.5px;
     letter-spacing: 1px;
     display: inline-flex;
     height: 44px;
-    padding: 10px 26px;
+    padding: 0 26px;
     justify-content: center;
     align-items: center;
     gap: 10px;
     margin: 31px;
+    margin-top: 0.5rem;
     border-radius: 4px;
-    border: 0.5px solid rgba(255, 255, 255, 0.80);
+   
     background: #09005D;
     box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.06);
     flex-shrink: 0;
+  }
+  .bann_btn:hover{
+    background: #fff;
+    color: #031B4E;
+    font-weight: 600;
   }
   
   .right img {
@@ -496,40 +448,6 @@ letter-spacing: 0.25px;
     position: relative;
     z-index: 999;
   }
-  
-/* .footer-cont{
-width: 100%;
-height: auto;
-background: #0C0125;
-}
-.footer-cont .head_text{
-    color: rgba(255, 255, 255, 0.95);
-font-family: 'Cormorant';
-font-size: 64px;
-font-style: normal;
-font-weight: 500;
-line-height: 55px; /* 85.938% */
-/* 
-letter-spacing: 0.25px;
-padding-top: 4rem;
-} */
-
-
-.btm_text{
-    color: rgba(255, 255, 255, 0.90);
-text-align: center;
-font-family: 'Poppins';
-font-size: 18px;
-font-style: normal;
-font-weight: 400;
-line-height: 30px; /* 166.667% */
-letter-spacing: 0.36px;
-border: .5px solid rgba(255, 255, 255, 0.44);
-border-bottom: none;
-border-left:none;
-border-right:none;
-padding: 1rem;
-}
   
 /* banner ends */
 

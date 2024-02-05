@@ -3,19 +3,22 @@
     height: auto;
     padding: 1rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(3,1fr);
     gap: 20px;
+    
   }
   
   .single_cont {
+    width: 95%;
     position: relative;
     overflow: hidden;
     margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     display: inline-block;
   }
   
   .single_cont img {
-    width: 95%;
+    width: 100%;
     display: block;
     transition: filter 0.5s ease;
   }
@@ -66,5 +69,12 @@
     .single_cont img {
       width: 100%;
     }
+    .Btm_cont{
+      grid-template-columns: repeat(2,1fr);
+    }
   }
-  
+  @media screen and (max-width: 768px){
+    .Btm_cont{
+      grid-template-columns: repeat(1,1fr);
+    }
+  }

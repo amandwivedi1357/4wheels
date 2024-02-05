@@ -42,7 +42,7 @@ export default function SingleSelfCarBook({ topic }) {
       <div className="Single_container">
         <div className="head_cont">
           <p className="head_text">{topic}</p>
-          <p className="desc_text">
+          <p className="desc_text book_desc">
             Driving your dreams to reality with an exquisite fleet of versatile
             vehicles for unforgettable journeys.
           </p>

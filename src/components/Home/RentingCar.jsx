@@ -3,8 +3,10 @@ import rentingCar1 from "../../assets/home/rentingCar1.webp";
 import FlowReact from "../FlowReact";
 import AnimatedNumberCounter from "./AnimatedNumberCounter";
 import bann_Car from "../../assets/home/banner_Car-removebg.webp"
-import weds from "../../assets/home/weds1.webp"
-import vip from "../../assets/home/VIP.webp"
+import weds from "../../assets/home/marriage.webp"
+import vip from "../../assets/home/bl_sport.webp"
+import vip1 from "../../assets/home/front_bl_sedan.webp"
+import new_car from "../../assets/home/front-view-black-sedan-sport-car-bridge.webp"
 import cust from "../../assets/home/custom_sols.webp"
 import car2 from "../../assets/home/custom_sols.webp"
 import car1 from "../../assets/home/newgal_1.webp";
@@ -17,6 +19,20 @@ import FAQSection from "../Faq/FAQSection";
 import Footer from "../Footer";
 import Steps from "./Steps";
 import red_car_info from "../../assets/home/red_car_info.webp"
+const car_data = [
+  {
+    id: 1,
+    img: weds,
+  },
+  {
+    id: 2,
+    img: vip,
+  },
+  {
+    id: 3,
+    img: vip1,
+  },
+]
 const second_car_data = [
   {
     id: 1,
@@ -35,7 +51,7 @@ const animate_data = [
   {
     id: 1,
     text: "Happy Customers",
-    numbers: 2345,
+    numbers: 3345,
   },
   {
     id: 2,
@@ -77,6 +93,9 @@ const cust_text = {
   textAlign:'left',
   color:'rgba(3, 3, 3, 0.90)',
   margin:'auto',
+  padding:'0 22px',
+  fontSize:'15px',
+
   '@media screen and (min-width: 768px) and (max-width: 1023px)':{
     fontSize:'15px'
   }
@@ -88,7 +107,8 @@ fontSize: '24px',
 fontStyle: 'normal',
 fontWeight: '400',
 lineHeight: '34.5px' ,/* 143.75% */
-textAlign:'left',margin:'1rem 1rem',
+textAlign:'left',margin:'0.5rem 1rem',
+padding:'0 22px',
 letterSpacing: '0.25px',
 marginLeft:'1rem'
 }
@@ -157,26 +177,13 @@ const RentingCar = () => {
       </div>
 
       <div className="Special_Services">
-        <p className="head_text spec">Our Special Services</p>
-        <p className="desc_text">We work for your comfort</p>
+        <p className="head_text">Our Special Services</p>
         <div className="cars_det">
-            <div className="flex_container1">
-              <img src={weds} alt="" className="fl_1" />
-              <div className="text_overlay1">Weddings & Special Events</div>
+          {car_data.map((data) => (
+            <div key={data.id} className="single_car_detail">
+              <img className="grid_img" src={data.img} alt="" />
             </div>
-            <div className="flex_container2">
-              <div className="img1">
-
-              <img className="fl2_img1" src={vip} alt="" />
-              <div className="text_overlay2">Custom Solutions</div>
-              </div>
-
-              <div className="img2">
-
-              <img className="fl2_img2" src={cust} alt="" />
-              <div className="text_overlay3">VIP</div>
-              </div>
-            </div>
+          ))}
         </div>
       </div>
        <div className="btm_container_1">
@@ -185,7 +192,7 @@ const RentingCar = () => {
 
         <div className="second_car_data">
           <div className="cont1">
-            <img src={car1} alt="" />
+            <img src={new_car} alt="" />
           </div>
           <div className="cont2">
             <img src={cust} alt="" />
@@ -211,7 +218,20 @@ const RentingCar = () => {
                 <p className="customer_text" style={cust_text}>Excellent Service! Car Rent Service!
 We have been using 4wheel for our trips needs for several years now and have always been happy with their service. Their customer support is Excellent Service! and they are always available to help with any issues we have. Their prices are also very competitive.</p>
 
-              <p style={{textAlign:'left',margin:'1rem 1rem'}}>⭐⭐⭐⭐</p>
+              <p style={{textAlign:'left',margin:'2rem 1rem 0rem 1rem',padding:'0 22px',display:"flex"}}>
+              {animate_data.map((data)=>(
+                <svg key={data.id} width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="Star" clipPath="url(#clip0_5889_3879)">
+                <path id="Vector" d="M13.0607 14.9549C12.5525 15.3346 9.29213 12.9274 8.66769 12.9221C8.04325 12.9169 4.74613 15.2687 4.24393 14.8804C3.74172 14.4921 4.92238 10.504 4.73423 9.8811C4.54608 9.25816 1.38929 6.70414 1.58704 6.08444C1.78482 5.46473 5.77491 5.40717 6.28305 5.02743C6.79118 4.64772 8.13733 0.717416 8.76181 0.722661C9.38621 0.727952 10.6715 4.68047 11.1737 5.06875C11.6759 5.45698 15.6647 5.58195 15.8529 6.20489C16.041 6.82783 12.8453 9.32822 12.6475 9.94792C12.4498 10.5676 13.5688 14.5751 13.0607 14.9549Z" fill="#FFC444"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_5889_3879">
+                <rect width="15.2494" height="16" fill="white" transform="translate(0.625)"/>
+                </clipPath>
+                </defs>
+                </svg>
+              ))}
+              </p>
               <p style={cust_name}>Varun Gupta</p>
               </div>
             ))}

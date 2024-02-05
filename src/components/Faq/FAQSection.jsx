@@ -12,7 +12,7 @@ const FaqItem = ({ question, answer }) => {
   };
 
   return (
-    <div style={{width:'90%',border:"1px solid gray",borderRadius:'4px',margin:'auto',background:'rgba(219, 209, 240, 0.89)'}}>
+    <div style={{width:'90%',borderRadius:'4px',margin:'auto',background:'rgba(219, 209, 240, 0.79)'}}>
       <Flex p={'18px 23px 13px 23px'}>
 
       <Text className='que_style'  fontWeight={400} fontSize="16px" mb={2} cursor="pointer" fontFamily={'Poppins'} onClick={handleToggle}>
@@ -25,7 +25,7 @@ const FaqItem = ({ question, answer }) => {
       </Flex>
       <Collapse in={isOpen} animateOpacity>
         <VStack align="start" spacing={4} bg={'rgba(245, 242, 252, 0.62)'}>
-          <Text className='text_style' p={'5px 23px'}>{answer}</Text>
+          <Text className='text_style' p={'27px'}>{answer}</Text>
         </VStack>
       </Collapse>
     </div>

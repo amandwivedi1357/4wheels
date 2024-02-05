@@ -53,7 +53,7 @@ export default function SingleCarBook({ topic }) {
       <div className="Single_container">
         <div className="head_cont">
           <p className="head_text">{topic}</p>
-          <p className="desc_text">
+          <p className="desc_text book_desc">
             Driving your dreams to reality with an exquisite fleet of versatile
             vehicles for unforgettable journeys.
           </p>
@@ -81,29 +81,29 @@ export default function SingleCarBook({ topic }) {
               <div className="main_Details">
                 <ul className="list_cont">
                   <li className="listItem">
-                    <span className="bold_props">4 Hours/40kms :</span>
+                    <span className="bold_props">4 Hrs/40kms :</span>
                     <span className="normal_props">{cars.properties.hours4_40kms}</span>
                   </li>
                   <li className="listItem">
-                    <span className="bold_props">8 Hours/80kms :</span>
+                    <span className="bold_props">8 Hrs/80kms :</span>
                     <span className="normal_props">{cars.properties.hours8_80kms}</span>
                   </li>
                   <li className="listItem">
-                    <span className="bold_props">Ext hour beyond 8Hr :</span>
+                    <span className="bold_props">Ext Hr beyond 8Hr :</span>
                     <span className="normal_props">{cars.properties.extraHourBeyond80kms}</span>
                   </li>
                   <li className="listItem">
-                    <span className="bold_props">Ext hour beyond 8okms :</span>
+                    <span className="bold_props">Ext Hrs beyond 8okms :</span>
                     <span className="normal_props">{cars.properties.extraHourBeyond8hr}</span>
                   </li>
                 </ul>
                 <ul className="list_cont">
                   <li className="listItem">
-                    <span className="bold_props">InterCity Minimum kms/km :</span>
+                    <span className="bold_props">InterCity Mini kms/km :</span>
                     <span className="normal_props">{cars.properties.InterCityMinimumKmsPerkm}</span>
                   </li>
                   <li className="listItem">
-                    <span className="bold_props">InterCity Minimum kms/Day :</span>
+                    <span className="bold_props">InterCity Mini kms/Day :</span>
                     <span className="normal_props">{cars.properties.InterCityMinimumkmsPerDay}</span>
                   </li>
                   <li className="listItem">

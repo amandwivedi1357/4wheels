@@ -11,7 +11,7 @@
 }
 .car_cont{
     padding-top: 1rem;
-    background: #f3ffff;
+    background: rgba(189, 208, 251, 0.3);
     /* background: #0051ff; */
     width: 90%;
     padding-bottom: 0.5rem;
@@ -32,8 +32,8 @@ background: #fff;
 
 }
 .left_img{
-    
-    display: flex;
+
+display: flex;
 justify-content: center;
 align-items: center;
 background: #fff;
@@ -57,13 +57,16 @@ background: #fff;
     border: none;
    width: 30%;
    border-radius: 4px;
-background: rgba(189, 208, 251, 0.37);
+background: rgba(189, 208, 251, 0.47);
    margin: 0.5rem;
    height: 5rem;
 
 }
+/* .price_btn:hover{
+    background: rgba(152, 171, 218, 0.37);
+} */
 .btn_text{
-    color: #031B4E;
+    color: rgba(3, 27, 78, 0.85);
 font-family: 'Poppins';
 font-size: 16px;
 font-style: normal;
@@ -72,8 +75,10 @@ line-height: 26px; /* 162.5% */
 letter-spacing: 0.5px;
 }
 .price_text{
-    font-size: 20px;
-    font-weight: bolder;
+    font-size: 24px;
+    
+    margin-top: 18px;
+    font-weight: 600;
 }
 .all_details .top_cont .carName_text{
     color: #031B4E;
@@ -106,10 +111,14 @@ display: flex;
 }
 .list_cont .listItem{
     /* border: 1px solid red; */
-    border-bottom: 2px solid #C0D2FA;
+    border-bottom: 2px solid rgba(192, 210, 250, 0.55);
     padding: 2px;
     display: flex;
+    
     justify-content: space-between;
+}
+.list_cont .listItem .normal_props{
+    margin-right: 7rem;
 }
 .input_container{
     
@@ -148,7 +157,9 @@ letter-spacing: 0.25px;
     width: 50%;
     /* border: 1px solid blue; */
 }
-
+.book_desc{
+    margin-bottom: 73px;
+}
 .input11 .input_wrapper{
     width: 90%;
 }
@@ -241,6 +252,9 @@ box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.06);
     /* border: 1px solid blue; */
     margin: auto;
 }
+.normal_props{
+    color: rgba(3, 27, 78, 0.85);
+}
 .terms_text{
     color: rgba(3, 27, 78, 0.90);
 font-family: 'Poppins';
@@ -251,7 +265,7 @@ line-height: normal;
 letter-spacing: 0.018px;
 }
 .textArea{
-    width: 100%; /* Occupy full width */
+    width: 80%; /* Occupy full width */
     box-sizing: border-box;
 }
 textarea{

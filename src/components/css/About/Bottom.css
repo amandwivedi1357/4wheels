@@ -62,6 +62,7 @@
   flex: 1;
   margin-top: 2rem;
   width: 50%;
+  margin-left: 2rem;
 }
 .inner_mid .left .head_text{
   text-align: left;
@@ -108,4 +109,33 @@ line-height: 32.5px; /* 203.125% */
 letter-spacing: 0.5px;
   width: 80%;
   text-align: center;
+}
+.last_Sec{
+  width: 100%;
+  margin-top: 2rem;
+  color: #fff;
+ 
+display: flex;
+  
+}
+.last_Sec .left_sec{
+  background: linear-gradient(0deg, #0C0125 26.56%, #1F0015 58.85%, #320003 100%);
+width: 60%;
+}
+.last_Sec .left_sec .top_head{
+  margin-left: 5rem;
+  }
+  .top_head .head_text{
+    text-align: left;
+    color: #fff;
+    margin-bottom: 4rem;
+  }
+  .left_sec .bottom_info{
+    margin-left: 7rem;
+  }
+  .left_sec .bottom_info ul li{
+    margin-bottom: 2rem;
+  }
+.last_Sec .right_sec{
+width: 40%;
 }

@@ -18,7 +18,7 @@
     margin: auto;
     margin-bottom: 0.5rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+    grid-template-columns: repeat(3,1fr)
 }
 .cheuffer_menu .menu_cont{
     padding: 0.5rem;
@@ -31,11 +31,12 @@ background: #FFF;
 }
 .cheuffer_menu .menu_cont img{
     width: 358px;
-    height: 50%;
+    height: 55%;
     object-fit: cover;
     margin: auto;
 }
 .cheuffer_menu .menu_cont .type_text{
+    margin-top: 35px;
     color: #030303;
     text-align: center;
     font-family: 'Cormorant';
@@ -44,7 +45,7 @@ background: #FFF;
     font-weight: 400;
     line-height: 55px; /* 152.778% */
     letter-spacing: 0.25px;
-    
+    text-transform: none;
 }
 .cheuffer_menu .menu_cont .explore{
     display: flex;
@@ -72,7 +73,11 @@ box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.06);
     flex-shrink: 0;
   }
   
-  
+  .cheuffer_menu .menu_cont .explore:hover{
+    background: #fff;
+    color: #09005D;
+    border: none;
+  }
 .desc_self{
     width: 40%;
     margin: auto;
@@ -95,8 +100,14 @@ box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.06);
     .cheuffer_menu .menu_cont .explore{
     font-size: 16px;
     }
+    .cheuffer_menu{
+        grid-template-columns: repeat(2,1fr)
+    }
 }
 @media screen and (max-width: 767px) {
+    .cheuffer_menu{
+        grid-template-columns: repeat(1,1fr)
+    }
     .btm_container .desc_text{
         width: 80%;
         font-size: 13px;

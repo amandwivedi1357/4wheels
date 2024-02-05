@@ -1,6 +1,6 @@
 
 import { GrLocation } from "react-icons/gr";
-import "./css/Footer.css"
+import "./css/faq/NewFooter.css"
 import { CiMail } from "react-icons/ci";
 import { FiPhone } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
@@ -11,20 +11,20 @@ const Footer = () => {
     navigate(`/${route}`)
   }
   return (
-    <div className="footer-cont">
+    <div className="footercont">
       <p className="head_text">Let’s Get Started</p>
     
  <div className="footer_flex">
  <div className="flex_cont">
      <ul className="unordered_list" style={{listStyle:'none'}}>
          <li className="list_head">Contact Now</li>
-         <li><span><GrLocation /></span>Corporate office / regs office — 
+         <li><p >Address</p>Corporate office / regs office — 
 4 wheel travels 
 91/A-2 , sagar cooperative society , road no.2 , banjara hills , hyderabad — 500034
 </li>
-         <li><span><CiMail /></span> Sales@4wheeltravels.com <br />
+         <li><p className="list_head">Emails</p> Sales@4wheeltravels.com <br />
 Bookings@4wheeltravels.com</li>
-         <li><span><FiPhone /></span> +914044774477 <br />
+         <li><p className="list_head">Contacts</p> +914044774477 <br />
 +919885354321 </li>
      
      </ul>

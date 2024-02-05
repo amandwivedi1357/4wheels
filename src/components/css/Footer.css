@@ -1,10 +1,11 @@
-.footer-cont {
+.footercont{
   width: 100%;
   margin-top: -5rem;
+  text-transform: none;
   height: auto;
   background: #0c0125;
 }
-.footer-cont .head_text {
+.footercont .head_text {
   color: rgba(255, 255, 255, 0.95);
   font-family: "Cormorant";
   font-size: 64px;
@@ -51,6 +52,7 @@
   line-height: 45px; /* 225% */
   margin-bottom: 1rem;
   letter-spacing: 0.25px;
+  text-transform: none;
 }
 
 .unordered_list li {
@@ -87,6 +89,11 @@ letter-spacing: 0.25px;
   line-height: 29px; /* 207.143% */
   letter-spacing: 0.5px;
 }
+.unordered_list .list_head,
+.unordered_list li {
+  text-transform: none; /* Add this line to reset text-transform */
+}
+
 .center{
     text-align: center;
 }

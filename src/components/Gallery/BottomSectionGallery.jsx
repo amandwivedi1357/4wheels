@@ -22,7 +22,13 @@ const BottomSectionGallery = () => {
   }, [dispatch]);
 console.log(fleets)
   return (
-    <div className="Btm_cont">
+    <div className="Btm_cont1">
+      <p className="head_text">Gallery</p>
+      <p className="desc_text">
+      Driving your dreams to reality with an exquisite fleet of versatile vehicles for unforgettable journeys.
+      </p>
+      <div className="Btm_cont">
+
       {fleets.map((data)=>(
         <div  key={data.id} className="single_cont">
             <img src={data.fleetImg} alt="" />
@@ -32,6 +38,7 @@ console.log(fleets)
               
         </div>
       ))}
+      </div>
     </div>
   )
 }

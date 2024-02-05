@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { useToast } from "@chakra-ui/react";
 import { addBooking } from "../../redux/actions/Booking.action";
 import email from "../../assets/email/template.png"
+import { useNavigate } from "react-router-dom";
 
 
 function generateFiveDigitNumber() {
@@ -34,6 +35,7 @@ export default function BookingForm({car,service,fleetType}) {
   };
   const dispatch = useDispatch();
   const toast = useToast();
+  const navigate = useNavigate()
   const [formData, setFormData] = useState({
     name: "",
     carName:car.carName,
@@ -102,12 +104,12 @@ export default function BookingForm({car,service,fleetType}) {
                 <h2>Fleet Booking Successful</h2>
               </div>
               <div class="content">
-                <img src="https://dl.dropboxusercontent.com/scl/fi/pjwy1k9wexq5jg3pe0bdt/template.png?rlkey=mi51z7k2bzxuczhxotvfj0v17&dl=0" alt="thanks for booking car" />
+                <img src="https://dl.dropboxusercontent.com/scl/fi/nfu0j7mfd8fz9mg4w7c0z/email-template.webp?rlkey=14jjc3y0i74hi0eg3y4gsyw48&dl=0" alt="thanks for booking car" />
                 <p>Your ${formData.carName} has been booked successfully.</p>
                 <!-- Add more content as needed -->
               </div>
               <div class="footer">
-                <p>For any inquiries, please contact us at Bookings@4wheeltravels.com <br/> or Call us At +91 </p>
+                <p>For any inquiries, please contact us at Bookings@4wheeltravels.com <br/> or Call us At +919885354321 </p>
               </div>
             </div>
           </body>
@@ -131,9 +133,26 @@ export default function BookingForm({car,service,fleetType}) {
     }).then((res)=>{
       console.log(res);
       if(res.status>199 && res.status<300){
-        alert('Send Successfully')
+        toast({
+          title: "Confirmation Mail",
+          description: "A Confirmation mail has been sent to your mail",
+          status: "success",
+          duration: 6000,
+          isClosable: true,
+        });
+        navigate("/")
+      }
+      else{
+        toast({
+          title: "Can't Book the this vehicle",
+          description: "There is an error while booking this fleet",
+          status: "error",
+          duration: 6000,
+          isClosable: true,
+        });
       }
     })
+    
   }
 
   const today = new Date().toISOString().split("T")[0];
@@ -425,7 +444,7 @@ export default function BookingForm({car,service,fleetType}) {
                 onChange={handleInputChange}
                 name=""
                 id="specialInstruction"
-                cols="120"
+                cols="105"
                 rows="10"
                 required
               ></textarea>
