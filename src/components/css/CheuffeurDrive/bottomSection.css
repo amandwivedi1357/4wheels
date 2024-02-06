@@ -107,7 +107,7 @@ box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.06);
 }
 @media screen and (max-width: 767px) {
     .cheuffer_menu{
-        grid-template-columns: repeat(1,1fr)
+        grid-template-columns: repeat(2,1fr)
     }
     .btm_container .desc_text{
         width: 80%;
@@ -116,9 +116,32 @@ box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.06);
         padding: 1rem;
     }
     .cheuffer_menu .menu_cont{
-        width: 60%;
+        width: 155px;
+  flex-grow: 0;
+  margin: 50px 18px 18px 16px;
+  border-radius: 4px;
+  border: solid 0.5px rgba(0, 0, 0, 0.34);
+  background-color: #fff;
     }
     .cheuffer_menu .menu_cont .type_text{
-        font-size: 25px;
+        font-family: Cormorant;
+        font-size: 20px;
+        margin-top: 7px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: 0.25px;
+        text-align: center;
+        color: #030303;
+    }
+    .cheuffer_menu .menu_cont .explore{
+        width:70px;
+        height: 15%;
+        margin-top: 1rem;
+        font-size: 13px;
+    }
+    .cheuffer_menu .menu_cont img{
+        width: 100%;
     }
 }
