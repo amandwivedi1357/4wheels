@@ -7,6 +7,7 @@ import weds from "../../assets/home/marriage.webp"
 import vip from "../../assets/home/bl_sport.webp"
 import vip1 from "../../assets/home/front_bl_sedan.webp"
 import new_car from "../../assets/home/front-view-black-sedan-sport-car-bridge.webp"
+import steps_mobile from "../../assets/home/mobile_steps.webp"
 import cust from "../../assets/home/custom_sols.webp"
 import car2 from "../../assets/home/custom_sols.webp"
 import car1 from "../../assets/home/newgal_1.webp";
@@ -123,7 +124,10 @@ const RentingCar = () => {
       <p className="desc_text rent_desc">Have a look at our different category of cars</p>
       <div className="sports_car">
         <div className="sports_info">
+          <div className="head_head">
+
           <p className="head_text">Sports Car</p>
+          </div>
           <div className="desc_desc">
 
           <p className="desc_text">
@@ -180,7 +184,11 @@ const RentingCar = () => {
         <p className="desc_text">
         How it works
         </p>
-        <Steps/>
+        <div className="content">
+    <Steps/> {/* Default: Display Steps component */}
+    
+  </div>
+  <img src={steps_mobile} alt="Mobile Image" className="mobile_image"/> {/* Display this image for mobile view */}
       </div>
 
       <div className="Special_Services">

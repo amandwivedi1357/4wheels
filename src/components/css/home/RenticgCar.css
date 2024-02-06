@@ -42,12 +42,14 @@ margin-top: 1%;
     padding: 20px; /* Add padding as needed */
     box-sizing: border-box; /* Include padding and border in the total width */
   }
-  
+  .head_head{
+    /* border: 1px solid red; */
+    margin-left: -4rem;
+  }
   .sports_info .head_text{
     color: #FFF;
     text-align: left;
     font-family: 'Cormorant';
-    
     font-size: 48px;
     font-style: normal;
     font-weight: 400;
@@ -132,7 +134,9 @@ letter-spacing: 1px;
     display: flex;
     justify-content: space-around;
 }
-
+.mobile_image{
+    display: none;
+}
 .animate_numbers .data_map .num{
     margin-bottom: 1rem;
     color: rgba(255, 255, 255, 1);
@@ -596,6 +600,13 @@ letter-spacing: 0.25px;
 
     .steps_container .head_text{
         font-size: 25px;
+    }
+    .content{
+        display: none;
+    }
+    .mobile_image{
+        display: inline;
+        height: 25rem;
     }
     /* Special Services starts */
     .grid_img{
