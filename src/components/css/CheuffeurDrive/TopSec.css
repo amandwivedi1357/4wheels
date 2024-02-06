@@ -143,23 +143,41 @@ background: transparent;
         margin-top: -15%;
     }
     .logo {
-        width: 40%;
+        width: 80%;
         height: 70%;
         margin: 0.5rem;
         /* border:2px solid yellowgreen; */
     }
     .heading_text{
-        width: 70%;
+        width: 85%;
     }
     .heading_text p{
-        font-family: 'Cormorant',serif;
-        margin-top: 10px;
+        margin: 95px 4px 30px;
+        font-family: Cormorant;
+        font-size: 37px;
+        font-weight: 400;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.31;
+        letter-spacing: 0.25px;
         text-align: center;
-        font-size: 35px;
+        color: #fff;
     }
     .detailed_desc{
-        width: 67%;
-        margin: auto;
+        width: 100%;
+        text-align: center;
+    }
+    .detailed_desc p{
+        margin: 30px 20px 0;
+  font-family: Poppins;
+  font-size: 13px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.92;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
     }
   }
   

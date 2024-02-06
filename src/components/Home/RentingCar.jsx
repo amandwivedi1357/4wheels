@@ -124,9 +124,12 @@ const RentingCar = () => {
       <div className="sports_car">
         <div className="sports_info">
           <p className="head_text">Sports Car</p>
+          <div className="desc_desc">
+
           <p className="desc_text">
             Have a look at our different category of cars
           </p>
+          </div>
         </div>
         <div className="sports_img">
           <img src={rentingCar1} alt="sports car" />

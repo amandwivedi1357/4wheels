@@ -6,7 +6,7 @@
 }
 .car_images img{
     width: 100%;
-    margin-top: -5%;
+    margin-top: 5%;
 }
 .cars{
     /* position: relative;
@@ -67,7 +67,8 @@
     }
 .car_images img{
     width: 100%;
-    margin-top: 20%;
+    height: 10rem;
+    margin-top: 60%;
 }
 .prev{
     margin-top: 5%;

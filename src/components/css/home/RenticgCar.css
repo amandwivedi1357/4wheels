@@ -34,7 +34,6 @@ margin-top: 1%;
   
   .sports_info {
     flex: 1; /* Take up 50% of the width */
-   
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -44,10 +43,11 @@ margin-top: 1%;
     box-sizing: border-box; /* Include padding and border in the total width */
   }
   
-  .sports_info .head_text {
+  .sports_info .head_text{
     color: #FFF;
-    text-align: center;
+    text-align: left;
     font-family: 'Cormorant';
+    
     font-size: 48px;
     font-style: normal;
     font-weight: 400;
@@ -58,7 +58,7 @@ margin-top: 1%;
   
   .sports_info .desc_text {
     color: rgba(255, 255, 255, 0.80);
-    text-align: center;
+    text-align: left;
     font-family: 'Poppins';
     font-size: 16px;
     font-style: normal;
@@ -520,23 +520,52 @@ letter-spacing: 0.25px;
         font-size: 14px;
     }
     .sports_car{
-        display: block;
-        
+        display: flex;
+        flex-direction: column-reverse;
     }
     .sports_car .sports_info{
         width: 100%;
+        
     }
     .sports_img{
         width: 100%;
+      
     }
-    .sports_info .head_text{
-        padding-top: 10rem;
+    .sports_img img{
+        height: 20rem;
+    }
+    .sports_info .head_text{ 
+        margin-top: 1rem;
+       margin-left: -5.5rem;
+       font-family: Cormorant;
+  font-size: 24px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.08;
+  letter-spacing: 0.25px;
+  text-align: left;
+  color: #fff;
+  font-size: 40px;
+    }
+    .sports_info .desc_desc{
         
-        font-size: 40px;
+        width: 100%;
+        text-align: left;
+        margin-left: -2rem;
     }
-    .sports_info .desc_text{
-        width: 80%;
-        margin: auto;
+    .sports_info .desc_desc .desc_text{
+        text-align: left;
+        
+
+  font-family: Poppins;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.23;
+  letter-spacing: 0.5px;
+  color: rgba(255, 255, 255, 0.8);
     }
     .renting_main_container .desc_text{
         width: 90%;

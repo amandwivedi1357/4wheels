@@ -3,7 +3,7 @@ import "./css/MySlider.css"
 import Slider from "react-slick";
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
-import car1 from '../assets/home/slider1.webp'
+import car1 from '../assets/home/sliderfirst.png'
 import car2 from '../assets/home/slider1.webp'
 import car3 from '../assets/home/slider2.webp'
 import car4 from '../assets/home/car4-removebg-preview.webp'
@@ -42,16 +42,16 @@ const MySlider = () => {
         <img src={car1} alt="" />
       </div>
       <div className="car_images">
-      <img src={car2} alt="" />
+      <img src={car1} alt="" />
       </div>
       <div className="car_images">
-      <img src={car3} alt="" />
+      <img src={car1} alt="" />
       </div>
       <div className="car_images">
-      <img src={car4} alt="" />
+      <img src={car1} alt="" />
       </div>
       <div className="car_images">
-      <img src={car5} alt="" />
+      <img src={car1} alt="" />
       </div>
       {/* <div className="car_images">
       <img src={car6} alt="" />
