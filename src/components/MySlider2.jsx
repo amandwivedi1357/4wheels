@@ -17,6 +17,8 @@ const MySlider2 = () => {
     speed: 300,
     slidesToShow: 1,
     slidesToScroll: 1,
+    prevArrow: null, // Hide previous arrow
+    nextArrow: null, // Hide next arrow
   };
 
   const slides = [

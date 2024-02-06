@@ -12,7 +12,7 @@ export default function Home() {
      <TopSection/>
      {/* <Landing/> */}
     
-     <MySlider2/>
+     {/* <MySlider2/> */}
      {/* <Services/> */}
      <RentingCar/>
      
