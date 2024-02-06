@@ -1,0 +1,6 @@
+@media screen and (max-width: 767px) {
+    .App{
+      overflow-x:hidden ;
+    }
+  }
+  
