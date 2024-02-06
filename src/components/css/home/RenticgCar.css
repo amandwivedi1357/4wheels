@@ -202,7 +202,9 @@ letter-spacing: 0.25px;
 text-transform: capitalize;
 margin-bottom: -1rem;
 }
-
+.Special_Services .cars_det_mob{
+    display: none;
+}
 .Special_Services .cars_det{
    width: 90%;
    height: 60%;
@@ -374,7 +376,7 @@ letter-spacing: 0.25px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: rgba(255, 255, 255, 0.2); /* Adjust the alpha value for transparency */
+    color: rgba(255, 255, 255, 0.2); 
     font-size: 80px;
     font-family: 'Poppins';
     font-weight: 600;
@@ -600,9 +602,16 @@ letter-spacing: 0.25px;
     .content{
         display: none;
     }
-    .mobile_image{
+    .cars_det{
+        display: none;
+    }
+    .cars_det_mob{
         display: inline;
-        height: 25rem;
+    }
+    .mobile_image{
+        width: 100%;
+        display: inline;
+        height: 30rem;
     }
     /* Special Services starts */
     .grid_img{
@@ -629,6 +638,7 @@ letter-spacing: 0.25px;
     .bann_text{
         text-align: center;
         font-size: 45px;
+        margin-left: -1rem;
         line-height: 45px;
     }
     .bann_text_2{
@@ -637,7 +647,9 @@ letter-spacing: 0.25px;
     }
     .bann_btn{
         margin: 0 25%;
+        margin-top: 25%;
     }
+    
     .right img{
         display: block;
         margin: 0 auto;
@@ -660,5 +672,14 @@ letter-spacing: 0.25px;
     /* .footer */
     .footer_flex{
         display: block;
+    }
+    .banner::before{
+        font-size: 25px;
+        
+        color: rgba(255, 255, 255, 0.5);
+        letter-spacing: 22.5px;
+        margin: auto;
+        margin-top: -2rem;
+        margin-left: 1rem;
     }
 }

@@ -20,6 +20,7 @@ import FAQSection from "../Faq/FAQSection";
 import Footer from "../Footer";
 import Steps from "./Steps";
 import red_car_info from "../../assets/home/car_image.webp"
+import MySlider3 from "../Sliders/MySlider3";
 const car_data = [
   {
     id: 1,
@@ -201,6 +202,9 @@ const RentingCar = () => {
               <p className="desc_title">{data.title}</p>
             </div>
           ))}
+        </div>
+        <div className="cars_det_mob">
+          <MySlider3/>
         </div>
       </div>
        <div className="btm_container_1">
