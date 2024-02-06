@@ -17,8 +17,8 @@ const Footer = () => {
  <div className="footer_flex">
  <div className="flex_cont curs">
      <ul className="unordered_list" style={{listStyle:'none'}}>
-         <li className="list_head">Contact Now</li>
-         <li><p >Address</p>Corporate office / regs office — 
+         <li className="list_head">Contact Now : </li>
+         <li><p className="list_head">Address : </p>Corporate office / regs office — 
 4 wheel travels 
 91/A-2 , sagar cooperative society , road no.2 , banjara hills , hyderabad — 500034
 </li>

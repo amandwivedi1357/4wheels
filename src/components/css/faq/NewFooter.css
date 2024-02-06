@@ -120,18 +120,38 @@
   
   }
   @media screen and (max-width: 767px) {
+    .footercont .head_text{
+      font-family: Cormorant;
+  font-size: 36px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.53;
+  letter-spacing: 0.25px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.95);
+    }
     .footer_flex {
         display: grid; /* Add this line to enable grid layout */
         grid-template-columns: repeat(1, 1fr);
     }
     .unordered_list .list_head {
-        text-align: center;
+        text-align: left;
+        font-family: Poppins;
+  font-size: 18px;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.06;
+  letter-spacing: 0.25px;
+
+  color: rgba(255, 255, 255, 0.9);
     }
     .unordered_list li {
-        text-align: center;
+        text-align: left;
     }
     .unordered_list li span {
-        text-align: center;
+        text-align: left;
     }
   }
   
