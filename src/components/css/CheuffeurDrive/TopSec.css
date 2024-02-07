@@ -9,6 +9,8 @@
     font-family: 'Poppins';
     width: 100%;
     /* border: 1px solid red; */
+    background: rgba(7, 7, 16, 0.28);
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12);
     font-weight: 400;
     display: flex;
 }
@@ -134,6 +136,11 @@ background: transparent;
 /* Media query for mobile */
 @media screen and (max-width: 767px) {
     /* Styles specific to mobile view */
+    .navbar{
+        position: fixed;
+        height: 10%;
+    }
+    
     .nav_options{
         display: none;
     }
