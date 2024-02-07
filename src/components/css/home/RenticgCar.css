@@ -608,6 +608,9 @@ letter-spacing: 0.25px;
     .content{
         display: none;
     }
+    .Special_Services{
+        margin-top: -7rem;
+    }
    .Special_Services .cars_det{
         display: none;
     }
@@ -617,7 +620,8 @@ letter-spacing: 0.25px;
     .mobile_image{
         width: 100%;
         display: inline;
-        height: 30rem;
+        height: 40rem;
+        margin-top: -2rem;
     }
     /* Special Services starts */
     .grid_img{

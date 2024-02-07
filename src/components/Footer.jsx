@@ -1,9 +1,8 @@
-import { GrLocation } from "react-icons/gr";
+
 import "./css/faq/NewFooter.css";
-import { CiMail } from "react-icons/ci";
-import { FiPhone } from "react-icons/fi";
+
 import { useNavigate } from "react-router-dom";
-import { Button, Input } from "@chakra-ui/react";
+
 const Footer = () => {
   const navigate = useNavigate();
   const handleClick = (route) => {
@@ -34,7 +33,7 @@ const Footer = () => {
         </div>
         <div className="flex_cont">
           <ul className="unordered_list center" style={{ listStyle: "none" }}>
-            <li className="list_head">Quick Links</li>
+            <li className="list_head quick">Quick Links</li>
             <li onClick={() => handleClick("selfdrive")}>Self Drive</li>
             <li onClick={() => handleClick("cheuffeurdrive")}>
               Chauffeur Drive

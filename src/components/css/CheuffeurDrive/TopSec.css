@@ -137,7 +137,9 @@ background: transparent;
 @media screen and (max-width: 767px) {
     /* Styles specific to mobile view */
     
-    
+    .main_top_container{
+        height: 40rem;
+    }
     .nav_options{
         display: none;
     }
