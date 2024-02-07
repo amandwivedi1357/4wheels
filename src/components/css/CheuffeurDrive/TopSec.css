@@ -136,10 +136,7 @@ background: transparent;
 /* Media query for mobile */
 @media screen and (max-width: 767px) {
     /* Styles specific to mobile view */
-    .navbar{
-        position: fixed;
-        height: 10%;
-    }
+    
     
     .nav_options{
         display: none;
