@@ -1,14 +1,12 @@
+/* eslint-disable react/prop-types */
 
 
 import Slider from "react-slick";
 import "./Myslider3.css"
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
-import car1 from '../../assets/home/marriage.webp'
-import car2 from '../../assets/home/bl_sport.webp'
-import car3 from '../../assets/home/front_bl_sedan.webp'
 
-const MySlider3 = () => {
+const MySlider3 = ({data}) => {
   const CustomPrevArrow = (props) => (
     <button {...props} className=" ">
       {""}
@@ -37,7 +35,7 @@ const MySlider3 = () => {
       <div className="cars">
     <Slider {...settings}>
 
-      <div className="slider_images">
+      {/* <div className="slider_images">
         <img src={car1} alt="" />
         <div className="image_text">Weddings and Special Events</div>
       </div>
@@ -48,7 +46,13 @@ const MySlider3 = () => {
       <div className="slider_images">
       <img src={car3} alt="" />
       <div className="image_text">Long Drive</div>
-      </div>
+      </div> */}
+      {data.map((data)=>(
+        <div key={data.id} className="slider_images">
+        <img src={data.img} alt="" />
+        <div className="image_text">{data.text}</div>
+        </div>
+      ))}
       {/* <div className="car_images">
       <img src={car6} alt="" />
       </div> */}

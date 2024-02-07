@@ -1,262 +1,257 @@
-/* Services.css */
-
 /* Common Styles for Different Screen Sizes */
 .head_text {
-    text-align: center;
-    font-size: 48px;
-    color: #031B4E;
-    font-weight: 700;
-    font-family: 'Cormorant';
-    margin-top: 10%;
-  }
-  .mt{
-    margin-top: 15%;
-  }
-  .desc {
-    width: 40%;
-    margin: auto;
-  }
+  text-align: center;
+  font-size: 48px;
+  color: #031B4E;
+  font-weight: 700;
+  font-family: 'Cormorant';
+  margin-top: 10%;
+}
+
+.mt {
+  margin-top: 15%;
+}
+
+.desc {
+  width: 40%;
+  margin: auto;
+}
+
+.desc_text {
+  color: #031B4ECC;
+  font-size: 16px;
+  font-family: 'Poppins';
+  font-weight: 400;
+  line-height: 29px;
+}
+
+/* Chauffer Drive Section */
+.chauffeur_drive {
+  margin-top: 68px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.chauffeur_drive .left_car {
+  flex: 1;
+}
+
+.chauffeur_drive .left_car img{
+  width: 100%;
+}
+
+.chauffeur_drive .right_info {
   
-  .desc_text {
-    color: #031B4ECC;
-    font-size: 16px;
-    font-family: 'Poppins';
-    font-weight: 400;
-    line-height: 29px;
-  }
-  
-  /* Chauffer Drive Section */
+  padding-bottom: 0.8rem;
+  width: 50%;
+  flex: 1;
+  background: linear-gradient(0deg, #0C0125 26.56%, #1F0015 58.85%, #320003 100%);
+}
+
+.right_info .info {
+  margin-left: 62px;
+ 
+}
+
+.right_info .info .head_text {
+  color: #FFF;
+  font-family: 'Cormorant';
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  text-align: left;
+  margin-top: 55px;
+}
+
+.right_info .info .desc_text {
+  width: 80%;
+  color: rgba(255, 255, 255, 0.80);
+  font-family: 'Poppins';
+  font-size: 15px;
+  text-align: left;
+  margin-top: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 173.333% */
+  letter-spacing: 0.5px;
+}
+
+.list {
+  width: 80%;
+  color: rgba(255, 255, 255, 0.80);
+  height: 12rem;
+  display: flex;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 29px;
+  letter-spacing: 0.5px;
+  justify-content: space-between;
+}
+
+.list ul {
+  margin-top: 47px;
+}
+
+.list ul li {
+  margin-top: 17px;
+  margin-left: 15px;
+}
+
+.book_btn {
+  cursor: pointer;
+  display: inline-flex;
+  height: 44px;
+  color: rgba(255, 255, 255, 0.80);
+  padding: 10px 26px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  margin-top: 25px;
+  border-radius: 4px;
+  border: 0.5px solid rgba(255, 255, 255, 0.80);
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.06);
+}
+
+/* Media Queries */
+@media screen and (min-width: 768px) and (max-width: 1025px) {
   .chauffeur_drive {
-    margin-top: 68px;
-    width: 100%;
-
     display: flex;
-    justify-content: space-between;
   }
-  .chauffeur_drive .left_car{
-    flex: 1;
+
+  .desc {
+    width: 80%;
   }
+
   .chauffeur_drive .left_car img {
-
     width: 100%;
   }
-  
+
   .chauffeur_drive .right_info {
-    height: 100%;
-    padding-bottom: 0.8rem;
-    width: 50%;
-    flex: 1;
-    background: linear-gradient(0deg, #0C0125 26.56%, #1F0015 58.85%, #320003 100%);
+    width: 95%;
+    height: 30rem;
   }
-  
-  .right_info .info {
-    margin-left: 62px;
-    height: 100%;
-  }
-  
-  .right_info .info .head_text {
-    color: #FFF;
-    font-family: 'Cormorant';
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 400;
-    text-align: left;
-    margin-top: 55px;
-  }
-  
-  .right_info .info .desc_text {
-    width: 80%;
-    color: rgba(255, 255, 255, 0.80);
-    font-family: 'Poppins';
-    font-size: 15px;
-    text-align: left;
-    margin-top: 13px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 26px; /* 173.333% */
-    letter-spacing: 0.5px;
-  }
-  
-  .list {
-    width: 80%;
-    color: rgba(255, 255, 255, 0.80);
-    height: 12rem;
-    display: flex;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 29px;
-    letter-spacing: 0.5px;
-    justify-content: space-between;
-  }
-  
+
   .list ul {
-    margin-top: 47px;
+    margin-top: 5px;
   }
-  
+
   .list ul li {
-    margin-top: 17px;
+    margin-top: 10px;
     margin-left: 15px;
   }
-  
+
+  .right_info .info .head_text {
+    margin-top: 13px;
+    font-size: 30px;
+  }
+
+  .right_info .info .desc_text {
+    font-size: 15px;
+  }
+
   .book_btn {
-    cursor: pointer;
-    display: inline-flex;
-    height: 44px;
-    color: rgba(255, 255, 255, 0.80);
-    padding: 10px 26px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    background: transparent;
-    margin-top: 25px;
-    border-radius: 4px;
-    border: 0.5px solid rgba(255, 255, 255, 0.80);
-    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.06);
+    margin-top: 15px;
   }
-  
-  /* Media Queries */
-  
-  @media screen and (min-width: 768px) and (max-width: 1025px) {
-    .chauffeur_drive {
-      display: flex;
-    }
-  
-    .desc {
-      width: 80%;
-    }
-  
-    .chauffeur_drive .left_car img {
-      width: 100%;
-    }
-  
-    .chauffeur_drive .right_info {
-      width: 95%;
-      height: 30rem;
-    }
-  
-    .list ul {
-      margin-top: 5px;
-    }
-  
-    .list ul li {
-      margin-top: 10px;
-      margin-left: 15px;
-    }
-  
-    .right_info .info .head_text {
-      margin-top: 13px;
-      font-size: 30px;
-    }
-  
-    .right_info .info .desc_text {
-      font-size: 15px;
-    }
-  
-    .book_btn {
-      margin-top: 15px;
-    }
+}
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+  .head_text {
+    margin: 108px 7px 12px 16px;
+    font-family: Cormorant;
+    font-size: 30px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: 0.25px;
+    text-align: center;
+    color: #031b4e;
   }
-  
-  /* Mobile */
-  @media screen and (max-width: 767px) {
-    .head_text {
-      margin: 108px 7px 12px 16px;
-  font-family: Cormorant;
-  font-size: 30px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.2;
-  letter-spacing: 0.25px;
-  text-align: center;
-  color: #031b4e;
-    }
- 
-    .desc .desc_text {
-      margin: 12px 1px 31px;
-  font-family: Poppins;
-  font-size: 13px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.77;
-  letter-spacing: 0.5px;
-  text-align: center;
-  color: rgba(3, 27, 78, 0.8);
-    }
-  
-    .desc {
-      width: 90%;
-      margin: auto;
-    }
-  
-    .chauffeur_drive {
-      
-      display: block;
-    }
-  
-    .chauffeur_drive .left_car img {
-      width: 100%;
-    }
-  
-    .chauffeur_drive .right_info {
-        margin-top: -1rem;
-        padding-top: 1rem;
-      width: 100%;
-   
-    }
-  .list{
+
+  .desc .desc_text {
+    margin: 12px 1px 31px;
+    font-family: Poppins;
+    font-size: 13px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.77;
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: rgba(3, 27, 78, 0.8);
+  }
+
+  .desc {
+    width: 90%;
+    margin: auto;
+  }
+
+  .chauffeur_drive {
     display: block;
   }
-    .list ul {
-      margin-top: 5px;
-      text-align: left;
-    }
-  
-    .list ul li {
-   
-      margin-top: 10px;
-      margin-left: -35px;
-      
-  font-family: Poppins;
-  font-size: 13px;
-  font-weight: 300;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 2.23;
-  letter-spacing: 0.5px;
-  text-align: left;
-  color: rgba(255, 255, 255, 0.8);
-    }
- 
-    .right_info .info .head_text{
-      margin-top: 2%;
-      padding-top: 5%;
-      margin-left: -15%;
-     font-family: Cormorant;
-  font-size: 24px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.33;
-  letter-spacing: 0.25px;
-  text-align: left;
-  color: #fff;
-    }
-  
-    .right_info .info .desc_text {
-      width: 100%;
-      font-size: 15px;
-      margin-left: -15%;
-      
-    }
-  
-    .book_btn {
-      margin-left: -3rem;
-      margin-top: 5rem;
-      margin-bottom: 2rem;
-    }
+
+  .chauffeur_drive .left_car img {
+    width: 100%;
   }
-  
+
+  .chauffeur_drive .right_info {
+    margin-top: -1rem;
+    padding-top: 1rem;
+    width: 100%;
+  }
+
+  .list {
+    display: block;
+  }
+
+  .list ul {
+    margin-top: 5px;
+    text-align: left;
+  }
+
+  .list ul li {
+    margin-top: 10px;
+    margin-left: -35px;
+    font-family: Poppins;
+    font-size: 13px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.23;
+    letter-spacing: 0.5px;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .right_info .info .head_text {
+    margin-top: 2%;
+    padding-top: 5%;
+    margin-left: -15%;
+    font-family: Cormorant;
+    font-size: 24px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: 0.25px;
+    text-align: left;
+    color: #fff;
+  }
+
+  .right_info .info .desc_text {
+    width: 100%;
+    font-size: 15px;
+    margin-left: -15%;
+  }
+
+  .book_btn {
+    margin-left: -3rem;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+  }
+}

@@ -262,6 +262,9 @@ margin-top: -0.2rem;
     gap: 20px;
     padding-top: 4rem;
 }
+.btm_container_1 .second_car_mobile{
+    display: none;
+}
 .second_car_data .cont1{
     
     width: 20%;
@@ -342,15 +345,15 @@ letter-spacing: 0.25px;
     line-height: 30px; /* 200% */
     letter-spacing: 0.25px;
 }
-.single_car_detail2 {
-    transition: transform 0.5s ease-in-out; /* Define the transition property here */
+
+    /* transition: transform 0.5s ease-in-out; Define the transition property here */
   
     /* Other styles for .single_car_detail2 */
-  }
-.single_car_detail2:hover{
+  
+/* .single_car_detail2:hover{
     transform: scale(1.1);
     
-}
+} */
 .btm_container_3{
     margin-top: -5rem;
 }
@@ -630,10 +633,28 @@ letter-spacing: 0.25px;
         display: block;
     }
     /* Special Services ends */
+    .btm_container_2 .second_car_data .cars_det{
+        display: none;
+    }
+   
+    .btm_container_2 .second_car_data .cars_det_mobile{
+        display: block;
        
-        .btm_container_2 .second_car_data .cars_det{
-            grid-template-columns: repeat(1,1fr);
+        margin-bottom: 4rem;
+    }
+    .single_car_detail{
+        transition: none;
+    }
+    .btm_container_2 .second_car_data .cars_det_mobile:hover{
+        transform: none;
+    }
+        .btm_container_1 .second_car_data{
+            display: none;
         }
+        .btm_container_1 .second_car_mobile{
+            display: block;
+        }
+
     /* banner container starts */
     .banner_cont{
         display: flex;

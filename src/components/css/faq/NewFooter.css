@@ -116,9 +116,6 @@
   .footer_inp{
       margin:2rem auto;
   }
-  @media screen and (min-width: 768px) and (max-width: 1025px) {
-  
-  }
   @media screen and (max-width: 767px) {
     .footercont .head_text{
       font-family: Cormorant;
@@ -132,8 +129,13 @@
   color: rgba(255, 255, 255, 0.95);
     }
     .footer_flex {
+     
         display: grid; /* Add this line to enable grid layout */
         grid-template-columns: repeat(1, 1fr);
+    }
+    .unordered_list{
+      
+      margin-left: -1rem;
     }
     .unordered_list .list_head {
         text-align: left;
@@ -152,6 +154,18 @@
     }
     .unordered_list li span {
         text-align: left;
+    }
+    .btm_text p{
+      width: 80%;
+      font-family: Poppins;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.14;
+  letter-spacing: 0.28px;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.8);
     }
   }
   

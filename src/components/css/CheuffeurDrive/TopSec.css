@@ -80,8 +80,9 @@ background: transparent;
 
 /* heading section starts */
 .heading_text{
-    width: 60%;
+    width: 65%;
     margin: auto;
+    margin-top: -2rem;
     /* border: 1px solid red; */
 }
 .heading_text p{
@@ -89,7 +90,7 @@ background: transparent;
    
     text-align: center;
     font-size: 70px;
-    line-height: 95px;
+    line-height: 85px;
 }
 /* heading section ends */
 

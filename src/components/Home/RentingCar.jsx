@@ -17,11 +17,56 @@ import car4 from "../../assets/home/newgal_4.webp";
 import car5 from "../../assets/home/newgal_5.webp";
 import car6 from "../../assets/home/newgal_6.webp";
 import quote from "../../assets/home/quote.svg";
-import FAQSection from "../Faq/FAQSection";
+import starry from "../../assets/home/starry_night.webp"
+import sport_front from "../../assets/home/sport_front.webp"
+import back from "../../assets/home/backview.webp"
 import Footer from "../Footer";
 import Steps from "./Steps";
 import red_car_info from "../../assets/home/car_image.webp"
 import MySlider3 from "../Sliders/MySlider3";
+import car11 from '../../assets/home/marriage.webp'
+import car12 from '../../assets/home/bl_sport.webp'
+import car13 from '../../assets/home/front_bl_sedan.webp'
+import Slider from "react-slick";
+const settings = {
+  dots: false,
+  infinite: true,
+  autoplay: true,
+  speed: 300,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+};
+const special2 = [
+  {
+    id:1,
+    img:starry
+  },
+  {
+    id:2,
+    img:back
+  },
+  {
+    id:3,
+    img:sport_front
+  }
+]
+const special = [
+  {
+    id:1,
+    img:car11,
+    text:"Weddings and Special Events"
+  },
+  {
+    id:2,
+    img:car12,
+    text:"Exotic Sports"
+  },
+  {
+    id:3,
+    img:car13,
+    text:"Long Drive"
+  },
+]
 const car_data = [
   {
     id: 1,
@@ -206,7 +251,7 @@ const RentingCar = () => {
           ))}
         </div>
         <div className="cars_det_mob">
-          <MySlider3/>
+          <MySlider3 data={special}/>
         </div>
       </div>
        <div className="btm_container_1">
@@ -227,6 +272,9 @@ const RentingCar = () => {
           <div className="cont4">
             <img src={car5} alt="" /><img src={car6} alt="" />
             </div>  
+        </div>
+        <div className="second_car_mobile">
+          <MySlider3 data = {special2}/>
         </div>
       </div> 
       <div className="btm_container_2">
@@ -258,6 +306,33 @@ We have been using 4wheel for our trips needs for several years now and have alw
               <p style={cust_name}>Varun Gupta</p>
               </div>
             ))}
+          </div>
+          <div className="cars_det_mobile">
+            <Slider {...settings}>
+            {second_car_data.map((data) => (
+              <div key={data.id} className="single_car_detail2" style={singleCarStyle}>
+                <img style={quoteStyle} src={quote} alt="" />
+                <p className="customer_text" style={cust_text}>Excellent Service! Car Rent Service!
+We have been using 4wheel for our trips needs for several years now and have always been happy with their service. Their customer support is Excellent Service! and they are always available to help with any issues we have. Their prices are also very competitive.</p>
+
+              <p style={{textAlign:'left',margin:'2rem 1rem 0rem 1rem',padding:'0 22px',display:"flex"}}>
+              {animate_data.map((data)=>(
+                <svg key={data.id} width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="Star" clipPath="url(#clip0_5889_3879)">
+                <path id="Vector" d="M13.0607 14.9549C12.5525 15.3346 9.29213 12.9274 8.66769 12.9221C8.04325 12.9169 4.74613 15.2687 4.24393 14.8804C3.74172 14.4921 4.92238 10.504 4.73423 9.8811C4.54608 9.25816 1.38929 6.70414 1.58704 6.08444C1.78482 5.46473 5.77491 5.40717 6.28305 5.02743C6.79118 4.64772 8.13733 0.717416 8.76181 0.722661C9.38621 0.727952 10.6715 4.68047 11.1737 5.06875C11.6759 5.45698 15.6647 5.58195 15.8529 6.20489C16.041 6.82783 12.8453 9.32822 12.6475 9.94792C12.4498 10.5676 13.5688 14.5751 13.0607 14.9549Z" fill="#FFC444"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_5889_3879">
+                <rect width="15.2494" height="16" fill="white" transform="translate(0.625)"/>
+                </clipPath>
+                </defs>
+                </svg>
+              ))}
+              </p>
+              <p style={cust_name}>Varun Gupta</p>
+              </div>
+            ))}
+            </Slider>
           </div>
         </div>
       </div>
