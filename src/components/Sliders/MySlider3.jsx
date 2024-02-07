@@ -1,6 +1,7 @@
 
-import "../css/MySlider.css"
+
 import Slider from "react-slick";
+import "./Myslider3.css"
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
 import car1 from '../../assets/home/marriage.webp'
@@ -36,20 +37,17 @@ const MySlider3 = () => {
       <div className="cars">
     <Slider {...settings}>
 
-      <div className="car_images">
+      <div className="slider_images">
         <img src={car1} alt="" />
+        <div className="image_text">Weddings and Special Events</div>
       </div>
-      <div className="car_images">
+      <div className="slider_images">
       <img src={car2} alt="" />
+      <div className="image_text">Exotic Sports</div>
       </div>
-      <div className="car_images">
+      <div className="slider_images">
       <img src={car3} alt="" />
-      </div>
-      <div className="car_images">
-      <img src={car1} alt="" />
-      </div>
-      <div className="car_images">
-      <img src={car1} alt="" />
+      <div className="image_text">Long Drive</div>
       </div>
       {/* <div className="car_images">
       <img src={car6} alt="" />

@@ -605,11 +605,11 @@ letter-spacing: 0.25px;
     .content{
         display: none;
     }
-    .cars_det{
+   .Special_Services .cars_det{
         display: none;
     }
-    .cars_det_mob{
-        display: inline;
+   .Special_Services .cars_det_mob{
+        display: block;
     }
     .mobile_image{
         width: 100%;
@@ -636,7 +636,8 @@ letter-spacing: 0.25px;
         }
     /* banner container starts */
     .banner_cont{
-        padding: 1rem;
+        display: flex;
+    flex-direction: column;
         margin-top: 2rem;
     }
     .banner{
@@ -657,6 +658,7 @@ letter-spacing: 0.25px;
         margin-left: 3rem;
     }
     .bann_btn{
+        order: 1;
         font-size: 15px;
   font-weight: normal;
   font-stretch: normal;
@@ -694,7 +696,7 @@ letter-spacing: 0.25px;
     }
     .banner::before{
         font-size: 25px;
-        
+        order: 2;
         color: rgba(255, 255, 255, 0.5);
         letter-spacing: 22.5px;
         margin: auto;
