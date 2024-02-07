@@ -40,7 +40,8 @@ margin-top: 1%;
   }
   .head_head{
     /* border: 1px solid red; */
-    margin-left: -4rem;
+    margin: 0 auto;
+   
   }
   .sports_info .head_text{
     color: #FFF;
@@ -99,6 +100,9 @@ letter-spacing: 1px;
     margin:6rem auto;
     width: 80%;
 
+}
+.info_mobile_red{
+    display: none;
 }
 /* React Flow implementation  ends*/
 .customer_offer{
@@ -620,6 +624,10 @@ letter-spacing: 0.25px;
     }
     .info_red{
         height: 20rem;
+        display: none;
+    }
+    .info_mobile_red{
+        display: block;
     }
     /* Special Services ends */
        

@@ -4,6 +4,7 @@ import FlowReact from "../FlowReact";
 import AnimatedNumberCounter from "./AnimatedNumberCounter";
 import bann_Car from "../../assets/home/banner_Car-removebg.webp"
 import weds from "../../assets/home/marriage.webp"
+import red_mobile from "../../assets/home/red_mobile.png"
 import vip from "../../assets/home/bl_sport.webp"
 import vip1 from "../../assets/home/front_bl_sedan.webp"
 import new_car from "../../assets/home/front-view-black-sedan-sport-car-bridge.webp"
@@ -152,6 +153,7 @@ const RentingCar = () => {
           <Flow2 />
         </div> */}
         <img src={red_car_info} alt="" className="info_red" />
+        <img src={red_mobile} alt="" className="info_mobile_red" />
       </div>
 
       <div className="customer_offer">
