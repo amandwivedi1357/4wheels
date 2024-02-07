@@ -30,7 +30,7 @@ export default function RespNav() {
           ref={btnRef}
           colorScheme="teal"
           onClick={onOpen}
-          color="#fff"
+          color="#000"
           size={"1.5rem"}
         />
       </div>
