@@ -646,16 +646,26 @@ letter-spacing: 0.25px;
     }
     .bann_text{
         text-align: center;
-        font-size: 45px;
+        font-size: 40px;
         margin-left: -1rem;
         line-height: 45px;
     }
     .bann_text_2{
+        width: 60%;
         text-align: center;
         line-height: 21px;
+        margin-left: 3rem;
     }
     .bann_btn{
-        margin: 0 25%;
+        font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.83;
+  letter-spacing: 1px;
+  text-align: left;
+  color: #fff;
+        margin: 0 22%;
         margin-top: 25%;
     }
     
