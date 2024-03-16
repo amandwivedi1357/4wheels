@@ -54,7 +54,7 @@ export default function SelfTop({topic,subTopic}) {
         </div>
         <p className="ser_text">{topic}</p>
               <p className="sub_text">{subTopic}</p>
-              <p className="bred"><Breadcrumbs/></p>
+              {/* <p className="bred"><Breadcrumbs/></p> */}
     </div>
   )
 }

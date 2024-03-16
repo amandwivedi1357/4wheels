@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom"
 import { useState } from "react";
 import RespNav from "../Responsive/RespNav";
 import { FaWhatsapp } from "react-icons/fa";
-import Breadcrumbs from "../BredCrumbs";
+
 export default function CheuffeurTopSection({topic,subTopic}) {
   const navigate = useNavigate();
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768); // Initial check for mobile
@@ -52,7 +52,7 @@ export default function CheuffeurTopSection({topic,subTopic}) {
         
               <p className="head_text ser_text">{topic}</p>
               <p className="sub_text">{subTopic}</p>
-              <p className="bred"><Breadcrumbs/></p>
+              {/* <p className="bred"><Breadcrumbs/></p> */}
     </div>
   )
 }

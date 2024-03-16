@@ -37,8 +37,8 @@ const BottomSection = () => {
       </p>
       <div className="cheuffer_menu">
         {fleets?.map((data) => (
-          <div key={data._id} className="menu_cont">
-            <img src={data.fleetImg} alt="" />
+          <div key={data._id} style={{paddingBottom:'2.5rem'}} className="menu_cont">
+            <img src={data.fleetImg} alt="" loading="lazy"/>
             <div className="fleet_img"></div>
             <p className="type_text" key={data._id}>
               {data.fleetType}

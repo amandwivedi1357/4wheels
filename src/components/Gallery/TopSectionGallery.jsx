@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom"
 import RespNav from "../Responsive/RespNav";
 import { useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";
-import Breadcrumbs from "../BredCrumbs";
+// import Breadcrumbs from "../BredCrumbs";
 export default function TopSectionGallery() {
   const navigate = useNavigate();
   const [showDropdown, setShowDropdown] = useState(false);
@@ -52,7 +52,7 @@ export default function TopSectionGallery() {
       </div>
         </div>
         <p className="ser_text">Gallery</p>
-        <p className="bred"><Breadcrumbs/></p>
+        {/* <p className="bred"><Breadcrumbs/></p> */}
     </div>
   )
 }

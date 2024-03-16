@@ -130,6 +130,7 @@ height: auto;
 background: #ffffff;
 }
 .inp_top_text{
+    margin-top: 3rem;
     color: #031B4E;
 text-align: center;
 font-family: 'Poppins';
@@ -184,6 +185,10 @@ font-weight: 600;
 line-height: normal;
 letter-spacing: 0.015px;
 }
+.contact_numWrap select option{
+    margin-left: 1rem;
+    border: 1px solid red;
+}
 .box{
     width: 3.5rem;
     display: flex;
@@ -191,6 +196,8 @@ letter-spacing: 0.015px;
     justify-content: center;
     height:3rem;
     color: #fff;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
     background: #8B959F;
 }
 input[type="date"]::-webkit-input-placeholder {

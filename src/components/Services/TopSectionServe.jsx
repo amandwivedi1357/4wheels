@@ -43,9 +43,9 @@ export default function TopSectionServe({topic,subTopic}) {
               <p className="ser_text">{topic}</p>
         
         <p className="sub_text">{subTopic}</p>
-        <p className="bred">
+        {/* <p className="bred">
           <Breadcrumbs/>
-        </p>
+        </p> */}
     </div>
   )
 }

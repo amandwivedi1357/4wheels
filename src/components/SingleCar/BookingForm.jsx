@@ -5,6 +5,7 @@ import { useToast } from "@chakra-ui/react";
 import { addBooking } from "../../redux/actions/Booking.action";
 import email from "../../assets/email/template.png"
 import { useNavigate } from "react-router-dom";
+import OTPEntryModal from "./OtpModal";
 
 
 function generateFiveDigitNumber() {
@@ -15,7 +16,7 @@ export default function BookingForm({car,service,fleetType}) {
   console.log(service)
   const resetForm = {
     name: "",
-    captcha: "",
+    
     carName:car.carName,
     fleetType:fleetType,
     // car:cars,
@@ -35,12 +36,13 @@ export default function BookingForm({car,service,fleetType}) {
   };
   const dispatch = useDispatch();
   const toast = useToast();
+  const [isOTPModalOpen, setIsOTPModalOpen] = useState(false);
   const navigate = useNavigate()
   const [formData, setFormData] = useState({
     name: "",
     carName:car.carName,
     // car:car,
-    captcha: "",
+   
     status:"Pending",
     contactNo: "",
     fleetType:fleetType,
@@ -168,36 +170,41 @@ export default function BookingForm({car,service,fleetType}) {
   const handleSubmit = async(e) => {
     e.preventDefault();
     
-    if (formData.captcha === randomFiveDigitNumber.toString() ) {
+    
       
-      toast({
-        title: "form submitted",
-        description: "Thank you the form has been submitted",
-        status: "success",
-        duration: 9000,
-        isClosable: true,
-      });
-      // const selectedCar = formData.typeOfVehicle === "self-drive" ? formData.car : formData.cheuffeurCar;
+      // toast({
+      //   title: "form submitted",
+      //   description: "Thank you the form has been submitted",
+      //   status: "success",
+      //   duration: 9000,
+      //   isClosable: true,
+      // });
       setFormData({...formData})
 
       dispatch(addBooking(formData));
-      await sendEmail();
+      setIsOTPModalOpen(true);
+      // await sendEmail();
       console.log("Form Data:", formData);
       
       // setFormData(resetForm);
       // navigate("/")
-    } else {
-      toast({
-        title: "wrong captcha",
-        description: "the captcha you entered is incorrect",
-        status: "error",
-        duration: 9000,
-        isClosable: true,
-      });
-    }
-  };
 
+      // toast({
+      //   title: "wrong captcha",
+      //   description: "the captcha you entered is incorrect",
+      //   status: "error",
+      //   duration: 9000,
+      //   isClosable: true,
+      // });
+    
+  };
+  const handleOTPSubmit = (otp) => {
+    setIsOTPModalOpen(false); // Close OTP modal after submission
+    console.log("Submitted OTP:", otp);
+    // Proceed with form submission
+  };
   return (
+    <div>
     <form className="input_container" onSubmit={handleSubmit}>
       <p className="inp_top_text">Book this car</p>
       <div className="outer_inp">
@@ -413,24 +420,7 @@ export default function BookingForm({car,service,fleetType}) {
               />
             </div>
           </div>
-          <div className="input12">
-            <label htmlFor="captcha">
-              Type in Character what you see in the picture
-              <span style={{ color: "red" }}>*</span>
-            </label>
-            <div className="captcha_numWrap">
-              <p className="box2">
-                <span>{randomFiveDigitNumber}</span>
-              </p>
-              <input
-                type="text"
-                id="captcha"
-                value={formData.captcha}
-                onChange={handleInputChange}
-                required
-              />
-            </div>
-          </div>
+         
         </div>
 
         <div className="input1">
@@ -479,5 +469,13 @@ export default function BookingForm({car,service,fleetType}) {
         </div>
       </div>
     </form>
+    <OTPEntryModal
+        isOpen={isOTPModalOpen}
+        onClose={() => setIsOTPModalOpen(false)}
+        onSubmit={handleOTPSubmit}
+        email={formData.emailId} // Pass necessary data to OTP modal
+        contactNo={formData.contactNo} // Pass necessary data to OTP modal
+      />
+    </div>
   );
 }
