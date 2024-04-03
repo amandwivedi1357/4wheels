@@ -129,7 +129,6 @@ const singleCarStyle = {
   margin:'auto',
   color:"rgba(3, 3, 3, 0.90)",
   borderRadius: '5px',
-
   '@media screen and (min-width: 768px) and (max-width: 1025px)':{
     width:'18rem'
   }
@@ -278,11 +277,13 @@ const RentingCar = () => {
         </div>
       </div> 
       <div className="btm_container_2">
+        
         <p className="head_text">Our Clients Say About Us</p>
         <p className="desc_text">We Believe in Quality Service</p>
 
         <div className="second_car_data">
           <div className="cars_det">
+            
             {second_car_data.map((data) => (
               <div key={data.id} className="single_car_detail2" style={singleCarStyle}>
                 <img style={quoteStyle} src={quote} alt="" />
@@ -306,8 +307,8 @@ We have been using 4wheel for our trips needs for several years now and have alw
               <p style={cust_name}>Varun Gupta</p>
               </div>
             ))}
-          </div>
-          <div className="cars_det_mobile">
+          {/* </div>
+          <div className="cars_det_mobile"> */}
             <Slider {...settings}>
             {second_car_data.map((data) => (
               <div key={data.id} className="single_car_detail2" style={singleCarStyle}>
