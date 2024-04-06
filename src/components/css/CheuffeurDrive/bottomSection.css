@@ -71,6 +71,7 @@ border: 0.5px solid #09005D;
 background: #09005D;
 box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.06);
     flex-shrink: 0;
+    transition: background 0.3s ease, color 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
   }
   
   .cheuffer_menu .menu_cont .explore:hover{
