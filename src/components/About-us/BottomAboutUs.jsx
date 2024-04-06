@@ -15,7 +15,7 @@ const BottomAboutUs = () => {
         <div className="right">
 
         <p className="head_text">Who Are We?</p>
-        <p className="desc_text">4 Wheel Travels, otherwise referred to by one & all as 4 wheels, is a Proprietorship Firm owned by Mr. S. M. Jain.  The operations are managed by Mr. Ashwin Jain, the CEO of the company, assisted by a team of people who have been with the company for 15 years or more.</p>
+        <p className="desc_text">4 Wheel Travels, otherwise referred to by one & all as 4 wheel, is a Proprietorship Firm owned by Mr. S. M. Jain.  The operations are managed by Mr. Ashwin Jain, the CEO of the company, assisted by a team of people who have been with the company for 15 years or more.</p>
         </div>
       </div>
       {/* <div className="who_car">
@@ -33,9 +33,9 @@ const BottomAboutUs = () => {
 
             
         <p className="head_text">Fleet</p>
-        <p className="desc_text">4 Wheels has one of the largest fleets in car rentals in Hyderabad.  With a own fleet of over 270 vehicles in almost 86 varieties (as on 1.11.23), the range of vehicles on offer to the clients is unmatched by probably any other company in Hyderabad or elsewhere.  4 wheels also probably has the most valuable fleet in car & bus rentals in Hyderabad.  Also, goes without saying that 4 wheels is also the undisputed leader in Hyderabad by fleet and value for luxury cars & luxury buses. <br /><br />
+        <p className="desc_text">4 Wheel has one of the largest fleets in car rentals in Hyderabad.  With a own fleet of over 270 vehicles in almost 86 varieties (as on 1.11.23), the range of vehicles on offer to the clients is unmatched by probably any other company in Hyderabad or elsewhere.  4 wheel also probably has the most valuable fleet in car & bus rentals in Hyderabad.  Also, goes without saying that 4 wheel is also the undisputed leader in Hyderabad by fleet and value for luxury cars & luxury buses. <br /><br />
 
-4 wheels also has the reputation for owning practically every car sold in the country and available in car rentals and for also being the first to buy a vehicle in car rentals the moment it is launched.
+4 wheel also has the reputation for owning practically every car sold in the country and available in car rentals and for also being the first to buy a vehicle in car rentals the moment it is launched.
 </p>
           </div>
           <div className="right">
@@ -64,7 +64,7 @@ const BottomAboutUs = () => {
       <div className="bottom">
         <div className="inner_btm">
         <p className="head_text">Operations</p>
-        <p className="desc_text">4 Wheels operations is divided across 5 main verticals</p>
+        <p className="desc_text">4 Wheel operations is divided across 5 main verticals</p>
 
         <div className="conc_info">
           <img src={operations} alt="" />

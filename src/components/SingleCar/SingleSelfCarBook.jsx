@@ -12,14 +12,14 @@ export default function SingleSelfCarBook({ topic }) {
   const { fleetType, id, carId } = useParams();
 
   const dispatch = useDispatch();
-  console.log(id);
+  // console.log(id);
 
   const { cars,loading,error } = useSelector((state) => state.selfData);
 
   useEffect(() => {
     dispatch(getSelfCarById(id,carId))
   }, [dispatch,id,carId]);
-  console.log(cars);
+  // console.log(cars);
 
   
   

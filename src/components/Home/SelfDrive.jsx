@@ -1,5 +1,5 @@
 import "../css/Services.css"
-import black_car from "../../assets/home/audi.jpg"
+import black_car from "../../assets/email/glc2.webp"
 import { useNavigate } from "react-router-dom"
 
 const SelfDrive = () => {
@@ -41,7 +41,7 @@ const SelfDrive = () => {
                       <li>Limitless fun</li>
                   </ul>
               </div>
-              <div>
+              <div className="book_now_btn">
                 <button onClick={handleClick} className="book_btn">Book Now</button>
               </div>
           </div>

@@ -28,6 +28,7 @@ import car11 from '../../assets/home/marriage.webp'
 import car12 from '../../assets/home/bl_sport.webp'
 import car13 from '../../assets/home/front_bl_sedan.webp'
 import Slider from "react-slick";
+import CustomSliders from "../Sliders/CustomSliders";
 const settings = {
   dots: false,
   infinite: true,
@@ -76,12 +77,38 @@ const car_data = [
   {
     id: 2,
     img: vip,
-    title:'Sports'
+    title:'Corporate'
   },
   {
     id: 3,
     img: vip1,
+    title:'Hotel Travel Desk'
+  },
+  {
+    id: 4,
+    img: vip1,
+    title:'Official Events'
+  },
+  {
+    id: 5,
+    img: vip1,
     title:'Luxury'
+  },
+  {
+    id: 6,
+    img: vip1,
+    title:'Employee Transportation'
+  },
+  {
+    id: 7,
+    img: vip1,
+    title:'Bus Transportation'
+    
+  },
+  {
+    id: 8,
+    img: vip1,
+    title:'Self Drive Rentals'
   },
 ]
 const second_car_data = [
@@ -102,17 +129,17 @@ const animate_data = [
   {
     id: 1,
     text: "Happy Customers",
-    numbers: 3345,
+    numbers: 1110999,
   },
   {
     id: 2,
-    text: "Vehicles Fleet",
-    numbers: 270,
+    text: "Total Transactions",
+    numbers: 110000,
   },
   {
     id: 3,
-    text: "Completed Orders",
-    numbers: 2345,
+    text: "Kilometers of Service",
+    numbers: 12225000,
   },
   {
     id: 4,
@@ -135,8 +162,8 @@ const singleCarStyle = {
 }
 
 const quoteStyle = {
-  margin:'4rem auto',
-
+  margin:'2rem auto',
+  marginBottom:'2rem'
 }
 const cust_text = {
   width:'90%',
@@ -169,7 +196,7 @@ const RentingCar = () => {
       <p className="head_text">A fleet that meets your needs</p>
       <p className="desc_text rent_desc">Have a look at our different category of cars</p>
       <div className="sports_car">
-        <div className="sports_info">
+        {/* <div className="sports_info">
           <div className="head_head">
 
           <p className="head_text">Sports Car</p>
@@ -183,9 +210,10 @@ const RentingCar = () => {
         </div>
         <div className="sports_img">
           <img src={rentingCar1} alt="sports car" />
-        </div>
+        </div> */}
+       
       </div>
-
+      
       {/* React Flow implementation */}
       <div className="red_car_container">
         {/* <p className="head_text">is Renting a Car worth it?</p>
@@ -196,6 +224,9 @@ const RentingCar = () => {
         <div className="react_flow">
           <Flow2 />
         </div> */}
+       <div>
+          <CustomSliders/>
+        </div>
         <img src={red_car_info} alt="" className="info_red" />
         <img src={red_mobile} alt="" className="info_mobile_red" />
       </div>
@@ -216,7 +247,8 @@ const RentingCar = () => {
                   value={data.numbers}
                   duration={2000}
                   easing="easeInOutQuad"
-                />
+                /> 
+                <span>+</span>
               </p>
               <p className="text">{data.text}</p>
             </div>
@@ -285,7 +317,9 @@ const RentingCar = () => {
           <div className="cars_det">
             
             {second_car_data.map((data) => (
+              
               <div key={data.id} className="single_car_detail2" style={singleCarStyle}>
+                {console.log(data)}
                 <img style={quoteStyle} src={quote} alt="" />
                 <p className="customer_text" style={cust_text}>Excellent Service! Car Rent Service!
 We have been using 4wheel for our trips needs for several years now and have always been happy with their service. Their customer support is Excellent Service! and they are always available to help with any issues we have. Their prices are also very competitive.</p>
@@ -307,8 +341,8 @@ We have been using 4wheel for our trips needs for several years now and have alw
               <p style={cust_name}>Varun Gupta</p>
               </div>
             ))}
-          {/* </div>
-          <div className="cars_det_mobile"> */}
+           </div>
+          {/* <div className="cars_det_mobile"> 
             <Slider {...settings}>
             {second_car_data.map((data) => (
               <div key={data.id} className="single_car_detail2" style={singleCarStyle}>
@@ -334,7 +368,7 @@ We have been using 4wheel for our trips needs for several years now and have alw
               </div>
             ))}
             </Slider>
-          </div>
+          </div> */}
         </div>
       </div>
 

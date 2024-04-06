@@ -25,7 +25,7 @@ export default function SelfTop({topic,subTopic}) {
   window.addEventListener("resize", handleResize);
 
   return (
-    <div className="main_top_container">
+    <div className="main_top_container2">
         <div className="navbar">
 
         <div >

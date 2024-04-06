@@ -41,7 +41,7 @@ const MySlider = () => {
       <div className="car_images">
         <img src={car1} alt="" />
       </div>
-      <div className="car_images">
+      {/* <div className="car_images">
       <img src={car1} alt="" />
       </div>
       <div className="car_images">
@@ -52,7 +52,7 @@ const MySlider = () => {
       </div>
       <div className="car_images">
       <img src={car1} alt="" />
-      </div>
+      </div> */}
       {/* <div className="car_images">
       <img src={car6} alt="" />
       </div> */}

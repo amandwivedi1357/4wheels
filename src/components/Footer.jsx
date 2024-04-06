@@ -11,7 +11,6 @@ const Footer = () => {
   return (
     <div className="footercont">
       <p className="head_text">Let’s Get Started</p>
-
       <div className="footer_flex">
         <div className="flex_cont curs">
           <ul className="unordered_list" style={{ listStyle: "none" }}>
@@ -57,7 +56,12 @@ const Footer = () => {
         <p>
           @2023 4wheels. All Rights Reserved . <span> Privacy Policy</span>
         </p>
+        <div style={{display:'flex',justifyContent:'center',gap:'1rem',cursor:'pointer'}} onClick={()=>window.open('https://rayformula.com/','_blank')}>
+        <p>Website By Ray Formula</p>
+        <img src="images/rayformula.svg" alt="" style={{width:'20px'}}/>
+        </div>
       </div>
+      
     </div>
   );
 };

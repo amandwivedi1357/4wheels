@@ -6,6 +6,7 @@ import { addBooking } from "../../redux/actions/Booking.action";
 import email from "../../assets/email/template.png"
 import { useNavigate } from "react-router-dom";
 import OTPEntryModal from "./OtpModal";
+import axios from "axios";
 
 
 function generateFiveDigitNumber() {
@@ -13,7 +14,7 @@ function generateFiveDigitNumber() {
 }
 const randomFiveDigitNumber = generateFiveDigitNumber();
 export default function BookingForm({car,service,fleetType}) {
-  console.log(service)
+  // console.log(service)
   const resetForm = {
     name: "",
     
@@ -59,103 +60,7 @@ export default function BookingForm({car,service,fleetType}) {
     specialInstruction: "",
   });
 
-  const sendEmail = async()=>{
-    let dataSend = {
-      email:formData.emailId,
-      subject:'Fleet Booking SuccessFull',
-      message:`
-      <html>
-          <head>
-            <style>
-              body {
-                font-family: 'Arial', sans-serif;
-                color: #333;
-              }
-              .container {
-                max-width: 600px;
-                margin: 0 auto;
-                padding: 20px;
-                border: 1px solid #ddd;
-              }
-              .header {
-                background-color: #007bff;
-                color: #fff;
-                padding: 10px;
-                text-align: center;
-              }
-              .content {
-                padding: 20px;
-                color:#000307;
-                text-align: center;
-              }
-              .content img {
-                max-width: 100%;
-                height: auto;
-                margin-bottom: 20px;
-              }
-              .footer {
-                background-color: #f4f4f4;
-                padding: 10px;
-                text-align: center;
-              }
-            </style>
-          </head>
-          <body>
-            <div class="container">
-              <div class="header">
-                <h2>Fleet Booking Successful</h2>
-              </div>
-              <div class="content">
-                <img src="https://dl.dropboxusercontent.com/scl/fi/nfu0j7mfd8fz9mg4w7c0z/email-template.webp?rlkey=14jjc3y0i74hi0eg3y4gsyw48&dl=0" alt="thanks for booking car" />
-                <p>Your ${formData.carName} has been booked successfully.</p>
-                <!-- Add more content as needed -->
-              </div>
-              <div class="footer">
-                <p>For any inquiries, please contact us at Bookings@4wheeltravels.com <br/> or Call us At +919885354321 </p>
-              </div>
-            </div>
-          </body>
-        </html>
-    `,
-    attachments: [
-      {
-        filename: "template.png",
-        path: email,
-        cid: "emailImage", // same cid value as used in the email HTML
-      },
-    ],
-    }
-    const res = await fetch(`https://stormy-fish-houndstooth.cyclic.app/api/email/sendEmail`,{
-      method:'POST',
-      body:JSON.stringify(dataSend),
-      headers:{
-        Accept:'application/json',
-        'Content-Type':"application/json",
-      }
-    }).then((res)=>{
-      console.log(res);
-      if(res.status>199 && res.status<300){
-        toast({
-          title: "Confirmation Mail",
-          description: "A Confirmation mail has been sent to your mail",
-          status: "success",
-          duration: 6000,
-          isClosable: true,
-        });
-        navigate("/")
-      }
-      else{
-        toast({
-          title: "Can't Book the this vehicle",
-          description: "There is an error while booking this fleet",
-          status: "error",
-          duration: 6000,
-          isClosable: true,
-        });
-      }
-    })
-    
-  }
+  
 
   const today = new Date().toISOString().split("T")[0];
   const handleInputChange = (e) => {
@@ -166,42 +71,45 @@ export default function BookingForm({car,service,fleetType}) {
       [id]: formattedValue,
     });
   };
+
+  
  
-  const handleSubmit = async(e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    
-      
-      // toast({
-      //   title: "form submitted",
-      //   description: "Thank you the form has been submitted",
-      //   status: "success",
-      //   duration: 9000,
-      //   isClosable: true,
-      // });
-      setFormData({...formData})
-
-      dispatch(addBooking(formData));
-      setIsOTPModalOpen(true);
-      // await sendEmail();
-      console.log("Form Data:", formData);
-      
-      // setFormData(resetForm);
-      // navigate("/")
-
-      // toast({
-      //   title: "wrong captcha",
-      //   description: "the captcha you entered is incorrect",
-      //   status: "error",
-      //   duration: 9000,
-      //   isClosable: true,
-      // });
-    
+  
+    // Assuming formData contains the phoneNumber
+    const phoneNumber = formData.contactNo;
+  
+    try {
+      const response = await fetch('http://localhost:8080/api/auth/send-otp', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ phoneNumber })
+      });
+  
+      if (response.ok) {
+        setIsOTPModalOpen(true);
+        // Optionally, you can handle success here
+        // For example, show a success message using toast
+      } else {
+        // Handle error if request was not successful
+        // For example, show an error message
+        console.error('Failed to send OTP:', response.statusText);
+        // Optionally, you can show an error message using toast
+      }
+    } catch (error) {
+      // Handle any errors that occurred during the request
+      console.error('Error sending OTP:', error.message);
+      // Optionally, you can show an error message using toast
+    }
   };
+  
   const handleOTPSubmit = (otp) => {
-    setIsOTPModalOpen(false); // Close OTP modal after submission
-    console.log("Submitted OTP:", otp);
-    // Proceed with form submission
+    setIsOTPModalOpen(false); 
+    // console.log("Submitted OTP:", otp);
+    
   };
   return (
     <div>
@@ -474,7 +382,8 @@ export default function BookingForm({car,service,fleetType}) {
         onClose={() => setIsOTPModalOpen(false)}
         onSubmit={handleOTPSubmit}
         email={formData.emailId} // Pass necessary data to OTP modal
-        contactNo={formData.contactNo} // Pass necessary data to OTP modal
+        contactNo={formData.contactNo}
+        carName = {formData.carName} // Pass necessary data to OTP modal
       />
     </div>
   );

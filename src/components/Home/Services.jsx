@@ -1,5 +1,5 @@
 import "../css/Services.css"
-import black_car from "../../assets/home/audi.jpg"
+import black_car from "../../assets/email/glc.webp"
 import { useNavigate } from "react-router-dom"
 
 const Services = () => {
@@ -28,8 +28,8 @@ const Services = () => {
               Chauffeur Drive
               </p>
               <p className="desc_text">
-              Where luxury meets exceptional care, creating unforgettable moments and exceeding your every expectation.
-              </p>
+
+           Where Luxury meets exceptional care, surpassing expectations, creating unforgettable moments.              </p>
               <div className="list">
                   <ul className="left_list">
                     <li>Comfort on every ride</li>
@@ -42,7 +42,7 @@ const Services = () => {
                       <li>Limitless fun</li>
                   </ul>
               </div>
-              <div>
+              <div className="book_now_btn">
                 <button onClick={handleClick} className="book_btn">Book Now</button>
               </div>
           </div>

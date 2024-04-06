@@ -102,7 +102,9 @@
   margin-top: 17px;
   margin-left: 15px;
 }
-
+.book_now_btn{
+  margin-bottom: 2rem;
+}
 .book_btn {
   cursor: pointer;
   display: inline-flex;

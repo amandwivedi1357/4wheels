@@ -5,6 +5,13 @@
     height: 50rem;
     background: linear-gradient(0deg, #0C0125 26.56%, #1F0015 58.85%, #320003 100%);
 }
+.main_top_container2{
+    /* border: 2px solid springgreen; */
+    width: 100%;
+    color: #fff;
+    height: 35rem;
+    background: linear-gradient(0deg, #0C0125 26.56%, #1F0015 58.85%, #320003 100%);
+}
 .navbar{
     font-family: 'Poppins';
     width: 100%;

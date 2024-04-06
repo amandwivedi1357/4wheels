@@ -68,8 +68,9 @@ box-shadow: 0px 2px 2px 0px rgba(151, 166, 183, 0.16);
     height: 13rem;
 }
 .car_name_Sec{
-    width: 84%;
-    margin: auto;
+    width: 100%;
+    /* border: 1px solid red; */
+    
 }
 .specification_sec .carName{
     color: #031B4E;

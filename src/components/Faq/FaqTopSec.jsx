@@ -21,7 +21,7 @@ export default function FaqTopSec() {
   window.addEventListener("resize", handleResize);
 
   return (
-    <div className="main_top_container">
+    <div className="main_top_container2">
         <div className="navbar">
 
         <div >
@@ -50,7 +50,7 @@ export default function FaqTopSec() {
         </div>
        
               <p className="ser_text">Find everything here</p>
-              <p className="bred"><Breadcrumbs/></p>
+              {/* <p className="bred"><Breadcrumbs/></p> */}
         
 
         

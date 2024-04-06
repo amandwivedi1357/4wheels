@@ -24,7 +24,7 @@ export const getFleetById = (id) => async (dispatch) => {
   };
   
   export const getCarById = (fleetId, carId) => async (dispatch) => {
-    console.log(1)
+    // console.log(1)
     dispatch({ type: actionTypes.GET_CAR_BY_ID_REQUEST });
   
     try {

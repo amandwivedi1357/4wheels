@@ -178,6 +178,7 @@ border: 2px solid springgreen;
 .Special_Services{
     width: 100%;
    height: auto;
+   margin-top: -3rem;
    color: #FFF;
 }
 .Special_Services .head_text{
@@ -194,17 +195,8 @@ border: 2px solid springgreen;
 }
 
 
-.Special_Services .head_text{
-    color: #031B4E;
-text-align: center;
-font-family: 'Cormorant';
-font-size: 46px;
-font-style: normal;
-font-weight: 600;
-line-height: 55px; /* 119.565% */
-letter-spacing: 0.25px;
-text-transform: capitalize;
-margin-bottom: -1rem;
+.Special_Services .desc_text{
+    margin-top: -1rem;
 }
 .Special_Services .cars_det_mob{
     display: none;
@@ -213,19 +205,25 @@ margin-bottom: -1rem;
    width: 90%;
    height: 60%;
    margin: auto;
+   
    display: grid;
    padding: 5% 0;
    gap: 20px;
-   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));;
+   grid-template-columns:repeat(4,1fr)
 }
 
 .Special_Services .cars_det .single_car_detail .desc_title{
-    font-size: 20px;
+    font-size: 25px;
     color: #031B4E;
     text-align: center;
+    font-weight: 400;
     margin-top: 2rem;
 }
-
+.grid_img{
+    border-radius: 5px;
+    height: 25rem;
+    width: 100%;
+}
 
   /* Add additional styling as needed */
   
@@ -238,7 +236,7 @@ margin-bottom: -1rem;
 .btm_container_1{
     width: 100%;
     height: auto;
-   margin-top: -4rem;
+   margin-top: -8rem;
 }
 .btm_container_1 .head_text{
     color: #031B4E;
@@ -306,13 +304,41 @@ margin-bottom: 10px;
 .second_car_data .cont4 img:nth-child(2){
 height: 15rem;
 }
+.single_car_detail{
+    /* border: 1px solid red; */
+    margin: auto;
+}
 /* btm_container_1 ends */
 /* btm_container_2 starts */
+/* .single_car_detail {
+    position: relative;
+    width: fit-content;
+}
+
+.grid_img {
+    width: 100%; 
+    display: block; 
+}
+
+.desc_container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 10px; 
+}
+
+.desc_title {
+    margin: 0;
+    color: #fff; 
+} */
+
 
 .btm_container_2{
     width: 100%;
     height: auto;
-  margin-top: -2rem;
+  margin-top: -4rem;
 }
 .btm_container_2 .head_text{
     color: #031B4E;
@@ -324,13 +350,16 @@ font-weight: 600;
 line-height: 78.5px; /* 163.542% */
 letter-spacing: 0.25px;
 }
+/* .btm_container_2 .desc_text{
+    margin-top: -0.5rem;
+} */
 .btm_container_2 .second_car_data .cars_det{
     width: 95%;
     /* height: 60%; */
     margin: auto;
     display: grid;
     padding: 5% 0;
-    
+    /* border: 1px solid red; */
     gap: 10px;
     grid-template-columns: repeat(3,1fr)
 }
@@ -349,11 +378,14 @@ letter-spacing: 0.25px;
     /* transition: transform 0.5s ease-in-out; Define the transition property here */
   
     /* Other styles for .single_car_detail2 */
-  
-/* .single_car_detail2:hover{
+  .single_car_detail2{
+    /* border: 1px solid red; */
+    transition: transform 0.3s ease;
+  }
+.single_car_detail2:hover{
     transform: scale(1.1);
     
-} */
+}
 .btm_container_3{
     margin-top: -5rem;
 }
@@ -377,19 +409,6 @@ letter-spacing: 0.25px;
     display: flex;
   }
   
-  .banner::before {
-    content: 'WHEELS';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgba(255, 255, 255, 0.2); 
-    font-size: 80px;
-    font-family: 'Poppins';
-    font-weight: 600;
-    letter-spacing: 60px;
-    margin-left: 5rem;
-  }
   
   .left {
     width: 50%;
@@ -488,6 +507,7 @@ letter-spacing: 0.25px;
         width: 80%;
         display: block;
   margin: 1rem auto;
+  
     }
     
     .btm_container_2 .second_car_data .cars_det{

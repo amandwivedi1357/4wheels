@@ -14,7 +14,7 @@ const MySlider2 = () => {
     dots: false,
     infinite: true,
     autoplay: true,
-    speed: 300,
+    speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     prevArrow: null, // Hide previous arrow
