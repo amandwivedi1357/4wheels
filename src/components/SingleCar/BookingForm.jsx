@@ -81,7 +81,7 @@ export default function BookingForm({car,service,fleetType}) {
     const phoneNumber = formData.contactNo;
   
     try {
-      const response = await fetch('http://localhost:8080/api/auth/send-otp', {
+      const response = await fetch('https://stormy-fish-houndstooth.cyclic.app/api/auth/send-otp', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -91,18 +91,16 @@ export default function BookingForm({car,service,fleetType}) {
   
       if (response.ok) {
         setIsOTPModalOpen(true);
-        // Optionally, you can handle success here
-        // For example, show a success message using toast
+        
       } else {
-        // Handle error if request was not successful
-        // For example, show an error message
+        
         console.error('Failed to send OTP:', response.statusText);
-        // Optionally, you can show an error message using toast
+       
       }
     } catch (error) {
-      // Handle any errors that occurred during the request
+      
       console.error('Error sending OTP:', error.message);
-      // Optionally, you can show an error message using toast
+      
     }
   };
   
@@ -207,7 +205,7 @@ export default function BookingForm({car,service,fleetType}) {
               <input
                 placeholder=" "
                 type="date"
-                min={today}
+                min={formData.startDate} 
                 id="endDate"
                 required
                 value={formData.endDate}
@@ -331,8 +329,8 @@ export default function BookingForm({car,service,fleetType}) {
          
         </div>
 
-        <div className="input1">
-          <div className="input11">
+       
+         <div className="input33">
             <label htmlFor="instruction">
               Special Instructions <span style={{ color: "red" }}>*</span>
             </label>
@@ -346,8 +344,8 @@ export default function BookingForm({car,service,fleetType}) {
                 rows="10"
                 required
               ></textarea>
+            
             </div>
-          </div>
         </div>
         <div className="submit_button">
 
