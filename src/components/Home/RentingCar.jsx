@@ -1,12 +1,18 @@
 import "../css/home/RenticgCar.css";
-import rentingCar1 from "../../assets/home/rentingCar1.webp";
-import FlowReact from "../FlowReact";
+// import rentingCar1 from "../../assets/home/rentingCar1.webp";
+// import FlowReact from "../FlowReact";
 import AnimatedNumberCounter from "./AnimatedNumberCounter";
 import bann_Car from "../../assets/home/banner_Car-removebg.webp"
 import weds from "../../assets/home/marriage.webp"
 import red_mobile from "../../assets/home/red_mobile.png"
-import vip from "../../assets/home/bl_sport.webp"
+import vip from "../../assets/home/red_car.webp"
 import vip1 from "../../assets/home/front_bl_sedan.webp"
+import bus from "../../assets/email/bus.webp"
+import corporate from "../../assets/email/corporate.webp"
+import official from "../../assets/email/official events.webp"
+import hotel from "../../assets/email/hotel.webp"
+import vip4 from "../../assets/home/newgal_1.webp"
+import red_Car from "../../assets/email/red-vehicle-car.webp"
 import new_car from "../../assets/home/front-view-black-sedan-sport-car-bridge.webp"
 import steps_mobile from "../../assets/home/mobile_steps.webp"
 import cust from "../../assets/home/custom_sols.webp"
@@ -27,16 +33,9 @@ import MySlider3 from "../Sliders/MySlider3";
 import car11 from '../../assets/home/marriage.webp'
 import car12 from '../../assets/home/bl_sport.webp'
 import car13 from '../../assets/home/front_bl_sedan.webp'
-import Slider from "react-slick";
+
 import CustomSliders from "../Sliders/CustomSliders";
-const settings = {
-  dots: false,
-  infinite: true,
-  autoplay: true,
-  speed: 300,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-};
+
 const special2 = [
   {
     id:1,
@@ -76,22 +75,22 @@ const car_data = [
   },
   {
     id: 2,
-    img: vip,
+    img: corporate,
     title:'Corporate'
   },
   {
     id: 3,
-    img: vip1,
+    img: hotel,
     title:'Hotel Travel Desk'
   },
   {
     id: 4,
-    img: vip1,
+    img: official,
     title:'Official Events'
   },
   {
     id: 5,
-    img: vip1,
+    img: vip4,
     title:'Luxury'
   },
   {
@@ -101,13 +100,13 @@ const car_data = [
   },
   {
     id: 7,
-    img: vip1,
+    img: bus,
     title:'Bus Transportation'
     
   },
   {
     id: 8,
-    img: vip1,
+    img: red_Car,
     title:'Self Drive Rentals'
   },
 ]

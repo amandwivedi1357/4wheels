@@ -26,13 +26,7 @@ export default function CustomSliders() {
     navigate(`/Cheuffeurdrive/${fleetType}/${id}`)
   }
 
-//   const nextSlide = () => {
-//     setCurrentSlide((prevSlide) => (prevSlide === fleets.length - 1 ? 0 : prevSlide + 1));
-//   };
 
-//   const prevSlide = () => {
-//     setCurrentSlide((prevSlide) => (prevSlide === 0 ? fleets.length - 1 : prevSlide - 1));
-//   };
 
   return (
     <div className="slider-container">
@@ -44,8 +38,7 @@ export default function CustomSliders() {
           </div>
         ))}
       </div>
-      {/* <button onClick={prevSlide} className="prev-button">Prev</button>
-      <button onClick={nextSlide} className="next-button">Next</button> */}
+      
     </div>
   );
 }
