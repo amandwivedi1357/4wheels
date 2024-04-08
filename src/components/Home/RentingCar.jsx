@@ -281,14 +281,29 @@ const RentingCar = () => {
        <p className="desc_text">We work for your comfort</p>
         <div className="cars_det">
           {car_data.map((data) => (
-            <div key={data.id} className="single_car_detail">
-              <img className="grid_img" src={data.img} alt="" />
-              <p className="desc_title">{data.title}</p>
-            </div>
+            // <div key={data.id} className="single_car_detail">
+            //   <img className="grid_img" src={data.img} alt="" />
+            //   <p className="desc_title">{data.title}</p>
+            // </div>
+
+            <div key={data.id} className="flip-card">
+    <div className="flip-card-inner">
+        <div className="flip-card-front">
+            <img src={data.img} alt="Front Image" className="card-image"/>
+            
+        </div>
+        <div className="flip-card-back">
+            <img src={data.img} alt="Back Image" className="card-image"/>
+            <p className="title">{data.title}</p>
+           
+        </div>
+    </div>
+</div>
+
           ))}
         </div>
         <div className="cars_det_mob">
-          <MySlider3 data={special}/>
+          <MySlider3 data={car_data}/>
         </div>
       </div>
        <div className="btm_container_1">

@@ -50,7 +50,7 @@ const MySlider3 = ({data}) => {
       {data.map((data)=>(
         <div key={data.id} className="slider_images">
         <img src={data.img} alt="" />
-        <div className="image_text">{data.text}</div>
+        <div className="image_text">{data.title}</div>
         </div>
       ))}
       {/* <div className="car_images">
