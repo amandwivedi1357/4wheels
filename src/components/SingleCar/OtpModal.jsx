@@ -1,8 +1,9 @@
 /* eslint-disable react/prop-types */
 import React, { useState, useRef } from 'react';
 import { Input, Button, Flex, Text, Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, ModalCloseButton, useToast } from '@chakra-ui/react';
+import emailjs from '@emailjs/browser';
 
-const OTPEntryModal = ({ isOpen, onClose, onSubmit,contactNo,email,name }) => {
+const OTPEntryModal = ({ isOpen, onClose, onSubmit,contactNo,email,name,formData,car,service,fleetType }) => {
   const [otp, setOTP] = useState(['', '', '', '', '', '']);
   const otpInputs = Array.from({ length: 6 }, (_, i) => i);
   const inputRefs = useRef(otpInputs.map(() => React.createRef()));
@@ -67,7 +68,6 @@ const OTPEntryModal = ({ isOpen, onClose, onSubmit,contactNo,email,name }) => {
     console.log(otpCode)
   const phoneNumber = contactNo
     try {
-      // Make a POST request to verify the OTP https://stormy-fish-houndstooth.cyclic.app/api/email/sendEmail
       const response = await fetch('https://stormy-fish-houndstooth.cyclic.app/api/auth/verify-otp', {
         method: 'POST',
         headers: {
@@ -76,9 +76,9 @@ const OTPEntryModal = ({ isOpen, onClose, onSubmit,contactNo,email,name }) => {
         body: JSON.stringify({ phoneNumber, otpCode })
       });
   
-      // Check if the request was successful
+     
       if (response.ok) {
-        // OTP verification successful
+        
         toast({
           title: "OTP Verified",
           description: "OTP verification successful.",
@@ -88,11 +88,11 @@ const OTPEntryModal = ({ isOpen, onClose, onSubmit,contactNo,email,name }) => {
         });
         setOTP(['', '', '', '', '', '']);
         await sendEmail();
-        // Close the modal only if OTP verification is successful
+        await sendSalesEmail();
         onClose();
       } else {
         setVerificationFailed(true); 
-        // OTP verification failed
+       
         toast({
           title: "Failed to Verify OTP",
           description: "OTP verification failed. Please try again.",
@@ -101,9 +101,7 @@ const OTPEntryModal = ({ isOpen, onClose, onSubmit,contactNo,email,name }) => {
           isClosable: true,
         });
       }
-      
     } catch (error) {
-      // Handle any errors that occurred during the request
       console.error('Error verifying OTP:', error.message);
       toast({
         title: "Error",
@@ -114,10 +112,42 @@ const OTPEntryModal = ({ isOpen, onClose, onSubmit,contactNo,email,name }) => {
       });
     }
   };
+   const sendSalesEmail = () => {
+    
+     console.log(formData)
+     // Sending email using emailjs library
+    emailjs.send('service_syu7i3h', 'template_k7x29ih', {
+    name: formData.name,
+    carName: car.carName,
+    status: "Pending",
+    contactNo: contactNo,
+    fleetType: fleetType,
+    emailId: email,
+    serviceCity: formData.serviceCity,
+    startDate: formData.startDate,
+    endDate: formData.endDate,
+    reportingTimeHrs: formData.reportingTimeHrs,
+    reportingTime24Hrs: formData.reportingTime24Hrs,
+    placeOfReporting: formData.placeOfReporting,
+    choiceOfTravel: formData.choiceOfTravel,
+    typeOfVehicle: service,
+    tentativePointOfDrop: formData.tentativePointOfDrop,
+    specialInstruction: formData.specialInstruction
+    
+      
+     }, "PAMSeoabaa0l3PiqP")
+       .then((result) => {
+       
+        console.log('sent')
+      }, (error) => {
+         console.log(error.text); 
+          
+       });
+   };
   const sendEmail = async()=>{
     let dataSend = {
       email:email,
-      subject:'Thank You for your Booking enquiry at 4 wheel travels       ',
+      subject:'Thank You for your Booking enquiry at 4 wheel travels',
       message:`
       <html>
           <head>

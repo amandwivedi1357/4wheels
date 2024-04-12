@@ -404,12 +404,16 @@ export default function BookingForm({car,service,fleetType}) {
       </div>
     </form>
     <OTPEntryModal
+    fleetType = {fleetType}
         isOpen={isOTPModalOpen}
         onClose={() => setIsOTPModalOpen(false)}
         onSubmit={handleOTPSubmit}
         email={formData.emailId} // Pass necessary data to OTP modal
         contactNo={formData.contactNo}
-        name = {formData.name} // Pass necessary data to OTP modal
+        name = {formData.name}
+        formData = {formData}
+        service = {service}
+        car = {car} // Pass necessary data to OTP modal
       />
     </div>
   );
