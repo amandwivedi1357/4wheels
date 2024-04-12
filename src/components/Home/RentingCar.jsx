@@ -71,12 +71,14 @@ const car_data = [
   {
     id: 1,
     img: weds,
-    title:'Wedding'
+    title:(<>
+    <p>Wedding <br />Events</p>
+    </>)
   },
   {
     id: 2,
     img: corporate,
-    title:'Corporate'
+    title:'Corporate Events'
   },
   {
     id: 3,
@@ -86,12 +88,12 @@ const car_data = [
   {
     id: 4,
     img: official,
-    title:'Official Events'
+    title:(<>Official<br/> Events</>)
   },
   {
     id: 5,
     img: vip4,
-    title:'Luxury'
+    title:(<>Luxury <br /> Events</>)
   },
   {
     id: 6,
@@ -134,22 +136,22 @@ const animate_data = [
   {
     id: 1,
     text: "Happy Customers",
-    numbers: 1110999,
+    numbers: "1.2M",
   },
   {
     id: 2,
     text: "Total Transactions",
-    numbers: 110000,
+    numbers: "1L",
   },
   {
     id: 3,
     text: "Kilometers of Service",
-    numbers: 12225000,
+    numbers: "1.2M",
   },
   {
     id: 4,
     text: "Years of Experience",
-    numbers: 42,
+    numbers: "42",
   },
 ];
 
@@ -248,11 +250,11 @@ const RentingCar = () => {
           {animate_data.map((data) => (
             <div className="data_map" key={data.id}>
               <p className="num">
-                <AnimatedNumberCounter
+                {/* <AnimatedNumberCounter
                   value={data.numbers}
                   duration={2000}
                   easing="easeInOutQuad"
-                /> 
+                />  */}{data.numbers}
                 <span>+</span>
               </p>
               <p className="text">{data.text}</p>

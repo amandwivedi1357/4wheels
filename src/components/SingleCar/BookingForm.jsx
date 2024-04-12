@@ -24,14 +24,14 @@ export default function BookingForm({car,service,fleetType}) {
     contactNo: "",
     status:"Pending",
     emailId: "",
-    serviceCity: "Hyderabad",
+    serviceCity: "",
     startDate: "",
     endDate: "",
     reportingTimeHrs: "",
     reportingTime24Hrs: "",
     placeOfReporting: "",
     choiceOfTravel: "",
-    typeOfVehicle: "",
+    typeOfVehicle: service,
     tentativePointOfDrop: "",
     specialInstruction: "",
   };
@@ -48,7 +48,7 @@ export default function BookingForm({car,service,fleetType}) {
     contactNo: "",
     fleetType:fleetType,
     emailId: "",
-    serviceCity: "Hyderabad",
+    serviceCity: "",
     startDate: "",
     endDate: "",
     reportingTimeHrs: "",
@@ -167,16 +167,15 @@ export default function BookingForm({car,service,fleetType}) {
               City where service is <span style={{ color: "red" }}>*</span>
             </label>
             <div className="contact_numWrap">
-              <select
+              <input
+              type="text"
                 id="serviceCity"
                 required
                 value={formData.serviceCity}
                 onChange={handleInputChange}
-              >
-               <option value="Hyderabad" >
-    Hyderabad
-  </option>
-              </select>
+              />
+               
+              
             </div>
           </div>
         </div>
@@ -256,6 +255,29 @@ export default function BookingForm({car,service,fleetType}) {
             </div>
           </div>
           <div className="input12">
+          <label htmlFor="choiceOfTravel">
+              Choice of travel<span style={{ color: "red" }}>*</span>
+            </label>
+            <div className="input_wrapper">
+              <select
+                id="choiceOfTravel"
+                required
+                value={formData.choiceOfTravel}
+                onChange={handleInputChange}
+              >
+                <option value="Local">Local</option>
+                <option value="Intercity">Intercity</option>
+                <option value="Airport">Airport</option>
+                <option value="Events">Events</option>
+              </select>
+            
+              
+            </div>
+          </div>
+        </div>
+
+        {/* <div className="input1">
+          <div className="input11">
             <label htmlFor="address">
               Pick Up Point <span style={{ color: "red" }}>*</span>
             </label>
@@ -268,51 +290,57 @@ export default function BookingForm({car,service,fleetType}) {
                 onChange={handleInputChange}
               />
                 
+            </div>
+          </div>
+          <div className="input12">
+            
+              <label htmlFor="tentativePointOfDrop">
+               Point of drop<span style={{ color: "red" }}>*</span>
+            </label>
+            <div className="input_wrapper">
+              <input
+                type="text"
+                id="tentativePointOfDrop"
+                value={formData.tentativePointOfDrop}
+                onChange={handleInputChange}
+              />
+            </div>
+          </div> 
+        </div> */}
+        <div className="input1">
+          <div className="input11">
+            <label htmlFor="address">
+            Pick Up Point<span style={{ color: "red" }}>*</span>
+            </label>
+            <div className="input_wrapper">
+              <input
+                value={formData.placeOfReporting}
+                onChange={handleInputChange}
+                type="text"
+                id="placeOfReporting"
+                required
+              />
+            </div>
+          </div>
+          <div className="input12">
+            <label htmlFor="service_city">
+            Point of drop <span style={{ color: "red" }}>*</span>
+            </label>
+            <div className="contact_numWrap">
+              <input
+              type="text"
+                id="tentativePointOfDrop"
+                required
+                value={formData.tentativePointOfDrop}
+                onChange={handleInputChange}
+              />
+               
               
             </div>
           </div>
         </div>
 
-        <div className="input1">
-          <div className="input11">
-            <label htmlFor="choiceOfTravel">
-              Choice of travel<span style={{ color: "red" }}>*</span>
-            </label>
-            <div className="input_wrapper">
-              <select
-                id="choiceOfTravel"
-                required
-                value={formData.choiceOfTravel}
-                onChange={handleInputChange}
-              >
-                <option value="Local">Local</option>
-                <option value="Intercity">Intercity</option>
-                <option value="Station">Station</option>
-                <option value="Airport">Airport</option>
-              </select>
-            </div>
-          </div>
-          <div className="input12">
-            <label htmlFor="TypeOfVehicle">
-              Type of vehicle <span style={{ color: "red" }}>*</span>
-            </label>
-            <div className="contact_numWrap">
-              <select
-                id="typeOfVehicle"
-                required
-                value={formData.typeOfVehicle}
-                onChange={handleInputChange}
-              >
-                <option value={service} >
-                {service}
-              </option>
-                
-              </select>
-            </div>
-          </div> 
-        </div>
-
-        <div className="input1">
+        {/* <div className="input1">
           <div className="input11">
             <label htmlFor="tentativePointOfDrop">
                Point of drop<span style={{ color: "red" }}>*</span>
@@ -327,7 +355,7 @@ export default function BookingForm({car,service,fleetType}) {
             </div>
           </div>
          
-        </div>
+        </div> */}
 
        
          <div className="input33">
@@ -381,7 +409,7 @@ export default function BookingForm({car,service,fleetType}) {
         onSubmit={handleOTPSubmit}
         email={formData.emailId} // Pass necessary data to OTP modal
         contactNo={formData.contactNo}
-        carName = {formData.carName} // Pass necessary data to OTP modal
+        name = {formData.name} // Pass necessary data to OTP modal
       />
     </div>
   );

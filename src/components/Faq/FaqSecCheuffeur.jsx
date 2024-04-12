@@ -3,7 +3,7 @@ import  { useState } from 'react';
 import { Text, Collapse, VStack, Flex, Spacer } from '@chakra-ui/react';
 import "../css/faq/faqbottom.css"
 import { FaArrowDown } from 'react-icons/fa';
-import { data } from '../designs/data';
+import { cheuffeurData } from '../designs/data';
 
 const FaqItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,16 +33,16 @@ const FaqItem = ({ question, answer }) => {
   );
 };
 
-const FAQSection = () => {
+const FaqCheuffeur = () => {
   
 
   return (
     <VStack spacing={5} align="start">
-      {data.map((faq, index) => (
+      {cheuffeurData.map((faq, index) => (
         <FaqItem key={index} question={faq.question} answer={faq.answer} />
       ))}
     </VStack>
   );
 };
 
-export default FAQSection;
+export default FaqCheuffeur;

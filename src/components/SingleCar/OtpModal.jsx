@@ -2,7 +2,7 @@
 import React, { useState, useRef } from 'react';
 import { Input, Button, Flex, Text, Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, ModalCloseButton, useToast } from '@chakra-ui/react';
 
-const OTPEntryModal = ({ isOpen, onClose, onSubmit,contactNo,email,carName }) => {
+const OTPEntryModal = ({ isOpen, onClose, onSubmit,contactNo,email,name }) => {
   const [otp, setOTP] = useState(['', '', '', '', '', '']);
   const otpInputs = Array.from({ length: 6 }, (_, i) => i);
   const inputRefs = useRef(otpInputs.map(() => React.createRef()));
@@ -86,6 +86,7 @@ const OTPEntryModal = ({ isOpen, onClose, onSubmit,contactNo,email,carName }) =>
           duration: 6000,
           isClosable: true,
         });
+        setOTP(['', '', '', '', '', '']);
         await sendEmail();
         // Close the modal only if OTP verification is successful
         onClose();
@@ -116,7 +117,7 @@ const OTPEntryModal = ({ isOpen, onClose, onSubmit,contactNo,email,carName }) =>
   const sendEmail = async()=>{
     let dataSend = {
       email:email,
-      subject:'Fleet Booking SuccessFull',
+      subject:'Thank You for your Booking enquiry at 4 wheel travels       ',
       message:`
       <html>
           <head>
@@ -140,7 +141,7 @@ const OTPEntryModal = ({ isOpen, onClose, onSubmit,contactNo,email,carName }) =>
               .content {
                 padding: 20px;
                 color:#000307;
-                text-align: center;
+                
               }
               .content img {
                 max-width: 100%;
@@ -149,24 +150,41 @@ const OTPEntryModal = ({ isOpen, onClose, onSubmit,contactNo,email,carName }) =>
               }
               .footer {
                 background-color: #f4f4f4;
-                padding: 10px;
-                text-align: center;
+                padding: 20px;
+                color:'#000';
+              }
+              .regards{
+                padding:20px;
+                color:'#000';
               }
             </style>
           </head>
           <body>
             <div class="container">
               <div class="header">
-                <h2>Fleet Booking Successful</h2>
+                <h3>Thank You for your Booking enquiry at 4 wheel travels 
+                </h4>
               </div>
               <div class="content">
                 <img src="https://dl.dropboxusercontent.com/scl/fi/nfu0j7mfd8fz9mg4w7c0z/email-template.webp?rlkey=14jjc3y0i74hi0eg3y4gsyw48&dl=0" alt="thanks for booking car" />
-                <p>Your ${carName} has been booked successfully.</p>
-                <!-- Add more content as needed -->
+                <p>Dear ${name},
+                Thank you for contacting 4 wheel travels. We appreciate your interest and would be delighted to assist you in securing the perfect vehicle for your transportation needs.<br/> 
+                
+                We strive to provide a prompt and personalized service to ensure your booking experience is seamless and hassle-free.
+                Our team is currently reviewing your enquiry and will get back to you shortly with availability, pricing, and any additional details you may need.
+                
+                </p>
+                <p>If you have any urgent requirements or questions, please don't hesitate to contact us directly at +91 92480 23800 or +914044384409
+                <br/> <br/> Thank you once again for choosing 4 wheel travels. We look forward to the opportunity to serve you and make your travel experience exceptional. 
+                </p>
+                <p>
+              Best regards,<br/>
+              Sales team <br/>
+              4 wheel travels
+              </p>
               </div>
-              <div class="footer">
-                <p>For any inquiries, please contact us at Bookings@4wheeltravels.com <br/> or Call us At +919885354321 </p>
-              </div>
+              
+              
             </div>
           </body>
         </html>
