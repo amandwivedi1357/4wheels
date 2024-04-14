@@ -55,6 +55,9 @@ export default function RespNav() {
             <div className="drawer-link" onClick={() => handleNavigate("/gallery")}>
               Gallery
             </div>
+            <div className="drawer-link" onClick={() => handleNavigate("/faq")}>
+              FAQs
+            </div>
             {/* Add more items as needed */}
           </DrawerBody>
         </DrawerContent>

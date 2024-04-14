@@ -116,7 +116,7 @@ const OTPEntryModal = ({ isOpen, onClose, onSubmit,contactNo,email,name,formData
     
      console.log(formData)
      // Sending email using emailjs library
-    emailjs.send('service_syu7i3h', 'template_k7x29ih', {
+    emailjs.send('service_x3ug8r7', 'template_qzsnwk2', {
     name: formData.name,
     carName: car.carName,
     status: "Pending",
@@ -135,7 +135,7 @@ const OTPEntryModal = ({ isOpen, onClose, onSubmit,contactNo,email,name,formData
     specialInstruction: formData.specialInstruction
     
       
-     }, "PAMSeoabaa0l3PiqP")
+     }, "aTTCyQOLfRMG-VaKb")
        .then((result) => {
        
         console.log('sent')
