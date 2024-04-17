@@ -130,6 +130,7 @@ height: auto;
 background: #ffffff;
 }
 .inp_top_text{
+    margin-bottom: 3rem;
     margin-top: 3rem;
     color: #031B4E;
 text-align: center;
@@ -280,12 +281,13 @@ line-height: normal;
 letter-spacing: 0.018px;
 }
 .input33{
-    margin: 0 108px;
+    margin: 0 105px;
+    /* border: 1px solid red; */
 }
 .textArea{
-    
+  
     box-sizing: border-box;
-    /* border: 1px solid red; */
+   
 }
 textarea{
     border: 1px solid black;

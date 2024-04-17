@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import { useDispatch } from "react-redux";
+// import "./BookingForm.css"
 import { useToast } from "@chakra-ui/react";
 import { addBooking } from "../../redux/actions/Booking.action";
 import email from "../../assets/email/template.png"
@@ -110,7 +111,8 @@ export default function BookingForm({car,service,fleetType}) {
     
   };
   return (
-    <div>
+    <div className="contact_form_div">
+      <div className="contact_form_outer">
     <form className="input_container" onSubmit={handleSubmit}>
       <p className="inp_top_text">Book this car</p>
       <div className="outer_inp">
@@ -276,37 +278,7 @@ export default function BookingForm({car,service,fleetType}) {
           </div>
         </div>
 
-        {/* <div className="input1">
-          <div className="input11">
-            <label htmlFor="address">
-              Pick Up Point <span style={{ color: "red" }}>*</span>
-            </label>
-            <div className="contact_numWrap">
-              <input
-                name=""
-                id="placeOfReporting"
-                required
-                value={formData.placeOfReporting}
-                onChange={handleInputChange}
-              />
-                
-            </div>
-          </div>
-          <div className="input12">
-            
-              <label htmlFor="tentativePointOfDrop">
-               Point of drop<span style={{ color: "red" }}>*</span>
-            </label>
-            <div className="input_wrapper">
-              <input
-                type="text"
-                id="tentativePointOfDrop"
-                value={formData.tentativePointOfDrop}
-                onChange={handleInputChange}
-              />
-            </div>
-          </div> 
-        </div> */}
+       
         <div className="input1">
           <div className="input11">
             <label htmlFor="address">
@@ -334,36 +306,15 @@ export default function BookingForm({car,service,fleetType}) {
                 value={formData.tentativePointOfDrop}
                 onChange={handleInputChange}
               />
-               
-              
             </div>
           </div>
         </div>
-
-        {/* <div className="input1">
-          <div className="input11">
-            <label htmlFor="tentativePointOfDrop">
-               Point of drop<span style={{ color: "red" }}>*</span>
-            </label>
-            <div className="input_wrapper">
-              <input
-                type="text"
-                id="tentativePointOfDrop"
-                value={formData.tentativePointOfDrop}
-                onChange={handleInputChange}
-              />
-            </div>
-          </div>
-         
-        </div> */}
-
-       
          <div className="input33">
             <label htmlFor="instruction">
               Special Instructions <span style={{ color: "red" }}>*</span>
             </label>
-            <div className="textArea">
-              <textarea
+            <div >
+              <textarea className="textArea"
                 value={formData.specialInstruction}
                 onChange={handleInputChange}
                 name=""
@@ -403,6 +354,8 @@ export default function BookingForm({car,service,fleetType}) {
         </div>
       </div>
     </form>
+    </div>
+    
     <OTPEntryModal
     fleetType = {fleetType}
         isOpen={isOTPModalOpen}
@@ -418,3 +371,184 @@ export default function BookingForm({car,service,fleetType}) {
     </div>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+// <div className="contact_form_div">
+//       <div className="contact_form_outer">
+//   <form className="contact_form" onSubmit={handleSubmit}>
+//              <div className="outer_single_line">
+//               <div className='inner_fields'>
+//                   <p className='inner_lables' htmlFor="firstname">First Name <span style={{color:'red'}}>*</span></p>
+//                   <input  name="firstname" onChange={handleInputChange} type="text" className='inner_inputs' id='firstname'/>
+//               </div>
+//               <div className='inner_fields'>
+//                   <p className='inner_lables' htmlFor="lastname">Last Name <span style={{color:'red'}}>*</span></p>
+//                   <input name='lastname' onChange={handleInputChange} type="text" className='inner_inputs' id='lastname' />
+//               </div>
+//              </div>
+//              <div className="outer_single_line">
+//               <div className='inner_fields'>
+//                   <p className='inner_lables' htmlFor="email">Business Email Id  <span style={{color:'red'}}>*</span></p>
+//                   <input onChange={handleInputChange} name='email' type="email" className='inner_inputs' id='email' />
+//               </div>
+//               <div className='inner_fields'>
+//                   <p className='inner_lables' htmlFor="company">Company / Organization <span style={{color:'red'}}>*</span></p>
+//                   <input onChange={handleInputChange} name='company' type="text" className='inner_inputs' id='company' />
+//               </div>
+//              </div>
+//              <div className="outer_single_line">
+//               <div className='inner_fields' style={{ position: 'relative' }}>
+//                   <p className='inner_lables' htmlFor="industry">Industry <span style={{color:'red'}}>*</span></p>
+//                   <select  onChange={handleInputChange} name='industry'  type="text" className='inner_inputs' id='industry' >
+//                       <option className='option' value="">1</option>
+//                       <option className='option' value="">2</option>
+//                       <option className='option' value="">3</option>
+//                   </select>
+//                   <img  style={{
+//     position: 'absolute',
+//     right: '5%',
+//     top: '50%',
+//     transform: 'translateY(-50%)',
+//     pointerEvents: 'none', 
+//   }} src="images/About/ArrowDropDown.svg" alt="" />
+//               </div>
+//               <div className='inner_fields'>
+//                   <p className='inner_lables' htmlFor="lastname">Job Title <span style={{color:'red'}}>*</span></p>
+//                   <input  onChange={handleInputChange} name='jobTitle' type="text" className='inner_inputs' id='lastname' />
+//               </div>
+//              </div>
+//              <div className="outer_single_line">
+//               <div className='inner_fields'>
+//                   <p className='inner_lables' htmlFor="firstname">Contact Number  <span style={{color:'red'}}>*</span></p>
+//                   <input  onChange={handleInputChange} name='contactNumber' type="text" className='inner_inputs' id='firstname'/>
+//               </div>
+//               <div className='inner_fields' style={{ position: 'relative' }}>
+//                   <p className='inner_lables' htmlFor="country">Country / Region <span style={{color:'red'}}>*</span></p>
+//                   <select
+//                 value={selectedCountry}
+//                 onChange={handleCountryChange}
+//                 className="inner_inputs"
+//               >
+//                 <option value="">Select Country</option>
+//                 {countries.map((country) => (
+//                   <option key={country.iso2} value={country.isoCode}>
+//                     {country.name}
+//                   </option>
+//                 ))}
+//               </select>
+//                   <img  style={{
+//     position: 'absolute',
+//     right: '5%',
+//     top: '50%',
+//     transform: 'translateY(-50%)',
+//     pointerEvents: 'none', 
+//   }} src="images/About/ArrowDropDown.svg" alt="" />
+//               </div> */}
+//              </div>
+//              <div className="outer_single_line">
+//             <div className='inner_fields' style={{ position: 'relative' }}>
+//                   <p className='inner_lables' htmlFor="state">State <span style={{color:'red'}}>*</span></p>
+//                   <select
+                
+//                 value={selectedState}
+//                 onChange={handleStateChange}
+//                 className="inner_inputs"
+//               >
+//                 <option value="">Select State</option>
+               
+//                 {states.map((state) => (
+//                   <option key={state.iso2} value={state.isoCode}>
+//                     {state.name}
+//                   </option>
+//                 ))}
+//               </select>
+//                   <img  style={{
+//     position: 'absolute',
+//     right: '5%',
+//     top: '50%',
+//     transform: 'translateY(-50%)',
+//     pointerEvents: 'none', 
+//   }} src="images/About/ArrowDropDown.svg" alt="" />
+//               </div> 
+//              <div className='inner_fields' style={{ position: 'relative' }}>
+//                   <p className='inner_lables' htmlFor="city">City<span style={{color:'red'}}>*</span></p>
+//                   <select
+//                 disabled={!selectedState}
+//                 value={formData.city}
+//                 name="city"
+//                 onChange={handleInputChange}
+//                 className="inner_inputs"
+//               >
+//                 <option value="">Select City</option>
+//                 {cities.map((city) => (
+//                   <option key={city.name} value={city.name}>
+//                     {city.name}
+//                   </option>
+//                 ))}
+//               </select>
+//                   <img  style={{
+//     position: 'absolute',
+//     right: '5%',
+//     top: '50%',
+//     transform: 'translateY(-50%)',
+//     pointerEvents: 'none', 
+//   }} src="images/About/ArrowDropDown.svg" alt="" />
+//               </div> */}
+//              </div>
+//              <div className="outer_single_line">
+//              <div className='inner_fields' style={{ position: 'relative' }}>
+//                   <p className='inner_lables' htmlFor="interest">Area Of interest <span style={{color:'red'}}>*</span></p>
+//                   <select value={formData.interest} onChange={handleInputChange} name='interest'  type="text" className='inner_inputs' id='interest' >
+//                       <option className='option' value="Solution">Solution</option>
+//                       <option className='option' value= "Products">Products</option>
+//                       <option className='option' value="Services">Services</option>
+//                   </select>
+//                   <img  style={{
+//     position: 'absolute',
+//     right: '5%',
+//     top: '50%',
+//     transform: 'translateY(-50%)',
+//     pointerEvents: 'none', 
+//   }} src="images/About/ArrowDropDown.svg" alt="" />
+//               </div>
+//               <div className='inner_fields' style={{ position: 'relative' }}>
+//                   <p className='inner_lables' htmlFor="looking">What are you looking for ? <span style={{color:'red'}}>*</span></p>
+//                   <select value={formData.looking} onChange={handleInputChange} name='looking'  type="text" className='inner_inputs' id='looking'  >
+//                       <option className='option' value="Contact Sales">Contact Sales</option>
+//                       <option className='option' value="General Enquiry">General Enquiry</option>
+//                       <option className='option' value="Make A purchase">Make A purchase</option>
+//                       <option className='option' value="Licenscing of Technology">Licenscing of Technology</option>
+//                       <option className='option' value="Value Added Partners">Value Added Partners</option>
+//                       <option className='option' value="Product Related">Product Related</option>
+//                       <option className='option' value="Service Related">Service Related</option>
+//                       <option className='option' value="Solutions Related">Solutions Related</option>
+//                   </select>
+//                   <img  style={{
+//     position: 'absolute',
+//     right: '5%',
+//     top: '50%',
+//     transform: 'translateY(-50%)',
+//     pointerEvents: 'none', 
+//   }} src="images/About/ArrowDropDown.svg" alt="" />
+//               </div>
+//              </div>
+          
+//              <div className="outer_text_area">
+//              <p className='inner_lables' htmlFor="message">Message<span style={{color:'red'}}>*</span></p>
+
+//               <textarea value={formData.message} onChange={handleInputChange} className='textarea' name="message" id="message" >dsfsf</textarea>
+//              </div>
+//              <button type='submit' className='submit_btn'>Submit</button>
+//           </form>
+//           </div>
+//           </div>

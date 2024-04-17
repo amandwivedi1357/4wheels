@@ -29,7 +29,7 @@ export default function SelfTop({topic,subTopic}) {
         <div className="navbar">
 
         <div >
-       <Link to={'/'}> <img className="logo" src={logo} alt="" /></Link>
+       <Link to={'/'}> <img className="logo" src='images/4wheelLogo.svg' alt="" /></Link>
       </div>
       {isMobile ? (
           <RespNav setShowDropdown={setShowDropdown} />

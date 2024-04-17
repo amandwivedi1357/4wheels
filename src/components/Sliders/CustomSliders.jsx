@@ -17,7 +17,7 @@ export default function CustomSliders() {
     dispatch(getAllCars());
     const interval = setInterval(() => {
       setCurrentSlide((prevSlide) => (prevSlide === fleets.length - 1 ? 0 : prevSlide + 1));
-    }, 5000); // Change slide every 5 seconds (adjust as needed)
+    }, 3000); // Change slide every 5 seconds (adjust as needed)
 
     return () => clearInterval(interval);
   }, [dispatch, fleets.length]);

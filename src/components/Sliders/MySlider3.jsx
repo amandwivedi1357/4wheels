@@ -29,8 +29,6 @@ const MySlider3 = ({data}) => {
     nextArrow: <CustomNextArrow />,
   };
 
-  
-  
   return (
       <div className="cars">
     <Slider {...settings}>

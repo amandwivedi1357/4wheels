@@ -39,6 +39,7 @@ const Footer = () => {
             </li>
             <li onClick={() => handleClick("about-us")}>About Us</li>
             <li onClick={() => handleClick("gallery")}>Gallery</li>
+            <li onClick={() => handleClick("faq")}>FAQ</li>
           </ul>
         </div>
         {/* <div className="flex_cont">

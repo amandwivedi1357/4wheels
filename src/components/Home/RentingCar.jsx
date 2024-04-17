@@ -78,7 +78,7 @@ const car_data = [
   {
     id: 2,
     img: corporate,
-    title:'Corporate Events'
+    title:'Corporate Travels'
   },
   {
     id: 3,
@@ -117,19 +117,19 @@ const second_car_data = [
     id: 1,
     img: car1,
     test:'On a memorable occasion, my family and I had the pleasure of traveling with 4 Wheel Travels. With a group of 25 people, we enjoyed a 10-hour journey in a minibus. Despite minor issues, the staff provided excellent service. Heartfelt thanks to S.M. Jain and the 4 Wheel Travels team for the wonderful experience.',
-    user:'Varun Gupta'
+    user:'Life Insurance Corporation Of India'
   },
   {
     id: 2,
     img: car2,
     test:'The vehicle arrived on time, and the service from the 4 Wheel team was excellent including the driver. The vehicle was in great condition, and the air conditioning worked perfectly despite the hot weather. I plan to become a regular customer and recommend 4 Wheel Travels to others.',
-    user:'Afsar Hussain'
+    user:'Afsar Hussain (Naj Soft pvt Ltd)'
   },
   {
     id: 3,
     img: car3,
     test:'A big thank you to Mr. S.M. Jain and the 4 Wheel Travels team for making our family function a grand success. Their exceptional service and round-the-clock assistance were greatly appreciated. Special thanks to Mr. Rambabu and Babu for their dedication.I wish you all the success in future.',
-    user:'Yogesh Agarwal'
+    user:'Yogesh Agarwal (Agarwal Global Steels Limited)'
   },
 ];
 const animate_data = [
