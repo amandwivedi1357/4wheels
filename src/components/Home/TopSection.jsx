@@ -81,7 +81,7 @@ export default function TopSection() {
             <FaYoutube />
           </span> */}
           <span>
-            <FaInstagram />
+            <FaInstagram onClick={()=>handleNav('https://www.instagram.com/4wheelindia?igsh=N2NmdjN4aTY5M29l')}/>
           </span>
         </div>
       </div>
