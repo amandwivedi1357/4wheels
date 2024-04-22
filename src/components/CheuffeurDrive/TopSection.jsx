@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import "../css/CheuffeurDrive/CheuffeurTopSection.css"
-import logo from "../../assets/home/final_logo.png";
+import logo from "../../assets/home/4wheelLogo.svg";
 import { Link, useNavigate } from "react-router-dom"
 import { useState } from "react";
 import RespNav from "../Responsive/RespNav";
@@ -26,7 +26,7 @@ export default function CheuffeurTopSection({topic,subTopic}) {
         <div className="navbar">
 
         <div >
-       <Link to={'/'}> <img className="logo" src='images/4wheelLogo.svg' alt="" /></Link>
+       <Link to={'/'}> <img className="logo" src={logo} alt="" /></Link>
       </div>
       {isMobile ? (
           <RespNav />
@@ -36,7 +36,6 @@ export default function CheuffeurTopSection({topic,subTopic}) {
             <ul>
               <li onClick={() => handleNavigate("selfdrive")}>Self Drive</li>
                 <li onClick={() => handleNavigate("cheuffeurdrive")}>Chauffeur Drive</li>
-               
                 <li onClick={() => handleNavigate("about-us")}>About Us</li>
                 <li onClick={() => handleNavigate("gallery")}>Gallery</li>
                 <li onClick={() => handleNavigate("faq")}>Faq</li>
@@ -46,10 +45,9 @@ export default function CheuffeurTopSection({topic,subTopic}) {
         )}
       <div className="contact">
       <FaWhatsapp size={'2rem'} cursor={'pointer'} onClick={()=>handleNav('https://api.whatsapp.com/send?phone=919885354321')}/>
-
       </div>
         </div>
-        
+ 
               <p className="head_text ser_text">{topic}</p>
               <p className="sub_text">{subTopic}</p>
               {/* <p className="bred"><Breadcrumbs/></p> */}

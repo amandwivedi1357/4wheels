@@ -1,5 +1,5 @@
 import "../css/CheuffeurDrive/CheuffeurTopSection.css"
-import logo from "../../assets/home/final_logo.png";
+import logo from "../../assets/home/4wheelLogo.svg";
 import { Link, useNavigate } from "react-router-dom"
  import "../css/CheuffeurDrive/TopSec.css"
 import {  useState } from "react";
@@ -20,7 +20,7 @@ export default function TopSectionServe({topic,subTopic}) {
         <div className="navbar">
 
         <div >
-       <Link to={'/'}> <img className="logo" src='images/4wheelLogo.svg' alt="" /></Link>
+       <Link to={'/'}> <img className="logo" src={logo} alt="" /></Link>
       </div>
       <div className="nav_options">
         <div className="nav_menus">
