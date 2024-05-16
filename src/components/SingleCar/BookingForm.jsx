@@ -1,5 +1,7 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
+
 import { useDispatch } from "react-redux";
 // import "./BookingForm.css"
 import { useToast } from "@chakra-ui/react";
@@ -8,6 +10,13 @@ import email from "../../assets/email/template.png"
 import { useNavigate } from "react-router-dom";
 import OTPEntryModal from "./OtpModal";
 import axios from "axios";
+ // Adjust the path based on your project structure
+
+import 'firebase/auth';
+
+import { RecaptchaVerifier, signInWithPhoneNumber } from "firebase/auth";
+import { auth } from "../../firebase.config";
+ // Adjust the path based on your project structure
 
 
 function generateFiveDigitNumber() {
@@ -15,6 +24,8 @@ function generateFiveDigitNumber() {
 }
 const randomFiveDigitNumber = generateFiveDigitNumber();
 export default function BookingForm({car,service,fleetType}) {
+  const [recaptchaVerified, setRecaptchaVerified] = useState(false);
+  const [recaptchaVerifier, setRecaptchaVerifier] = useState(null);
   // console.log(service)
   const resetForm = {
     name: "",
@@ -66,53 +77,124 @@ export default function BookingForm({car,service,fleetType}) {
   const today = new Date().toISOString().split("T")[0];
   const handleInputChange = (e) => {
     const { id, value } = e.target;
-    const formattedValue = e.target.type === 'date' ? value.split('T')[0] : value;    console.log(`Updating ${id} with value: ${value}`);
+    const formattedValue = e.target.type === 'date' ? value.split('T')[0] : value;  
+      // console.log(`Updating ${id} with value: ${value}`);
     setFormData({
       ...formData,
       [id]: formattedValue,
     });
   };
 
+  useEffect(() => {
+    const initializeRecaptcha = () => {
+      const verifier = new RecaptchaVerifier(auth,'recaptcha-container', {
+        size: 'invisible',
+        callback: (response) => {
+          // Callback function
+        },
+      });
+      setRecaptchaVerifier(verifier);
+    };
+
+    initializeRecaptcha();
+
+    // Clean up function
+    return () => {
+      if (recaptchaVerifier) {
+        recaptchaVerifier.clear();
+      }
+    };
+  }, []);
+
+    // const onCaptchaVerify = ()=>{
+     
+    //   if(!window.recaptchaVerifier){
+     
+    //     window.recaptchaVerifier = new RecaptchaVerifier(auth, 'recaptcha-container', {
+    //       size: 'invisible',
+    //       callback: (response) => {
+          
+    //       },
+    //       'expired-callback': () => {
+           
+    //       }
+    //     });
+    //   }
+    // }
+
+    const onSignup = async () => {
+      try {
+        // Ensure recaptchaVerifier is initialized
+        if (!recaptchaVerifier) {
+          throw new Error('Recaptcha verifier is not initialized');
+        }
+    
+        const phoneNumber = "+91" + formData.contactNo;
+        if (window.confirmationResult) {
+          window.confirmationResult = null;
+        }
+    
+        const confirmationResult = await signInWithPhoneNumber(auth, phoneNumber, recaptchaVerifier);
+        toast({
+          title: "OTP Sent",
+          description: "Please check if you received the OTP.",
+          status: "success",
+          duration: 6000,
+          isClosable: true,
+        });
+    
+        window.confirmationResult = confirmationResult;
+        setIsOTPModalOpen(true);
+      } catch (error) {
+        console.error('Error during signup:', error);
+        setIsOTPModalOpen(false);
+        toast({
+          title: "Error",
+          description: "An error occurred while sending OTP. Please try again later.",
+          status: "error",
+          duration: 6000,
+          isClosable: true,
+        });
+      }
+    };
+    
+    const [isSubmitting, setIsSubmitting] = useState(false); // State to track form submission status
+
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+      
+      // Check if form is already being submitted
+      if (!isSubmitting) {
+        setIsSubmitting(true); // Set form submission flag to true
+      
+        // Call onSignup function
+        try {
+          await onSignup();
+        } catch (error) {
+          console.error('Error during signup:', error);
+        } finally {
+          setIsSubmitting(false); // Reset form submission flag
+        }
+      }
+   
+      // console.log(formData);
+    };
+    
+  
   
  
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-  
-    // Assuming formData contains the phoneNumber
-    const phoneNumber = formData.contactNo;
-  
-    try {
-      const response = await fetch('https://stormy-fish-houndstooth.cyclic.app/api/auth/send-otp', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ phoneNumber })
-      });
-  
-      if (response.ok) {
-        setIsOTPModalOpen(true);
-        
-      } else {
-        
-        console.error('Failed to send OTP:', response.statusText);
-       
-      }
-    } catch (error) {
-      
-      console.error('Error sending OTP:', error.message);
-      
-    }
-  };
   
   const handleOTPSubmit = (otp) => {
     setIsOTPModalOpen(false); 
-    // console.log("Submitted OTP:", otp);
+   
     
   };
   return (
     <div className="contact_form_div">
+      <div id="recaptcha-container"></div>
       <div className="contact_form_outer">
+      
+
     <form className="input_container" onSubmit={handleSubmit}>
       <p className="inp_top_text">Book this car</p>
       <div className="outer_inp">
@@ -331,6 +413,7 @@ export default function BookingForm({car,service,fleetType}) {
         <button className="submit_btn" type="submit">
           Submit
         </button>
+       
         </div>
 
         <div className="terms">
@@ -355,7 +438,7 @@ export default function BookingForm({car,service,fleetType}) {
       </div>
     </form>
     </div>
-    
+    {/* {isLoading && <div>Loading OTP...</div>} */}
     <OTPEntryModal
     fleetType = {fleetType}
         isOpen={isOTPModalOpen}
@@ -368,6 +451,18 @@ export default function BookingForm({car,service,fleetType}) {
         service = {service}
         car = {car} // Pass necessary data to OTP modal
       />
+    {/* <OTPEntryModal
+    fleetType = {fleetType}
+        isOpen={isOTPModalOpen}
+        onClose={() => setIsOTPModalOpen(false)}
+        onSubmit={handleOTPSubmit}
+        email={formData.emailId} // Pass necessary data to OTP modal
+        contactNo={formData.contactNo}
+        name = {formData.name}
+        formData = {formData}
+        service = {service}
+        car = {car} // Pass necessary data to OTP modal
+      /> */}
     </div>
   );
 }
@@ -381,6 +476,35 @@ export default function BookingForm({car,service,fleetType}) {
 
 
 
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  
+  //   // Assuming formData contains the phoneNumber
+  //   const phoneNumber = formData.contactNo;
+  
+  //   try {
+  //     const response = await fetch('http://4wheelbackend-env.eba-mpb5rpet.ap-south-1.elasticbeanstalk.com/api/auth/send-otp', {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json'
+  //       },
+  //       body: JSON.stringify({ phoneNumber })
+  //     });
+  
+  //     if (response.ok) {
+  //       setIsOTPModalOpen(true);
+        
+  //     } else {
+        
+  //       console.error('Failed to send OTP:', response.statusText);
+       
+  //     }
+  //   } catch (error) {
+      
+  //     console.error('Error sending OTP:', error.message);
+      
+  //   }
+  // };
 
 
 // <div className="contact_form_div">

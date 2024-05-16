@@ -1,84 +1,23 @@
 /* eslint-disable react/prop-types */
-import React, { useState, useRef } from 'react';
-import { Input, Button, Flex, Text, Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, ModalCloseButton, useToast } from '@chakra-ui/react';
+import  { useState } from 'react';
+import {  Button, Flex, Text, Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, ModalCloseButton, useToast, HStack, PinInput, PinInputField } from '@chakra-ui/react';
 import emailjs from '@emailjs/browser';
+import 'firebase/auth';
 
-const OTPEntryModal = ({ isOpen, onClose, onSubmit,contactNo,email,name,formData,car,service,fleetType }) => {
-  const [otp, setOTP] = useState(['', '', '', '', '', '']);
-  const otpInputs = Array.from({ length: 6 }, (_, i) => i);
-  const inputRefs = useRef(otpInputs.map(() => React.createRef()));
-  const toast = useToast();
-    const [verificationFailed, setVerificationFailed] = useState(false); 
-  let resendAttempts = 0;
-  const handleChange = (index, value) => {
-    const newOTP = [...otp];
-    newOTP[index] = value;
-    setOTP(newOTP);
-    if (value !== '' && index < otp.length - 1) {
-      inputRefs.current[index + 1].current.focus();
-    }
-  };
-
-  const handleClick = async (e) => {
-    e.preventDefault();
-    
-    const phoneNumber = contactNo;
-    
-    try {
-      if (resendAttempts >= 3) {
-        toast({
-          title: "Exceeded Resend Limit",
-          description: "You have exceeded the number of attempts to resend the OTP. Please try again after some time.",
-          status: "warning",
-          duration: 6000,
-          isClosable: true,
-        });
-        return; 
-      }
-      
-      const response = await fetch('https://stormy-fish-houndstooth.cyclic.app/api/auth/send-otp', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ phoneNumber })
-      });
+const OTPEntryModal = ({ isOpen, onSubmit, contactNo, email, name, formData, car, service, fleetType }) => {
+  const [otp, setOTP] = useState(['','','','','','']);
   
-      if (response.ok) {
-        resendAttempts++;
-        
-        toast({
-          title: "OTP Resent",
-          description: `A New OTP has been sent to ${contactNo}`,
-          status: "success",
-          duration: 6000,
-          isClosable: true,
-        });
-      } else {
-        console.error('Failed to send OTP:', response.statusText);
-      }
-    } catch (error) {
-      console.error('Error sending OTP:', error.message);
-    }
-  }
+  
+  const toast = useToast();
+  const [verificationError, setVerificationError] = useState(false);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    onSubmit(otp.join(''));
     const otpCode = otp.join('');
-    console.log(otpCode)
-  const phoneNumber = contactNo
+    
     try {
-      const response = await fetch('https://stormy-fish-houndstooth.cyclic.app/api/auth/verify-otp', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ phoneNumber, otpCode })
-      });
-  
-     
-      if (response.ok) {
-        
+      const res = await window.confirmationResult.confirm(otpCode);
+      if (res.user) {
         toast({
           title: "OTP Verified",
           description: "OTP verification successful.",
@@ -86,16 +25,16 @@ const OTPEntryModal = ({ isOpen, onClose, onSubmit,contactNo,email,name,formData
           duration: 6000,
           isClosable: true,
         });
-        setOTP(['', '', '', '', '', '']);
         await sendEmail();
         await sendSalesEmail();
-        onClose();
+        setVerificationError(false); // Reset verification error
+        setOTP(['', '', '', '', '', '']); // Clear OTP fields
+        onSubmit(otpCode);
       } else {
-        setVerificationFailed(true); 
-       
+        setVerificationError(true); // Set verification error for incorrect OTP
         toast({
           title: "Failed to Verify OTP",
-          description: "OTP verification failed. Please try again.",
+          description: "Incorrect OTP entered. Please try again.",
           status: "error",
           duration: 6000,
           isClosable: true,
@@ -112,10 +51,58 @@ const OTPEntryModal = ({ isOpen, onClose, onSubmit,contactNo,email,name,formData
       });
     }
   };
+
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   onSubmit(otp.join(''));
+  //   const otpCode = otp.join('');
+
+  //   console.log('this is the otp: ',otpCode)
+  //   try {
+  //     window.confirmationResult.confirm(otpCode).then(async(res)=>{
+  //       console.log(res);
+  //       const user = res.user;
+  //       if (user) {
+  //         toast({
+  //           title: "OTP Verified",
+  //           description: "OTP verification successful.",
+  //           status: "success",
+  //           duration: 6000,
+  //           isClosable: true,
+  //         });
+          
+  //         setOTP(['', '', '', '', '', '']);
+  //         await sendEmail();
+  //         setVerificationError(true)
+  //       } else {
+  //         setVerificationError(false);
+  //         toast({
+  //           title: "Failed to Verify OTP",
+  //           description: "Incorrect OTP entered. Please try again.",
+  //           status: "error",
+  //           duration: 6000,
+  //           isClosable: true,
+  //         });
+  //       }
+  //     })
+     
+  //   } catch (error) {
+  //     console.error('Error verifying OTP:', error.message);
+  //     toast({
+  //       title: "Error",
+  //       description: "An error occurred while verifying OTP. Please try again later.",
+  //       status: "error",
+  //       duration: 6000,
+  //       isClosable: true,
+  //     });
+  //   }
+  // };
+
    const sendSalesEmail = () => {
     
      console.log(formData)
-     // Sending email using emailjs library
+     // Sending email using emailjs library 
+    //  service_x3ug8r7     template_qzsnwk2
     emailjs.send('service_x3ug8r7', 'template_qzsnwk2', {
     name: formData.name,
     carName: car.carName,
@@ -136,6 +123,7 @@ const OTPEntryModal = ({ isOpen, onClose, onSubmit,contactNo,email,name,formData
     
       
      }, "aTTCyQOLfRMG-VaKb")
+    //  aTTCyQOLfRMG-VaKb
        .then((result) => {
        
         console.log('sent')
@@ -227,7 +215,7 @@ const OTPEntryModal = ({ isOpen, onClose, onSubmit,contactNo,email,name,formData
       },
     ],
     }
-    const res = await fetch(`https://stormy-fish-houndstooth.cyclic.app/api/email/sendEmail`,{
+    const res = await fetch(`http://4wheelbackend-env.eba-mpb5rpet.ap-south-1.elasticbeanstalk.com/api/email/sendEmail`,{
       method:'POST',
       body:JSON.stringify(dataSend),
       headers:{
@@ -258,43 +246,41 @@ const OTPEntryModal = ({ isOpen, onClose, onSubmit,contactNo,email,name,formData
     })
     
   }
-
+  const handleInputChange = (value,index) => {
+    const newOTP = [...otp];
+  newOTP[index] = value;
+  setOTP(newOTP);
+  console.log(newOTP.join(''));
+  };
   return (
-  <Modal isOpen={isOpen} onClose={verificationFailed ? undefined : onClose} size="md">
-
-      <ModalOverlay />
-      <ModalContent>
-        <ModalHeader>Enter OTP</ModalHeader>
-        <ModalCloseButton />
-        <ModalBody>
-          <form onSubmit={handleSubmit}>
-            <Flex direction="column" align="center" justify="center">
-              <Text mb={4}>Please enter the OTP sent to your phone:</Text>
-              <Flex justifyContent={'center'}>
-                {otpInputs.map((index) => (
-                  <Input
-                    key={index}
-                    ref={inputRefs.current[index]}
-                    type="text"
-                    placeholder=" "
-                    maxLength={1}
-                    value={otp[index]}
-                    onChange={(e) => handleChange(index, e.target.value)}
-                    // eslint-disable-next-line no-undef
-                    // onKeyDown={(e) => handleKeyDown(index, e)}
-                    width="10%"
-                    textAlign="center"
-                    mr={2}
-                  />
-                ))}
-              </Flex>
-              <Button variant="outline" bgColor={'blue.500'} color={'white'} mt={2} onClick={handleClick}>Resend OTP</Button>
-              <Button type="submit" colorScheme="blue">Submit</Button>
+    <Modal isOpen={isOpen} size="md"  onClose={() => setVerificationError(false)}>
+    <ModalOverlay />
+    <ModalContent>
+      <ModalHeader>Enter OTP</ModalHeader>
+      <ModalCloseButton />
+      <ModalBody>
+        <form onSubmit={handleSubmit}>
+          <Flex direction="column" align="center" justify="center">
+            <Text mb={4}>Please enter the OTP sent to your phone:</Text>
+            <Flex justifyContent={'center'}>
+             
+              <PinInput otp>
+  {Array.from({ length: 6 }, (_, i) => (
+    <PinInputField
+      mx={2}
+      key={i}
+      value={otp[i]}
+      onChange={(e) => handleInputChange(e.target.value, i)}
+    />
+  ))}
+</PinInput>
             </Flex>
-          </form>
-        </ModalBody>
-      </ModalContent>
-    </Modal>
+            <Button type="submit" colorScheme="blue">Submit</Button>
+          </Flex>
+        </form>
+      </ModalBody>
+    </ModalContent>
+  </Modal>
   );
 };
 
