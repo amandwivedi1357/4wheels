@@ -1,27 +1,16 @@
 import "../css/home/RenticgCar.css";
 // import rentingCar1 from "../../assets/home/rentingCar1.webp";
 // import FlowReact from "../FlowReact";
-import AnimatedNumberCounter from "./AnimatedNumberCounter";
+import { FaArrowRightLong } from "react-icons/fa6";
 import bann_Car from "../../assets/home/banner_Car-removebg.webp"
-import weds from "../../assets/home/marriage.webp"
 import red_mobile from "../../assets/home/red_mobile.png"
-import vip from "../../assets/home/red_car.webp"
-import vip1 from "../../assets/home/front_bl_sedan.webp"
-import bus from "../../assets/email/bus.webp"
-import corporate from "../../assets/email/corporate.webp"
-import official from "../../assets/email/official events.webp"
-import hotel from "../../assets/email/hotel.webp"
-import vip4 from "../../assets/home/newgal_1.webp"
-import red_Car from "../../assets/email/red-vehicle-car.webp"
-import new_car from "../../assets/home/front-view-black-sedan-sport-car-bridge.webp"
+
 import steps_mobile from "../../assets/home/mobile_steps.webp"
-import cust from "../../assets/home/custom_sols.webp"
+
 import car2 from "../../assets/home/custom_sols.webp"
 import car1 from "../../assets/home/newgal_1.webp";
 import car3 from "../../assets/home/newgal_3.webp";
-import car4 from "../../assets/home/newgal_4.webp";
-import car5 from "../../assets/home/newgal_5.webp";
-import car6 from "../../assets/home/newgal_6.webp";
+
 import quote from "../../assets/home/quote.svg";
 import starry from "../../assets/home/starry_night.webp"
 import sport_front from "../../assets/home/sport_front.webp"
@@ -35,6 +24,7 @@ import car12 from '../../assets/home/bl_sport.webp'
 import car13 from '../../assets/home/front_bl_sedan.webp'
 
 import CustomSliders from "../Sliders/CustomSliders";
+import TestSlider from "../Sliders/TestSlider";
 
 const special2 = [
   {
@@ -53,62 +43,67 @@ const special2 = [
 const special = [
   {
     id:1,
-    img:car11,
-    text:"Weddings and Special Events"
+    img:'images/royale.png',
+    text:"Royale"
   },
   {
     id:2,
-    img:car12,
-    text:"Exotic Sports"
+    img:'images/pres.png',
+    text:"Presindent"
   },
   {
     id:3,
-    img:car13,
-    text:"Long Drive"
+    img:'images/hatch.png',
+    text:"Hatchbacks"
+  },
+  {
+    id:4,
+    img:'images/lux.png',
+    text:"Luxury SUV"
   },
 ]
 const car_data = [
   {
     id: 1,
-    img: weds,
+    
     title:(<>
-    <p>Wedding <br />Events</p>
+    <p>Wedding Events</p>
     </>)
   },
   {
     id: 2,
-    img: corporate,
+   
     title:'Corporate Travels'
   },
   {
     id: 3,
-    img: hotel,
+    
     title:'Hotel Travel Desk'
   },
   {
     id: 4,
-    img: official,
-    title:(<>Official<br/> Events</>)
+   
+    title:(<>Official Events</>)
   },
   {
     id: 5,
-    img: vip4,
-    title:(<>Luxury <br /> Events</>)
+   
+    title:(<>Luxury Events</>)
   },
   {
     id: 6,
-    img: vip1,
+    
     title:'Employee Transportation'
   },
   {
     id: 7,
-    img: bus,
+    
     title:'Bus Transportation'
     
   },
   {
     id: 8,
-    img: red_Car,
+   
     title:'Self Drive Rentals'
   },
 ]
@@ -203,34 +198,13 @@ const RentingCar = () => {
       <p className="head_text">A fleet that meets your needs</p>
       <p className="desc_text rent_desc">Have a look at our different category of cars</p>
       <div className="sports_car">
-        {/* <div className="sports_info">
-          <div className="head_head">
-
-          <p className="head_text">Sports Car</p>
-          </div>
-          <div className="desc_desc">
-
-          <p className="desc_text">
-            Have a look at our different category of cars
-          </p>
-          </div>
-        </div>
-        <div className="sports_img">
-          <img src={rentingCar1} alt="sports car" />
-        </div> */}
+     
        
       </div>
       
-      {/* React Flow implementation */}
+    
       <div className="red_car_container">
-        {/* <p className="head_text">is Renting a Car worth it?</p>
-        <p className="desc_text flow">
-          Have a look at our different category of cars
-        </p>
-
-        <div className="react_flow">
-          <Flow2 />
-        </div> */}
+       
        <div>
           <CustomSliders/>
         </div>
@@ -250,11 +224,7 @@ const RentingCar = () => {
           {animate_data.map((data) => (
             <div className="data_map" key={data.id}>
               <p className="num">
-                {/* <AnimatedNumberCounter
-                  value={data.numbers}
-                  duration={2000}
-                  easing="easeInOutQuad"
-                />  */}{data.numbers}
+               {data.numbers}
                 <span>+</span>
               </p>
               <p className="text">{data.text}</p>
@@ -278,31 +248,28 @@ const RentingCar = () => {
       </div>
 
       <div className="Special_Services">
-       <p className="head_text">Our Special Services</p>
+        <div className="left">
+        <div className="special_heading">
+      <p className="head_text">Our Special Services</p>
        <p className="desc_text">We work for your comfort</p>
-        <div className="cars_det">
-          {car_data.map((data) => (
-            // <div key={data.id} className="single_car_detail">
-            //   <img className="grid_img" src={data.img} alt="" />
-            //   <p className="desc_title">{data.title}</p>
-            // </div>
-
-            <div key={data.id} className="flip-card">
-    <div className="flip-card-inner">
-        <div className="flip-card-front">
-            <img src={data.img} alt="Front Image" className="card-image"/>
-            
+      </div>
+      <div className="special_serv_list">
+          {
+            car_data.map((data,idx)=>(
+              <div className="service_list" key={idx}>
+                <img src="images/conc.png" alt="" className="conc"/>
+                <p className="serv_names">{data.title}</p>
+              </div>
+            ))
+          }
+      </div>
+      
         </div>
-        <div className="flip-card-back">
-            <img src={data.img} alt="Back Image" className="card-image"/>
-            <p className="title">{data.title}</p>
-           
+        <div className="right">
+          <img src="images/car_service.png" alt="" className="serv_car"/>
         </div>
-    </div>
-</div>
-
-          ))}
-        </div>
+      
+       
         <div className="cars_det_mob">
           <MySlider3 data={car_data}/>
         </div>
@@ -311,7 +278,7 @@ const RentingCar = () => {
         <p className="head_text">Gallery</p>
         <p className="desc_text">4 Wheels Gallery </p>
 
-        <div className="second_car_data">
+        {/* <div className="second_car_data">
           <div className="cont1">
             <img src={new_car} alt="" />
           </div>
@@ -325,18 +292,113 @@ const RentingCar = () => {
           <div className="cont4">
             <img src={car5} alt="" /><img src={car6} alt="" />
             </div>  
+        </div> */}
+        <div className="gallery_cards_main">
+          <div className="inner_cards">
+           
+                <>
+                <div  className="gal_single_cards">
+                  <div className="text_container">
+                  <p className="gal_text">Royale 
+                  
+                 <p style={{marginLeft:'1.5rem'}}>
+                 <FaArrowRightLong size={30}/>
+                  </p> 
+                 
+</p>
+                  </div>
+                  <img src='images/royale.png' alt="" className="gal_car_image"/>
+                </div>
+                
+                </>
+                <>
+                <div  className="gal_single_cards">
+                  <div className="text_container">
+                  <p className="gal_text">President
+                  <p style={{marginLeft:'2rem'}}>
+                 <FaArrowRightLong size={30}/>
+                  </p>
+                  </p>
+                   
+                  </div>
+                  <img src='images/pres.png' alt="" className="gal_car_image" style={{marginTop:'10rem'}}/>
+                </div>
+                
+                </>
+                <>
+                <div  className="gal_single_cards">
+                  <div className="text_container">
+                  <p className="gal_text">Hatchbacks
+                  <p style={{marginLeft:'3rem'}}>
+                 <FaArrowRightLong size={30}/>
+                  </p> 
+                  </p>
+                  
+                  </div>
+                  <img src='images/hatch.png' alt="" className="gal_car_image" style={{marginTop:'9rem'}}/>
+                </div>
+                
+                </>
+                <>
+                <div  className="gal_single_cards">
+                  <div className="text_container">
+                  <p className="gal_text">Luxury SUV
+                  <p style={{marginLeft:'4rem'}}>
+                 <FaArrowRightLong size={30}/>
+                  </p> 
+                  </p>
+                  </div>
+                  <img src='images/lux.png' alt="" className="gal_car_image"/>
+                </div>
+                
+                </>
+              
+          </div>
         </div>
         <div className="second_car_mobile">
           <MySlider3 data = {special2}/>
         </div>
       </div> 
+      
       <div className="btm_container_2">
         
         <p className="head_text">Our Clients Say About Us</p>
         <p className="desc_text">We Believe in Quality Service</p>
 
-        <div className="second_car_data">
-          <div className="cars_det">
+
+        <TestSlider/>
+        {/* <div className="second_car_data"> */}
+
+          
+          {/* <div className="main_test_cont">
+            <div className="left_test">
+              <img src="images/test1.png" alt="" className="test_img"/>
+            </div>
+            <div className="right_test">
+              <div className="quote_cont">
+            <img  src={quote} alt="" className="quote"/>
+            <p className="cust_text">On a memorable occasion, my family and I had the pleasure of traveling with 4 Wheel Travels. With a group of 25 people, we enjoyed a 10-hour journey in a minibus. Despite minor issues, the staff provided excellent service. Heartfelt thanks to S.M. Jain and the 4 Wheel Travels team for the wonderful experience.</p>
+
+            <p style={{textAlign:'left',margin:'2rem 1rem 0rem 0rem',padding:'0',display:"flex"}}>
+              {animate_data.map((data)=>(
+                <svg key={data.id} width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="Star" clipPath="url(#clip0_5889_3879)">
+                <path id="Vector" d="M13.0607 14.9549C12.5525 15.3346 9.29213 12.9274 8.66769 12.9221C8.04325 12.9169 4.74613 15.2687 4.24393 14.8804C3.74172 14.4921 4.92238 10.504 4.73423 9.8811C4.54608 9.25816 1.38929 6.70414 1.58704 6.08444C1.78482 5.46473 5.77491 5.40717 6.28305 5.02743C6.79118 4.64772 8.13733 0.717416 8.76181 0.722661C9.38621 0.727952 10.6715 4.68047 11.1737 5.06875C11.6759 5.45698 15.6647 5.58195 15.8529 6.20489C16.041 6.82783 12.8453 9.32822 12.6475 9.94792C12.4498 10.5676 13.5688 14.5751 13.0607 14.9549Z" fill="#FFC444"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_5889_3879">
+                <rect width="15.2494" height="16" fill="white" transform="translate(0.625)"/>
+                </clipPath>
+                </defs>
+                </svg>
+              ))}
+              </p>
+              <p className='cust_name'>Varun Gupta</p>
+              </div>
+
+            </div>
+          </div> */}
+          {/* <div className="cars_det">
             
             {second_car_data.map((data) => (
               
@@ -362,7 +424,7 @@ const RentingCar = () => {
               <p style={cust_name}>{data.user}</p>
               </div>
             ))}
-           </div>
+           </div> */}
           {/* <div className="cars_det_mobile"> 
             <Slider {...settings}>
             {second_car_data.map((data) => (
@@ -390,7 +452,7 @@ We have been using 4wheel for our trips needs for several years now and have alw
             ))}
             </Slider>
           </div> */}
-        </div>
+        
       </div>
 
       {/* <div className="btm_container_3">
@@ -418,6 +480,7 @@ We have been using 4wheel for our trips needs for several years now and have alw
           </div>
         </div>
       </div>
+      
       <Footer/>
     </div>
   );
