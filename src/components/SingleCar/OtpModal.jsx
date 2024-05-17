@@ -215,7 +215,7 @@ const OTPEntryModal = ({ isOpen, onSubmit, contactNo, email, name, formData, car
       },
     ],
     }
-    const res = await fetch(`http://4wheelbackend-env.eba-mpb5rpet.ap-south-1.elasticbeanstalk.com/api/email/sendEmail`,{
+    const res = await fetch(`https://fourwheelsbackend.onrender.com/api/email/sendEmail`,{
       method:'POST',
       body:JSON.stringify(dataSend),
       headers:{
