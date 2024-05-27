@@ -13,7 +13,8 @@ export default function FaqBottom() {
         <p className="desc_text">
         We Believe in Quality Service
         </p>
-        <div className="content">
+        <div className="faq_content">
+          
             {/* <FAQSection/> */}
             <Tabs isFitted variant='enclosed'>
   <TabList mb='1em' >

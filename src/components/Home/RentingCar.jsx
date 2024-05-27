@@ -365,8 +365,10 @@ const RentingCar = () => {
         <p className="head_text">Our Clients Say About Us</p>
         <p className="desc_text">We Believe in Quality Service</p>
 
+        <div className="test_cont">
 
         <TestSlider/>
+        </div>
         {/* <div className="second_car_data"> */}
 
           

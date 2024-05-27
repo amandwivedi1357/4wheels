@@ -179,13 +179,14 @@ width: 40%;
   .inner_mid .right img{
    
     width: 93%;
-    /* border: 1px solid red; */
+    
   }
   .inner_mid .left{
+   
     margin: 0;
     width: 100%;
     margin-left: -0.8rem;
-    margin-top: -3rem;
+    margin-top: -5rem;
   }
   .inner_mid .left .head_text{
     margin-left: -0.2rem;
@@ -224,6 +225,8 @@ width: 40%;
         margin: auto;
       }
       .inner_btm .desc_text{
+        width: 95%;
+        margin: auto;
         margin-bottom: 1rem;
       }
       .conc_info{

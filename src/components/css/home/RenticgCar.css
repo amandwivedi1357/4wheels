@@ -745,6 +745,9 @@ letter-spacing: 0.25px;
     .btm_container_1{
         margin-top: -50px;
     }
+    .btm_container_1 .desc_text{
+        margin-top: -1rem;
+    }
         .btm_container_1 .second_car_data{
             display: none;
         }
@@ -753,6 +756,12 @@ letter-spacing: 0.25px;
         }
         .gallery_cards_main{
             display: none;
+        }
+        .btm_container_2 .desc_text{
+            margin-top: -1rem;
+        }
+        .btm_container_2 .test_cont{
+            margin-top: -2rem;
         }
     /* banner container starts */
     .banner_cont{

@@ -14,9 +14,9 @@ const FaqItem = ({ question, answer }) => {
 
   return (
     <div style={{width:'100%',borderRadius:'4px',margin:'auto',background:'rgba(219, 209, 240, 0.79)'}}>
-      <Flex p={'18px 23px 13px 23px'}>
+      <Flex p={'18px 23px 13px 23px'} >
 
-      <Text className='que_style'  fontWeight={400} fontSize="16px" mb={2} cursor="pointer" fontFamily={'Poppins'} onClick={handleToggle}>
+      <Text className='que_style' fontWeight={400} fontSize="16px" mb={2} cursor="pointer" fontFamily={'Poppins'} onClick={handleToggle}>
         {question}
        
 
