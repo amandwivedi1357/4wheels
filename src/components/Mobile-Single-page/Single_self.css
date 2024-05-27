@@ -1,0 +1,197 @@
+.mobile_single_self_container{
+    width: 95%;
+    /* height: 365px; */
+    
+    margin: auto;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    border: 0.5px solid rgba(122, 131, 140, 0.21);
+    background: #FFF;
+    box-shadow: 0px 2px 2px 0px rgba(151, 166, 183, 0.16);
+}
+.mobile_single_self_container .inner_top_div{
+    width: 95%;
+    display: flex;
+    
+    margin: auto;
+    margin-top: 10px;
+}
+.inner_top_div .detail_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    flex: 1;
+    height: 132px;
+    background: rgba(147, 149, 152, 0.06);
+}
+.detail_div .carName{
+    color: #031B4E;
+    font-family: 'Poppins';
+    font-size: 15px;
+    margin: 0.5rem;
+    text-align: center;
+    margin-left: 1rem;
+    font-style: normal;
+    font-weight: 600; /* 162.5% */
+    letter-spacing: 0.25px;
+   
+}
+.detail_div .pricee{
+    text-align: center;
+    color: #031B4E;
+    font-size: 25px;
+    font-weight: bold;
+    }
+    .detail_div .hourly{
+        text-align: center;
+        color: #031B4E;
+    font-size: 18px;
+    font-weight: 500;
+    }
+.inner_top_div .img_div{
+    flex: 1;  
+}
+.inner_top_div .img_div img{
+    
+    height: 100%;
+}
+.main_Details_div{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding: 0 5px;
+    /* border: 1px solid red; */
+}
+.main_Details_div ul{
+    list-style: none;
+    margin-top: 1rem;
+}
+.main_Details_div ul li{
+    margin-bottom: 1rem;
+    font-size: 15px;
+    color: #031B4E;
+    font-weight: 600;
+}
+
+.main_Details_div ul li .props{
+    font-size: 15px;
+    color: #031B4E;
+    font-weight: 400;
+}
+.rent_btn_cont{
+    width: 100%;
+    margin: auto;
+    /* border: 1px solid red; */
+    display: flex;
+    margin-bottom: 0.5rem;
+}
+.rent_btn{
+    width: 95%;
+    padding: 0.5rem 0;
+    color: #FFF;
+    font-weight: 400;
+    background: #031B4E;
+    margin: auto;
+}
+.Form_main{
+    
+    width: 100%;
+    background: #f3ffff;
+    padding: 20px 0;
+    
+}
+.Form_main .inner_form_main{
+    width: 95%;
+    border-radius: 20px;
+    background: #FFF;
+    /* border: 1px solid red; */
+    margin: auto;
+}
+.inner_form_main .booking_text{
+    color: #031B4E;
+text-align: center;
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 39px; /* 243.75% */
+letter-spacing: 0.25px;
+}
+.inner_form_main .Form_container{
+    width: 80%;
+    
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 2rem;
+    /* border: 1px solid red; */
+    justify-content: center;
+}
+.Form_container .Input_cont {
+    margin-bottom: 19px;
+}
+.Form_container .Input_cont Input,select{
+    margin-top: 10px;
+    border-radius: 3px;
+border: 0.5px solid rgba(90, 84, 84, 0.58);
+}
+.Form_container .Input_cont textarea{
+    margin-top: 10px;
+    width: 100%;
+    height: 159px;
+    border-radius: 3px;
+border: 0.5px solid rgba(90, 84, 84, 0.58);
+}
+.input121{
+    width: 100%;
+    margin-bottom: 19px;
+    /* border: 1px solid red; */
+}
+.contact_numWrap1{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    margin-top: 10px;
+    /* border: 1px solid red; */
+}
+.contact_numWrap1 .box{
+    border-radius: 3px;
+background: #8B959F;
+width: 75px;
+height: 43px;
+}
+.contact_numWrap1 Input,select{
+    border-radius: 3px;
+border: 0.5px solid rgba(90, 84, 84, 0.58);
+    height: 43px;
+    
+}
+.submit_mobile{
+    color: #FFF;
+font-family: Poppins;
+font-size: 15px;
+font-style: normal;
+font-weight: 300;
+line-height: 20px; /* 133.333% */
+letter-spacing: 1px;
+    display: flex;
+width: 100%;
+height: 44px;
+padding: 10px 26px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+margin-bottom: 20px;
+margin-top: -10px;
+flex-shrink: 0;
+border-radius: 4px;
+border: 1px solid #09005D;
+background: #031B4E;
+box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.06);
+}
+.time_for_reporting{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}

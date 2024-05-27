@@ -309,4 +309,9 @@ textarea{
 }
 
 /* mobile view */
-@media screen and (max-width: 767px) {}
+@media screen and (max-width: 767px) {
+    .head_cont{
+        width: 100%;
+        margin-top: -3rem;
+    }
+}

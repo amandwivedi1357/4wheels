@@ -1,3 +1,15 @@
+/* NoCar Modal */
+
+.car-not-available{
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 25px;
+    color: #031B4E;
+    margin-top: -2.5rem;
+}
+/* NoCar Modal */
+
 .btm_Sec{
     width: 100%;
     height: 100vh;
@@ -23,9 +35,11 @@ box-shadow: 0px 2px 2px 0px rgba(151, 166, 183, 0.16);
     width: 100%;
 }
 .inner_right{
+    /* border: 1px solid red; */
     flex-grow: 1;
-    overflow-y: auto;
+    
 width: 75%;
+
 /* border: 2px solid red; */
 }
 .inner_right::before {
@@ -36,9 +50,9 @@ width: 75%;
 .right_cont{
     margin: auto;
     width: auto;
-    height: auto;
+    height: 100vh;
     padding: 10px;
-   
+    overflow-y: auto;
     /* border: 2px solid springgreen; */
 }
 .right_cont .single_cont{
@@ -55,11 +69,38 @@ background: #FFF;
 box-shadow: 0px 2px 2px 0px rgba(151, 166, 183, 0.16);
     
 }
+.right_cont .Single_Cont_mob{
+    width: 95%;
+    height: auto;
+    /* border: 2px solid blue; */
+    display: none;
+    justify-content: space-between;
+    margin: 0 1.5rem 1.5rem 1.5rem;
+    padding-bottom:2rem ;
+    padding-top: 2rem;
+    border-radius: 5px;
+border: 0.5px solid rgba(122, 131, 140, 0.21);
+background: #FFF;
+box-shadow: 0px 2px 2px 0px rgba(151, 166, 183, 0.16);
+}
 .right_cont .single_cont .img_sec{
-    /* border: 1px solid black; */
+    
     width: 20%;
     margin: auto;
-    height: 100%;
+    flex: 1;
+    
+}
+.right_cont .Single_Cont_mob .img_sec{
+    /* border: 1px solid red; */
+    display: flex;        /* Add Flexbox display */
+    justify-content: center; /* Center horizontally */
+    align-items: center;  
+}
+.right_cont .Single_Cont_mob .img_sec img{
+    height: 87px; 
+    /* border: 1px solid red; */
+    margin: auto;
+    width: 152px;
 }
 .right_cont .single_cont .specification_sec{
     /* border: 1px solid black; */
@@ -67,10 +108,47 @@ box-shadow: 0px 2px 2px 0px rgba(151, 166, 183, 0.16);
     margin: auto;
     height: 13rem;
 }
+.right_cont .Single_Cont_mob .img_sec{
+    /* border: 1px solid black; */
+    width: 50%;
+    margin: auto;
+    flex: 1;
+    height: 100%;
+}
+.right_cont .Single_Cont_mob .price_section{
+background: rgba(147, 149, 152, 0.06);
+
+flex: 1;
+/* border: 1px solid red; */
+}
 .car_name_Sec{
     width: 100%;
     /* border: 1px solid red; */
     
+}
+.price_section .pricee{
+text-align: center;
+color: #031B4E;
+font-size: 25px;
+font-weight: bold;
+}
+.price_section .hourly{
+    text-align: center;
+    color: #031B4E;
+font-size: 18px;
+font-weight: 500;
+}
+.price_section .carName{
+    color: #031B4E;
+    font-family: 'Poppins';
+    font-size: 15px;
+    margin: 0.5rem;
+    text-align: center;
+    margin-left: 1rem;
+    font-style: normal;
+    font-weight: 600; /* 162.5% */
+    letter-spacing: 0.25px;
+    text-transform: capitalize;
 }
 .specification_sec .carName{
     color: #031B4E;
@@ -248,22 +326,122 @@ margin: auto;
     margin: auto;
 }
  .desc_nocar{
+    margin-bottom: 3rem;
     color: rgba(3, 27, 78, 0.60);
 text-align: center;
 font-family: 'Poppins';
-font-size: 20px;
+font-size: 16px;
 font-style: normal;
 font-weight: 400;
 line-height: 29px; /* 145% */
 letter-spacing: 0.5px;
 }
 /* In your CSS file or component styles */
+
+/* Mobile Filter */
+
+.mobile_filter{
+    display: none;
+    
+    width: 100%;
+    height: 5rem;
+    /* border: 1px solid red; */
+    position: sticky;
+   
+    /* Ensure it stays on top if there's other content */
+     
+}
+.mobile_filter .filter_icon{
+    width: 30%;
+    height: 100%;
+    /* border: 1px solid red; */
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.filter_icon p{
+    
+    color: #000;
+font-family: Poppins;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: 20px; /* 111.111% */
+letter-spacing: 0.25px;
+    text-align: center;
+}
+.mobile_filter .fleet_filter_mobile{
+    width: 35%;
+    height: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   
+}
+.fleet_filter_mobile .filter_btns1{
+    margin-top: -0.1rem;
+    color: #031B4E;
+font-family: Poppins;
+font-size: 12px;
+font-style: normal;
+font-weight: 500;
+line-height: 20px; /* 166.667% */
+letter-spacing: 0.25px;
+    width: 89px;
+height: 32px;
+flex-shrink: 0;
+    border-radius: 4px;
+border: 0.5px solid rgba(128, 128, 128, 0.35);
+background: #FFF;
+}
+/* Mobile Filter */
+
+
+
+
+
 @media only screen and (max-width: 768px) {
+    .mobile_filter{
+        display: flex;
+    }
+    .btm_Sec{
+        height: auto;
+    }
+    .desc_self{
+        width: 100%;
+    }
+    .inner_left{
+        display: none;
+    }
     .specification_sec {
       display: none;
     }
-    .img_sec{
+    .right_cont .single_cont .img_sec{
         width: 50%;
+        margin: 0;
+    }
+    .right_cont{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .right_cont .single_cont{
+        margin: auto;
+        padding: 0;
+        display: none;
+       
+    }
+    .right_cont .Single_Cont_mob{
+        display: flex;
+        width: 100%;
+        padding: 0 0;
+        margin: 0;
+        /* border: 1px solid red; */
+    }    
+     .right_cont .Single_Cont_mob .price_section{
+        padding: 2rem 0;
     }
   }
   

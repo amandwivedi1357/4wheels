@@ -1,5 +1,5 @@
 import quote from "../assets/home/quote.svg";
-
+import "./Test.css"
 export default function Test3() {
     const second_car_data = [
         {
@@ -47,7 +47,7 @@ export default function Test3() {
     <div className="test1_main" >
    <div className="main_test_cont">
             <div className="left_test">
-              <img src="images/test1.png" alt="" className="test_img"/>
+              <img src="images/test3.png" alt="" className="test_img"/>
             </div>
             <div className="right_test">
               <div className="quote_cont">

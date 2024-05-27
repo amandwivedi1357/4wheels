@@ -1,3 +1,44 @@
-.car_comps{
+.car_compss {
     width: 100%;
-}
+    position: relative;
+  }
+  .custom-dots {
+    position: absolute;
+    bottom: -50px; /* Adjust the position as needed */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .custom-dot {
+    /* width: 8px; 
+    height: 8px;
+    
+    background-color: #ccc;
+    margin: 0 8px; 
+    border: 2px solid transparent; 
+    cursor: pointer;*/
+    transition: background-color 0.3s, border-color 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);  
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin: 0 8px; 
+  }
+  
+  .custom-dot.active {
+    
+     background-color: #20232b;
+    border-color: #0e0e0f; /* Active border color */
+    border-radius: 50%;
+   /* Slightly enlarge active dot */
+  }
+  
+  .custom-dot:hover {
+    background-color: #A680FF; /* Hover color */
+    border-color: #A680FF; /* Hover border color */
+  }

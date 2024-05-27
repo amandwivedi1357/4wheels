@@ -8,8 +8,19 @@ import Loader from "../designs/Loader";
 import { getAllSelfCars, getSelfCarById, getSelfFleetById } from "../../redux/actions/SelfDrive.action";
 import Footer from "../Footer";
 import NocarModal from "./NocarModal";
-
+import { Image, useDisclosure } from "@chakra-ui/react";
+import {
+  Drawer,
+  DrawerBody,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+  Button,
+} from "@chakra-ui/react";
 const FleetSelfDetail = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
   const [localCars, setLocalCars] = useState({ cars: [] });
   const { fleetType, id } = useParams();
 
@@ -35,8 +46,39 @@ const FleetSelfDetail = () => {
     setSelectedFleet({ fleetName, fleetId });
     navigate(`/selfdrive/${fleetName}/${fleetId}`);
     setSelectedFuelType("");
+    onClose();
   };
-  
+  const handleApplyFilter = async () => {
+    // const fleetId = selectedFleet?.fleetId || id;
+    // const fleetName = selectedFleet?.fleetName || fleetType;
+
+    // navigate({
+    //   pathname: `/selfdrive/${fleetName}/${fleetId}`,
+    //   search: selectedFuelType ? `?fuelType=${selectedFuelType}` : "",
+    // });
+
+    // try {
+    //   const res = await fetch(`https://fourwheelsbackend.onrender.com/api/v3/self/fleet/${fleetId}?fuelType=${selectedFuelType}`);
+    //   const data = await res.json();
+    //   setLocalCars({ cars: data });
+    //   if (data.filter((car) => car.properties.status === 'In Stock').length === 0) {
+    //     setIsNoCarModalOpen(true);
+    //   }
+    // } catch (error) {
+    //   console.error(error);
+    // }
+
+    onClose();
+  };
+
+  const handleCheckboxChangeDrawer = (fleetName, fleetId) => {
+    setSelectedFleet({ fleetName, fleetId });
+  };
+
+  const handleFuelTypeChangeDrawer = (fuelType) => {
+    setSelectedFuelType(fuelType);
+  };
+
   const handleBookNow = (fleetId, carId) => {
     dispatch(getSelfCarById(id, carId));
     navigate(`/selfdrive/${fleetType}/${id}/car/${carId}`);
@@ -50,7 +92,7 @@ const FleetSelfDetail = () => {
       search: `?fuelType=${fuelType}`,
     });
     try {
-      const res = await fetch(`https://stormy-fish-houndstooth.cyclic.app/api/v3/self/fleet/${fleetId}?fuelType=${fuelType}`);
+      const res = await fetch(`https://fourwheelsbackend.onrender.com/api/v3/self/fleet/${fleetId}?fuelType=${fuelType}`);
       const data = await res.json();
       console.log(data);
       setLocalCars({ cars: data });
@@ -60,6 +102,7 @@ const FleetSelfDetail = () => {
     } catch (error) {
       console.error(error);
     }
+    onClose();
   }
   const closeNoCarModal = () => {
     setIsNoCarModalOpen(false);
@@ -72,7 +115,7 @@ const FleetSelfDetail = () => {
       <CheuffeurTopSection topic={"Self Drive"} subTopic={fleetType} />
       {localCars?.cars && (
         <>
-          <p className="head_text">{fleetType}</p>
+          <p className="head_text t1">{fleetType}</p>
           <div className="desc_self">
           <p className="desc_text">Driving your dreams to reality with an exquisite fleet of versatile vehicles for unforgettable journeys.</p>
           </div>
@@ -120,13 +163,28 @@ const FleetSelfDetail = () => {
                 ))}
               </div>
             </div>
-            <div className="inner_right ">
+            <div className="inner_right">
+            <div className="mobile_filter">
+                <div className="filter_icon">
+              <p className="fil_text">Filter</p>
+                </div>
+                <div className="fleet_filter_mobile">
+                  <button className="filter_btns1" onClick={onOpen}>{fleetType}</button>
+                  {/* Add content or functionality here */}
+                </div>
+                <div className="fleet_filter_mobile">
+                  <button className="filter_btns1" onClick={onOpen}>{selectedFuelType ? selectedFuelType :'Type of Fuels'}</button>
+                  {/* Add content or functionality here */}
+                </div>
+              </div>
               <div className="right_cont">
+                <img src="images/filter_bg.svg" alt="" />
                 {localCars.cars
                 .filter((car) => car.properties.status === 'In Stock')
                 .map((data) => (
-                 
+                 <>
                   <div key={data._id} className="single_cont">
+                  {console.log(cars)}
                     <div className="img_sec">
                       <img src={data.properties.img}  />
                     </div>
@@ -170,28 +228,88 @@ const FleetSelfDetail = () => {
                        Rent now
                       </button>
                     </div>
+                    
                   </div>
+                  <div className="Single_Cont_mob"  onClick={() => handleBookNow(id, data._id)}>
+                  <div className="img_sec">
+                      <img src={data.properties.img}  />
+                    </div>
+                    <div className="price_section">
+                      <p className="carName">{data.carName}</p>
+                      <p className="hourly">Hourly Pack</p>
+                      <p className="pricee">{data.properties.hourlyPack} Rs</p>
+                    </div>
+                  </div>
+                  
+                  </>
                 ))}
+                
                 {/* Conditionally render a message if no cars are available */}
                 {isNoCarModalOpen && (
             <NocarModal onClose={closeNoCarModal} fuelType={selectedFuelType} fleet={fleetType}/>
           )}
               </div>
+              
             </div>
+            
           </div>
         </>
       )}
       |<Footer/>
+      <Drawer isOpen={isOpen} placement="bottom" onClose={onClose}>
+      <DrawerOverlay />
+      <DrawerContent>
+        <DrawerCloseButton />
+        <DrawerHeader>Filter Options</DrawerHeader>
+
+        <DrawerBody>
+          <div className="fleet_filter">
+            <p className="fleet_text">Type of Cars</p>
+            {fleets.map((data) => (
+              <div className="inner_fleetFilter" key={data._id}>
+                <div className="inp_check">
+                  <input
+                    type="radio"
+                    className="checkbox"
+                    value={data.fleetType}
+                    onChange={() => handleCheckboxChange(data.fleetType, data._id)}
+                    checked={selectedFleet && selectedFleet.fleetId === data._id}
+                  />
+                </div>
+                <div className="check_text">
+                  <p className="filter_text">{data.fleetType}</p>
+                </div>
+              </div>
+            ))}
+            <p className="fleet_text">Fuel Type</p>
+            {["EV", "PETROL", "DIESEL"].map((fuelType) => (
+              <div className="inner_fleetFilter" key={fuelType}>
+                <div className="inp_check">
+                  <input
+                    type="radio"
+                    className="checkbox"
+                    value={fuelType.toUpperCase()}
+                    onChange={() => handleFuelTypeChange(fuelType)}
+                    checked={selectedFuelType === fuelType}
+                  />
+                </div>
+                <div className="check_text">
+                  <p className="filter_text">{fuelType}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </DrawerBody>
+
+        <DrawerFooter>
+         
+        </DrawerFooter>
+      </DrawerContent>
+    </Drawer>
     </div>
   );
 };
 
 export default FleetSelfDetail;
 
-{
-  /* <div className="menu_cont" key={data.id}>
-<img src={data.properties.img} alt={data.type} />
-<p className="type_text">{data.carName}</p>
-<p  className="explore" style={{textDecoration:'underline'}}>Explore</p>
-</div> */
-}
+

@@ -11,8 +11,20 @@ import {
 } from "../../redux/actions/CheuffeurDrive.action";
 import Loader from "../designs/Loader";
 import Footer from "../Footer";
+import { Image, useDisclosure } from "@chakra-ui/react";
+import {
+  Drawer,
+  DrawerBody,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+  Button,
+} from "@chakra-ui/react";
 
 const FleetDetail = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
   const [localCars, setLocalCars] = useState({ cars: [] });
   const { fleetType, id } = useParams();
 
@@ -35,6 +47,7 @@ const FleetDetail = () => {
   const handleCheckboxChange = (fleetName, fleetId) => {
     setSelectedFleet({ fleetName, fleetId });
     navigate(`/cheuffeurdrive/${fleetName}/${fleetId}`);
+    onClose()
   };
 
   const handleBookNow = (fleetId, carId) => {
@@ -82,14 +95,28 @@ const FleetDetail = () => {
               </div>
             </div>
             <div className="inner_right ">
+            <div className="mobile_filter">
+            <div className="filter_icon">
+              <p className="fil_text">Filter</p>
+                </div>
+                <div className="fleet_filter_mobile">
+                  <button className="filter_btns1" onClick={onOpen}>{fleetType}</button>
+                  
+                </div>
+                {/* <div className="fleet_filter_mobile">
+                  <button className="filter_btns1" onClick={onOpen}>Type Of Fuels</button>
+                  
+                </div> */}
+              </div>
               <div className="right_cont">
                 {localCars.cars
                 
                 .filter((car) => car.properties.status === 'In Stock')
                 .map((data) => (
+                 <>
                  
                   <div key={data._id} className="single_cont">
-                     {console.log(cars)}
+                     {/* {console.log(data)} */} 
                     <div className="img_sec">
                       <img src={data.properties.img}  />
                     </div>
@@ -134,7 +161,20 @@ const FleetDetail = () => {
                         Rent now
                       </button>
                     </div>
+
+                    
                   </div>
+                  <div className="Single_Cont_mob"  onClick={() => handleBookNow(id, data._id)}>
+                  <div className="img_sec">
+                      <img src={data.properties.img}  />
+                    </div>
+                    <div className="price_section">
+                      <p className="carName">{data.carName}</p>
+                      <p className="hourly">4 hrs/40kms</p>
+                      <p className="pricee">{data.properties.hours4_40kms} Rs</p>
+                    </div>
+                  </div>
+                  </>
                 ))}
               </div>
             </div>
@@ -142,6 +182,40 @@ const FleetDetail = () => {
         </>
       )}
       <Footer/>
+      <Drawer isOpen={isOpen} placement="bottom" onClose={onClose}>
+      <DrawerOverlay />
+      <DrawerContent>
+        <DrawerCloseButton />
+        <DrawerHeader>Filter Options</DrawerHeader>
+
+        <DrawerBody>
+          <div className="fleet_filter">
+            <p className="fleet_text">Type of Cars</p>
+            {fleets.map((data) => (
+              <div className="inner_fleetFilter" key={data._id}>
+                <div className="inp_check">
+                  <input
+                    type="radio"
+                    className="checkbox"
+                    value={data.fleetType}
+                    onChange={() => handleCheckboxChange(data.fleetType, data._id)}
+                    checked={selectedFleet && selectedFleet.fleetId === data._id}
+                  />
+                </div>
+                <div className="check_text">
+                  <p className="filter_text">{data.fleetType}</p>
+                </div>
+              </div>
+            ))}
+            
+          </div>
+        </DrawerBody>
+
+        <DrawerFooter>
+         
+        </DrawerFooter>
+      </DrawerContent>
+    </Drawer>
     </div>
   );
 };

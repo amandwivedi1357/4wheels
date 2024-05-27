@@ -10,13 +10,13 @@ const Footer = () => {
   };
   return (
     <div className="footercont">
-      <p className="head_text">Let’s Get Started</p>
+      {/* <p className="head_text">Let’s Get Started</p> */}
       <div className="footer_flex">
         <div className="flex_cont curs">
           <ul className="unordered_list" style={{ listStyle: "none" }}>
             <li className="list_head">Contact Now : </li>
             <li className="ml">
-              <p className="list_head">Address : </p>Corporate office / regs
+              <p className="list_head">Address : </p>Corporate office / regst
               office — 4 wheel travels 91/A-2 , sagar cooperative society , road
               no.2 , banjara hills , hyderabad — 500034
             </li>
@@ -25,8 +25,8 @@ const Footer = () => {
               Bookings@4wheeltravels.com
             </li>
             <li className="ml">
-              <p className="list_head">Contacts</p> +914044774477 <br />
-              +919885354321{" "}
+              <p className="list_head">Contacts</p>  040-44774477 <br />
+              +91 9885354321{" "}
             </li>
           </ul>
         </div>

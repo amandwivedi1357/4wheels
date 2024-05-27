@@ -1,5 +1,5 @@
 import quote from "../assets/home/quote.svg";
-
+import "./Test.css"
 export default function Test1() {
     const second_car_data = [
         {

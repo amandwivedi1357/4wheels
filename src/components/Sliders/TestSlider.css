@@ -4,76 +4,44 @@
     margin-top: 2rem;
     /* border: 1px solid red; */
   }
-  
-  .car_comps .main_test_cont{
-    display: flex;
-    
-    width: 90%;
-    background: rgba(198, 215, 255, 0.28);
-    margin: auto;
-    /* border: 1px solid red; */
-    border-radius: 10px;
-    padding: 20px;
-  }
-  
-  .main_test_cont .left_test{
-    flex: 1;
-    width: 50%;
-    /* border: 1px solid red; */
-    
-  }
-  
-  .main_test_cont .left_test .test_img {
-    width: 100%;
-   margin-left: -5rem;
-    border-radius: 10px;
-  }
-  
-  .main_test_cont .right_test {
-    flex: 1;
-    /* border: 1px solid red; */
-    
-    padding-left: 20px;
-  }
-  
-  .right_test .quote_cont {
-    margin-top: 52px;
-  }
-  
-  .right_test .quote_cont .cust_text {
-    font-size: 15px;
-    font-family: 'Poppins', sans-serif;
-    margin-top: 35px;
-    color: #0C0125;
-  }
-  
-  .right_test .quote_cont .cust_name {
-    color: rgba(3, 3, 3, 0.90);
-    font-family: 'Cormorant', serif;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 34.5px;
-    text-align: left;
-    margin: 1rem 1rem;
-    margin-left: 0;
-    letter-spacing: 0.25px;
-  }
-  
 
-  /* testing */
-
-  .test1_main {
-    display: flex;
+  .custom-dots {
+    position: absolute;
+    bottom: -50px; /* Adjust the position as needed */
     width: 100%;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
   
-  .test1_main .lefty {
-    flex: 1;
-    border: 1px solid blue;
+  .custom-dot {
+    /* width: 8px; 
+    height: 8px;
+    
+    background-color: #ccc;
+    margin: 0 8px; 
+    border: 2px solid transparent; 
+    cursor: pointer;*/
+    transition: background-color 0.3s, border-color 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);  
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin: 0 8px; 
   }
   
-  .test1_main .righty {
-    flex: 1;
-    border: 1px solid blue;
+  .custom-dot.active {
+    
+     background-color: #20232b;
+    border-color: #0e0e0f; /* Active border color */
+    border-radius: 50%;
+   /* Slightly enlarge active dot */
+  }
+  
+  .custom-dot:hover {
+    background-color: #A680FF; /* Hover color */
+    border-color: #A680FF; /* Hover border color */
   }

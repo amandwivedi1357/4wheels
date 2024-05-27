@@ -86,13 +86,11 @@ export default function TopSection() {
         </div>
       </div>
       <div className="heading_text">
-        <p>Experience the joy of riding on premium wheels</p>
+        <p>Experience the joy of Travelling on premium wheels</p>
       </div>
       <div className="detailed_desc">
         <p>
-          Embark on unforgettable adventures and discover the world in
-          unparalleled comfort and style with our fleet of exceptionally
-          comfortable cars.
+        Embark on unforgettable adventures and discover the world in unparalleled luxury and style with our fleet of exceptionally comfortable cars.
         </p>
       </div>
       <MySlider />

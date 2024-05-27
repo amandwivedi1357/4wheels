@@ -6,17 +6,18 @@ import "../css/CheuffeurDrive/fleetDetail.css";
 const NocarModal = ({ onClose,fuelType,fleet }) => {
     console.log(fleet)
   return (
-    <Modal isOpen={true} onClose={onClose}>
+    <Modal isOpen={true} onClose={onClose} >
       <ModalOverlay />
       <ModalContent>
-        <ModalHeader>Car Not Available</ModalHeader>
-        <ModalCloseButton />
-        <ModalBody>
-          <Image src={nocar1} alt="" m={'auto'}/>
+        {/* <ModalHeader>Car Not Available</ModalHeader> */}
+        <ModalCloseButton _hover={{color:'#000'}} mt={'-0.2rem'}/>
+        <ModalBody >
+          <Image src={nocar1} alt="" m={'auto'} mb={'3rem'} mt={'3rem'}/>
+          <p className='car-not-available'>Car not available</p>
           <p className="desc_nocar"> sorry we do not have {fuelType} cars in the {fleet}</p>
-          <Button colorScheme="blue" onClick={onClose}>
+          {/* <Button colorScheme="blue" onClick={onClose}>
             Close
-          </Button>
+          </Button> */}
         </ModalBody>
       </ModalContent>
     </Modal>

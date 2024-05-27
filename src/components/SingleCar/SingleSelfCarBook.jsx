@@ -3,14 +3,15 @@ import { useDispatch, useSelector } from "react-redux";
 import TopSectionServe from "../Services/TopSectionServe";
 import "./SingleCarBook.css";
 import { useParams } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import BookingForm from "./BookingForm";
 import { getSelfCarById } from "../../redux/actions/SelfDrive.action";
 import Loader from "../designs/Loader";
+import FormBooking from "../Mobile-Single-page/FormBooking";
 export default function SingleSelfCarBook({ topic }) {
   const { fleetType, id, carId } = useParams();
-
+  const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 768);
   const dispatch = useDispatch();
   // console.log(id);
 
@@ -21,8 +22,20 @@ export default function SingleSelfCarBook({ topic }) {
   }, [dispatch,id,carId]);
   // console.log(cars);
 
-  
-  
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobileView(window.innerWidth <= 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  if (isMobileView) {
+    return <FormBooking car={cars} fleetType={fleetType} service={'self drive'} />;
+  }
 
   if (loading) {
     return <div><Loader/></div>;
@@ -122,29 +135,3 @@ export default function SingleSelfCarBook({ topic }) {
 
 
 
-
-// export default function SingleCarBook() {
-//   const { fleetType, id, carId } = useParams();
-//   const [cars, setcars] = useState([]);
-//   const dispatch = useDispatch();
-//   console.log(id);
-
-//   const { cars,loading,error } = useSelector((state) => state.data);
-
-//   useEffect(() => {
-//      dispatch(getCarById(id, carId));
-//   }, [dispatch,id, carId]);
-//   console.log(cars)
-//   return (
-//     <div>
-//       {cars && cars.properties && (
-//   <>
-//     <p>Car Name: {cars.carName}</p>
-//     <img src={cars.properties.img} alt="Car" />
-//     <p>Hours 4 (40kms): {cars.properties.hours4_40kms}</p>
-//     {/* Other property displays */}
-//   </>
-// )}
-//     </div>
-//   )
-// }

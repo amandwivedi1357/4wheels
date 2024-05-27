@@ -13,6 +13,10 @@ import SingleSelfCarBook from "../components/SingleCar/SingleSelfCarBook"
 import AdminPage from "../components/admin/AdminPage"
 import Faq from "../pages/Faq"
  import Login from "../components/Login/Login"
+import { isMobile } from "react-device-detect"
+import Single_Self from "../components/Mobile-Single-page/Single_Self"
+import FormBooking from "../components/Mobile-Single-page/FormBooking"
+import Single_Cheauffeur from "../components/Mobile-Single-page/Single_Cheauffeur"
 
 
 const NotFound = () => {
@@ -37,15 +41,19 @@ const AllRoutes = () => {
         
         <Route path='/selfdrive' element={<SelfDrive />} />
         <Route path='/admin' element={<AdminPage />} /> 
-        <Route path='/cheuffeurdrive/:fleetType/:id/car/:carId' element={<SingleCarBook topic = {'cheuffeur'}/>} />
+        <Route path='/cheuffeurdrive/:fleetType/:id/car/:carId' element={isMobile ? <Single_Cheauffeur/> : <SingleCarBook topic = {'cheuffeur'}/>} />
         <Route path='/cheuffeurdrive/:fleetType/:id' element={<FleetDetail />} />
-        <Route path='/selfdrive/:fleetType/:id/car/:carId' element={<SingleSelfCarBook topic = {'self'}/>} />
+        <Route
+        path='/selfdrive/:fleetType/:id/car/:carId'
+        element={isMobile ? <Single_Self topic={'self'} /> : <SingleSelfCarBook topic={'self'} />}
+      />
         <Route path='/selfdrive/:fleetType/:id' element={<FleetSelfDetail />} />
         <Route path='/services' element={<Services />} />
         <Route path='/about-us' element={<AboutUs />} />
         <Route path='/gallery' element={<Gallery />} />
         <Route path='/faq' element={<Faq />} />
          <Route path='/login' element={<Login />} /> 
+         <Route path='/form-booking' element={isMobile ? <FormBooking /> : <NotFound />} /> 
 
         <Route path="*" element={<NotFound />} />
         

@@ -205,7 +205,7 @@ margin-left: 2rem;
 }
 .Special_Services .special_serv_list{
 display: grid;
-
+/* border: 1px solid red; */
 grid-template-columns: repeat(2,1fr);
 gap: 10px;
 margin-left: 2rem;
@@ -649,11 +649,19 @@ letter-spacing: 0.25px;
 
 
     .offer_text_container .offer_text{
+       /* border: 1px solid red; */
+       width: 120%;
         font-size: 25px;
         line-height: 40px;
+        margin-left: 15px;
     }
     .customer_offer .animate_numbers{
-        margin-top: 2rem;
+      
+        margin: 2rem auto;
+        margin-left: 15px;
+        justify-content: space-between;
+        margin-bottom: 0;
+        
     }
     .animate_numbers .data_map{
         width: 100%;
@@ -677,6 +685,21 @@ letter-spacing: 0.25px;
     }
     .Special_Services{
         margin-top: -7rem;
+        /* border: 1px solid red; */
+        display: block;
+    }
+    .Special_Services .right{
+        display: none;
+    }
+    .left .special_heading{
+        width: 100%;
+    }
+    .special_heading .head_text{
+        padding: 0;
+    }
+    .Special_Services .special_serv_list{
+        width: 100%;
+        margin-left: 0;
     }
    .Special_Services .cars_det{
         display: none;
@@ -719,13 +742,18 @@ letter-spacing: 0.25px;
     .btm_container_2 .second_car_data .cars_det_mobile:hover{
         transform: none;
     }
+    .btm_container_1{
+        margin-top: -50px;
+    }
         .btm_container_1 .second_car_data{
             display: none;
         }
         .btm_container_1 .second_car_mobile{
             display: block;
         }
-
+        .gallery_cards_main{
+            display: none;
+        }
     /* banner container starts */
     .banner_cont{
         display: flex;

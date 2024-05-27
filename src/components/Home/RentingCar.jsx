@@ -141,7 +141,7 @@ const animate_data = [
   {
     id: 3,
     text: "Kilometers of Service",
-    numbers: "1.2M",
+    numbers: "12.2M",
   },
   {
     id: 4,
@@ -270,9 +270,9 @@ const RentingCar = () => {
         </div>
       
        
-        <div className="cars_det_mob">
+        {/* <div className="cars_det_mob">
           <MySlider3 data={car_data}/>
-        </div>
+        </div> */}
       </div>
        <div className="btm_container_1">
         <p className="head_text">Gallery</p>
