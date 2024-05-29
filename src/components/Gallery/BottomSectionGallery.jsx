@@ -23,10 +23,8 @@ const BottomSectionGallery = () => {
 console.log(fleets)
   return (
     <div className="Btm_cont1">
-      <p className="head_text">Gallery</p>
-      <p className="desc_text">
-      Driving your dreams to reality with an exquisite fleet of versatile vehicles for unforgettable journeys.
-      </p>
+      {/* <p className="head_text">Gallery</p> */}
+      
       <div className="Btm_cont">
 
       {fleets.map((data)=>(

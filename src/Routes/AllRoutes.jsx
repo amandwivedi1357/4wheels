@@ -17,6 +17,7 @@ import { isMobile } from "react-device-detect"
 import Single_Self from "../components/Mobile-Single-page/Single_Self"
 import FormBooking from "../components/Mobile-Single-page/FormBooking"
 import Single_Cheauffeur from "../components/Mobile-Single-page/Single_Cheauffeur"
+import Contactus from "../pages/Contactus"
 
 
 const NotFound = () => {
@@ -52,6 +53,7 @@ const AllRoutes = () => {
         <Route path='/about-us' element={<AboutUs />} />
         <Route path='/gallery' element={<Gallery />} />
         <Route path='/faq' element={<Faq />} />
+        <Route path='/contact-us' element={<Contactus />} />
          <Route path='/login' element={<Login />} /> 
          <Route path='/form-booking' element={isMobile ? <FormBooking /> : <NotFound />} /> 
 

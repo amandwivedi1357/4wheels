@@ -28,10 +28,10 @@ export default function Steps() {
             </div>
             <div className="inner_2">
                 <p className="head_2">
-                    Drive
+                    Confirmed
                 </p>
                 <p className="desc_2">
-                    Drive your best ride
+                    Your journey begins with us!
                 </p>
             </div>
         </div>

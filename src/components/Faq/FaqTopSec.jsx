@@ -33,23 +33,25 @@ export default function FaqTopSec() {
           <div className="nav_options">
             <div className="nav_menus">
             <ul>
-              <li onClick={() => handleNavigate("selfdrive")}>Self Drive</li>
-                <li onClick={() => handleNavigate("cheuffeurdrive")}>Chauffeur Drive</li>
-               
                 <li onClick={() => handleNavigate("about-us")}>About Us</li>
+                <li onClick={() => handleNavigate("cheuffeurdrive")}>Chauffeur Drive</li>
+              <li onClick={() => handleNavigate("selfdrive")}>Self Drive</li>
+               
                 <li onClick={() => handleNavigate("gallery")}>Gallery</li>
                 <li onClick={() => handleNavigate("faq")}>Faq</li>
+                <li onClick={() => handleNavigate("contact-us")}>Contact us</li>
               </ul>
             </div>
           </div>
         )}
       <div className="contact">
-      <FaWhatsapp size={'2rem'} cursor={'pointer'} onClick={()=>handleNav('https://api.whatsapp.com/send?phone=919885354321')}/>
+      <FaWhatsapp size={'2rem'} color="#25d366" cursor={'pointer'} onClick={()=>handleNav('https://api.whatsapp.com/send?phone=919885354321')}/>
 
       </div>
         </div>
        
-              <p className="ser_text">Find everything here</p>
+              <p className="ser_text">Do you have questions?</p>
+              <p className="sub_text">Find everything here</p>
               {/* <p className="bred"><Breadcrumbs/></p> */}
         
 

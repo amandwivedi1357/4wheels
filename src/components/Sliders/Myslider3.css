@@ -30,4 +30,88 @@
     background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
     
   }
+  .gal_dots{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  .gal_dots div{
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid black;
+    transition: background 0.3s, border-color 0.3s;
+  }
   
+.gal_dots .active {
+    background: #000; /* Background color for the active dot */
+    border-color: #000; /* Border color for the active dot */
+}
+  @media screen and (max-width: 767px) 
+  {
+    .gal_single_cards{
+        height: 400px;
+        width: 95%;
+        margin: auto;
+        border: 1px solid rgba(64, 123, 255, 0.3);
+        background-color: rgba(64, 123, 255, 0.3);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .gal_single_cards2{
+        height: 400px;
+        width: 95%;
+        margin: auto;
+        border: 1px solid rgba(166, 128, 255, 0.3);
+        background-color: rgba(166, 128, 255, 0.3);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .gal_single_cards3{
+        width: 95%;
+        height: 400px;
+        margin: auto;
+        border: 1px solid rgba(64, 123, 255, 0.3);
+        background-color: rgba(64, 123, 255, 0.3);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .gal_single_cards4{
+        width: 95%;
+        height: 400px;
+        margin: auto;
+        border: 1px solid rgba(166, 128, 255, 0.3);
+        background-color: rgba(166, 128, 255, 0.3);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        
+    }
+    .gal_text{
+        text-align: center;
+    }
+    .gal_car_image_royale{
+        margin: auto;
+        z-index: 100;
+        
+        padding-top: 3rem;
+    }
+    .gal_car_image1{
+        margin: auto;
+        margin-top: 12rem;
+        
+    }
+    .gal_car_image{
+        margin: auto;
+        margin-bottom: 3rem;
+        
+    }
+    .gal_text1{
+        margin-top: 5rem;
+    }
+    .gal_dots{
+        margin-top: 3rem;
+    }
+  }

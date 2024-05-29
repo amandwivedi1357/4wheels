@@ -1,9 +1,39 @@
 
+import {
+  FaFacebookF,
+  
+  FaInstagram,
+  FaLinkedinIn,
+  FaWhatsapp,
+  FaYoutube,
+ 
+} from "react-icons/fa";
 import "./css/faq/NewFooter.css";
 
 import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const socials = [
+    {
+      img:(<FaFacebookF color="#fff"/>),
+      link:''
+    },
+    {
+      img:(<FaInstagram color="#fff"/>),
+      link:''
+    },
+    
+    {
+      img:(<FaYoutube color="#fff"/>),
+      link:''
+    },
+    
+    {
+      img:(<FaLinkedinIn color="#fff"/>),
+      link:''
+    },
+    
+  ]
   const navigate = useNavigate();
   const handleClick = (route) => {
     navigate(`/${route}`);
@@ -12,13 +42,13 @@ const Footer = () => {
     <div className="footercont">
       {/* <p className="head_text">Let’s Get Started</p> */}
       <div className="footer_flex">
-        <div className="flex_cont curs">
+        {/* <div className="flex_cont curs">
           <ul className="unordered_list" style={{ listStyle: "none" }}>
             <li className="list_head">Contact Now : </li>
             <li className="ml">
-              <p className="list_head">Address : </p>Corporate office / regst
+              <p className="list_head">Address : </p>Corporate office / registered
               office — 4 wheel travels 91/A-2 , sagar cooperative society , road
-              no.2 , banjara hills , hyderabad — 500034
+              no.2 , <br /> banjara hills , hyderabad — 500034
             </li>
             <li className="ml">
               <p className="list_head">Emails</p> Sales@4wheeltravels.com <br />
@@ -29,17 +59,41 @@ const Footer = () => {
               +91 9885354321{" "}
             </li>
           </ul>
-        </div>
+        </div> */}
         <div className="flex_cont">
           <ul className="unordered_list center" style={{ listStyle: "none" }}>
             <li className="list_head quick">Quick Links</li>
-            <li onClick={() => handleClick("selfdrive")}>Self Drive</li>
+            <img className='underline' src="images/underline.svg" alt="" />
+            <li onClick={() => handleClick("/")}>Home</li>
+            <li onClick={() => handleClick("about-us")}>About Us</li>
             <li onClick={() => handleClick("cheuffeurdrive")}>
               Chauffeur Drive
             </li>
-            <li onClick={() => handleClick("about-us")}>About Us</li>
+            <li onClick={() => handleClick("selfdrive")}>Self Drive</li>
             <li onClick={() => handleClick("gallery")}>Gallery</li>
+           
+          </ul>
+        </div>
+        <div className="flex_cont">
+          <ul className="unordered_list center" style={{ listStyle: "none" }}>
+            <li className="list_head ">Support Center</li>
+            <img className='underline1' src="images/underline.svg" alt="" />
             <li onClick={() => handleClick("faq")}>FAQ</li>
+            <li onClick={() => handleClick("contact-us")}>Contact us</li>
+            
+          </ul>
+        </div>
+        <div className="flex_cont">
+        <ul className="unordered_list center" style={{ listStyle: "none" }}>
+            <li className="list_head ">Join our social media community</li>
+            <div className="social_supports">
+              {socials.map((item,idx)=>(
+                <div className="socials_cont" key={idx} onClick={()=>window.open(item.link,'_blank')}>
+                 {item.img}
+                </div>
+              ))}
+            </div>
+            
           </ul>
         </div>
         {/* <div className="flex_cont">

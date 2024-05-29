@@ -3,12 +3,12 @@
     width: 60%;
     /* border: 1px solid red; */
     color: #FFF;
-    margin: 10rem auto 2rem auto;
+    margin: 5rem auto 2rem auto;
 text-align: center;
 font-family: 'Cormorant';
 font-size: 70px;
 font-style: normal;
-font-weight: 600;
+font-weight: 500;
 line-height: 85px; /* 121.429% */
 letter-spacing: 0.25px;
 }
@@ -17,8 +17,9 @@ letter-spacing: 0.25px;
     color: rgba(255, 255, 255, 0.80);
     text-align: center;
     font-family: 'Poppins';
-    font-size: 25px;
- 
+    font-size: 16px;
+    margin: auto;
+    width: 40%;
     font-style: normal;
     font-weight: 400;
     line-height: 32.5px; /* 203.125% */
@@ -57,5 +58,8 @@ letter-spacing: 0.5px;
 }
 
 @media screen and (max-width: 767px) {
-    
+    .ser_text{
+        margin: auto;
+        margin-top: 5rem;
+    }
 }

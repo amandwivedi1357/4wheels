@@ -102,7 +102,7 @@ const OTPEntryModal = ({ isOpen, onSubmit, contactNo, email, name, formData, car
     
      console.log(formData)
      // Sending email using emailjs library 
-    //  service_x3ug8r7     template_qzsnwk2
+    //    service_eu7vpfz    template_mibvgw4
     emailjs.send('service_x3ug8r7', 'template_qzsnwk2', {
     name: formData.name,
     carName: car.carName,
@@ -123,7 +123,8 @@ const OTPEntryModal = ({ isOpen, onSubmit, contactNo, email, name, formData, car
     
       
      }, "aTTCyQOLfRMG-VaKb")
-    //  aTTCyQOLfRMG-VaKb
+    //  
+    // H1sHfJr8qqsZab0R0
        .then((result) => {
        
         console.log('sent')

@@ -1,50 +1,179 @@
-/* eslint-disable react/prop-types */
 
 
 import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+// import "./css/home/MySlider2.css"
 import "./Myslider3.css"
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
 
-const MySlider3 = ({data}) => {
-  const CustomPrevArrow = (props) => (
-    <button {...props} className=" ">
-      {""}
+import { useState,useRef  } from "react";
+import { FaArrowRightLong } from "react-icons/fa6";
+const PrevArrow = (props) => {
+  const { className, style, onClick } = props;
+  return (
+    <button
+      className={className}
+      style={{ ...style, display: "block", background: "grey" }}
+      onClick={onClick}
+    >
+      Previous
     </button>
   );
+};
 
-  const CustomNextArrow = (props) => (
-    <button {...props} className=" ">
-      {""}
+const NextArrow = (props) => {
+  const { className, style, onClick } = props;
+  return (
+    <button
+      className={className}
+      style={{ ...style, display: "block", background: "grey" }}
+      onClick={onClick}
+    >
+      Next
     </button>
   );
+};
+const TestSlider = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeSlide, setActiveSlide] = useState(0);
+  const sliderRef = useRef(null);
+  
   const settings = {
     dots: false,
     infinite: true,
     autoplay: true,
-    speed: 300,
+    speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    prevArrow: <CustomPrevArrow />,
-    nextArrow: <CustomNextArrow />,
+    beforeChange: (current, next) => setActiveIndex(next),
   };
 
+  const slides = [
+    { id:1,component: <Test1 /> },
+    { id:2,component: <Test2 /> },  
+    { id:2,component: <Test3 /> },  
+    { id:2,component: <Test4 /> },  
+  ];
+  const handleDotClick = (index) => {
+    setActiveIndex(index);
+    if (sliderRef.current) {
+      sliderRef.current.slickGoTo(index);
+    }
+  };
   return (
-      <div className="cars">
-    <Slider {...settings}>
-
-      
-      {data.map((data)=>(
-        <div key={data.id} className="slider_images">
-        <img src={data.img} alt="" />
-        <div className="image_text">{data.title}</div>
-        </div>
+    <div className="car_comps">
+    <Slider {...settings} ref={sliderRef}>
+      {slides.map((component) => (
+        <div className="" key={component.id}>{component.component}</div>
       ))}
-     
-      
     </Slider>
-      </div>
+    <div className="gal_dots">
+            {Array.from({ length: 4 }).map((_, idx) => (
+                <div
+                    key={idx}
+                    className={idx === activeIndex ? 'active' : ''}
+                    onClick={() => handleDotClick(idx)}
+
+                     // Example onClick to change active dot
+                ></div>
+            ))}
+        </div>
+  </div>
   );
 };
 
-export default MySlider3
+export default TestSlider
+
+
+const Test1 = ()=>{
+  return (
+   <>
+                <div  className="gal_single_cards">
+                  <div className="text_container">
+                  <p className="gal_text">Royale 
+                  
+                 <p style={{marginLeft:'1.5rem'}}>
+                 <FaArrowRightLong size={30}/>
+                  </p> 
+                 
+</p>
+                  </div>
+                  <img src='images/royale.png' alt="" className="gal_car_image_royale" style={{marginTop:'3rem'}}/>
+                </div>
+                
+                </>
+               
+  )
+}
+const Test2 = ()=>{
+  return (
+<>
+                <div  className="gal_single_cards2">
+                  <div className="text_container">
+                  <p className="gal_text">President
+                  <p style={{marginLeft:'10.5rem'}}>
+                 <FaArrowRightLong size={30}/>
+                  </p>
+                  </p>
+                   
+                  </div>
+                  <img src='images/pres.png' alt="" className="gal_car_image" style={{marginTop:'8rem'}}/>
+                </div>
+                
+                </>
+  )
+  
+  
+}
+const Test3 = ()=>{
+  return (
+<>
+                <div  className="gal_single_cards3">
+                  <div className="text_container">
+                  <p className="gal_text">Hatchbacks
+                  <p style={{marginLeft:'11rem'}}>
+                 <FaArrowRightLong size={30}/>
+                  </p> 
+                  </p>
+                  
+                  </div>
+                  <img src='images/hatch.png' alt="" className="gal_car_image" style={{marginTop:'8rem'}}/>
+                </div>
+                
+                </>
+  )
+  
+}
+const Test4 = ()=>{
+  return (
+    <>
+                <div  className="gal_single_cards4">
+                  <div className="text_container">
+                  <p className="gal_text">Luxury SUV
+                  <p style={{marginLeft:'11rem'}}>
+                 <FaArrowRightLong size={30}/>
+                  </p> 
+                  </p>
+                  
+                  </div>
+                  <img src='images/lux.png' alt="" className="gal_car_image" style={{marginTop:'7rem'}}/>
+                </div>
+                
+                </>
+    // <>
+    // <div  className="gal_single_cards4">
+    //   <div className="text_container">
+    //   <p className="gal_text " style={{marginTop:'4rem'}}>Luxury SUV
+    //   <p style={{marginLeft:'11rem'}}>
+    //  <FaArrowRightLong size={30}/>
+    //   </p> 
+    //   </p>
+    //   </div>
+    //   <img src='images/lux.png' alt="" className="gal_car_image1"/>
+    // </div>
+    
+    // </>
+  )
+  
+}

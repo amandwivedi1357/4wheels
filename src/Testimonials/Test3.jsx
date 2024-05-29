@@ -47,7 +47,7 @@ export default function Test3() {
     <div className="test1_main" >
    <div className="main_test_cont">
             <div className="left_test">
-              <img src="images/test3.png" alt="" className="test_img"/>
+              <img src="images/test2.png" alt="" className="test_img2"/>
             </div>
             <div className="right_test">
               <div className="quote_cont">

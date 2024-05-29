@@ -59,7 +59,7 @@ const FleetDetail = () => {
   }
   return (
     <div>
-       <CheuffeurTopSection topic={"cheuffeur drive"} subTopic={fleetType} />
+       <CheuffeurTopSection topic={"Cheuffeur Drive"} subTopic={fleetType} />
       {localCars?.cars && (
         <>
          

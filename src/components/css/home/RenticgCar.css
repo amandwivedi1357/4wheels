@@ -218,7 +218,7 @@ padding-top: 69px;
    gap: 20px;
 }
 .service_list .serv_names{
-    font-weight: bold;
+   
     color: #031B4E;
     text-align: left;
     
@@ -228,8 +228,8 @@ padding-top: 69px;
     text-align: left;
 }
 .conc{
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     
 }
 
@@ -278,14 +278,20 @@ margin-top: -0.2rem;
     /* border: 1px solid red; */
     display: grid;
     grid-template-columns: repeat(4,1fr);
-   
+   gap: 28px;
 }
 .inner_cards .gal_single_cards{
     width: 292px;
     background-color: rgba(64, 123, 255, 0.3);
     margin: auto;
+    border-top-left-radius:10px ;
+    border-top-right-radius:10px ;
     /* border: 1px solid red; */
-    height: 352px;
+    height: 302px;
+    transition: transform 0.3s ease-in-out;
+}
+.inner_cards .gal_single_cards:hover{
+    transform: scale(1.1);
 }
 .gal_single_cards .text_container{
     display: flex;
@@ -306,7 +312,7 @@ margin-top: -0.2rem;
     display: none;
 }
 .gal_single_cards .gal_car_image{
-    margin-top: 8rem;
+    margin-top: 4rem;
 }
 
 .second_car_data .cont1{
@@ -586,15 +592,24 @@ letter-spacing: 0.25px;
     }
     .red_car_container{
         padding: 2rem 1rem;
+       width: 100%;
+       /* border: 1px solid red; */
     }
     .red_car_container .head_text{
         margin: auto;
+        margin-top: 5rem;
+        margin-bottom: 1rem;
         line-height: 25px;
+    }
+    .red_car_container .desc_text{
+        margin-top: 2rem;
     }
    .red_car_container .flow{
         font-size: 14px;
+        /* border: 1px solid red; */
     }
     .sports_car{
+        
         display: flex;
         flex-direction: column-reverse;
     }
@@ -697,6 +712,9 @@ letter-spacing: 0.25px;
     .special_heading .head_text{
         padding: 0;
     }
+    .special_heading .desc_text{
+        margin-top: -1rem;
+    }
     .Special_Services .special_serv_list{
         width: 100%;
         margin-left: 0;
@@ -724,7 +742,12 @@ letter-spacing: 0.25px;
         display: none;
     }
     .info_mobile_red{
+        
         display: block;
+        width: 90%;
+        margin: auto;
+        margin-top: -1rem;
+        /* border: 1px solid red; */
     }
     /* Special Services ends */
     .btm_container_2 .second_car_data .cars_det{
@@ -744,9 +767,11 @@ letter-spacing: 0.25px;
     }
     .btm_container_1{
         margin-top: -50px;
+        /* border: 1px solid red; */
     }
     .btm_container_1 .desc_text{
-        margin-top: -1rem;
+        margin-top: -1.5rem;
+
     }
         .btm_container_1 .second_car_data{
             display: none;
@@ -772,6 +797,7 @@ letter-spacing: 0.25px;
     .banner{
         padding: 1rem 0;
         width: 100%;
+        
         display: block;
     }
     .bann_text{
@@ -785,8 +811,10 @@ letter-spacing: 0.25px;
         text-align: center;
         line-height: 21px;
         margin-left: 3rem;
+        margin-top: 10px;
     }
     .bann_btn{
+
         order: 1;
         font-size: 15px;
   font-weight: normal;
@@ -797,10 +825,11 @@ letter-spacing: 0.25px;
   text-align: left;
   color: #fff;
         margin: 0 22%;
-        margin-top: 25%;
+        
     }
     
     .right img{
+        /* border: 1px solid red; */
         display: block;
         margin: 0 auto;
     }
@@ -816,6 +845,16 @@ letter-spacing: 0.25px;
         height: 100%;
         
     }
+    .steps_container{
+        margin-top: -4rem;
+    }
+    .steps_container .mobile_image{
+        /* border: 1px solid red; */
+        /* width: 500px; */
+        margin-top: -2rem;
+        object-fit: fill;
+    }
+    
     
     /* banner container ends */
 

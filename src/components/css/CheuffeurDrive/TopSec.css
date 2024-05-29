@@ -45,6 +45,7 @@
 .nav_options{
     width: 60%;
     text-align: center;
+    margin-left: 8rem;
     /* border:2px solid yellowgreen; */
 }
 .nav_menus{
@@ -54,23 +55,35 @@
     display: -ms-flexbox;
     
     display: flex;
+    
 -webkit-box-pack: center;
     -ms-flex-pack: center;
         justify-content: center;
 -webkit-box-align: center;
     -ms-flex-align: center;
         align-items: center;
-margin-left: 5rem;
+
 }
 
 .nav_options .nav_menus ul{
+    width: 100%;
+    /* border:2px solid yellowgreen; */
     color:rgba(255, 255, 255, 0.80);
 list-style: none;
+gap: 30px;
 text-align: center;
 }
 .nav_options .nav_menus ul li{
     cursor: pointer;
     
+    color: rgba(255, 255, 255, 0.80);
+font-family: Poppins;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 0.18px;
+text-transform: capitalize;
 }
 /* nav options section ends */
 /* contact section starts */
@@ -185,9 +198,11 @@ background: transparent;
         margin-top: -15%;
     }
     .logo {
-        width: 80%;
-        height: 70%;
+        width: 100%;
+        height: 90%;
         margin: 0.5rem;
+
+        margin-left: -1rem;
         /* border:2px solid yellowgreen; */
     }
     .heading_text{
@@ -221,6 +236,9 @@ background: transparent;
   text-align: center;
   color: rgba(255, 255, 255, 0.7);
     }
+    .main_top_container2{
+        height: 25rem;
+    }
   }
   
   @media screen and (max-width: 1290px) {
@@ -228,3 +246,6 @@ background: transparent;
         margin-top: 7%;
     }
   }
+  @media screen and (max-width: 767px) {
+    
+}

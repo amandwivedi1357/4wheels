@@ -15,7 +15,7 @@ const BottomAboutUs = () => {
         <div className="right">
 
         <p className="head_text">Who Are We?</p>
-        <p className="desc_text">4 Wheel Travels, otherwise referred to by one & all as 4 wheel, is a Proprietorship Firm owned by Mr. S. M. Jain.  The operations are managed by Mr. Ashwin Jain, the CEO of the company, assisted by a team of people who have been with the company for 15 years or more.</p>
+        <p className="desc_text">4 Wheel Travels, otherwise referred to by one & all as 4 wheel, is a Private Limited Firm owned by Mr. S. M. Jain.  The operations are managed by Mr. Ashwin Jain, the CEO of the company, assisted by a team of people who have been with the company for 15 years or more.</p>
         </div>
       </div>
       {/* <div className="who_car">
@@ -52,8 +52,8 @@ const BottomAboutUs = () => {
             <ul>
               <li>24x7 operations for seamless service to clients in Hyderabad & elsewhere.</li>
               <li>100% of the own fleet is GPS enabled for enhanced security and tracking.</li>
-              <li>Comprehensive website with payment gateway enabled.</li>
-              <li>All drivers (deployed on 4 wheel owned vehicles) on the rolls of the company for peace of mind</li>
+              {/* <li>Comprehensive website with payment gateway enabled.</li> */}
+              <li>All drivers on the rolls of the company for peace of mind.</li>
             </ul>
           </div>
         </div>

@@ -31,14 +31,14 @@ const SelfDrive = () => {
               Enhance every single trip to the fullest with the most luxurious car rentals at the most affordable prices.</p>
               <div className="list">
                   <ul className="left_list">
-                    <li>Comfort on every ride</li>
-                    <li>No Parking Hassle</li>
-                    <li>Cost Effective</li>
+                    <li>Meticulously maintained vehicles</li>
+                    <li>Stringent hygiene standards</li>
+                    <li>Privacy</li>
                   </ul>
                   <ul className="right_list">
-                      <li>Extra Safety</li>
-                      <li>Luxury Appearance</li>
-                      <li>Limitless fun</li>
+                      <li>Flexibility</li>
+                      <li>Safety and Security</li>
+                      <li>Affordability</li>
                   </ul>
               </div>
               <div className="book_now_btn">

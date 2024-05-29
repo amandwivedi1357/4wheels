@@ -11,7 +11,7 @@ import SelfDrive from "../Home/SelfDrive";
 import Test1 from "../../Testimonials/Test1";
 import Test2 from "../../Testimonials/Test2";
 import Test3 from "../../Testimonials/Test3";
-import { useState } from "react";
+import { useRef, useState } from "react";
 const PrevArrow = (props) => {
   const { className, style, onClick } = props;
   return (
@@ -38,16 +38,17 @@ const NextArrow = (props) => {
   );
 };
 const TestSlider = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
   const [activeSlide, setActiveSlide] = useState(0);
-  const [sliderRef, setSliderRef] = useState(null);
-  const settings = {
+  const sliderRef = useRef(null);  const settings = {
     dots: false,
     infinite: true,
     autoplay: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    beforeChange: (current, next) => setActiveSlide(next),
+    beforeChange: (current, next) => setActiveIndex(next),
   };
 
   const slides = [
@@ -55,25 +56,30 @@ const TestSlider = () => {
     { id:2,component: <Test2 /> },  
     { id:2,component: <Test3 /> },  
   ];
-  
+  const handleDotClick = (index) => {
+    setActiveIndex(index);
+    if (sliderRef.current) {
+      sliderRef.current.slickGoTo(index);
+    }
+  };
   return (
     <div className="car_comps">
-    <Slider {...settings} ref={(slider) => setSliderRef(slider)}>
+    <Slider {...settings} ref={sliderRef}>
       {slides.map((component) => (
         <div className="" key={component.id}>{component.component}</div>
       ))}
     </Slider>
-    {/* <div className="custom-dots">
-        {slides.map((slide, index) => (
-          <button
-            key={slide.id}
-            className={`custom-dot ${index === activeSlide ? "active" : ""}`}
-            onClick={() => sliderRef.slickGoTo(index)}
-          >
-           
-          </button>
-        ))}
-      </div> */}
+    <div className="gal_dots">
+            {Array.from({ length: 3 }).map((_, idx) => (
+                <div
+                    key={idx}
+                    className={idx === activeIndex ? 'active' : ''}
+                    onClick={() => handleDotClick(idx)}
+
+                     // Example onClick to change active dot
+                ></div>
+            ))}
+        </div>
   </div>
   );
 };

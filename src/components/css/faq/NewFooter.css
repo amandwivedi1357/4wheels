@@ -3,9 +3,10 @@
     margin-top: 1rem;
     text-transform: none;
     height: auto;
-    background: #0c0125;
+    background: #000102;
   }
   .footercont .head_text {
+    
     color: rgba(255, 255, 255, 0.95);
     font-family: "Cormorant";
     font-size: 64px;
@@ -22,7 +23,7 @@
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 20px 1fr;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px; 
     padding: 20px; 
     -webkit-box-sizing: border-box; 
@@ -50,28 +51,37 @@
     letter-spacing: 0.25px;
     text-transform: none;
   }
+  .underline{
+    width: 30%;
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+  }
+  .underline1{
+    width: 42%;
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+  }
   .unordered_list li {
-  
+  text-align: left;
       color: rgba(255, 255, 255, 0.90);
   font-family: 'Poppins';
-  font-size: 18px;
+  font-size: 17px;
   font-style: normal;
   font-weight: 400;
   line-height: 37px; /* 205.556% */
   
   letter-spacing: 0.25px;
-    margin-bottom: 1rem;
+    margin-bottom: 0.2rem;
   }
   .flex_cont .head {
-    color: rgba(255, 255, 255, 0.95);
-    font-family: "Poppins";
-    font-size: 36px;
-    text-align: left;
+    color: rgba(255, 255, 255, 0.80);
+    font-family: Poppins;
+    font-size: 17px;
     font-style: normal;
-    font-weight: 500;
-    line-height: 55px; /* 152.778% */
+    font-weight: 400;
+    line-height: 20px; /* 117.647% */
+ 
     letter-spacing: 0.25px;
-    margin: 1rem 0;
   }
   .flex_cont .desc_cont .subT {
     color: rgba(255, 255, 255, 0.58);
@@ -87,11 +97,19 @@
     cursor: auto;
   }
   .flex_cont .unordered_list .list_head{
-    font-weight: bolder;
+    color: #FFF;
+font-family: Poppins;
+font-size: 20px;
+font-style: normal;
+font-weight: 300;
+line-height: 45px; /* 225% */
+
+letter-spacing: 0.25px;
   }
   .unordered_list .list_head,
   .unordered_list li {
-    text-transform: none; /* Add this line to reset text-transform */
+    text-transform: none;
+     /* Add this line to reset text-transform */
   }
   
   .center{
@@ -116,8 +134,21 @@
   .footer_inp{
       margin:2rem auto;
   }
+  .social_supports{
+    display: flex;
+    gap: 30px;
+  }
+  .social_supports .socials_cont{
+    
+    display: grid;
+  place-items: center;
+
+    border-radius: 50%;
+   
+  }
   @media screen and (max-width: 767px) {
     .footercont .head_text{
+      
       font-family: Cormorant;
   font-size: 36px;
   font-weight: 500;
@@ -129,7 +160,8 @@
   color: rgba(255, 255, 255, 0.95);
     }
     .footer_flex {
-     
+      /* border: 1px solid red; */
+
         display: grid; /* Add this line to enable grid layout */
         grid-template-columns: repeat(1, 1fr);
     }
@@ -138,6 +170,7 @@
       margin-left: -1rem;
     }
     .unordered_list .list_head {
+      
         text-align: left;
         font-family: Poppins;
   font-size: 18px;

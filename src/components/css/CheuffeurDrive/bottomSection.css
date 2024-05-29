@@ -12,19 +12,22 @@
     padding: 1rem;
 }
 .cheuffer_menu{
-    /* border: 1px solid red; */
-    width: 95%;
+    
+    width: 90%;
     height: auto;
     margin: auto;
     margin-bottom: 0.5rem;
     display: grid;
+    margin-top: 5rem;
     grid-template-columns: repeat(3,1fr)
 }
 .cheuffer_menu .menu_cont{
     padding: 0.5rem;
     margin: auto;
-width: 90%;
-height: 90%;
+    margin-bottom: 5rem;
+    /* border: 1px solid red; */
+width: 80%;
+height: 408px;
 border-radius: 5px;
 border: 0.5px solid rgba(177, 167, 167, 0.58);
 background: #FFF;
@@ -36,7 +39,7 @@ background: #FFF;
     margin: auto;
 }
 .cheuffer_menu .menu_cont .type_text{
-    margin-top: 35px;
+    margin-top: 15px;
     color: #030303;
     text-align: center;
     font-family: 'Cormorant';
@@ -56,7 +59,7 @@ background: #FFF;
     justify-content: center;
     align-items: center;
     margin: auto;
-    margin-top: 2rem;
+    margin-top: 1rem;
     text-align: center;
     gap: 10px;
     color: #FFF;

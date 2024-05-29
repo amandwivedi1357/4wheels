@@ -43,20 +43,23 @@ export default function RespNav() {
             <div className="drawer-link" onClick={() => handleNavigate("/")}>
               Home
             </div>
-            <div className="drawer-link" onClick={() => handleNavigate("/selfdrive")}>
-              Self Drive
+            <div className="drawer-link" onClick={() => handleNavigate("/about-us")}>
+              About Us
             </div>
             <div className="drawer-link" onClick={() => handleNavigate("/cheuffeurdrive")}>
               Chauffeur Drive
             </div>
-            <div className="drawer-link" onClick={() => handleNavigate("/about-us")}>
-              About Us
+            <div className="drawer-link" onClick={() => handleNavigate("/selfdrive")}>
+              Self Drive
             </div>
             <div className="drawer-link" onClick={() => handleNavigate("/gallery")}>
               Gallery
             </div>
             <div className="drawer-link" onClick={() => handleNavigate("/faq")}>
               FAQs
+            </div>
+            <div className="drawer-link" onClick={() => handleNavigate("/contact-us")}>
+              Contact us
             </div>
             {/* Add more items as needed */}
           </DrawerBody>

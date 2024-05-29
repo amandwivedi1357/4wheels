@@ -7,12 +7,12 @@ export default function FaqBottom() {
   return (
     <div className='faq_cont'>
       <div className="top_faq">
-        <p className="head_text">
+        {/* <p className="head_text">
         Do you have any question?
-        </p>
-        <p className="desc_text">
+        </p> */}
+        {/* <p className="desc_text">
         We Believe in Quality Service
-        </p>
+        </p> */}
         <div className="faq_content">
           
             {/* <FAQSection/> */}

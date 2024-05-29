@@ -17,7 +17,7 @@ import sport_front from "../../assets/home/sport_front.webp"
 import back from "../../assets/home/backview.webp"
 import Footer from "../Footer";
 import Steps from "./Steps";
-import red_car_info from "../../assets/home/car_image.webp"
+import red_car_info from "../../assets/home/car_image.jpg"
 import MySlider3 from "../Sliders/MySlider3";
 import car11 from '../../assets/home/marriage.webp'
 import car12 from '../../assets/home/bl_sport.webp'
@@ -195,23 +195,28 @@ const RentingCar = () => {
   return (
     <div className="renting_main_container">
       
-      <p className="head_text">A fleet that meets your needs</p>
+      {/* <p className="head_text">A fleet that meets your needs</p>
       <p className="desc_text rent_desc">Have a look at our different category of cars</p>
       <div className="sports_car">
      
        
-      </div>
+      </div> */}
       
     
       <div className="red_car_container">
        
-       <div>
+       {/* <div>
           <CustomSliders/>
-        </div>
+        </div> */}
+        <p className="head_text" style={{color:'#031b4e'}}>
+        Is Renting A Car Worth It?
+        </p>
+        <p className="desc_text">
+        Best car rental deals
+        </p>
         <img src={red_car_info} alt="" className="info_red" />
-        <img src={red_mobile} alt="" className="info_mobile_red" />
       </div>
-
+      <img src={red_mobile} alt="" className="info_mobile_red" />
       <div className="customer_offer">
         <div className="offer_text_container">
           <p className="offer_text">
@@ -244,7 +249,7 @@ const RentingCar = () => {
     <Steps/> {/* Default: Display Steps component */}
     
   </div>
-  <img src={steps_mobile} alt="Mobile Image" className="mobile_image"/> {/* Display this image for mobile view */}
+  <img src='images/newStep.png' alt="Mobile Image" className="mobile_image"/> {/* Display this image for mobile view */}
       </div>
 
       <div className="Special_Services">
@@ -276,7 +281,7 @@ const RentingCar = () => {
       </div>
        <div className="btm_container_1">
         <p className="head_text">Gallery</p>
-        <p className="desc_text">4 Wheels Gallery </p>
+        <p className="desc_text">4 Wheel Gallery </p>
 
         {/* <div className="second_car_data">
           <div className="cont1">
@@ -321,7 +326,7 @@ const RentingCar = () => {
                   </p>
                    
                   </div>
-                  <img src='images/pres.png' alt="" className="gal_car_image" style={{marginTop:'10rem'}}/>
+                  <img src='images/pres.png' alt="" className="gal_car_image" style={{marginTop:'6rem'}}/>
                 </div>
                 
                 </>
@@ -335,7 +340,7 @@ const RentingCar = () => {
                   </p>
                   
                   </div>
-                  <img src='images/hatch.png' alt="" className="gal_car_image" style={{marginTop:'9rem'}}/>
+                  <img src='images/hatch.png' alt="" className="gal_car_image" style={{marginTop:'5rem'}}/>
                 </div>
                 
                 </>

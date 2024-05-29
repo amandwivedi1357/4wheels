@@ -7,7 +7,9 @@ import {
   FaFacebookF,
   
   FaInstagram,
+  FaLinkedinIn,
   FaWhatsapp,
+  FaYoutube,
  
 } from "react-icons/fa";
 import { useState } from "react";
@@ -51,11 +53,13 @@ export default function TopSection() {
           <div className="nav_options">
             <div className="nav_menus">
               <ul>
-              <li onClick={() => handleNavigate("selfdrive")}>Self Drive</li>
-                <li onClick={() => handleNavigate("cheuffeurdrive")}>Chauffeur Drive</li>
                 <li onClick={() => handleNavigate("about-us")}>About Us</li>
+                <li onClick={() => handleNavigate("cheuffeurdrive")}>Chauffeur Drive</li>
+              <li onClick={() => handleNavigate("selfdrive")}>Self Drive</li>
                 <li onClick={() => handleNavigate("gallery")}>Gallery</li>
                 <li onClick={() => handleNavigate("faq")}>Faq</li>
+                <li onClick={() => handleNavigate("contact-us")}>Contact us</li>
+
               </ul>
             </div>
           </div>
@@ -64,7 +68,7 @@ export default function TopSection() {
         {/* <div className="contact_button">
            
         </div> */}
-        <FaWhatsapp size={'2rem'} cursor={'pointer'} onClick={()=>handleNav('https://api.whatsapp.com/send?phone=919885354321')}/>
+               <FaWhatsapp color="#25d366" size={'2rem'} cursor={'pointer'} onClick={()=>handleNav('https://api.whatsapp.com/send?phone=919885354321')}/>
       </div>
       </div>
       <div className="home_btm">
@@ -83,10 +87,16 @@ export default function TopSection() {
           <span>
             <FaInstagram onClick={()=>handleNav('https://www.instagram.com/4wheelindia?igsh=N2NmdjN4aTY5M29l')}/>
           </span>
+          <span>
+            <FaLinkedinIn  onClick={()=>handleNav('https://in.linkedin.com/company/4-wheel-travels')}/>
+          </span>
+          <span> 
+            <FaYoutube   onClick={()=>handleNav('https://www.youtube.com/@4WheelTravels1981')}/>
+          </span>
         </div>
       </div>
       <div className="heading_text">
-        <p>Experience the joy of Travelling on premium wheels</p>
+        <p>Experience the joy of travelling on premium wheels</p>
       </div>
       <div className="detailed_desc">
         <p>

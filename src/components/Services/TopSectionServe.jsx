@@ -16,7 +16,7 @@ export default function TopSectionServe({topic,subTopic}) {
     navigate(`/${route}`);
   };
   return (
-    <div className="main_top_container">
+    <div className="main_top_container2">
         <div className="navbar">
 
         <div >
