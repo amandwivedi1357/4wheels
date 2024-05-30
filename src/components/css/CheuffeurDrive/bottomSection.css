@@ -97,6 +97,7 @@ box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.06);
         padding: 1rem;
     }
     .cheuffer_menu .menu_cont{
+        border: 1px solid red;
         width: 80%;
     }
     .cheuffer_menu .menu_cont .type_text{
@@ -112,7 +113,7 @@ box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.06);
 @media screen and (max-width: 767px) {
     .cheuffer_menu{
         grid-template-columns: repeat(2,1fr);
-    
+        gap: 20px;
     }
     .btm_container .desc_text{
         width: 80%;
@@ -121,8 +122,7 @@ box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.06);
         padding: 1rem;
     }
     .cheuffer_menu .menu_cont{
-        
-        padding-bottom: 1.5rem;
+        height: 250px;
         width: 150px;
   flex-grow: 0;
  margin: auto;

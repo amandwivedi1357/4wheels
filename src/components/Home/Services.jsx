@@ -10,7 +10,7 @@ const Services = () => {
   return (
     <div className="services">
       <p className="head_text mt">
-        Services We Offer
+        Services we offer
       </p>
       <div className="desc">
       <p className="desc_text">

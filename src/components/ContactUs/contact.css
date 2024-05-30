@@ -70,7 +70,7 @@ line-height: 24px; /* 150% */
  @media screen and (max-width: 767px) {
     .main_cont_container .inner_contact{
         display: block;
-        border: 1px solid red;
+        /* border: 1px solid red; */
         width: 100%;
         margin: 0;
     }

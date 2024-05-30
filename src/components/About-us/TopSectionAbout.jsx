@@ -55,7 +55,7 @@ export default function TopSectionAbout() {
         </div>
        
               <p className="ser_text">Elevating travel experiences</p>
-              <p className="about_text">Established in 1981, 4 Wheel Travels, is one of the largest Car & bus rental companies operating out of Hyderabad.</p>
+              <p className="about_text">About us</p>
               {/* <p className="bred"><Breadcrumbs/></p> */}
 
         

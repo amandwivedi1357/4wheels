@@ -43,7 +43,7 @@
 }
 /* nav options section starts */
 .nav_options{
-    width: 60%;
+    width: 58%;
     text-align: center;
     margin-left: 8rem;
     /* border:2px solid yellowgreen; */
@@ -70,21 +70,41 @@
     /* border:2px solid yellowgreen; */
     color:rgba(255, 255, 255, 0.80);
 list-style: none;
-gap: 30px;
+gap: 25px;
 text-align: center;
 }
-.nav_options .nav_menus ul li{
+
+  
+  .nav_options .nav_menus ul li {
+    position: relative;
     cursor: pointer;
-    
     color: rgba(255, 255, 255, 0.80);
-font-family: Poppins;
-font-size: 18px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-letter-spacing: 0.18px;
-text-transform: capitalize;
-}
+    font-family: Poppins, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.18px;
+    text-transform: capitalize;
+    padding: 10px 0; /* Adjust padding if needed */
+    margin: 0 10px; /* Adjust margin if needed */
+  }
+  
+  .nav_options .nav_menus ul li::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px; /* Adjust thickness of the border */
+    background-color: rgba(255, 255, 255, 0.80); /* Adjust color */
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .nav_options .nav_menus ul li:hover::before {
+    width: 100%;
+  }
+  
 /* nav options section ends */
 /* contact section starts */
 .contact{

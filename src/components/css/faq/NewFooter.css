@@ -147,6 +147,9 @@ letter-spacing: 0.25px;
    
   }
   @media screen and (max-width: 767px) {
+    .quick1{
+      margin-top: -4rem;
+    }
     .footercont .head_text{
       
       font-family: Cormorant;
@@ -201,7 +204,7 @@ letter-spacing: 0.25px;
   color: rgba(255, 255, 255, 0.8);
     }
     .quick{
-      margin-top: -4rem;
+      margin-top: -2rem;
     }
   }
   

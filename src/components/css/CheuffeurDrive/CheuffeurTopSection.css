@@ -59,7 +59,12 @@ letter-spacing: 0.5px;
 
 @media screen and (max-width: 767px) {
     .ser_text{
+        width: 100%;
         margin: auto;
         margin-top: 5rem;
+       
+    }
+    .sub_text{
+        width: 100%;
     }
 }

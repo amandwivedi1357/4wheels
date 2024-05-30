@@ -4,21 +4,30 @@
 }
 .top{
   max-width: 100%;
-  display: flex;
+ 
 }
-.top .left{
-  margin: 3rem auto auto 3rem;
+
+.top .left img{
+  margin-top: 2rem;
+ height: 600px;
+ 
 }
 .top .right{
-  width: 50%;
-
-  margin: auto 5rem auto 1rem;
+  width: 90%;
+  margin: auto;
+  
 }
 .top .right .head_text{
-  text-align: left;
+  text-align: center;
+  margin-top: 4rem;
+  text-transform: none;
+  margin-bottom: 2rem;
 }
 .top .right .desc_text{
-  text-align: left;
+  text-align: center;
+  /* border: 1px solid red; */
+  margin: 0;
+  padding: 0;
 }
 .who_car {
   width: 100%;
@@ -66,6 +75,7 @@
 }
 .inner_mid .left .head_text{
   text-align: left;
+  margin-bottom: 2rem;
 }
 .inner_mid .left .desc_text{
   text-align: left;
@@ -74,17 +84,28 @@
   margin: auto;
 }
 .inner_mid .right img{
-  padding-top: 5rem;
+
+  border-radius: 10px;
+  /* border: 1px solid red; */
   width: 65%;
   margin: auto;
+  margin-top: 5rem;
+}
+.inner_btm .head_text{
+  margin-top: 4rem;
 }
 
 .inner_btm .desc_text{
   margin-bottom: 5rem;
 }
 .conc_info{
+ 
   width: 50%;
+ 
   margin: auto;
+}
+.conc_info img{
+  margin-top: -5rem;
 }
 .btm_cont_text{
   display: flex;
@@ -112,36 +133,67 @@ letter-spacing: 0.5px;
 }
 .last_Sec{
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 6rem;
   color: #fff;
- 
+
 display: flex;
   
 }
 .last_Sec .left_sec{
+
   background: linear-gradient(0deg, #0C0125 26.56%, #1F0015 58.85%, #320003 100%);
-width: 60%;
+width: 100%;
 }
-.last_Sec .left_sec .top_head{
-  margin-left: 5rem;
-  }
+
+.ulTop{
+  display: flex;
+  width: 100%;
+ /* border: 1px solid red; */
+  list-style: none;
+}
+.ul1,.ul2{
+  
+  margin-top: 1rem;
+  /* border: 1px solid red; */
+  list-style-type: disc;
+}
+.ul1 li,.ul2 li{
+  width: 100%;
+}
+
   .top_head .head_text{
+    margin-top: 3rem;
+    font-weight: 500;
     text-align: left;
+    text-align: center;
     color: #fff;
+    margin-left: -7rem;
     margin-bottom: 4rem;
+    text-transform: none;
   }
+  
   .left_sec .bottom_info{
-    margin-left: 7rem;
+    margin: auto;
+    width: 80%;
+
+  }
+  .left_sec .bottom_info ul{
+    justify-content: space-between;
   }
   .left_sec .bottom_info ul li{
     margin-bottom: 2rem;
-    margin-right: 10rem;
+    
     font-family: 'Poppins';
     font-size: 18.5px;
   }
 .last_Sec .right_sec{
 width: 40%;
 }
+.UlHeads{
+
+  font-size: 25px;
+}
+
 @media screen and (max-width: 767px) {
   .top{
     flex-direction: column;
@@ -152,11 +204,11 @@ width: 40%;
     margin-top: 1rem;
   }
   .top .left img{
-    
+    height: 450px;
     margin-left: -1rem;
   }
   .top .right{
-    margin-top: -5rem;
+    margin-top: -2rem;
     width: 90%;
   }
   .top .right .head_text{
@@ -200,7 +252,7 @@ width: 40%;
     width: 100%;
   }
   .last_Sec .left_sec .top_head{
-    margin-top: -5rem;
+  
     margin-left:0;
     }
     .left_sec .bottom_info{
@@ -215,7 +267,8 @@ width: 40%;
       width: 100%;
       }
       .top_head .head_text{
-        font-size: 20px;
+        font-size: 30px;
+       margin-left: -10rem;
       }
       .bottom{
         margin-top: -4rem;
@@ -223,6 +276,12 @@ width: 40%;
       .bottom .inner_btm{
         width: 100%;
         margin: auto;
+      }
+      .bottom .inner_btm .head_text{
+        margin-top: 6rem;
+      }
+      .conc_info img{
+        margin: 0;
       }
       .inner_btm .desc_text{
         width: 95%;
@@ -237,5 +296,12 @@ width: 40%;
         width: 100%;
         height: auto;
         padding: 1rem 0;
+      }
+      .ulTop{
+        display: block;
+      }
+      .UlHeads{
+        font-size: 20px;
+        margin-left: -1rem;
       }
 }

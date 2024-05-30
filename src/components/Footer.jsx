@@ -4,7 +4,7 @@ import {
   
   FaInstagram,
   FaLinkedinIn,
-  FaWhatsapp,
+  
   FaYoutube,
  
 } from "react-icons/fa";
@@ -16,21 +16,21 @@ const Footer = () => {
   const socials = [
     {
       img:(<FaFacebookF color="#fff"/>),
-      link:''
+      link:'https://www.facebook.com/profile.php?id=100069861290873'
     },
     {
       img:(<FaInstagram color="#fff"/>),
-      link:''
+      link:'https://www.instagram.com/4wheelindia?igsh=N2NmdjN4aTY5M29l'
     },
     
     {
       img:(<FaYoutube color="#fff"/>),
-      link:''
+      link:'https://www.youtube.com/@4WheelTravels1981'
     },
     
     {
       img:(<FaLinkedinIn color="#fff"/>),
-      link:''
+      link:'https://in.linkedin.com/company/4-wheel-travels'
     },
     
   ]
@@ -76,7 +76,7 @@ const Footer = () => {
         </div>
         <div className="flex_cont">
           <ul className="unordered_list center" style={{ listStyle: "none" }}>
-            <li className="list_head ">Support Center</li>
+            <li className="list_head quick1">Support Center</li>
             <img className='underline1' src="images/underline.svg" alt="" />
             <li onClick={() => handleClick("faq")}>FAQ</li>
             <li onClick={() => handleClick("contact-us")}>Contact us</li>
@@ -85,7 +85,7 @@ const Footer = () => {
         </div>
         <div className="flex_cont">
         <ul className="unordered_list center" style={{ listStyle: "none" }}>
-            <li className="list_head ">Join our social media community</li>
+            <li className="list_head quick1">Join our social media community</li>
             <div className="social_supports">
               {socials.map((item,idx)=>(
                 <div className="socials_cont" key={idx} onClick={()=>window.open(item.link,'_blank')}>

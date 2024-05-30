@@ -25,6 +25,7 @@ import car13 from '../../assets/home/front_bl_sedan.webp'
 
 import CustomSliders from "../Sliders/CustomSliders";
 import TestSlider from "../Sliders/TestSlider";
+import MySlider4 from "../Sliders/MySlider4";
 
 const special2 = [
   {
@@ -195,12 +196,9 @@ const RentingCar = () => {
   return (
     <div className="renting_main_container">
       
-      {/* <p className="head_text">A fleet that meets your needs</p>
+      <p className="head_text">A fleet that meets your needs</p>
       <p className="desc_text rent_desc">Have a look at our different category of cars</p>
-      <div className="sports_car">
-     
-       
-      </div> */}
+      <MySlider4/>
       
     
       <div className="red_car_container">
@@ -209,7 +207,7 @@ const RentingCar = () => {
           <CustomSliders/>
         </div> */}
         <p className="head_text" style={{color:'#031b4e'}}>
-        Is Renting A Car Worth It?
+        Is renting a car worth it?
         </p>
         <p className="desc_text">
         Best car rental deals
@@ -237,7 +235,7 @@ const RentingCar = () => {
           ))}
         </div>
       </div>
-
+         
       <div className="steps_container">
         <p className="head_text">
         Simple steps to get the car
@@ -255,7 +253,7 @@ const RentingCar = () => {
       <div className="Special_Services">
         <div className="left">
         <div className="special_heading">
-      <p className="head_text">Our Special Services</p>
+      <p className="head_text">Our special services</p>
        <p className="desc_text">We work for your comfort</p>
       </div>
       <div className="special_serv_list">
@@ -281,7 +279,7 @@ const RentingCar = () => {
       </div>
        <div className="btm_container_1">
         <p className="head_text">Gallery</p>
-        <p className="desc_text">4 Wheel Gallery </p>
+        <p className="desc_text">4 wheel gallery </p>
 
         {/* <div className="second_car_data">
           <div className="cont1">
@@ -367,8 +365,8 @@ const RentingCar = () => {
       
       <div className="btm_container_2">
         
-        <p className="head_text">Our Clients Say About Us</p>
-        <p className="desc_text">We Believe in Quality Service</p>
+        <p className="head_text">Our clients say about us</p>
+        <p className="desc_text">We believe in quality service</p>
 
         <div className="test_cont">
 

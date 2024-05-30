@@ -59,6 +59,7 @@ const BottomSection = () => {
                 p="2.5rem"
                 className="menu_cont"
                 align="start"
+                
               >
                 <Skeleton height="200px" width="100%" />
                 <SkeletonText mt="4" noOfLines={2} spacing="4" width="100%" />

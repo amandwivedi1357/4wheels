@@ -10,6 +10,18 @@ font-style: normal;
 font-weight: 700;
 line-height: 55px; /* 114.583% */
 letter-spacing: 0.25px;
+text-transform: none;
+}
+.head_texttt{
+color: #031B4E;
+text-align: center;
+font-family: 'Cormorant';
+font-size: 48px;
+margin-top: 10%;
+font-style: normal;
+font-weight: 700;
+line-height: 55px; /* 114.583% */
+letter-spacing: 0.25px;
 text-transform: capitalize;
 }
 .desc_text{
@@ -717,8 +729,10 @@ letter-spacing: 0.25px;
     }
     .Special_Services .special_serv_list{
         width: 100%;
-        margin-left: 0;
+        margin: auto;
+        grid-template-columns: repeat(1,1fr);
     }
+    /* .special_serv_list .service_list{} */
    .Special_Services .cars_det{
         display: none;
     }
