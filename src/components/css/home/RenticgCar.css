@@ -109,7 +109,7 @@ line-height: 55px;
 letter-spacing: 1px;
 }
 .red_car_container img{
-    margin:6rem auto;
+    margin:3rem auto;
     width: 80%;
 
 }
@@ -213,7 +213,7 @@ margin-left: 2rem;
    font-weight: 600;
    line-height: 55px; /* 119.565% */
    letter-spacing: 0.25px;
-   text-transform: capitalize;
+   text-transform: none;
 }
 .Special_Services .special_serv_list{
 display: grid;

@@ -1,10 +1,12 @@
 .slider-container {
     width: 90%;
     margin: auto;
-    margin-top: 4rem;
+    
+ 
 }
 
 .slide {
+    margin-top: 3rem;
     padding: 10px;
 }
 
@@ -52,16 +54,17 @@
 }
 
 .nav-button {
-    border-radius: 10px;
+    border-radius: 5px;
     border: 1px solid gray;
     padding: 10px 20px;
     margin: 0 10px;
+    color: #031b4e;
     cursor: pointer;
-    background-color: white;
+    background-color: #fff;
     transition: background-color 0.3s, color 0.3s;
 }
 
 .nav-button:hover {
-    background-color: gray;
+    background-color: #031b4e;
     color: rgb(255, 255, 255);
 }
