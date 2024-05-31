@@ -6,7 +6,9 @@ import who from "../../assets/about/who.webp"
 import why from "../../assets/about/why.png"
 import fleet from "../../assets/about/fleet.webp"
 import styled, { css, keyframes } from "styled-components"
+import { useNavigate } from "react-router-dom"
 const BottomAboutUs = () => {
+  const navigate = useNavigate()
   const row1 = [
     "images/img1.jpg",
     "images/img2.jpg",
@@ -173,7 +175,7 @@ The admin office & HO is based at Sagar society, road no.2, banjara hills.
             Contact us for assistance
             </p>
             </div>
-            <button className="bann_btn">
+            <button className="bann_btn" onClick={()=>navigate('/contact-us')}>
               Contact Us
             </button>
           </div>
@@ -276,6 +278,7 @@ const ImageGroup = styled.div`
   place-items: center;
   width: clamp(10rem, 1rem + 40vmin, 30rem);
   padding: calc(clamp(10rem, 1rem + 30vmin, 30rem) / 10);
+ 
 `;
 
 const Image = styled.img`
@@ -287,4 +290,5 @@ const Image = styled.img`
   aspect-ratio: 16/9;
   padding: 5px 20px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  
 `;

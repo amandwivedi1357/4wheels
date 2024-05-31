@@ -26,6 +26,7 @@ import car13 from '../../assets/home/front_bl_sedan.webp'
 import CustomSliders from "../Sliders/CustomSliders";
 import TestSlider from "../Sliders/TestSlider";
 import MySlider4 from "../Sliders/MySlider4";
+import { useNavigate } from "react-router-dom";
 
 const special2 = [
   {
@@ -193,6 +194,7 @@ letterSpacing: '0.25px',
 marginLeft:'1rem'
 }
 const RentingCar = () => {
+  const navigate = useNavigate()
   return (
     <div className="renting_main_container">
       
@@ -476,7 +478,7 @@ We have been using 4wheel for our trips needs for several years now and have alw
             Contact us for assistance
             </p>
             </div>
-            <button className="bann_btn" onClick={()=>window.open('https://api.whatsapp.com/send?phone=919885354321','_blank')}>
+            <button className="bann_btn" onClick={()=>navigate('/contact-us')}>
               Contact Us
             </button>
           </div>
