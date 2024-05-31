@@ -7,6 +7,7 @@
 
 .main_top_container{
     /* border: 2px solid springgreen; */
+    position: relative;
     width: 100%;
     color: #fff;
     height: 50rem;
@@ -15,6 +16,7 @@
     background: linear-gradient(0deg, #0C0125 26.56%, #1F0015 58.85%, #320003 100%);
 }
 .main_top_container2{
+    position: relative;
     /* border: 2px solid springgreen; */
     width: 100%;
     color: #fff;
@@ -23,6 +25,33 @@
     background: -o-linear-gradient(bottom, #0C0125 26.56%, #1F0015 58.85%, #320003 100%);
     background: linear-gradient(0deg, #0C0125 26.56%, #1F0015 58.85%, #320003 100%);
 }
+.ellipse1{
+    position: absolute;
+    bottom: 20%;
+    right: 10%;
+    z-index: 0;
+}
+.ellipse2{
+    width: 100px;
+    position: absolute;
+    bottom: 60%;
+    right: 2%;
+    z-index: 0;
+}
+.ellipse3{
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    z-index: 0;
+}
+.ellipse4{
+    position: absolute;
+    bottom: 70%;
+    left: 2%;
+    z-index: 0;
+}
+
+
 .navbar{
     font-family: 'Poppins';
     width: 100%;
@@ -258,6 +287,9 @@ background: transparent;
     }
     .main_top_container2{
         height: 25rem;
+    }
+    .ellipse1,.ellipse2,.ellipse3,.ellipse4{
+        display: none;
     }
   }
   

@@ -4,6 +4,8 @@ import { Link, useNavigate } from "react-router-dom"
  import "../css/CheuffeurDrive/TopSec.css"
 import {  useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";
+import ellipse from "../../assets/email/Ellipse.png" 
+
 import Breadcrumbs from "../BredCrumbs";
 export default function TopSectionServe({topic,subTopic}) {
 
@@ -17,6 +19,10 @@ export default function TopSectionServe({topic,subTopic}) {
   };
   return (
     <div className="main_top_container2">
+      <img src={ellipse} alt="" className="ellipse1"/>
+      <img src={ellipse} alt="" className="ellipse2"/>
+      <img src={ellipse} alt="" className="ellipse3"/>
+      <img src={ellipse} alt="" className="ellipse4"/>
         <div className="navbar">
 
         <div >

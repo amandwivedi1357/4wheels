@@ -5,6 +5,8 @@ import { Link, useNavigate } from "react-router-dom"
 import { useState } from "react";
 import RespNav from "../Responsive/RespNav";
 import { FaWhatsapp } from "react-icons/fa";
+import { Image } from "@chakra-ui/react";
+import ellipse from "../../assets/email/Ellipse.png" 
 
 export default function CheuffeurTopSection({topic,subTopic}) {
   const navigate = useNavigate();
@@ -23,6 +25,11 @@ export default function CheuffeurTopSection({topic,subTopic}) {
   }
   return (
     <div className="main_top_container2">
+      
+       <img src={ellipse} alt="" className="ellipse1"/>
+      <img src={ellipse} alt="" className="ellipse2"/>
+      <img src={ellipse} alt="" className="ellipse3"/>
+      <img src={ellipse} alt="" className="ellipse4"/>
         <div className="navbar">
 
         <div >

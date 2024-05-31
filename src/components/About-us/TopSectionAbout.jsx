@@ -23,6 +23,10 @@ export default function TopSectionAbout() {
 
   return (
     <div className="main_top_container2">
+      <img src="images/Ellipse.svg" alt="" className="ellipse1"/>
+      <img src="images/Ellipse.svg" alt="" className="ellipse2"/>
+      <img src="images/Ellipse.svg" alt="" className="ellipse3"/>
+      <img src="images/Ellipse.svg" alt="" className="ellipse4"/>
         <div className="navbar">
 
         <div >
