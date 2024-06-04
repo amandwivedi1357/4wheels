@@ -53,8 +53,8 @@
   @media screen and (max-width: 767px) 
   {
     .gal_single_cards{
-        height: 400px;
-        width: 95%;
+        height: 300px;
+        width: 75%;
         margin: auto;
         border: 1px solid rgba(64, 123, 255, 0.3);
         background-color: rgba(64, 123, 255, 0.3);
@@ -62,8 +62,8 @@
         border-top-right-radius: 10px;
     }
     .gal_single_cards2{
-        height: 400px;
-        width: 95%;
+        height: 300px;
+        width: 75%;
         margin: auto;
         border: 1px solid rgba(166, 128, 255, 0.3);
         background-color: rgba(166, 128, 255, 0.3);
@@ -71,8 +71,8 @@
         border-top-right-radius: 10px;
     }
     .gal_single_cards3{
-        width: 95%;
-        height: 400px;
+        height: 300px;
+        width: 75%;
         margin: auto;
         border: 1px solid rgba(64, 123, 255, 0.3);
         background-color: rgba(64, 123, 255, 0.3);
@@ -80,8 +80,8 @@
         border-top-right-radius: 10px;
     }
     .gal_single_cards4{
-        width: 95%;
-        height: 400px;
+        height: 300px;
+        width: 75%;
         margin: auto;
         border: 1px solid rgba(166, 128, 255, 0.3);
         background-color: rgba(166, 128, 255, 0.3);

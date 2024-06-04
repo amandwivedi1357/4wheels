@@ -1,6 +1,22 @@
+.mobile_whats{
+  display: none;
+}
+
 @media screen and (max-width: 767px) {
     .App{
       overflow-x:hidden ;
+      position: relative;
+    }
+    .mobile_whats{
+      display: block;
+      position: fixed;
+      z-index: 100;
+      bottom: 5%;
+      right: 5%;
+    }
+    .mobile_whats img{
+      width: 50px;
+      cursor: pointer;
     }
   }
   

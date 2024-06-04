@@ -9,6 +9,7 @@ import "./Myslider3.css"
 
 import { useState,useRef  } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
 const PrevArrow = (props) => {
   const { className, style, onClick } = props;
   return (
@@ -35,6 +36,7 @@ const NextArrow = (props) => {
   );
 };
 const TestSlider = () => {
+  const navigate = useNavigate()
   const [activeIndex, setActiveIndex] = useState(0);
   const [activeSlide, setActiveSlide] = useState(0);
   const sliderRef = useRef(null);
@@ -65,7 +67,7 @@ const TestSlider = () => {
     <div className="car_comps">
     <Slider {...settings} ref={sliderRef}>
       {slides.map((component) => (
-        <div className="" key={component.id}>{component.component}</div>
+        <div className="" key={component.id} onClick={()=>navigate('/gallery')}>{component.component}</div>
       ))}
     </Slider>
     <div className="gal_dots">
@@ -99,7 +101,7 @@ const Test1 = ()=>{
                  
 </p>
                   </div>
-                  <img src='images/royale.png' alt="" className="gal_car_image_royale" style={{marginTop:'3rem'}}/>
+                  <img src='images/royale.png' alt="" className="gal_car_image_royale" style={{marginTop:'-2rem'}}/>
                 </div>
                 
                 </>
@@ -112,13 +114,13 @@ const Test2 = ()=>{
                 <div  className="gal_single_cards2">
                   <div className="text_container">
                   <p className="gal_text">President
-                  <p style={{marginLeft:'10.5rem'}}>
+                  <p style={{marginLeft:'8rem'}}>
                  <FaArrowRightLong size={30}/>
                   </p>
                   </p>
                    
                   </div>
-                  <img src='images/pres.png' alt="" className="gal_car_image" style={{marginTop:'8rem'}}/>
+                  <img src='images/pres.png' alt="" className="gal_car_image" style={{marginTop:'3rem'}}/>
                 </div>
                 
                 </>
@@ -132,13 +134,13 @@ const Test3 = ()=>{
                 <div  className="gal_single_cards3">
                   <div className="text_container">
                   <p className="gal_text">Hatchbacks
-                  <p style={{marginLeft:'11rem'}}>
+                  <p style={{marginLeft:'8rem'}}>
                  <FaArrowRightLong size={30}/>
                   </p> 
                   </p>
                   
                   </div>
-                  <img src='images/hatch.png' alt="" className="gal_car_image" style={{marginTop:'8rem'}}/>
+                  <img src='images/hatch.png' alt="" className="gal_car_image" style={{marginTop:'2rem'}}/>
                 </div>
                 
                 </>
@@ -151,13 +153,13 @@ const Test4 = ()=>{
                 <div  className="gal_single_cards4">
                   <div className="text_container">
                   <p className="gal_text">Luxury SUV
-                  <p style={{marginLeft:'11rem'}}>
+                  <p style={{marginLeft:'8rem'}}>
                  <FaArrowRightLong size={30}/>
                   </p> 
                   </p>
                   
                   </div>
-                  <img src='images/lux.png' alt="" className="gal_car_image" style={{marginTop:'7rem'}}/>
+                  <img src='images/lux.png' alt="" className="gal_car_image" style={{marginTop:'1rem'}}/>
                 </div>
                 
                 </>

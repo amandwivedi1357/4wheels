@@ -109,14 +109,14 @@ const Footer = () => {
       </div>
       <div className="btm_text">
         <p>
-          @2023 4wheels. All Rights Reserved . <span> Privacy Policy</span>
+          @2024 4wheels. All Rights Reserved . 
         </p>
-        <div style={{display:'flex',justifyContent:'center',gap:'1rem',cursor:'pointer'}} onClick={()=>window.open('https://rayformula.com/','_blank')}>
-        <p>Website By Ray Formula</p>
-        <img src="images/rayformula.svg" alt="" style={{width:'20px'}}/>
-        </div>
+        
       </div>
-      
+      <div className="footer_footer" onClick={()=>window.open('https://rayformula.com/','_blank')}>
+        <img src="images/rayformula.svg" alt="" style={{width:'20px'}}/>
+        <p>Website By Ray Formula</p>
+        </div>
     </div>
   );
 };

@@ -23,6 +23,10 @@ function App() {
       ):(
         <>
         <ScrollToTop/>
+        <div className='mobile_whats'>
+          
+        <img src="images/whatsappnew.svg" alt="" onClick={()=>window.open('https://api.whatsapp.com/send?phone=919885354321','_blank')}/>
+        </div>
         <AllRoutes/>
         </>
       )}

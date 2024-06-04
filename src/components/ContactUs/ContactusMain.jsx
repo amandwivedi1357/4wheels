@@ -64,7 +64,7 @@ export default function ContactusMain() {
                         <p className="contact_head">
                             Contact Us
                         </p>
-                        <p className="contact_desc">Not sure what you need? The team at 4Wheel will be happy to listen to you.</p>
+                        <p className="contact_desc">Not sure what you need? The team at 4 Wheel will be happy to listen to you.</p>
 
                         <div className="contact_details">
                             <div className="cont_dets" style={{display:'flex',gap:'30px'}}>
@@ -82,7 +82,7 @@ Road No.2, Banjara Hills, Hyderabad, Telangana-500034.</p>
                             <div className="cont_dets" style={{display:'flex',gap:'30px'}}>
 
                         <img src="images/mail.svg" alt="" />
-                        <p className="contact_desc">Sales@4wheeltravels.com  Bookings@4wheeltravels.com</p>
+                        <p className="contact_desc">sales@4wheeltravels.com Or bookings@4wheeltravels.com</p>
                             </div>
                         </div>
                         <div className="contact_details1">
@@ -101,7 +101,7 @@ Road No.2, Banjara Hills, Hyderabad, Telangana-500034.</p>
                             <div className="cont_dets" >
 
                         <img src="images/mail.svg" alt="" />
-                        <p className="contact_desc">Sales@4wheeltravels.com  Bookings@4wheeltravels.com</p>
+                        <p className="contact_desc">sales@4wheeltravels.com OR bookings@4wheeltravels.com</p>
                             </div>
                         </div>
                     </div>

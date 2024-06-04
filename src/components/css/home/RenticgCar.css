@@ -728,8 +728,11 @@ letter-spacing: 0.25px;
         margin-top: -1rem;
     }
     .Special_Services .special_serv_list{
+        /* border:1px solid red; */
         width: 100%;
         margin: auto;
+        margin-top: -3rem;
+        margin-bottom: -3rem;
         grid-template-columns: repeat(1,1fr);
     }
     /* .special_serv_list .service_list{} */
@@ -780,7 +783,7 @@ letter-spacing: 0.25px;
         transform: none;
     }
     .btm_container_1{
-        margin-top: -50px;
+        margin-top: -70px;
         /* border: 1px solid red; */
     }
     .btm_container_1 .desc_text{
@@ -868,8 +871,24 @@ letter-spacing: 0.25px;
         margin-top: -2rem;
         object-fit: fill;
     }
-    
-    
+    .banner .right img{
+        margin-top: 2rem;
+    }
+    .bann_text {
+        font-size: 40px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        width: 100%;
+        /* border: 1px solid red; */
+    }
+    .bann_text_2{
+        font-size: 18px;
+        margin-left: 2rem;
+        font-weight: 200;
+        letter-spacing: 1px;
+        width: 100%;
+        text-align: left;
+    }
     /* banner container ends */
 
     /* .footer */

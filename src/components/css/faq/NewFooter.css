@@ -146,6 +146,21 @@ letter-spacing: 0.25px;
     border-radius: 50%;
    
   }
+  .footer_footer{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: -10px;
+    cursor: pointer;
+  }
+  .footer_footer p{
+    font-size: 18px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: Poppins;
+  }
+  
   @media screen and (max-width: 767px) {
     .quick1{
       margin-top: -4rem;
@@ -191,10 +206,10 @@ letter-spacing: 0.25px;
     .unordered_list li span {
         text-align: left;
     }
-    .btm_text p{
+    .footer_footer p{
       width: 80%;
       font-family: Poppins;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;

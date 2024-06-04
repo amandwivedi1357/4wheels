@@ -35,9 +35,9 @@ const BottomAboutUs = () => {
         <div className="right">
 
         <p className="head_text">Who are we?</p>
-        <p className="desc_text">4 Wheel Travels Pvt Ltd is renowned as Hyderabad`&apos;`s leading chauffeur-driven car service, with a significant presence across major cities. The company offers an extensive array of travel services, including self-drive cars, local city taxis, long-distance cabs, airport transfers, as well as corporate car rental and management solutions. <br /> <br />
+        <p className="desc_text">4 Wheel Travels Pvt Ltd is renowned as Hyderabad`s leading chauffeur-driven car service, with a significant presence across major cities. The company offers an extensive array of travel services, including self-drive cars, local city taxis, long-distance cabs, airport transfers, as well as corporate car rental and management solutions. <br /> <br />
 4 Wheel Travels, otherwise referred to by one & all as 4 wheel, is being managed by Mr. Ashwin Jain, the CEO of the company, assisted by a team of people who have been with the company for 15 years or more. <br /> <br />
-<strong>We also have our extendedverticals serving to different segments of clients </strong>: <br />
+<strong>We also have our extended verticals serving to different segments of clients </strong>: <br />
  <strong>Urban Oasis Serviced Apartments & Guest Houses </strong>: Comfortable stays for business travellers. <br />
 <strong> Luxe Rides </strong>: Self-drive luxury fleet of cars and bikes for a lavish travel experience.<br />
 <strong> Imobiliti LLP </strong>: Network Mobility for convenient transportation. <br />
