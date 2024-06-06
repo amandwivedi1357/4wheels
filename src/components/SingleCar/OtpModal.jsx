@@ -3,11 +3,14 @@ import  { useState } from 'react';
 import {  Button, Flex, Text, Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, ModalCloseButton, useToast, HStack, PinInput, PinInputField } from '@chakra-ui/react';
 import emailjs from '@emailjs/browser';
 import 'firebase/auth';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { addBooking } from '../../redux/actions/Booking.action';
 
 const OTPEntryModal = ({ isOpen, onSubmit, contactNo, email, name, formData, car, service, fleetType }) => {
   const [otp, setOTP] = useState(['','','','','','']);
-  
-  
+  const navigate = useNavigate();
+  const dispatch = useDispatch()
   const toast = useToast();
   const [verificationError, setVerificationError] = useState(false);
 
@@ -52,51 +55,7 @@ const OTPEntryModal = ({ isOpen, onSubmit, contactNo, email, name, formData, car
     }
   };
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   onSubmit(otp.join(''));
-  //   const otpCode = otp.join('');
-
-  //   console.log('this is the otp: ',otpCode)
-  //   try {
-  //     window.confirmationResult.confirm(otpCode).then(async(res)=>{
-  //       console.log(res);
-  //       const user = res.user;
-  //       if (user) {
-  //         toast({
-  //           title: "OTP Verified",
-  //           description: "OTP verification successful.",
-  //           status: "success",
-  //           duration: 6000,
-  //           isClosable: true,
-  //         });
-          
-  //         setOTP(['', '', '', '', '', '']);
-  //         await sendEmail();
-  //         setVerificationError(true)
-  //       } else {
-  //         setVerificationError(false);
-  //         toast({
-  //           title: "Failed to Verify OTP",
-  //           description: "Incorrect OTP entered. Please try again.",
-  //           status: "error",
-  //           duration: 6000,
-  //           isClosable: true,
-  //         });
-  //       }
-  //     })
-     
-  //   } catch (error) {
-  //     console.error('Error verifying OTP:', error.message);
-  //     toast({
-  //       title: "Error",
-  //       description: "An error occurred while verifying OTP. Please try again later.",
-  //       status: "error",
-  //       duration: 6000,
-  //       isClosable: true,
-  //     });
-  //   }
-  // };
+ 
 
    const sendSalesEmail = () => {
     
@@ -233,7 +192,8 @@ const OTPEntryModal = ({ isOpen, onSubmit, contactNo, email, name, formData, car
           duration: 6000,
           isClosable: true,
         });
-        // navigate("/")
+        navigate("/")
+        dispatch(addBooking(formData));
       }
       else{
         toast({
