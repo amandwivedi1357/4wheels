@@ -50,7 +50,7 @@ export default function SingleCarBook({ topic }) {
     <div>
     {cars && cars.properties && (
       <>
-        <TopSectionServe topic={"Cheuffeur Drive"} subTopic={fleetType} />
+        <TopSectionServe topic={"Chauffeur Drive"} subTopic={fleetType} />
       <div className="Single_container">
         <div className="head_cont">
           <p className="head_text">{topic}</p>
