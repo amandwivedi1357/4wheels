@@ -1,80 +1,174 @@
-.Btm_cont {
-    width: 100%;
-    height: auto;
-    padding: 1rem;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 20px;
+/* Gallery/BottomSec.css */
+.Btm_cont1 {
+  padding: 20px;
+}
+.Btm_cont1 .head_text{
+  margin: 20px;
+  margin-bottom: 40px;
+}
+.fleetButton_cont {
+  margin-bottom: 5rem;
+  margin-top: 5rem;
+   
+}
+.fleetButtonSlider{
+  position: relative;
+  width: 80%;
+  padding-left: 15px;
+  /* border: 1px solid red; */
+  gap: 10px;
+  margin: 10px;
+  /* display: grid;
+  grid-template-columns: repeat(6,1fr); */
+ 
+ gap: 10px;
+  margin: auto;
+}
+.prevs{
+  /* border: 1px solid red; */
+  position: absolute;
+  color: #000000;
+top: 32.3%;
+z-index: 100;
+cursor: pointer;
+left: 9%;
+}
+.next{
+  cursor: pointer;
+  /* border: 1px solid red; */
+  position: absolute;
+  color: #000000;
+  top: 20.7%;
+z-index: 100;
+right: 9%;
+}
+
+.fleetBtn {
+  width: 150px;
+ 
+  padding: 10px;
+  border: 1px solid #031B4E;
+  color: #000000;
+ margin: auto;
+ white-space: nowrap;
+  transition: background-color 0.3s, transform 0.3s;
+  
+  cursor: pointer;
+}
+.fleetBtn.active {
+  border-radius: 7px;
+  background-color: #0056b3; /* Blue background for the active button */
+}
+.fleetButtonSlider .fleetBtn.active,
+.fleetButtonSlider .fleetBtn:hover {
+  background-color: #031B4E;
+  transform: scale(1.1);
+}
+
+.imageSlider .carImageContainer {
+  padding: 10px;
+}
+.carImageContainer .desc_text{
+  margin-top: 20px;
+  color: #031B4E;
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 26px; /* 162.5% */
+letter-spacing: 0.5px;
+}
+.imageSlider{
+  margin: 5rem;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+
+.imageSlider .carImage {
+  width: 100%;
+  height: 200px; /* Ensure consistent height */
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.imageSlider .carImage:hover {
+  transform: scale(1.05);
+  /* background: #000000 */
+}
+.navigation-buttons{
+  display: none;
+}
+.popupImage {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.imageSlider_mob{
+  display: none;
+}
+.fleetSlider-navigation-buttons{
+  width: 100%;
+  display: flex;
+  /* border: 1px solid red; */
+  margin-top: 20px;
+  justify-content: center;
+  gap: 20px;
+}
+.fleetSlider-navigation-buttons .fleetSlider-nav-button{
+  width: 5rem;
+  background: #fff;
+  color: #031B4E;
+  text-align: center;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #031B4E;
+  transition: background-color 0.3s, transform 0.3s;
+}
+.fleetSlider-navigation-buttons .fleetSlider-nav-button:hover{
+  background-color: #031B4E;
+color: #fff;
+}
+@media screen and (max-width: 767px) {
+  .fleetButtonSlider{
+    /* border: 1px solid red; */
+    width: 85%;
     
+    /* grid-template-columns: repeat(2,1fr); */
   }
-  
-  .single_cont {
-    width: 95%;
-    position: relative;
-    overflow: hidden;
-    margin: auto;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    display: inline-block;
+  .fleetBtn {
+    
+    width: 8rem;
+    padding: 10px;
+    border: 1px solid #031B4E;
+    
+   margin: auto;
+   white-space: nowrap;
+    transition: background-color 0.3s, transform 0.3s;
+    
+    cursor: pointer;
   }
-  
-  .single_cont img {
-    width: 100%;
-    display: block;
-    transition: filter 0.5s ease;
+  .imageSlider{
+    margin: 40px 0;
+    display: none;
   }
-  .overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    transition: top 0.5s ease, opacity 0.5s ease;
+  .navigation-buttons{
     display: flex;
-    border-radius: 5px;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    opacity: 0;
   }
-  .single_cont p.desc_text {
-    /* position: absolute;
-    bottom: 0;
-    left: 0;
+  .imageSlider_mob{
+    margin: 40px 0;
+    display: block;
+  }
+  .imageSlider_mob .carImage{
     width: 100%;
-    padding: 15px;
-    margin: 0;
-    
-    background-color: rgba(180, 175, 175, 0.8);
-    opacity: 0;
-    transition: opacity 0.3s; */
-    margin: 0;
-    color: #ffffff;
-    font-family: 'Cormorant';
-    font-size: 26px;
-  }
-  
-  .single_cont:hover .overlay {
-    top: 0;
-    opacity: 1;
-  }
-  
-  .single_cont:hover p.desc_text {
-    opacity: 1;
-  }
-  
-  @media screen and (min-width: 768px) and (max-width: 1025px) {
-    .single_cont img {
-      width: 100%;
-    }
-    .Btm_cont{
-      grid-template-columns: repeat(2,1fr);
-    }
-  }
-  @media screen and (max-width: 768px){
-    .Btm_cont{
-      grid-template-columns: repeat(1,1fr);
-    }
-  }
+  height: 200px; /* Ensure consistent height */
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  } 
+}
