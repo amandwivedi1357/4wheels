@@ -16,14 +16,30 @@
   }
 }
 
-.ham {
-  cursor: pointer;
-}
+.ham{
+  position: fixed;
+top: 3%;
+border-radius: 5px;
+left: 85%;
+padding: 0.5rem;
 
+background: #fff;
+cursor: pointer;
+z-index: 999;
+}
 .drawer-link {
-  margin: 1rem 0;
-  cursor: pointer;
-  transition: color 0.2s;
+  display: block;
+  padding: 10px;
+  margin: 10px 0;
+  color: #000; /* Customize link color */
+  text-decoration: none;
+  font-size: 18px; /* Adjust font size as needed */
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+
+  &:hover {
+    color: #ec1717; /* Change link color on hover */
+  }
 }
 
 .drawer-link:hover {

@@ -10,10 +10,10 @@ import { useNavigate } from "react-router-dom"
 const BottomAboutUs = () => {
   const navigate = useNavigate()
   const row1 = [
-    "images/img1.jpg",
-    "images/img2.jpg",
-    "images/img3.jpg",
-    "images/img4.jpg",
+    "/images/img1.jpg",
+    "/images/img2.jpg",
+    "/images/imobility.jpg",
+    "/images/img4.jpg",
     
   ];
 

@@ -68,7 +68,7 @@ export default function MySlider4() {
                     ))}
                 </Slider>
             </div>
-            <div className="navigation-buttons">
+            <div className="navigation-buttonss">
                 <div className="nav-button" onClick={prevSlide}>Back</div>
                 <div className="nav-button" onClick={nextSlide}>Next</div>
             </div>

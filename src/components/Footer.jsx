@@ -63,21 +63,20 @@ const Footer = () => {
         <div className="flex_cont">
           <ul className="unordered_list center" style={{ listStyle: "none" }}>
             <li className="list_head quick">Quick Links</li>
-            <img className='underline' src="images/underline.svg" alt="" />
+            <img className='underline' src="/images/underline.svg" alt="" />
             <li onClick={() => handleClick("/")}>Home</li>
             <li onClick={() => handleClick("about-us")}>About Us</li>
             <li onClick={() => handleClick("cheuffeurdrive")}>
               Chauffeur Drive
             </li>
             <li onClick={() => handleClick("selfdrive")}>Self Drive</li>
-            <li onClick={() => handleClick("gallery")}>Gallery</li>
-           
+            <li onClick={() => handleClick("gallery")}>Gallery</li> 
           </ul>
         </div>
         <div className="flex_cont">
           <ul className="unordered_list center" style={{ listStyle: "none" }}>
             <li className="list_head quick1">Support Center</li>
-            <img className='underline1' src="images/underline.svg" alt="" />
+            <img className='underline1' src="/images/underline.svg" alt="" />
             <li onClick={() => handleClick("faq")}>FAQ</li>
             <li onClick={() => handleClick("contact-us")}>Contact us</li>
             
@@ -114,7 +113,7 @@ const Footer = () => {
         
       </div>
       <div className="footer_footer" onClick={()=>window.open('https://rayformula.com/','_blank')}>
-        <img src="images/rayformula.svg" alt="" style={{width:'20px'}}/>
+        <img src="/images/rayformula.svg" alt="" style={{width:'20px'}}/>
         <p>Website By Ray Formula</p>
         </div>
     </div>
