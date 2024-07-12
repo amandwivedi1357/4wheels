@@ -159,7 +159,10 @@ export default function BookingForm({ car, service, fleetType }) {
     <div className="contact_form_div">
       <div id="recaptcha-container"></div>
       <div className="contact_form_outer">
-        <form className="input_container" onSubmit={handleSubmit}>
+        <form className="input_container" 
+        name="bookingForm"
+        id="bookingForm"
+        onSubmit={handleSubmit}>
           <p className="inp_top_text">Book this car</p>
           <div className="outer_inp">
             <div className="input1">
