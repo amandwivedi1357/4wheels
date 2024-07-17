@@ -176,6 +176,7 @@ export default function BookingForm({ car, service, fleetType }) {
                     onChange={handleInputChange}
                     type="text"
                     id="name"
+                    name="name"
                     required
                   />
                 </div>
@@ -190,6 +191,7 @@ export default function BookingForm({ car, service, fleetType }) {
                   </p>
                   <input
                     value={formData.contactNo}
+                    name="contactNo"
                     onChange={handleInputChange}
                     type="tel"
                     id="contactNo"
@@ -206,6 +208,7 @@ export default function BookingForm({ car, service, fleetType }) {
                 <div className="input_wrapper">
                   <input
                     value={formData.emailId}
+                    name="emailId"
                     onChange={handleInputChange}
                     type="email"
                     id="emailId"
@@ -220,6 +223,7 @@ export default function BookingForm({ car, service, fleetType }) {
                 <div className="contact_numWrap">
                   <input
                     type="text"
+                    name="serviceCity"
                     id="serviceCity"
                     required
                     value={formData.serviceCity}
@@ -237,6 +241,7 @@ export default function BookingForm({ car, service, fleetType }) {
                   <input
                     placeholder=" "
                     type="date"
+                    name="startDate"
                     id="startDate"
                     min={today}
                     value={formData.startDate}
@@ -255,6 +260,7 @@ export default function BookingForm({ car, service, fleetType }) {
                     type="date"
                     id="endDate"
                     required
+                    name="endDate"
                     min={formData.startDate}
                     value={formData.endDate}
                     onChange={handleInputChange}
@@ -272,6 +278,7 @@ export default function BookingForm({ car, service, fleetType }) {
                   <select
                     placeholder="hrs"
                     required
+                    name="reportingTimeHrs"
                     id="reportingTimeHrs"
                     value={formData.reportingTimeHrs}
                     onChange={handleInputChange}
@@ -289,6 +296,7 @@ export default function BookingForm({ car, service, fleetType }) {
                   <select
                     placeholder="24 hours basis"
                     required
+                    name="reportingTime24Hrs"
                     id="reportingTime24Hrs"
                     value={formData.reportingTime24Hrs}
                     onChange={handleInputChange}
@@ -311,6 +319,7 @@ export default function BookingForm({ car, service, fleetType }) {
                   <select
                     id="choiceOfTravel"
                     required
+                    name="choiceOfTravel"
                     value={formData.choiceOfTravel}
                     onChange={handleInputChange}
                   >
@@ -332,6 +341,7 @@ export default function BookingForm({ car, service, fleetType }) {
                     value={formData.placeOfReporting}
                     onChange={handleInputChange}
                     type="text"
+                    name="placeOfReporting"
                     id="placeOfReporting"
                     required
                   />
@@ -346,6 +356,7 @@ export default function BookingForm({ car, service, fleetType }) {
                     type="text"
                     id="tentativePointOfDrop"
                     required
+                    name="tentativePointOfDrop"
                     value={formData.tentativePointOfDrop}
                     onChange={handleInputChange}
                   />
@@ -361,7 +372,7 @@ export default function BookingForm({ car, service, fleetType }) {
                   className="textArea"
                   value={formData.specialInstruction}
                   onChange={handleInputChange}
-                  name=""
+                  name="specialInstruction"
                   id="specialInstruction"
                   cols="105"
                   rows="10"
